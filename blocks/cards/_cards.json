@@ -2,7 +2,7 @@
   "definitions": [
     {
       "title": "Cards",
-      "id": "cardsbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "id": "cards",
       "plugins": {
         "xwalk": {
           "page": {
