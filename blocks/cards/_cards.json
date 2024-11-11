@@ -54,7 +54,7 @@
   ],
   "filters": [
     {
-      "id": "cardszzzzzzzzzzzzzzzzzzzzzzzzzz",
+      "id": "cards",
       "components": [
         "card"
       ]
