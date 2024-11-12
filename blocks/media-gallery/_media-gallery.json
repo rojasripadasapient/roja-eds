@@ -23,7 +23,9 @@
       "fields": [
         {
           "component": "text",
-          "name": "title",
+          "valueType": "string",
+          "name": "itemTitle",
+          "value": "",
           "label": "Title"
         },
         {
