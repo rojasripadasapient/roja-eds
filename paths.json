@@ -1,5 +1,5 @@
 {
   "mappings": [
-    "/content/roja-eds/:/"
+    "/content/roja-eds/configuration:/.helix/config.json"
   ]
 }
