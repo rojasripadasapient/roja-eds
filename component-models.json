@@ -160,7 +160,7 @@
     ]
   },
   {
-    "id": "hero",
+    "id": "accordion",
     "fields": [
       {
         "component": "reference",
@@ -168,6 +168,28 @@
         "name": "image",
         "label": "Image",
         "multi": false
+      },
+      {
+        "component": "text",
+        "name": "linkTitle",
+        "label": "Title"
+      }
+    ]
+  },
+  {
+    "id": "media-gallery",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "linkTitle",
+        "label": "Title"
       },
       {
         "component": "text",
@@ -183,10 +205,11 @@
         "label": "Text",
         "valueType": "string"
       }
+
     ]
   },
   {
-    "id": "media-gallery",
+    "id": "hero",
     "fields": [
       {
         "component": "reference",
