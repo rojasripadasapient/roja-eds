@@ -158,14 +158,14 @@
           }
         },
         {
-          "title": "Hero1",
+          "title": "Hero22",
           "id": "hero",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "Hero1",
+                  "name": "Hero222",
                   "model": "hero"
                 }
               }
