@@ -1,7 +1,7 @@
 {
   "definitions": [
     {
-      "title": "MediaGallery",
+      "title": "Media-Gallery",
       "id": "media-gallery",
       "plugins": {
         "xwalk": {
@@ -23,10 +23,8 @@
       "fields": [
         {
           "component": "text",
-          "valueType": "string",
           "name": "title",
-          "label": "Title",
-          "value": ""
+          "label": "Title"
         },
         {
           "component": "richtext",
