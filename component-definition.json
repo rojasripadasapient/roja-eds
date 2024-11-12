@@ -152,7 +152,7 @@
                 "template": {
                   "name": "Hero",
                   "model": "hero"
-                },
+                }
         {
           "title": "Media-Gallery",
           "id": "media-gallery",
