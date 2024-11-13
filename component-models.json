@@ -180,6 +180,26 @@
     "id": "media-gallery",
     "fields": [
       {
+        "component": "text",
+        "name": "linkTitle",
+        "label": "Title"
+      },
+      {
+        "component": "select",
+        "name": "Teaser",
+        "label": "Type",
+        "options": [
+          {
+            "name": "variant-1",
+            "value": "variant-1"
+          },
+          {
+            "name": "variant-2",
+            "value": "variant-2"
+          }
+        ]
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "image",
@@ -242,30 +262,7 @@
             "value": "tertiary"
           }
         ]
-      },
-
-      {
-        "component": "text",
-        "name": "linkTitle",
-        "label": "Title"
-      },
-      {
-        "component": "select",
-        "name": "Teaser",
-        "label": "Type",
-        "options": [
-          {
-            "name": "variant-1",
-            "value": "variant-1"
-          },
-          {
-            "name": "variant-2",
-            "value": "variant-2"
-          }
-        ]
       }
-
-
     ]
   },
   {
