@@ -220,6 +220,8 @@
         "label": "Text",
         "valueType": "string"
       },
+
+
       {
         "component": "select",
         "name": "classes",
@@ -229,9 +231,13 @@
         "valueType": "string",
         "options": [
           {
-            "name": "Green",
-            "value": "bg-green"
-          },
+            "name": "Red",
+            "value": "bg-red"
+          }
+        ]
+      },
+
+
 
       {
         "component": "aem-content",
