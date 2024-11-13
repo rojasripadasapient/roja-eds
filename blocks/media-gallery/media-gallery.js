@@ -1,3 +1,12 @@
+import {
+  decorateMain,
+} from '../../scripts/scripts.js';
+
+import {
+  loadSections,
+} from '../../scripts/aem.js';
+
+
 (function(document, $) {
     $(document).on("foundation-contentloaded", function() {
         const teaserSelect = $('[name="./teaser"]');
