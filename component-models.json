@@ -311,6 +311,44 @@
         "valueType": "string"
       },
       {
+        "component": "aem-content",
+        "name": "variant1Link",
+        "label": "Variant1 Link"
+      },
+      {
+        "component": "text",
+        "name": "variant1LinkText",
+        "label": "Variant1 Text"
+      },
+      {
+        "component": "text",
+        "name": "variant1LinkTitle",
+        "label": "Variant1 Title"
+      },
+      {
+        "component": "select",
+        "name": "variant1LinkType",
+        "label": "Variant1 Type",
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          },
+          {
+            "name": "tertiary",
+            "value": "tertiary"
+          }
+        ]
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "variant2Image2",
@@ -335,6 +373,44 @@
         "value": "",
         "label": "Variant2 Text2",
         "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "variant1Link",
+        "label": "Variant1 Link"
+      },
+      {
+        "component": "text",
+        "name": "variant1LinkText",
+        "label": "Variant1 Text"
+      },
+      {
+        "component": "text",
+        "name": "variant1LinkTitle",
+        "label": "Variant1 Title"
+      },
+      {
+        "component": "select",
+        "name": "variant1LinkType",
+        "label": "Variant1 Type",
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          },
+          {
+            "name": "tertiary",
+            "value": "tertiary"
+          }
+        ]
       }
     ]
   }
