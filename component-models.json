@@ -222,6 +222,15 @@
       },
 
 
+
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "marqueeText",
+        "value": "",
+        "label": "Marquee text",
+        "description": "The text you want shown in your marquee"
+      },
       {
         "component": "select",
         "name": "classes",
