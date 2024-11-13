@@ -221,6 +221,19 @@
         "valueType": "string"
       },
       {
+        "component": "select",
+        "name": "classes",
+        "value": "",
+        "label": "Background Color",
+        "description": "The marquee background color",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Red",
+            "value": "bg-red"
+          },
+
+      {
         "component": "aem-content",
         "name": "link",
         "label": "Link"
