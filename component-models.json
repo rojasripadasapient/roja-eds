@@ -195,11 +195,6 @@
         ]
       },
       {
-        "component": "text",
-        "name": "linkTitle",
-        "label": "Title"
-      },
-      {
         "component": "reference",
         "valueType": "string",
         "name": "image",
