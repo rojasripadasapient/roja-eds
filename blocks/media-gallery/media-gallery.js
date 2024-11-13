@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Get dropdown element
-    const variantDropdown = document.querySelector("[name='teaser']");
+    const variantDropdown = document.querySelector("[name='media-gallery']");
 
     // Define the fields to toggle for each variant
     const variant1Fields = [
