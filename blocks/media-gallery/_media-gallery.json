@@ -127,40 +127,40 @@
           "valueType": "string"
         },
         {
-          "component": "aem-content1",
-          "name": "variant2Link1",
-          "label": "Variant2 Link1"
+          "component": "aem-content",
+          "name": "variant1Link",
+          "label": "Variant1 Link"
         },
         {
-          "component": "text1",
-          "name": "variant2LinkText1",
-          "label": "Variant2 Text1"
+          "component": "text",
+          "name": "variant1LinkText",
+          "label": "Variant1 Text"
         },
         {
-          "component": "text1",
-          "name": "variant2LinkTitle1",
-          "label": "Variant2 Title1"
+          "component": "text",
+          "name": "variant1LinkTitle",
+          "label": "Variant1 Title"
         },
         {
-          "component": "select1",
-          "name": "variant2LinkType1",
-          "label": "Variant2 LinkType1",
+          "component": "select",
+          "name": "variant1LinkType",
+          "label": "Variant1 Type",
           "options": [
             {
-              "name": "default1",
+              "name": "default",
               "value": ""
             },
             {
-              "name": "primary1",
-              "value": "primary1"
+              "name": "primary",
+              "value": "primary"
             },
             {
-              "name": "secondary1",
-              "value": "secondary1"
+              "name": "secondary",
+              "value": "secondary"
             },
             {
-              "name": "tertiary1",
-              "value": "tertiary1"
+              "name": "tertiary",
+              "value": "tertiary"
             }
           ]
         },
@@ -191,40 +191,40 @@
           "valueType": "string"
         },
         {
-          "component": "aem-content2",
-          "name": "variant2Link2",
-          "label": "Variant2 Link2"
+          "component": "aem-content",
+          "name": "variant1Link",
+          "label": "Variant1 Link"
         },
         {
-          "component": "text2",
-          "name": "variant2LinkText2",
-          "label": "Variant2 Text2"
+          "component": "text",
+          "name": "variant1LinkText",
+          "label": "Variant1 Text"
         },
         {
-          "component": "text2",
-          "name": "variant2LinkTitle2",
-          "label": "Variant2 Title2"
+          "component": "text",
+          "name": "variant1LinkTitle",
+          "label": "Variant1 Title"
         },
         {
-          "component": "select2",
-          "name": "variant2LinkType2",
-          "label": "Variant2 LinkType2",
+          "component": "select",
+          "name": "variant1LinkType",
+          "label": "Variant1 Type",
           "options": [
             {
-              "name": "default2",
+              "name": "default",
               "value": ""
             },
             {
-              "name": "primary2",
-              "value": "primary2"
+              "name": "primary",
+              "value": "primary"
             },
             {
-              "name": "secondary2",
-              "value": "secondary2"
+              "name": "secondary",
+              "value": "secondary"
             },
             {
-              "name": "tertiary2",
-              "value": "tertiary2"
+              "name": "tertiary",
+              "value": "tertiary"
             }
           ]
         }
