@@ -22,15 +22,6 @@
       "id": "media-gallery",
       "fields": [
         {
-          "component": "text",
-          "valueType": "string",
-          "name": "itemTitle",
-          "value": "",
-          "label": "Title"
-        },
-
-
-        {
           "component": "select",
           "name": "Teaser",
           "label": "Type",
@@ -44,6 +35,14 @@
               "value": "variant-2"
             }
           ]
+        },
+
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "itemTitle",
+          "value": "",
+          "label": "Title"
         },
         {
           "component": "richtext",
