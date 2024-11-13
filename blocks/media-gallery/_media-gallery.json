@@ -23,7 +23,7 @@
       "fields": [
         {
           "component": "select",
-          "name": "Teaser",
+          "name": "type",
           "label": "Type",
           "options": [
             {
@@ -35,6 +35,17 @@
               "value": "variant-2"
             }
           ]
+        },
+        {
+          "component": "reference",
+          "name": "imageURL",
+          "label": "ImageURL",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "name": "imageAlt",
+          "label": "Alt Text"
         },
 
         {
@@ -50,17 +61,6 @@
           "value": "",
           "label": "Description",
           "valueType": "string"
-        },
-        {
-          "component": "reference",
-          "name": "imageURL",
-          "label": "ImageURL",
-          "multi": false
-        },
-        {
-          "component": "text",
-          "name": "imageAlt",
-          "label": "Alt Text"
         },
         {
           "component": "aem-content",
