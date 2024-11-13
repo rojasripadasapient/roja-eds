@@ -132,12 +132,12 @@
           "label": "Variant2 Link"
         },
         {
-          "component": "text2",
+          "component": "text",
           "name": "variant2LinkText",
           "label": "Variant2 Text"
         },
         {
-          "component": "text2",
+          "component": "text",
           "name": "variant1LinkTitle",
           "label": "Variant2 Title"
         },
@@ -196,12 +196,12 @@
           "label": "Variant3 Link"
         },
         {
-          "component": "text3",
-          "name": "variant1LinkText",
+          "component": "text",
+          "name": "variant3LinkText",
           "label": "Variant3 Text"
         },
         {
-          "component": "text3",
+          "component": "text",
           "name": "variant3LinkTitle",
           "label": "Variant3 Title"
         },
