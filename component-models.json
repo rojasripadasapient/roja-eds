@@ -312,23 +312,23 @@
       },
       {
         "component": "aem-content",
-        "name": "variant1Link",
-        "label": "Variant1 Link"
+        "name": "variant2Link1",
+        "label": "Variant2 Link1"
       },
       {
         "component": "text",
-        "name": "variant1LinkText",
-        "label": "Variant1 Text"
+        "name": "variant2LinkText1",
+        "label": "Variant2 Text1"
       },
       {
         "component": "text",
-        "name": "variant1LinkTitle",
-        "label": "Variant1 Title"
+        "name": "variant2LinkTitle1",
+        "label": "Variant2 Title1"
       },
       {
         "component": "select",
-        "name": "variant1LinkType",
-        "label": "Variant1 Type",
+        "name": "variant2LinkType1",
+        "label": "Variant2 Type1",
         "options": [
           {
             "name": "default",
@@ -376,23 +376,23 @@
       },
       {
         "component": "aem-content",
-        "name": "variant1Link",
-        "label": "Variant1 Link"
+        "name": "variant2Link2",
+        "label": "Variant2 Link2"
       },
       {
         "component": "text",
-        "name": "variant1LinkText",
-        "label": "Variant1 Text"
+        "name": "variant2LinkText2",
+        "label": "Variant2 Text2"
       },
       {
         "component": "text",
-        "name": "variant1LinkTitle",
-        "label": "Variant1 Title"
+        "name": "variant2LinkTitle2",
+        "label": "Variant2 Title2"
       },
       {
         "component": "select",
-        "name": "variant1LinkType",
-        "label": "Variant1 Type",
+        "name": "variant2LinkType2",
+        "label": "Variant2 Type2",
         "options": [
           {
             "name": "default",
