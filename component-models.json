@@ -180,11 +180,6 @@
     "id": "media-gallery",
     "fields": [
       {
-        "component": "text",
-        "name": "linkTitle",
-        "label": "Title"
-      },
-      {
         "component": "select",
         "name": "Teaser",
         "label": "Type",
@@ -198,6 +193,11 @@
             "value": "variant-2"
           }
         ]
+      },
+      {
+        "component": "text",
+        "name": "linkTitle",
+        "label": "Title"
       },
       {
         "component": "reference",
