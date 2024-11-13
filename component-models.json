@@ -211,12 +211,12 @@
         "label": "Type",
         "options": [
           {
-            "name": "variant-1",
-            "value": "variant-1"
+            "name": "variant1",
+            "value": "variant1"
           },
           {
-            "name": "variant-2",
-            "value": "variant-2"
+            "name": "variant2",
+            "value": "variant2"
           }
         ]
       },
