@@ -317,17 +317,17 @@
       },
       {
         "component": "text",
-        "name": "variant2LinkText2",
+        "name": "variant2LinkText",
         "label": "Variant2 Text"
       },
       {
         "component": "text",
-        "name": "variant2LinkTitle2",
+        "name": "variant2LinkTitle",
         "label": "Variant2 Title"
       },
       {
         "component": "select",
-        "name": "variant2LinkType2",
+        "name": "variant2LinkType",
         "label": "Variant2 Type",
         "options": [
           {
