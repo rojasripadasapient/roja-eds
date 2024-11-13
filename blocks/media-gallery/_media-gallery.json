@@ -23,62 +23,210 @@
       "fields": [
         {
           "component": "select",
-          "name": "type",
+          "name": "teaser",
           "label": "Type",
           "options": [
             {
-              "name": "variant-1",
-              "value": "variant-1"
+              "name": "variant1",
+              "value": "variant1"
             },
             {
-              "name": "variant-2",
-              "value": "variant-2"
+              "name": "variant2",
+              "value": "variant2"
             }
           ]
         },
         {
           "component": "reference",
-          "name": "imageURL",
-          "label": "ImageURL",
+          "valueType": "string",
+          "name": "variant1Image",
+          "label": "Variant1 Image",
           "multi": false
         },
         {
           "component": "text",
-          "name": "imageAlt",
-          "label": "Alt Text"
-        },
-
-        {
-          "component": "text",
           "valueType": "string",
-          "name": "itemTitle",
-          "value": "",
-          "label": "Title"
+          "name": "imageAltVariant1",
+          "label": "Variant1 Alt",
+          "value": ""
         },
         {
           "component": "text",
-          "valueType": "string",
-          "name": "marqueeText",
-          "value": "",
-          "label": "Marquee text",
-          "description": "The text you want shown in your marquee"
+          "name": "variant1Title",
+          "label": "Vatiant1 Title"
         },
         {
           "component": "richtext",
-          "name": "description",
+          "name": "variant1Text",
           "value": "",
-          "label": "Description",
+          "label": "Variant1 Text",
           "valueType": "string"
         },
         {
           "component": "aem-content",
-          "name": "link",
-          "label": "Link"
+          "name": "variant1Link",
+          "label": "Variant1 Link"
         },
         {
           "component": "text",
-          "name": "linkText",
-          "label": "Text"
+          "name": "variant1LinkText",
+          "label": "Variant1 Text"
+        },
+        {
+          "component": "text",
+          "name": "variant1LinkTitle",
+          "label": "Variant1 Title"
+        },
+        {
+          "component": "select",
+          "name": "variant1LinkType",
+          "label": "Variant1 Type",
+          "options": [
+            {
+              "name": "default",
+              "value": ""
+            },
+            {
+              "name": "primary",
+              "value": "primary"
+            },
+            {
+              "name": "secondary",
+              "value": "secondary"
+            },
+            {
+              "name": "tertiary",
+              "value": "tertiary"
+            }
+          ]
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "variant2Image1",
+          "label": "Variant2 Image1",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "image1AltVariant2",
+          "label": "Variant2 Alt1",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "name": "variant2Title1",
+          "label": "Vatiant2 Title1"
+        },
+        {
+          "component": "richtext",
+          "name": "variant2Text1",
+          "value": "",
+          "label": "Variant2 Text1",
+          "valueType": "string"
+        },
+        {
+          "component": "aem-content",
+          "name": "variant2Link1",
+          "label": "Variant2 Link1"
+        },
+        {
+          "component": "text",
+          "name": "variant2LinkText1",
+          "label": "Variant2 Text1"
+        },
+        {
+          "component": "text",
+          "name": "variant2LinkTitle1",
+          "label": "Variant2 Title1"
+        },
+        {
+          "component": "select",
+          "name": "variant2LinkType1",
+          "label": "Variant2 Type1",
+          "options": [
+            {
+              "name": "default",
+              "value": ""
+            },
+            {
+              "name": "primary",
+              "value": "primary"
+            },
+            {
+              "name": "secondary",
+              "value": "secondary"
+            },
+            {
+              "name": "tertiary",
+              "value": "tertiary"
+            }
+          ]
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "variant2Image2",
+          "label": "Variant2 Image2",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "image2AltVariant2",
+          "label": "Variant2 Alt2",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "name": "variant2Title2",
+          "label": "Vatiant2 Title2"
+        },
+        {
+          "component": "richtext",
+          "name": "variant2Text2",
+          "value": "",
+          "label": "Variant2 Text2",
+          "valueType": "string"
+        },
+        {
+          "component": "aem-content",
+          "name": "variant2Link2",
+          "label": "Variant2 Link2"
+        },
+        {
+          "component": "text",
+          "name": "variant2LinkText2",
+          "label": "Variant2 Text2"
+        },
+        {
+          "component": "text",
+          "name": "variant2LinkTitle2",
+          "label": "Variant2 Title2"
+        },
+        {
+          "component": "select",
+          "name": "variant2LinkType2",
+          "label": "Variant2 Type2",
+          "options": [
+            {
+              "name": "default",
+              "value": ""
+            },
+            {
+              "name": "primary",
+              "value": "primary"
+            },
+            {
+              "name": "secondary",
+              "value": "secondary"
+            },
+            {
+              "name": "tertiary",
+              "value": "tertiary"
+            }
+          ]
         }
       ]
     }
