@@ -7,22 +7,13 @@ import {
 } from '../../scripts/aem.js';
 
 
-export default function decorate(block) {
-  const [media-galleryWrapper] = block.children;
-
-  const blockmedia-gallery = document.createElement('blockmedia-gallery');
-  blockmedia-gallery.textContent = quoteWrapper.textContent.trim();
-  media-galleryWrapper.replaceChildren(blockmedia-gallery);
-}
-
-
 
 (function(document, $) {
     $(document).on("foundation-contentloaded", function() {
-        const teaserSelect = $('[name="./teaser"]');
+        const media-gallerySelect = $('[name="./media-gallery"]');
 
         function toggleFields() {
-            const selectedVariant = teaserSelect.val();
+            const selectedVariant = teasermedia-gallerySelect.val();
             $('[data-show-for-variant]').each(function() {
                 const variant = $(this).data('show-for-variant');
                 $(this).closest(".coral-Form-fieldwrapper").toggle(variant === selectedVariant);
@@ -33,6 +24,6 @@ export default function decorate(block) {
         toggleFields();
 
         // Event listener for teaser dropdown change
-        teaserSelect.on("change", toggleFields);
+        media-gallerySelect.on("change", toggleFields);
     });
 })(document, Granite.$);
