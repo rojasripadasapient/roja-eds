@@ -7,6 +7,16 @@ import {
 } from '../../scripts/aem.js';
 
 
+export default function decorate(block) {
+  const [media-galleryWrapper] = block.children;
+
+  const blockmedia-gallery = document.createElement('blockmedia-gallery');
+  blockmedia-gallery.textContent = quoteWrapper.textContent.trim();
+  media-galleryWrapper.replaceChildren(blockmedia-gallery);
+}
+
+
+
 (function(document, $) {
     $(document).on("foundation-contentloaded", function() {
         const teaserSelect = $('[name="./teaser"]');
