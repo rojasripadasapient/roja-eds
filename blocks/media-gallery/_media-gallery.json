@@ -80,7 +80,7 @@
         {
           "component": "select",
           "name": "variant1LinkType",
-          "label": "Variant1 Type",
+          "label": "Variant1 LinkType",
           "options": [
             {
               "name": "default",
@@ -144,23 +144,23 @@
         {
           "component": "select1",
           "name": "variant2LinkType1",
-          "label": "Variant2 Type1",
+          "label": "Variant2 LinkType1",
           "options": [
             {
-              "name": "default",
+              "name": "default1",
               "value": ""
             },
             {
-              "name": "primary",
-              "value": "primary"
+              "name": "primary1",
+              "value": "primary1"
             },
             {
-              "name": "secondary",
-              "value": "secondary"
+              "name": "secondary1",
+              "value": "secondary1"
             },
             {
-              "name": "tertiary",
-              "value": "tertiary"
+              "name": "tertiary1",
+              "value": "tertiary1"
             }
           ]
         },
@@ -208,23 +208,23 @@
         {
           "component": "select2",
           "name": "variant2LinkType2",
-          "label": "Variant2 Type2",
+          "label": "Variant2 LinkType2",
           "options": [
             {
               "name": "default",
               "value": ""
             },
             {
-              "name": "primary",
+              "name": "primary2",
               "value": "primary"
             },
             {
-              "name": "secondary",
+              "name": "secondary2",
               "value": "secondary"
             },
             {
-              "name": "tertiary",
-              "value": "tertiary"
+              "name": "tertiary2",
+              "value": "tertiary2"
             }
           ]
         }
