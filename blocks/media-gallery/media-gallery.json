@@ -101,25 +101,25 @@
         },
         {
           "component": "reference",
-          "name": "variant2ImageURL1",
-          "label": "ImageURL1",
+          "name": "imageURL1",
+          "label": "Variant2 ImageURL1",
           "multi": false
         },
         {
           "component": "text",
-          "name": "variant2ImageAlt1",
+          "name": "imageAlt1",
           "label": "Variant2 Alt Text1"
         },
         {
           "component": "text",
           "valueType": "string",
-          "name": "variant2Title1",
+          "name": "title1",
           "value": "",
           "label": "Variant2 Title1"
         },
         {
           "component": "richtext",
-          "name": "variant2Description1",
+          "name": "description1",
           "value": "",
           "label": "Variant2 Description1",
           "valueType": "string"
@@ -127,22 +127,22 @@
 
         {
           "component": "aem-content",
-          "name": "variant2Link1",
+          "name": "link1",
           "label": "Variant2 Link1"
         },
         {
           "component": "text",
-          "name": "variant2LinkText1",
+          "name": "linkText1",
           "label": "Variant2 Text1"
         },
         {
           "component": "text",
-          "name": "variant2LinkTitle1",
+          "name": "LinkTitle1",
           "label": "Variant2 Title1"
         },
         {
           "component": "select",
-          "name": "variant2LinkType1",
+          "name": "LinkType1",
           "label": "Variant2 LinkType1",
           "options": [
             {
@@ -165,25 +165,25 @@
         },
         {
           "component": "reference",
-          "name": "variant2ImageURL2",
+          "name": "imageURL2",
           "label": "Variant2 ImageURL2",
           "multi": false
         },
         {
           "component": "text",
-          "name": "variant2ImageAlt2",
+          "name": "imageAlt2",
           "label": "Variant2 Alt Text2"
         },
         {
           "component": "text",
           "valueType": "string",
-          "name": "variant2Title2",
+          "name": "title2",
           "value": "",
           "label": "Variant2 Title2"
         },
         {
           "component": "richtext",
-          "name": "variant2Description2",
+          "name": "description2",
           "value": "",
           "label": "Variant2 Description2",
           "valueType": "string"
@@ -191,22 +191,22 @@
 
         {
           "component": "aem-content",
-          "name": "variant2Link2",
+          "name": "link2",
           "label": "Variant2 Link2"
         },
         {
           "component": "text",
-          "name": "variant2LinkText2",
+          "name": "linkText2",
           "label": "Variant2 Text2"
         },
         {
           "component": "text",
-          "name": "variant2LinkTitle2",
+          "name": "linkTitle2",
           "label": "Variant2 Title2"
         },
         {
           "component": "select",
-          "name": "variant2LinkType2",
+          "name": "linkType2",
           "label": "Variant2 LinkType2",
           "options": [
             {
