@@ -274,26 +274,28 @@
         "label": "Variant2 Title1"
       },
       {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "ctaLink",
+        "label": "CTA Link",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "ctaText",
+        "label": "CTA Text",
+        "value": ""
+      },
+      {
         "component": "select",
-        "name": "variant2LinkType1",
-        "label": "Variant2 Type1",
+        "name": "ctaType",
+        "label": "CTA Type",
         "options": [
-          {
-            "name": "default",
-            "value": ""
-          },
-          {
-            "name": "primary",
-            "value": "primary"
-          },
-          {
-            "name": "secondary",
-            "value": "secondary"
-          },
-          {
-            "name": "tertiary",
-            "value": "tertiary"
-          }
+          { "name": "default", "value": "" },
+          { "name": "primary", "value": "primary" },
+          { "name": "secondary", "value": "secondary" },
+          { "name": "tertiary", "value": "tertiary" }
         ]
       }
 
