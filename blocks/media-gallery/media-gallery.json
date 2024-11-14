@@ -117,7 +117,7 @@
         {
           "component": "text",
           "name": "variant2Title1",
-          "label": "Variant2 Title1"
+          "label": "Vatiant2 Title1"
         },
         {
           "component": "richtext",
@@ -174,14 +174,14 @@
         {
           "component": "text",
           "valueType": "string",
-          "name": "image2AltVariant2",
+          "name": "imageAlt2Variant2",
           "label": "Variant2 Alt2",
           "value": ""
         },
         {
           "component": "text",
           "name": "variant2Title2",
-          "label": "Variant2 Title2"
+          "label": "Vatiant2 Title2"
         },
         {
           "component": "richtext",
