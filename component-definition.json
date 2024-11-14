@@ -159,7 +159,7 @@
         },
         {
           "title": "Media-Gallery",
-          "id": "media-gallery",
+          "id": "media-galleryContent",
           "plugins": {
             "xwalk": {
               "page": {
@@ -181,8 +181,8 @@
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "tabContent",
-                  "model": "tabContent"
+                  "name": "media-galleryContent",
+                  "model": "media-galleryContent"
                 }
               }
             }
