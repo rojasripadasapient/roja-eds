@@ -220,8 +220,15 @@
         "valueType": "string"
       },
       {
+        "component": "richtext",
+        "name": "description",
+        "value": "",
+        "label": "Description",
+        "valueType": "string"
+      },
+      {
         "component": "aem-content",
-        "name": "variant1 Link",
+        "name": "variant1Link",
         "label": "Variant1 Link"
       },
       {
@@ -236,15 +243,29 @@
       },
       {
         "component": "select",
-        "name": "ctaType",
-        "label": "CTA Type",
+        "name": "variant1LinkType",
+        "label": "Variant1 LinkType",
         "options": [
-          { "name": "default", "value": "" },
-          { "name": "primary", "value": "primary" },
-          { "name": "secondary", "value": "secondary" },
-          { "name": "tertiary", "value": "tertiary" }
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          },
+          {
+            "name": "tertiary",
+            "value": "tertiary"
+          }
         ]
       }
+
+
     ]
   },
   {
