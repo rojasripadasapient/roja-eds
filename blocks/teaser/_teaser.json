@@ -1,7 +1,7 @@
 {
   "definitions": [
     {
-      "title": "teaser",
+      "title": "Teaser",
       "id": "teaser",
       "plugins": {
         "xwalk": {
@@ -17,7 +17,7 @@
       }
     },
     {
-      "title": "teaser Content",
+      "title": "Teaser Content",
       "id": "teaserContent",
       "plugins": {
         "xwalk": {
@@ -39,17 +39,13 @@
       "fields": [
         {
           "component": "select",
-          "name": "teaserType",
-          "label": "Type",
+          "label": "Variation Type",
+          "name": "varType",
+          "valueType": "string",
+          "description": "",
           "options": [
-            {
-              "name": "var1",
-              "value": "var1"
-            },
-            {
-              "name": "var2",
-              "value": "var2"
-            }
+            { "name": "Variation 1", "value": "var1" },
+            { "name": "Variation 2", "value": "var2" }
           ]
         },
         {
