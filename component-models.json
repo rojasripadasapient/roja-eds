@@ -218,13 +218,6 @@
     "id": "media-gallery",
     "fields": [
       {
-        "component": "text",
-        "valueType": "string",
-        "name": "tabName",
-        "label": "Tab Name",
-        "multi": false
-      },
-      {
         "component": "reference",
         "valueType": "string",
         "name": "image",
