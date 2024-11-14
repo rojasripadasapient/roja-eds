@@ -405,8 +405,8 @@
       },
       {
         "component": "select",
-        "name": "variant2LinkType",
-        "label": "Variant2 LinkType",
+        "name": "variant2LinkType2",
+        "label": "Variant2 LinkType2",
         "condition": { "==": [{ "var": "varType" }, "var2"] },
         "options": [
           {
