@@ -1,7 +1,7 @@
 {
   "definitions": [
     {
-      "title": "Teaser",
+      "title": "teaser",
       "id": "teaser",
       "plugins": {
         "xwalk": {
@@ -10,7 +10,23 @@
             "template": {
               "name": "teaser",
               "model": "teaser",
-              "filter" : "teaser"
+              "filter": "teaser"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "teaser Content",
+      "id": "teaserContent",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "teaserContent",
+              "model": "teaserContent",
+              "filter": "teaserContent"
             }
           }
         }
@@ -23,7 +39,7 @@
       "fields": [
         {
           "component": "select",
-          "name": "teaser",
+          "name": "Variation Type",
           "label": "Type",
           "options": [
             {
@@ -259,7 +275,7 @@
   "filters": [
     {
       "id": "teaser",
-      "components": []
+      "components": ["teaserContent"]
     }
   ]
 }

@@ -203,7 +203,7 @@
     ]
   },
   {
-    "id": "teaser",
+    "id": "teaserContent",
     "fields": [
       {
         "component": "select",
