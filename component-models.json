@@ -177,43 +177,43 @@
       },
       {
         "component": "reference",
-        "name": "imageURL",
-        "label": "ImageURL",
+        "name": "imageURLVariant1",
+        "label": "ImageURL Variant1",
         "multi": false
       },
       {
         "component": "text",
-        "name": "imageAlt",
-        "label": "Alt Text"
+        "name": "imageAlt Variant1",
+        "label": "Alt Text Variant1"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "itemTitle",
+        "name": "itemTitleVariant1",
         "value": "",
-        "label": "Title"
+        "label": "Title Variant1"
       },
       {
         "component": "richtext",
-        "name": "description",
+        "name": "descriptionVariant1",
         "value": "",
-        "label": "Description",
+        "label": "Description Variant1",
         "valueType": "string"
       },
       {
         "component": "aem-content",
-        "name": "link",
-        "label": "Link"
+        "name": "linkVariant1",
+        "label": "Link Variant1"
       },
       {
         "component": "text",
-        "name": "linkText",
-        "label": "Text"
+        "name": "linkTextVariant1",
+        "label": "TextVariant1"
       },
       {
         "component": "select",
-        "name": "linkType",
-        "label": "Type",
+        "name": "linkTypeVariant1",
+        "label": "Type Variant1",
         "options": [
           {
             "name": "default",
