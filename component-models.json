@@ -284,18 +284,18 @@
       },
       {
         "component": "aem-content",
-        "name": "variant2link1",
-        "label": "Variant2 Link1"
+        "name": "link",
+        "label": "Link"
       },
       {
         "component": "text",
-        "name": "variant2linkText1",
-        "label": "Variant2 Text"
+        "name": "linkText",
+        "label": "Text"
       },
       {
         "component": "select",
-        "name": "variant2LinkType1",
-        "label": "variant2 Type1",
+        "name": "linkType",
+        "label": "Type",
         "options": [
           {
             "name": "default",
@@ -346,4 +346,5 @@
     ]
   }
 ]
+
 
