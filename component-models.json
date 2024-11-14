@@ -194,6 +194,18 @@
     ]
   },
   {
+    "id": "teaser",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "blockTitle",
+        "label": "Title",
+        "value": ""
+      }
+    ]
+  },
+  {
     "id": "teaserContent",
     "fields": [
       {
