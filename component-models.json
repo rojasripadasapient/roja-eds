@@ -426,26 +426,6 @@
             "value": "tertiary"
           }
         ]
-      },
-      {
-        "component": "richtext",
-        "name": "usp",
-        "value": "",
-        "label": "USP",
-        "valueType": "string",
-        "description": "Add USP and USP-Value as key-value pair",
-        "multi": true,
-        "condition": { "==": [{ "var": "varType" }, "var2"] }
-      },
-      {
-        "component": "richtext",
-        "name": "uspvalue",
-        "value": "",
-        "label": "USP Value",
-        "description": "Add USP and USP-Value as key-value pair",
-        "valueType": "string",
-        "multi": true,
-        "condition": { "==": [{ "var": "varType" }, "var2"] }
       }
     ]
   }
