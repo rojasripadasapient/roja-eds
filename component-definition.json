@@ -172,6 +172,25 @@
             }
           }
         },
+
+        {
+          "title": "Tab Content",
+          "id": "tabContent",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "tabContent",
+                  "model": "tabContent",
+                  "filter": "tabContent"
+                }
+              }
+            }
+          }
+        },
+
+
         {
           "title": "Hero",
           "id": "hero",

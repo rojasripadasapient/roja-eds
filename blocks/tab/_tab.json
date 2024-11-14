@@ -1,15 +1,32 @@
 {
   "definitions": [
     {
-      "title": "Hero",
-      "id": "hero",
+      "title": "Tab",
+      "id": "tab",
       "plugins": {
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block",
             "template": {
-              "name": "Hero",
-              "model": "hero"
+              "name": "tab",
+              "model": "tab",
+              "filter": "tab"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Tab Content",
+      "id": "tabContent",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "tabContent",
+              "model": "tabContent",
+              "filter": "tabContent"
             }
           }
         }
@@ -18,8 +35,27 @@
   ],
   "models": [
     {
-      "id": "hero",
+      "id": "tab",
       "fields": [
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "blockTitle",
+          "label": "Title",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "tabContent",
+      "fields": [
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "tabName",
+          "label": "Tab Name",
+          "multi": false
+        },
         {
           "component": "reference",
           "valueType": "string",
@@ -28,21 +64,85 @@
           "multi": false
         },
         {
+          "component": "select",
+          "label": "Variation Type",
+          "name": "varType",
+          "valueType": "string",
+          "description": "Select Variation 1 for displaying Heading & Description, and select Variation 2 for displaying Features",
+          "options": [
+            { "name": "Variation 1", "value": "var1" },
+            { "name": "Variation 2", "value": "var2" }
+          ]
+        },
+        {
           "component": "text",
           "valueType": "string",
-          "name": "imageAlt",
-          "label": "Alt",
-          "value": ""
+          "name": "heading",
+          "label": "Heading",
+          "value": "",
+          "condition": { "==": [{ "var": "varType" }, "var1"] }
         },
         {
           "component": "richtext",
-          "name": "text",
+          "name": "description",
+          "label": "Description",
+          "condition": { "==": [{ "var": "varType" }, "var1"] }
+        },
+        {
+          "component": "aem-content",
+          "valueType": "string",
+          "name": "ctaLink",
+          "label": "CTA Link",
           "value": "",
-          "label": "Text",
-          "valueType": "string"
+          "condition": { "==": [{ "var": "varType" }, "var1"] }
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "ctaText",
+          "label": "CTA Text",
+          "value": "",
+          "condition": { "==": [{ "var": "varType" }, "var1"] }
+        },
+        {
+          "component": "select",
+          "name": "ctaType",
+          "label": "CTA Type",
+          "options": [
+            { "name": "default", "value": "" },
+            { "name": "primary", "value": "primary" },
+            { "name": "secondary", "value": "secondary" },
+            { "name": "tertiary", "value": "tertiary" }
+          ],
+          "condition": { "==": [{ "var": "varType" }, "var1"] }
+        },
+        {
+          "component": "richtext",
+          "name": "usp",
+          "value": "",
+          "label": "USP",
+          "valueType": "string",
+          "description": "Add USP and USP-Value as key-value pair",
+          "multi": true,
+          "condition": { "==": [{ "var": "varType" }, "var2"] }
+        },
+        {
+          "component": "richtext",
+          "name": "uspvalue",
+          "value": "",
+          "label": "USP Value",
+          "description": "Add USP and USP-Value as key-value pair",
+          "valueType": "string",
+          "multi": true,
+          "condition": { "==": [{ "var": "varType" }, "var2"] }
         }
       ]
     }
   ],
-  "filters": []
+  "filters": [
+    {
+      "id": "tab",
+      "components": ["tabContent"]
+    }
+  ]
 }
