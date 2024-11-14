@@ -190,6 +190,60 @@
 
 
 
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "variant2Image2",
+          "label": "Variant2 Image2",
+          "multi": false,
+          "condition": { "==": [{ "var": "varType" }, "var2"] }
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "image2AltVariant2",
+          "label": "Variant2 Alt12",
+          "value": "",
+          "condition": { "==": [{ "var": "varType" }, "var2"] }
+        },
+        {
+          "component": "text",
+          "name": "variant2Title2",
+          "label": "Vatiant2 Title2",
+          "condition": { "==": [{ "var": "varType" }, "var2"] }
+        },
+        {
+          "component": "richtext",
+          "name": "variant2Text2",
+          "value": "",
+          "label": "Variant2 Text2",
+          "valueType": "string",
+          "condition": { "==": [{ "var": "varType" }, "var2"] }
+        },
+        {
+          "component": "select",
+          "name": "variant2LinkType",
+          "label": "Variant2 LinkType",
+          "condition": { "==": [{ "var": "varType" }, "var2"] },
+          "options": [
+            {
+              "name": "default",
+              "value": ""
+            },
+            {
+              "name": "primary",
+              "value": "primary"
+            },
+            {
+              "name": "secondary",
+              "value": "secondary"
+            },
+            {
+              "name": "tertiary",
+              "value": "tertiary"
+            }
+          ]
+        },
 
 
         {
