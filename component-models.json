@@ -180,29 +180,43 @@
     "id": "media-gallery",
     "fields": [
       {
+        "component": "select",
+        "name": "teaser",
+        "label": "Type",
+        "options": [
+          {
+            "name": "variant1",
+            "value": "variant1"
+          },
+          {
+            "name": "variant2",
+            "value": "variant2"
+          }
+        ]
+      },
+      {
         "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
+        "name": "imageURL",
+        "label": "ImageURL",
         "multi": false
       },
       {
         "component": "text",
-        "valueType": "string",
         "name": "imageAlt",
-        "label": "Alt",
-        "value": ""
+        "label": "Alt Text"
       },
       {
         "component": "text",
-        "name": "Title",
+        "valueType": "string",
+        "name": "itemTitle",
+        "value": "",
         "label": "Title"
       },
       {
         "component": "richtext",
-        "name": "text",
+        "name": "description",
         "value": "",
-        "label": "Text",
+        "label": "Description",
         "valueType": "string"
       },
       {
@@ -216,14 +230,24 @@
         "label": "Text"
       },
       {
+        "component": "aem-content",
+        "name": "variant1Link",
+        "label": "Variant1 Link"
+      },
+      {
         "component": "text",
-        "name": "linkTitle",
-        "label": "Title"
+        "name": "variant1LinkText",
+        "label": "Variant1 Text"
+      },
+      {
+        "component": "text",
+        "name": "variant1LinkTitle",
+        "label": "Variant1 Title"
       },
       {
         "component": "select",
-        "name": "linkType",
-        "label": "Type",
+        "name": "variant1LinkType",
+        "label": "Variant1 LinkType",
         "options": [
           {
             "name": "default",
@@ -243,7 +267,6 @@
           }
         ]
       }
-
     ]
   },
   {

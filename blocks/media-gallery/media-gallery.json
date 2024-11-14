@@ -22,6 +22,32 @@
       "id": "media-gallery",
       "fields": [
         {
+          "component": "select",
+          "name": "teaser",
+          "label": "Type",
+          "options": [
+            {
+              "name": "variant1",
+              "value": "variant1"
+            },
+            {
+              "name": "variant2",
+              "value": "variant2"
+            }
+          ]
+        },
+        {
+          "component": "reference",
+          "name": "imageURL",
+          "label": "ImageURL",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "name": "imageAlt",
+          "label": "Alt Text"
+        },
+        {
           "component": "text",
           "valueType": "string",
           "name": "itemTitle",
@@ -36,17 +62,6 @@
           "valueType": "string"
         },
         {
-          "component": "reference",
-          "name": "imageURL",
-          "label": "ImageURL",
-          "multi": false
-        },
-        {
-          "component": "text",
-          "name": "imageAlt",
-          "label": "Alt Text"
-        },
-        {
           "component": "aem-content",
           "name": "link",
           "label": "Link"
@@ -55,6 +70,44 @@
           "component": "text",
           "name": "linkText",
           "label": "Text"
+        },
+        {
+          "component": "aem-content",
+          "name": "variant1Link",
+          "label": "Variant1 Link"
+        },
+        {
+          "component": "text",
+          "name": "variant1LinkText",
+          "label": "Variant1 Text"
+        },
+        {
+          "component": "text",
+          "name": "variant1LinkTitle",
+          "label": "Variant1 Title"
+        },
+        {
+          "component": "select",
+          "name": "variant1LinkType",
+          "label": "Variant1 LinkType",
+          "options": [
+            {
+              "name": "default",
+              "value": ""
+            },
+            {
+              "name": "primary",
+              "value": "primary"
+            },
+            {
+              "name": "secondary",
+              "value": "secondary"
+            },
+            {
+              "name": "tertiary",
+              "value": "tertiary"
+            }
+          ]
         }
       ]
     }
