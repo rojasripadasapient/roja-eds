@@ -117,18 +117,18 @@
         },
         {
           "component": "aem-content",
-          "name": "link1Variant2",
-          "label": "Link1 Variant2"
+          "name": "link",
+          "label": "Link"
         },
         {
           "component": "text",
-          "name": "linkText1Variant2",
-          "label": "Text1 Variant2"
+          "name": "linkText",
+          "label": "Text"
         },
         {
           "component": "select",
-          "name": "linkType1Variant2",
-          "label": "Type1 Variant2",
+          "name": "linkType",
+          "label": "Type",
           "options": [
             {
               "name": "default",
