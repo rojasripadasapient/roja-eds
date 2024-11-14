@@ -187,9 +187,6 @@
             }
           ]
         },
-
-
-
         {
           "component": "reference",
           "valueType": "string",
@@ -221,9 +218,27 @@
           "condition": { "==": [{ "var": "varType" }, "var2"] }
         },
         {
+          "component": "aem-content",
+          "name": "variant2Link2",
+          "label": "Variant2 Link2",
+          "condition": { "==": [{ "var": "varType" }, "var2"] }
+        },
+        {
+          "component": "text",
+          "name": "variant2LinkText2",
+          "label": "Variant2 Text2",
+          "condition": { "==": [{ "var": "varType" }, "var2"] }
+        },
+        {
+          "component": "text",
+          "name": "variant2LinkTitle2",
+          "label": "Variant2 Title2",
+          "condition": { "==": [{ "var": "varType" }, "var2"] }
+        },
+        {
           "component": "select",
           "name": "variant2LinkType2",
-          "label": "Variant2 LinkType2",
+          "label": "Variant2 Type2",
           "condition": { "==": [{ "var": "varType" }, "var2"] },
           "options": [
             {
