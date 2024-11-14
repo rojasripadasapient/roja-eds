@@ -158,7 +158,7 @@
           }
         },
         {
-          "title": "Media-Gallerry",
+          "title": "Media-Gallery",
           "id": "media-gallery",
           "plugins": {
             "xwalk": {
