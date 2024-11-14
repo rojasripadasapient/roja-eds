@@ -314,64 +314,6 @@
             "value": "tertiary"
           }
         ]
-      },
-      {
-        "component": "reference",
-        "name": "variant2ImageURL2",
-        "label": "Variant2 ImageURL2",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "name": "variant2ImageAlt2",
-        "label": "Variant2 Alt Text2"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "variant2Title2",
-        "value": "",
-        "label": "Variant2 Title2"
-      },
-      {
-        "component": "richtext",
-        "name": "variant2Description2",
-        "value": "",
-        "label": "Variant2 Description2",
-        "valueType": "string"
-      },
-      {
-        "component": "aem-content",
-        "name": "variant2Link2",
-        "label": "Variant2 Link2"
-      },
-      {
-        "component": "text",
-        "name": "variant2LinkText2",
-        "label": "Variant2 Text2"
-      },
-      {
-        "component": "select",
-        "name": "variant2LinkType2",
-        "label": "Variant2 Type2",
-        "options": [
-          {
-            "name": "default",
-            "value": ""
-          },
-          {
-            "name": "primary",
-            "value": "primary"
-          },
-          {
-            "name": "secondary",
-            "value": "secondary"
-          },
-          {
-            "name": "tertiary",
-            "value": "tertiary"
-          }
-        ]
       }
 
 
