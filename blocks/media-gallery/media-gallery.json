@@ -63,50 +63,27 @@
         },
         {
           "component": "aem-content",
-          "name": "link",
-          "label": "Link"
+          "valueType": "string",
+          "name": "ctaLink",
+          "label": "CTA Link",
+          "value": ""
         },
         {
           "component": "text",
-          "name": "linkText",
-          "label": "Text"
-        },
-        {
-          "component": "aem-content",
-          "name": "variant1Link",
-          "label": "Variant1 Link"
-        },
-        {
-          "component": "text",
-          "name": "variant1LinkText",
-          "label": "Variant1 Text"
-        },
-        {
-          "component": "text",
-          "name": "variant1LinkTitle",
-          "label": "Variant1 Title"
+          "valueType": "string",
+          "name": "ctaText",
+          "label": "CTA Text",
+          "value": ""
         },
         {
           "component": "select",
-          "name": "variant1LinkType",
-          "label": "Variant1 LinkType",
+          "name": "ctaType",
+          "label": "CTA Type",
           "options": [
-            {
-              "name": "default",
-              "value": ""
-            },
-            {
-              "name": "primary",
-              "value": "primary"
-            },
-            {
-              "name": "secondary",
-              "value": "secondary"
-            },
-            {
-              "name": "tertiary",
-              "value": "tertiary"
-            }
+            { "name": "default", "value": "" },
+            { "name": "primary", "value": "primary" },
+            { "name": "secondary", "value": "secondary" },
+            { "name": "tertiary", "value": "tertiary" }
           ]
         }
       ]
