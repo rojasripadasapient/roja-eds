@@ -230,67 +230,69 @@
           {
             "name": "tertiary",
             "value": "tertiary"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "name": "imageURL1Variant2",
+        "label": "ImageURL1 Variant2",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "imageAlt1 Variant2",
+        "label": "Alt Text1 Variant2"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "itemTitle1Variant2",
+        "value": "",
+        "label": "Title1 Variant2"
+      },
+      {
+        "component": "richtext",
+        "name": "description1Variant2",
+        "value": "",
+        "label": "Description1 Variant2",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "link1",
+        "label": "Link1"
+      },
+      {
+        "component": "text",
+        "name": "linkText1",
+        "label": "Text1"
+      },
+      {
+        "component": "select",
+        "name": "linkType1",
+        "label": "Type1",
+        "options": [
+          {
+            "name": "default",
+            "value": ""
           },
           {
-            "component": "reference",
-            "name": "imageURL1Variant2",
-            "label": "ImageURL1 Variant2",
-            "multi": false
+            "name": "primary",
+            "value": "primary"
           },
           {
-            "component": "text",
-            "name": "imageAlt1 Variant2",
-            "label": "Alt Text1 Variant2"
+            "name": "secondary",
+            "value": "secondary"
           },
           {
-            "component": "text",
-            "valueType": "string",
-            "name": "itemTitle1Variant2",
-            "value": "",
-            "label": "Title1 Variant2"
-          },
-          {
-            "component": "richtext",
-            "name": "description1Variant2",
-            "value": "",
-            "label": "Description1 Variant2",
-            "valueType": "string"
-          },
-          {
-            "component": "aem-content",
-            "name": "link1",
-            "label": "Link1"
-          },
-          {
-            "component": "text",
-            "name": "linkText1",
-            "label": "Text1"
-          },
-          {
-            "component": "select",
-            "name": "linkType1",
-            "label": "Type1",
-            "options": [
-              {
-                "name": "default",
-                "value": ""
-              },
-              {
-                "name": "primary",
-                "value": "primary"
-              },
-              {
-                "name": "secondary",
-                "value": "secondary"
-              },
-              {
-                "name": "tertiary",
-                "value": "tertiary"
-              }
-            ]
+            "name": "tertiary",
+            "value": "tertiary"
           }
         ]
       }
+
+
     ]
   },
 
