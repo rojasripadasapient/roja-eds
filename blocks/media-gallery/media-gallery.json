@@ -132,12 +132,12 @@
         {
           "component": "text",
           "name": "variant2LinkText1",
-          "label": "Variant2 Text1"
+          "label": "Variant2 LinkText1"
         },
         {
           "component": "text",
           "name": "variant2LinkTitle1",
-          "label": "Variant2 Title1"
+          "label": "Variant2 Link Title1"
         },
         {
           "component": "select",
@@ -172,6 +172,8 @@
     }
   ]
 }
+
+
 
 
 
