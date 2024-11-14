@@ -1,16 +1,16 @@
 {
   "definitions": [
     {
-      "title": "Media-Gallery",
-      "id": "media-gallery",
+      "title": "Teaser",
+      "id": "teaser",
       "plugins": {
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block",
             "template": {
-              "name": "media-gallery",
-              "model": "media-gallery",
-              "filter" : "media-gallery"
+              "name": "teaser",
+              "model": "teaser",
+              "filter" : "teaser"
             }
           }
         }
@@ -19,7 +19,7 @@
   ],
   "models": [
     {
-      "id": "media-gallery",
+      "id": "teaser",
       "fields": [
         {
           "component": "select",
@@ -110,7 +110,7 @@
         {
           "component": "text",
           "valueType": "string",
-          "name": "image1AltVariant2",
+          "name": "imageAlt1Variant2",
           "label": "Variant2 Alt1",
           "value": ""
         },
@@ -128,23 +128,23 @@
         },
         {
           "component": "aem-content",
-          "name": "variant2Link",
-          "label": "Variant2 Link"
+          "name": "variant2Link1",
+          "label": "Variant2 Link1"
         },
         {
           "component": "text",
-          "name": "variant2LinkText",
-          "label": "Variant2 Text"
+          "name": "variant2LinkText1",
+          "label": "Variant2 Text1"
         },
         {
           "component": "text",
-          "name": "variant2LinkTitle",
-          "label": "Variant2 Title"
+          "name": "variant2LinkTitle1",
+          "label": "Variant2 Title1"
         },
         {
           "component": "select",
-          "name": "variant2LinkType",
-          "label": "Variant2 Type",
+          "name": "variant2LinkType1",
+          "label": "Variant2 Type1",
           "options": [
             {
               "name": "default",
@@ -192,23 +192,23 @@
         },
         {
           "component": "aem-content",
-          "name": "variant3Link",
-          "label": "Variant3 Link"
+          "name": "variant2Link2",
+          "label": "Variant2 Link2"
         },
         {
           "component": "text",
-          "name": "variant3LinkText",
-          "label": "Variant3 Text"
+          "name": "variant2LinkText2",
+          "label": "Variant2 Text2"
         },
         {
           "component": "text",
-          "name": "variant3LinkTitle",
-          "label": "Variant3 Title"
+          "name": "variant2LinkTitle2",
+          "label": "Variant2 Title2"
         },
         {
           "component": "select",
-          "name": "variant3LinkType",
-          "label": "Variant3 Type",
+          "name": "variant2LinkType2",
+          "label": "Variant2 Type2",
           "options": [
             {
               "name": "default",
@@ -233,7 +233,7 @@
   ],
   "filters": [
     {
-      "id": "media-gallery",
+      "id": "teaser",
       "components": []
     }
   ]
