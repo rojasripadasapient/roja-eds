@@ -215,7 +215,7 @@
     ]
   },
   {
-    "id": "media-galleryConntent",
+    "id": "media-gallery",
     "fields": [
       {
         "component": "text",
