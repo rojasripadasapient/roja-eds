@@ -245,6 +245,7 @@
         "component": "select",
         "name": "variant2LinkType1",
         "label": "Variant2 Type1",
+        "condition": { "==": [{ "var": "varType" }, "var1"] },
         "options": [
           {
             "name": "default",
