@@ -141,7 +141,7 @@
   ],
   "filters": [
     {
-      "id": "tab",
+      "id": "teaser",
       "components": ["teaserContent"]
     }
   ]
