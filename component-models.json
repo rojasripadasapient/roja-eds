@@ -399,7 +399,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "image1AltVariant2",
+        "name": "imageAlt1Variant2",
         "label": "Variant2 Alt1",
         "value": "",
         "condition": { "==": [{ "var": "varType" }, "var2"] }
@@ -420,26 +420,26 @@
       },
       {
         "component": "aem-content",
-        "name": "variant2Link",
-        "label": "Variant2 Link",
+        "name": "variant2Link1",
+        "label": "Variant2 Link1",
         "condition": { "==": [{ "var": "varType" }, "var2"] }
       },
       {
         "component": "text",
-        "name": "variant2LinkText",
-        "label": "Variant2 Text",
+        "name": "variant2LinkText1",
+        "label": "Variant2 Text1",
         "condition": { "==": [{ "var": "varType" }, "var2"] }
       },
       {
         "component": "text",
-        "name": "variant2LinkTitle",
-        "label": "Variant2 Title",
+        "name": "variant2LinkTitle1",
+        "label": "Variant2 Title1",
         "condition": { "==": [{ "var": "varType" }, "var2"] }
       },
       {
         "component": "select",
-        "name": "variant2LinkType",
-        "label": "Variant2 Type",
+        "name": "variant2LinkType1",
+        "label": "Variant2 Type1",
         "condition": { "==": [{ "var": "varType" }, "var2"] },
         "options": [
           {
