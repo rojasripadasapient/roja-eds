@@ -260,21 +260,6 @@
       },
       {
         "component": "aem-content",
-        "name": "variant2Link1",
-        "label": "Variant2 Link1"
-      },
-      {
-        "component": "text",
-        "name": "variant2LinkText1",
-        "label": "Variant2 Text1"
-      },
-      {
-        "component": "text",
-        "name": "variant2LinkTitle1",
-        "label": "Variant2 Title1"
-      },
-      {
-        "component": "aem-content",
         "valueType": "string",
         "name": "ctaLink",
         "label": "CTA Link",
@@ -298,6 +283,7 @@
           { "name": "tertiary", "value": "tertiary" }
         ]
       }
+
 
 
     ]
