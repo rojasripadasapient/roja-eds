@@ -1,7 +1,7 @@
 {
   "definitions": [
     {
-      "title": "Media-Gallery",
+      "title": "Media Gallery",
       "id": "media-gallery",
       "plugins": {
         "xwalk": {
@@ -17,16 +17,15 @@
       }
     },
     {
-      "title": "Tab Content",
-      "id": "tabContent",
+      "title": "Media Gallery",
+      "id": "mediagallery",
       "plugins": {
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block/item",
             "template": {
-              "name": "tabContent",
-              "model": "tabContent",
-              "filter": "tabContent"
+              "name": "media-gallery",
+              "model": "media-gallery"
             }
           }
         }
@@ -271,7 +270,7 @@
   "filters": [
     {
       "id": "media-gallery",
-      "components": []
+      "components": ["mediagallery"]
     }
   ]
 }
