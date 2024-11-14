@@ -182,46 +182,8 @@
 
 
   {
-    "id": "teaser",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "blockTitle",
-        "label": "Title",
-        "value": ""
-      }
-    ]
-  },
-  {
-    "id": "teaser",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "blockTitle",
-        "label": "Title",
-        "value": ""
-      }
-    ]
-  },
-  {
     "id": "teaserContent",
     "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "teaserName",
-        "label": "teaser Name",
-        "multi": false
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
       {
         "component": "select",
         "label": "Variation Type",
