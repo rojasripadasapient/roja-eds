@@ -260,17 +260,17 @@
       },
       {
         "component": "aem-content",
-        "name": "link1",
+        "name": "variant2Link1",
         "label": "Link1"
       },
       {
         "component": "text",
-        "name": "linkText1",
+        "name": "variant2LinkText1",
         "label": "Text1"
       },
       {
         "component": "select",
-        "name": "linkType1",
+        "name": "variant2LinkType1",
         "label": "Type1",
         "options": [
           {
