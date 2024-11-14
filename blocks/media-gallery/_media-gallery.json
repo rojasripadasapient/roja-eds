@@ -149,6 +149,62 @@
 "value": "",
 "condition": { "==": [{ "var": "varType" }, "var2"] }
 },
+        {
+          "component": "text",
+          "name": "variant2Title1",
+          "label": "Vatiant2 Title1",
+          "condition": { "==": [{ "var": "varType" }, "var2"] }
+        },
+        {
+          "component": "richtext",
+          "name": "variant2Text1",
+          "value": "",
+          "label": "Variant2 Text1",
+          "valueType": "string",
+          "condition": { "==": [{ "var": "varType" }, "var2"] }
+        },
+        {
+          "component": "aem-content",
+          "name": "variant2Link",
+          "label": "Variant2 Link",
+          "condition": { "==": [{ "var": "varType" }, "var2"] }
+        },
+        {
+          "component": "text",
+          "name": "variant2LinkText",
+          "label": "Variant2 Text",
+          "condition": { "==": [{ "var": "varType" }, "var2"] }
+        },
+        {
+          "component": "text",
+          "name": "variant2LinkTitle",
+          "label": "Variant2 Title",
+          "condition": { "==": [{ "var": "varType" }, "var2"] }
+        },
+        {
+          "component": "select",
+          "name": "variant2LinkType",
+          "label": "Variant2 Type",
+          "condition": { "==": [{ "var": "varType" }, "var2"] },
+          "options": [
+            {
+              "name": "default",
+              "value": ""
+            },
+            {
+              "name": "primary",
+              "value": "primary"
+            },
+            {
+              "name": "secondary",
+              "value": "secondary"
+            },
+            {
+              "name": "tertiary",
+              "value": "tertiary"
+            }
+          ]
+        },
 {
 "component": "richtext",
 "name": "usp",
