@@ -123,47 +123,7 @@
           "value": "",
           "label": "Variant2 Description1",
           "valueType": "string"
-        },
-        {
-          "component": "aem-content",
-          "name": "variant2Link1",
-          "label": "Variant2 Link1"
-        },
-        {
-          "component": "text",
-          "name": "variant2LinkText1",
-          "label": "Variant2 Text1"
-        },
-        {
-          "component": "text",
-          "name": "variant2LinkTitle1",
-          "label": "Variant2 Title1"
-        },
-        {
-          "component": "select",
-          "name": "variant2LinkType1",
-          "label": "Variant2 LinkType1",
-          "options": [
-            {
-              "name": "default",
-              "value": ""
-            },
-            {
-              "name": "primary",
-              "value": "primary"
-            },
-            {
-              "name": "secondary",
-              "value": "secondary"
-            },
-            {
-              "name": "tertiary",
-              "value": "tertiary"
-            }
-          ]
         }
-
-
       ]
     }
   ],
