@@ -162,19 +162,8 @@
 
 
   {
-    "id": "teaserContent",
+    "id": "teaser",
     "fields": [
-      {
-        "component": "select",
-        "label": "Variation Type",
-        "name": "varType",
-        "valueType": "string",
-        "description": "",
-        "options": [
-          { "name": "Variation 1", "value": "var1" },
-          { "name": "Variation 2", "value": "var2" }
-        ]
-      },
       {
         "component": "reference",
         "valueType": "string",
