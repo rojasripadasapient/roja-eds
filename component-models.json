@@ -381,13 +381,13 @@
       },
       {
         "component": "text",
-        "name": "variant2LinkText2",
-        "label": "Variant2 Text2"
+        "name": "variant2LinkText",
+        "label": "Variant3 Text"
       },
       {
         "component": "text",
-        "name": "variant2LinkTitle2",
-        "label": "Variant2 Title"
+        "name": "variant3LinkTitle",
+        "label": "Variant3 Title"
       },
       {
         "component": "select",
@@ -460,13 +460,13 @@
             "name": "heading",
             "label": "Heading",
             "value": "",
-            "condition": { "==": [{ "var": "varType" }, "var1"] }
+
           },
           {
             "component": "richtext",
             "name": "description",
             "label": "Description",
-            "condition": { "==": [{ "var": "varType" }, "var1"] }
+
           },
           {
             "component": "aem-content",
@@ -474,7 +474,7 @@
             "name": "ctaLink",
             "label": "CTA Link",
             "value": "",
-            "condition": { "==": [{ "var": "varType" }, "var1"] }
+
           },
           {
             "component": "text",
@@ -482,7 +482,7 @@
             "name": "ctaText",
             "label": "CTA Text",
             "value": "",
-            "condition": { "==": [{ "var": "varType" }, "var1"] }
+
           },
           {
             "component": "select",
@@ -494,7 +494,7 @@
               { "name": "secondary", "value": "secondary" },
               { "name": "tertiary", "value": "tertiary" }
             ],
-            "condition": { "==": [{ "var": "varType" }, "var1"] }
+
           },
           {
             "component": "richtext",
@@ -504,7 +504,7 @@
             "valueType": "string",
             "description": "Add USP and USP-Value as key-value pair",
             "multi": true,
-            "condition": { "==": [{ "var": "varType" }, "var2"] }
+
           },
           {
             "component": "richtext",
@@ -514,10 +514,13 @@
             "description": "Add USP and USP-Value as key-value pair",
             "valueType": "string",
             "multi": true,
-            "condition": { "==": [{ "var": "varType" }, "var2"] }
+
           }
         ]
       }
+
+
+
     ]
   }
 ]
