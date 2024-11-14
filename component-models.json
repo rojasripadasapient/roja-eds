@@ -198,41 +198,48 @@
         "component": "reference",
         "name": "imageURL",
         "label": "ImageURL",
-        "multi": false
+        "multi": false,
+        "condition": { "==": [{ "var": "varType" }, "var1"] }
       },
       {
         "component": "text",
         "name": "imageAlt",
-        "label": "Alt Text"
+        "label": "Alt Text",
+        "condition": { "==": [{ "var": "varType" }, "var1"] }
       },
       {
         "component": "text",
         "valueType": "string",
         "name": "itemTitle",
         "value": "",
-        "label": "Title"
+        "label": "Title",
+        "condition": { "==": [{ "var": "varType" }, "var1"] }
       },
       {
         "component": "richtext",
         "name": "description",
         "value": "",
         "label": "Description",
-        "valueType": "string"
+        "valueType": "string",
+        "condition": { "==": [{ "var": "varType" }, "var1"] }
       },
       {
         "component": "aem-content",
         "name": "variant2Link1",
-        "label": "Variant2 Link1"
+        "label": "Variant2 Link1",
+        "condition": { "==": [{ "var": "varType" }, "var1"] }
       },
       {
         "component": "text",
         "name": "variant2LinkText1",
-        "label": "Variant2 Text1"
+        "label": "Variant2 Text1",
+        "condition": { "==": [{ "var": "varType" }, "var1"] }
       },
       {
         "component": "text",
         "name": "variant2LinkTitle1",
-        "label": "Variant2 Title1"
+        "label": "Variant2 Title1",
+        "condition": { "==": [{ "var": "varType" }, "var1"] }
       },
       {
         "component": "select",
