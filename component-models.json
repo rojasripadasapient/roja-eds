@@ -256,7 +256,74 @@
             "value": "tertiary"
           }
         ]
+      },
+      {
+        "component": "reference",
+        "name": "variant2 imageURL1",
+        "label": "Variant2 ImageURL1",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "variant2 imageAlt1",
+        "label": "Variant2 Alt Text1"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "variant2 title1",
+        "value": "",
+        "label": "Variant2 Title1"
+      },
+      {
+        "component": "richtext",
+        "name": "variant2 description1",
+        "value": "",
+        "label": "Variant2 Description1",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "variant2Link1",
+        "label": "Variant2 Link1"
+      },
+      {
+        "component": "text",
+        "name": "variant2LinkText1",
+        "label": "Variant2 Text1"
+      },
+      {
+        "component": "text",
+        "name": "variant2LinkTitle1",
+        "label": "Variant2 Title1"
+      },
+      {
+        "component": "select",
+        "name": "variant2LinkType1",
+        "label": "Variant2 LinkType1",
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          },
+          {
+            "name": "tertiary",
+            "value": "tertiary"
+          }
+        ]
       }
+
+
+
+
     ]
   },
   {
