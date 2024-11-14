@@ -63,17 +63,18 @@
         },
         {
           "component": "aem-content",
-          "valueType": "string",
-          "name": "ctaLink",
-          "label": "CTA Link",
-          "value": ""
+          "name": "variant1Link",
+          "label": "Variant1 Link"
         },
         {
           "component": "text",
-          "valueType": "string",
-          "name": "ctaText",
-          "label": "CTA Text",
-          "value": ""
+          "name": "variant1LinkText",
+          "label": "Variant1 Text"
+        },
+        {
+          "component": "text",
+          "name": "variant1LinkTitle",
+          "label": "Variant1 Title"
         },
         {
           "component": "select",
