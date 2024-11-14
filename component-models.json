@@ -218,13 +218,6 @@
     "id": "media-gallery",
     "fields": [
       {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
         "component": "select",
         "label": "Variation Type",
         "name": "varType",
@@ -236,12 +229,11 @@
         ]
       },
       {
-        "component": "text",
+        "component": "reference",
         "valueType": "string",
-        "name": "heading",
-        "label": "Heading",
-        "value": "",
-        "condition": { "==": [{ "var": "varType" }, "var1"] }
+        "name": "image",
+        "label": "Image",
+        "multi": false
       },
       {
         "component": "richtext",

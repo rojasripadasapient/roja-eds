@@ -46,13 +46,9 @@
         }
       ]
     },
-        {
-          "component": "reference",
-          "valueType": "string",
-          "name": "image",
-          "label": "Image",
-          "multi": false
-        },
+    {
+      "id": "mediaContent",
+      "fields": [
         {
           "component": "select",
           "label": "Variation Type",
@@ -65,12 +61,11 @@
           ]
         },
         {
-          "component": "text",
+          "component": "reference",
           "valueType": "string",
-          "name": "heading",
-          "label": "Heading",
-          "value": "",
-          "condition": { "==": [{ "var": "varType" }, "var1"] }
+          "name": "image",
+          "label": "Image",
+          "multi": false
         },
         {
           "component": "richtext",
