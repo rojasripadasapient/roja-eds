@@ -61,94 +61,94 @@
           ]
         },
         {
-  "component": "reference",
-  "valueType": "string",
-  "name": "variant1Image",
-  "label": "Variant1 Image",
-  "multi": false,
-  "condition": { "==": [{ "var": "varType" }, "var1"] }
-},
-{
-"component": "text",
-"valueType": "string",
-"name": "imageAltVariant1",
-"label": "Variant1 Alt",
-"value": "",
-"condition": { "==": [{ "var": "varType" }, "var1"] }
-},
-{
-"component": "text",
-"name": "variant1Title",
-"label": "Vatiant1 Title",
-"condition": { "==": [{ "var": "varType" }, "var1"] }
-},
-{
-"component": "richtext",
-"name": "variant1Text",
-"value": "",
-"label": "Variant1 Text",
-"valueType": "string",
-"condition": { "==": [{ "var": "varType" }, "var1"] }
-},
-{
-"component": "aem-content",
-"name": "variant1Link",
-"label": "Variant1 Link",
-"condition": { "==": [{ "var": "varType" }, "var1"] }
-},
-{
-"component": "text",
-"name": "variant1LinkText",
-"label": "Variant1 Text",
-"condition": { "==": [{ "var": "varType" }, "var1"] }
-},
-{
-"component": "text",
-"name": "variant1LinkTitle",
-"label": "Variant1 Title",
-"condition": { "==": [{ "var": "varType" }, "var1"] }
-},
-{
-"component": "select",
-"name": "variant1LinkType",
-"label": "Variant1 LinkType",
-"condition": { "==": [{ "var": "varType" }, "var1"] },
-"options": [
-{
-"name": "default",
-"value": ""
-},
-{
-"name": "primary",
-"value": "primary"
-},
-{
-"name": "secondary",
-"value": "secondary"
-},
-{
-"name": "tertiary",
-"value": "tertiary"
-}
-]
-},
+          "component": "reference",
+          "valueType": "string",
+          "name": "variant1Image",
+          "label": "Variant1 Image",
+          "multi": false,
+          "condition": { "==": [{ "var": "varType" }, "var1"] }
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "imageAltVariant1",
+          "label": "Variant1 Alt",
+          "value": "",
+          "condition": { "==": [{ "var": "varType" }, "var1"] }
+        },
+        {
+          "component": "text",
+          "name": "variant1Title",
+          "label": "Vatiant1 Title",
+          "condition": { "==": [{ "var": "varType" }, "var1"] }
+        },
+        {
+          "component": "richtext",
+          "name": "variant1Text",
+          "value": "",
+          "label": "Variant1 Text",
+          "valueType": "string",
+          "condition": { "==": [{ "var": "varType" }, "var1"] }
+        },
+        {
+          "component": "aem-content",
+          "name": "variant1Link",
+          "label": "Variant1 Link",
+          "condition": { "==": [{ "var": "varType" }, "var1"] }
+        },
+        {
+          "component": "text",
+          "name": "variant1LinkText",
+          "label": "Variant1 Text",
+          "condition": { "==": [{ "var": "varType" }, "var1"] }
+        },
+        {
+          "component": "text",
+          "name": "variant1LinkTitle",
+          "label": "Variant1 Title",
+          "condition": { "==": [{ "var": "varType" }, "var1"] }
+        },
+        {
+          "component": "select",
+          "name": "variant1LinkType",
+          "label": "Variant1 LinkType",
+          "condition": { "==": [{ "var": "varType" }, "var1"] },
+          "options": [
+            {
+              "name": "default",
+              "value": ""
+            },
+            {
+              "name": "primary",
+              "value": "primary"
+            },
+            {
+              "name": "secondary",
+              "value": "secondary"
+            },
+            {
+              "name": "tertiary",
+              "value": "tertiary"
+            }
+          ]
+        },
 
-{
-"component": "reference",
-"valueType": "string",
-"name": "variant2Image1",
-"label": "Variant2 Image1",
-"multi": false,
-"condition": { "==": [{ "var": "varType" }, "var2"] }
-},
-{
-"component": "text",
-"valueType": "string",
-"name": "image1AltVariant2",
-"label": "Variant2 Alt1",
-"value": "",
-"condition": { "==": [{ "var": "varType" }, "var2"] }
-},
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "variant2Image1",
+          "label": "Variant2 Image1",
+          "multi": false,
+          "condition": { "==": [{ "var": "varType" }, "var2"] }
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "image1AltVariant2",
+          "label": "Variant2 Alt1",
+          "value": "",
+          "condition": { "==": [{ "var": "varType" }, "var2"] }
+        },
         {
           "component": "text",
           "name": "variant2Title1",
@@ -164,27 +164,9 @@
           "condition": { "==": [{ "var": "varType" }, "var2"] }
         },
         {
-          "component": "aem-content",
-          "name": "variant2Link",
-          "label": "Variant2 Link",
-          "condition": { "==": [{ "var": "varType" }, "var2"] }
-        },
-        {
-          "component": "text",
-          "name": "variant2LinkText",
-          "label": "Variant2 Text",
-          "condition": { "==": [{ "var": "varType" }, "var2"] }
-        },
-        {
-          "component": "text",
-          "name": "variant2LinkTitle",
-          "label": "Variant2 Title",
-          "condition": { "==": [{ "var": "varType" }, "var2"] }
-        },
-        {
           "component": "select",
           "name": "variant2LinkType",
-          "label": "Variant2 Type",
+          "label": "Variant2 LinkType",
           "condition": { "==": [{ "var": "varType" }, "var2"] },
           "options": [
             {
@@ -205,29 +187,34 @@
             }
           ]
         },
-{
-"component": "richtext",
-"name": "usp",
-"value": "",
-"label": "USP",
-"valueType": "string",
-"description": "Add USP and USP-Value as key-value pair",
-"multi": true,
-"condition": { "==": [{ "var": "varType" }, "var2"] }
-},
-{
-"component": "richtext",
-"name": "uspvalue",
-"value": "",
-"label": "USP Value",
-"description": "Add USP and USP-Value as key-value pair",
-"valueType": "string",
-"multi": true,
-"condition": { "==": [{ "var": "varType" }, "var2"] }
-}
-]
-}
-],
+
+
+
+
+
+        {
+          "component": "richtext",
+          "name": "usp",
+          "value": "",
+          "label": "USP",
+          "valueType": "string",
+          "description": "Add USP and USP-Value as key-value pair",
+          "multi": true,
+          "condition": { "==": [{ "var": "varType" }, "var2"] }
+        },
+        {
+          "component": "richtext",
+          "name": "uspvalue",
+          "value": "",
+          "label": "USP Value",
+          "description": "Add USP and USP-Value as key-value pair",
+          "valueType": "string",
+          "multi": true,
+          "condition": { "==": [{ "var": "varType" }, "var2"] }
+        }
+      ]
+    }
+  ],
   "filters": [
     {
       "id": "media-gallery",
