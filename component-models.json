@@ -196,55 +196,48 @@
       },
       {
         "component": "reference",
-        "name": "imageURL",
-        "label": "ImageURL",
-        "multi": false,
-        "condition": { "==": [{ "var": "varType" }, "var1"] }
+        "name": "variant1 imageURL",
+        "label": "Variant1 ImageURL",
+        "multi": false
       },
       {
         "component": "text",
-        "name": "imageAlt",
-        "label": "Alt Text",
-        "condition": { "==": [{ "var": "varType" }, "var1"] }
+        "name": "variant1 imageAlt",
+        "label": "Variant1 Alt Text"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "itemTitle",
+        "name": "variant1 title",
         "value": "",
-        "label": "Title",
-        "condition": { "==": [{ "var": "varType" }, "var1"] }
+        "label": "Variant1 Title"
       },
       {
         "component": "richtext",
-        "name": "description",
+        "name": "variant1 description",
         "value": "",
-        "label": "Description",
-        "valueType": "string",
-        "condition": { "==": [{ "var": "varType" }, "var1"] }
+        "label": "Variant1 Description",
+        "valueType": "string"
       },
       {
         "component": "aem-content",
-        "name": "variant2Link1",
-        "label": "Variant2 Link1",
-        "condition": { "==": [{ "var": "varType" }, "var1"] }
+        "name": "variant1 Link",
+        "label": "Variant1 Link"
       },
       {
         "component": "text",
-        "name": "variant2LinkText1",
-        "label": "Variant2 Text1",
-        "condition": { "==": [{ "var": "varType" }, "var1"] }
+        "name": "variant1LinkText",
+        "label": "Variant1 LinkText"
       },
       {
         "component": "text",
-        "name": "variant2LinkTitle1",
-        "label": "Variant2 Title1",
-        "condition": { "==": [{ "var": "varType" }, "var1"] }
+        "name": "variant1 LinkTitle",
+        "label": "Variant1 LinkTitle"
       },
       {
         "component": "select",
-        "name": "variant2LinkType1",
-        "label": "Variant2 Type1",
+        "name": "variant1 LinkType",
+        "label": "Variant1 LinkType",
         "options": [
           {
             "name": "default",
