@@ -209,7 +209,7 @@
         {
           "component": "text",
           "name": "variant2Title2",
-          "label": "Vatiant2 Title2",
+          "label": "Variant2 Title2",
           "condition": { "==": [{ "var": "varType" }, "var2"] }
         },
         {
