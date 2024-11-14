@@ -224,13 +224,13 @@
         "name": "heading",
         "label": "Heading",
         "value": "",
-        "condition": { "==": [{ "var": "varType" }, "var1"] }
+        "condition": { "==": [{ "var": "varType" }, "var2"] }
       },
       {
         "component": "richtext",
         "name": "description",
         "label": "Description",
-        "condition": { "==": [{ "var": "varType" }, "var1"] }
+        "condition": { "==": [{ "var": "varType" }, "var2"] }
       },
       {
         "component": "aem-content",
@@ -238,7 +238,7 @@
         "name": "ctaLink",
         "label": "CTA Link",
         "value": "",
-        "condition": { "==": [{ "var": "varType" }, "var1"] }
+        "condition": { "==": [{ "var": "varType" }, "var2"] }
       },
       {
         "component": "text",
@@ -246,7 +246,7 @@
         "name": "ctaText",
         "label": "CTA Text",
         "value": "",
-        "condition": { "==": [{ "var": "varType" }, "var1"] }
+        "condition": { "==": [{ "var": "varType" }, "var2"] }
       },
       {
         "component": "select",
@@ -258,26 +258,6 @@
           { "name": "secondary", "value": "secondary" },
           { "name": "tertiary", "value": "tertiary" }
         ],
-        "condition": { "==": [{ "var": "varType" }, "var1"] }
-      },
-      {
-        "component": "richtext",
-        "name": "usp",
-        "value": "",
-        "label": "USP",
-        "valueType": "string",
-        "description": "Add USP and USP-Value as key-value pair",
-        "multi": true,
-        "condition": { "==": [{ "var": "varType" }, "var2"] }
-      },
-      {
-        "component": "richtext",
-        "name": "uspvalue",
-        "value": "",
-        "label": "USP Value",
-        "description": "Add USP and USP-Value as key-value pair",
-        "valueType": "string",
-        "multi": true,
         "condition": { "==": [{ "var": "varType" }, "var2"] }
       }
     ]
