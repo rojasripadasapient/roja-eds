@@ -397,7 +397,18 @@
 
 
 
-
+  {
+    "id": "tab",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "blockTitle",
+        "label": "Titleee",
+        "value": ""
+      }
+    ]
+  },
   {
     "id": "tabContent",
     "fields": [
