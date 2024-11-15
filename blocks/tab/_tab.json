@@ -174,7 +174,7 @@
           "name": "usp",
           "value": "",
           "label": "USP",
-          "valueType": "string[]",
+          "valueType": "string",
           "description": "Add USP and USP-Value as key-value pair",
           "multi": true,
           "condition": {
