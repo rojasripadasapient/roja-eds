@@ -321,7 +321,7 @@
         }
       },
       {
-        "component": "richtext",
+        "component": "key-value",
         "name": "usp",
         "value": "",
         "label": "USP",
@@ -338,7 +338,7 @@
         }
       },
       {
-        "component": "richtext",
+        "component": "key-value",
         "name": "uspvalue",
         "value": "[]",
         "label": "USP Value",
