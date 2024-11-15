@@ -323,9 +323,9 @@
       {
         "component": "richtext",
         "name": "usp",
-        "value": "[]",
+        "value": "",
         "label": "USP",
-        "valueType": "array",
+        "valueType": "string",
         "description": "Add USP and USP-Value as key-value pair",
         "multi": true,
         "condition": {
@@ -343,7 +343,7 @@
         "value": "array",
         "label": "USP Value",
         "description": "Add USP and USP-Value as key-value pair",
-        "valueType": "array",
+        "valueType": "array[]",
         "multi": true,
         "condition": {
           "==": [
