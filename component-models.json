@@ -321,11 +321,11 @@
         }
       },
       {
-        "component": "richtext",
+        "component": "key-value",
         "name": "usp",
-        "value": "",
+        "value": "[]",
         "label": "USP",
-        "valueType": "string",
+        "valueType": "array",
         "description": "Add USP and USP-Value as key-value pair",
         "multi": true,
         "condition": {
