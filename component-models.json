@@ -113,18 +113,6 @@
   },
 
   {
-    "id": "tab",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "blockTitle",
-        "label": "Title",
-        "value": ""
-      }
-    ]
-  },
-  {
     "id": "tabContent",
     "fields": [
       {
