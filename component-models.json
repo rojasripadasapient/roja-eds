@@ -258,18 +258,7 @@
   },
 
 
-  {
-    "id": "teaser",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "blockTitle",
-        "label": "Title",
-        "value": ""
-      }
-    ]
-  },
+
   {
     "id": "teaserContent",
     "fields": [
@@ -359,25 +348,6 @@
         "valueType": "string",
         "multi": true,
         "condition": { "==": [{ "var": "varType" }, "var2"] }
-      }
-    ]
-  },
-
-
-  {
-    "id": "accordion",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "name": "linkTitle",
-        "label": "Title"
       }
     ]
   },
