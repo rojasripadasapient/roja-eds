@@ -328,10 +328,6 @@
         "valueType": "string",
         "description": "Add USP and USP-Value as key-value pair",
         "multi": true,
-        "options": [
-          { "name": "Option 1", "value": "option1" },
-          { "name": "Option 2", "value": "option2" }
-        ],
         "condition": {
           "==": [
             {
