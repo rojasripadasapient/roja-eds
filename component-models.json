@@ -112,7 +112,6 @@
     ]
   },
 
-
   {
     "id": "tabContent",
     "fields": [
@@ -137,14 +136,8 @@
         "valueType": "string",
         "description": "Select Variation 1 for displaying Heading & Description, and select Variation 2 for displaying Features",
         "options": [
-          {
-            "name": "Variation 1",
-            "value": "var1"
-          },
-          {
-            "name": "Variation 2",
-            "value": "var2"
-          }
+          { "name": "Variation 1", "value": "var1" },
+          { "name": "Variation 2", "value": "var2" }
         ]
       },
       {
@@ -153,27 +146,13 @@
         "name": "heading",
         "label": "Heading",
         "value": "",
-        "condition": {
-          "==": [
-            {
-              "var": "varType"
-            },
-            "var1"
-          ]
-        }
+        "condition": { "==": [{ "var": "varType" }, "var1"] }
       },
       {
         "component": "richtext",
         "name": "description",
         "label": "Description",
-        "condition": {
-          "==": [
-            {
-              "var": "varType"
-            },
-            "var1"
-          ]
-        }
+        "condition": { "==": [{ "var": "varType" }, "var1"] }
       },
       {
         "component": "aem-content",
@@ -181,14 +160,7 @@
         "name": "ctaLink",
         "label": "CTA Link",
         "value": "",
-        "condition": {
-          "==": [
-            {
-              "var": "varType"
-            },
-            "var1"
-          ]
-        }
+        "condition": { "==": [{ "var": "varType" }, "var1"] }
       },
       {
         "component": "text",
@@ -196,45 +168,19 @@
         "name": "ctaText",
         "label": "CTA Text",
         "value": "",
-        "condition": {
-          "==": [
-            {
-              "var": "varType"
-            },
-            "var1"
-          ]
-        }
+        "condition": { "==": [{ "var": "varType" }, "var1"] }
       },
       {
         "component": "select",
         "name": "ctaType",
         "label": "CTA Type",
         "options": [
-          {
-            "name": "default",
-            "value": ""
-          },
-          {
-            "name": "primary",
-            "value": "primary"
-          },
-          {
-            "name": "secondary",
-            "value": "secondary"
-          },
-          {
-            "name": "tertiary",
-            "value": "tertiary"
-          }
+          { "name": "default", "value": "" },
+          { "name": "primary", "value": "primary" },
+          { "name": "secondary", "value": "secondary" },
+          { "name": "tertiary", "value": "tertiary" }
         ],
-        "condition": {
-          "==": [
-            {
-              "var": "varType"
-            },
-            "var1"
-          ]
-        }
+        "condition": { "==": [{ "var": "varType" }, "var1"] }
       },
       {
         "component": "richtext",
@@ -244,14 +190,7 @@
         "valueType": "string",
         "description": "Add USP and USP-Value as key-value pair",
         "multi": true,
-        "condition": {
-          "==": [
-            {
-              "var": "varType"
-            },
-            "var2"
-          ]
-        }
+        "condition": { "==": [{ "var": "varType" }, "var2"] }
       },
       {
         "component": "richtext",
@@ -261,14 +200,7 @@
         "description": "Add USP and USP-Value as key-value pair",
         "valueType": "string",
         "multi": true,
-        "condition": {
-          "==": [
-            {
-              "var": "varType"
-            },
-            "var2"
-          ]
-        }
+        "condition": { "==": [{ "var": "varType" }, "var2"] }
       }
     ]
   },
@@ -563,6 +495,173 @@
       }
     ]
   },
+
+
+
+  {
+    "component": "text",
+    "valueType": "string",
+    "name": "tabName",
+    "label": "Tab Name",
+    "multi": false
+  },
+  {
+    "component": "reference",
+    "valueType": "string",
+    "name": "image",
+    "label": "Image",
+    "multi": false
+  },
+  {
+    "component": "select",
+    "label": "Variation Type",
+    "name": "varType",
+    "valueType": "string",
+    "description": "Select Variation 1 for displaying Heading & Description, and select Variation 2 for displaying Features",
+    "options": [
+      {
+        "name": "Variation 1",
+        "value": "var1"
+      },
+      {
+        "name": "Variation 2",
+        "value": "var2"
+      }
+    ]
+  },
+  {
+    "component": "text",
+    "valueType": "string",
+    "name": "heading",
+    "label": "Heading",
+    "value": "",
+    "condition": {
+      "==": [
+        {
+          "var": "varType"
+        },
+        "var1"
+      ]
+    }
+  },
+  {
+    "component": "richtext",
+    "name": "description",
+    "label": "Description",
+    "condition": {
+      "==": [
+        {
+          "var": "varType"
+        },
+        "var1"
+      ]
+    }
+  },
+  {
+    "component": "aem-content",
+    "valueType": "string",
+    "name": "ctaLink",
+    "label": "CTA Link",
+    "value": "",
+    "condition": {
+      "==": [
+        {
+          "var": "varType"
+        },
+        "var1"
+      ]
+    }
+  },
+  {
+    "component": "text",
+    "valueType": "string",
+    "name": "ctaText",
+    "label": "CTA Text",
+    "value": "",
+    "condition": {
+      "==": [
+        {
+          "var": "varType"
+        },
+        "var1"
+      ]
+    }
+  },
+  {
+    "component": "select",
+    "name": "ctaType",
+    "label": "CTA Type",
+    "options": [
+      {
+        "name": "default",
+        "value": ""
+      },
+      {
+        "name": "primary",
+        "value": "primary"
+      },
+      {
+        "name": "secondary",
+        "value": "secondary"
+      },
+      {
+        "name": "tertiary",
+        "value": "tertiary"
+      }
+    ],
+    "condition": {
+      "==": [
+        {
+          "var": "varType"
+        },
+        "var1"
+      ]
+    }
+  },
+  {
+    "component": "richtext",
+    "name": "usp",
+    "value": "",
+    "label": "USP",
+    "valueType": "string",
+    "description": "Add USP and USP-Value as key-value pair",
+    "multi": true,
+    "condition": {
+      "==": [
+        {
+          "var": "varType"
+        },
+        "var2"
+      ]
+    }
+  },
+  {
+    "component": "richtext",
+    "name": "uspvalue",
+    "value": "",
+    "label": "USP Value",
+    "description": "Add USP and USP-Value as key-value pair",
+    "valueType": "string",
+    "multi": true,
+    "condition": {
+      "==": [
+        {
+          "var": "varType"
+        },
+        "var2"
+      ]
+    }
+  },
+
+
+
+
+
+
+
+
+
+
 
   {
     "id": "hero",
