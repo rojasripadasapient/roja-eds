@@ -327,15 +327,7 @@
         "label": "USP",
         "valueType": "string",
         "description": "Add USP and USP-Value as key-value pair",
-        "multi": true,
-        "condition": {
-          "==": [
-            {
-              "var": "varType"
-            },
-            "var2"
-          ]
-        }
+        "multi": true
       },
       {
         "component": "richtext",
