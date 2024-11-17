@@ -323,7 +323,7 @@
       {
         "component": "richtext",
         "name": "usp",
-        "value": "",
+        "value": "[]",
         "label": "USP",
         "valueType": "string",
         "description": "Add USP and USP-Value as key-value pair",
