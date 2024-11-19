@@ -303,17 +303,20 @@
       {
         "component": "aem-content",
         "name": "ctaLink",
-        "label": "CTA Link"
+        "label": "CTA Link",
+        "condition": { "==": [{ "var": "varType" }, "var1"] }
       },
       {
         "component": "text",
         "name": "ctaLinkText",
-        "label": "CTA Link Text"
+        "label": "CTA Link Text",
+        "condition": { "==": [{ "var": "varType" }, "var1"] }
       },
       {
         "component": "select",
         "name": "linkType",
         "label": "CTA Type",
+        "condition": { "==": [{ "var": "varType" }, "var1"] },
         "options": [
           {
             "name": "default",
@@ -334,41 +337,50 @@
         ]
       },
 
-
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image1",
+        "label": "Image1",
+        "condition": { "==": [{ "var": "varType" }, "var2"] }
+      },
       {
         "component": "text",
         "valueType": "string",
         "name": "imageAlt1",
         "label": "Image Alt1",
         "value": "",
-        "condition": { "==": [{ "var": "varType" }, "var1"] }
+        "condition": { "==": [{ "var": "varType" }, "var2"] }
       },
       {
         "component": "text",
         "name": "title1",
         "label": "Title1",
-        "condition": { "==": [{ "var": "varType" }, "var1"] }
+        "condition": { "==": [{ "var": "varType" }, "var2"] }
       },
       {
         "component": "richtext",
         "name": "text1",
         "label": "Text1",
-        "condition": { "==": [{ "var": "varType" }, "var1"] }
+        "condition": { "==": [{ "var": "varType" }, "var2"] }
       },
       {
         "component": "aem-content",
         "name": "ctaLink1",
-        "label": "CTA Link1"
+        "label": "CTA Link1",
+        "condition": { "==": [{ "var": "varType" }, "var2"] }
       },
       {
         "component": "text",
         "name": "ctaLinkText1",
-        "label": "CTA Text1"
+        "label": "CTA Text1",
+        "condition": { "==": [{ "var": "varType" }, "var2"] }
       },
       {
         "component": "select",
         "name": "linkType1",
         "label": "Type1",
+        "condition": { "==": [{ "var": "varType" }, "var2"] },
         "options": [
           {
             "name": "default",
@@ -390,18 +402,14 @@
       },
       {
         "component": "reference",
-        "valueType": "string",
         "name": "image2",
         "label": "Image2",
-        "multi": false,
         "condition": { "==": [{ "var": "varType" }, "var2"] }
       },
       {
         "component": "text",
-        "valueType": "string",
         "name": "imageAlt2",
         "label": "Image Alt2",
-        "value": "",
         "condition": { "==": [{ "var": "varType" }, "var2"] }
       },
       {

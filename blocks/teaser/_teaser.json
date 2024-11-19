@@ -57,10 +57,8 @@
         },
         {
           "component": "text",
-          "valueType": "string",
           "name": "imageAlt",
           "label": "Image Alt",
-          "value": "",
           "condition": { "==": [{ "var": "varType" }, "var1"] }
         },
         {
@@ -78,69 +76,20 @@
         {
           "component": "aem-content",
           "name": "ctaLink",
-          "label": "CTA Link"
+          "label": "CTA Link",
+          "condition": { "==": [{ "var": "varType" }, "var1"] }
         },
         {
           "component": "text",
           "name": "ctaLinkText",
-          "label": "CTA Link Text"
+          "label": "CTA Link Text",
+          "condition": { "==": [{ "var": "varType" }, "var1"] }
         },
         {
           "component": "select",
           "name": "linkType",
           "label": "CTA Type",
-          "options": [
-            {
-              "name": "default",
-              "value": ""
-            },
-            {
-              "name": "primary",
-              "value": "primary"
-            },
-            {
-              "name": "secondary",
-              "value": "secondary"
-            },
-            {
-              "name": "tertiary",
-              "value": "tertiary"
-            }
-          ]
-        },
-
-        {
-          "component": "text",
-          "name": "imageAlt1",
-          "label": "Image Alt1",
-          "condition": { "==": [{ "var": "varType" }, "var1"] }
-        },
-        {
-          "component": "text",
-          "name": "title1",
-          "label": "Title1",
-          "condition": { "==": [{ "var": "varType" }, "var1"] }
-        },
-        {
-          "component": "richtext",
-          "name": "text1",
-          "label": "Text1",
-          "condition": { "==": [{ "var": "varType" }, "var1"] }
-        },
-        {
-          "component": "aem-content",
-          "name": "ctaLink1",
-          "label": "CTA Link1"
-        },
-        {
-          "component": "text",
-          "name": "ctaLinkText1",
-          "label": "CTA Link Text1"
-        },
-        {
-          "component": "select",
-          "name": "linkType1",
-          "label": "CTA Type1",
+          "condition": { "==": [{ "var": "varType" }, "var1"] },
           "options": [
             {
               "name": "default",
@@ -164,29 +113,87 @@
         {
           "component": "reference",
           "valueType": "string",
-          "name": "image2",
-          "label": "Image2",
-          "multi": false,
+          "name": "image1",
+          "label": "Image1",
           "condition": { "==": [{ "var": "varType" }, "var2"] }
         },
         {
           "component": "text",
-          "valueType": "string",
-          "name": "imageAlt2",
-          "label": "Image Alt2",
-          "value": "",
+          "name": "imageAlt1",
+          "label": "Image Alt1",
           "condition": { "==": [{ "var": "varType" }, "var2"] }
         },
         {
           "component": "text",
-          "name": "Title2",
-          "label": "Title2",
+          "name": "title1",
+          "label": "Title1",
           "condition": { "==": [{ "var": "varType" }, "var2"] }
         },
         {
           "component": "richtext",
-          "name": "Text2",
-          "label": "Text2",
+          "name": "text1",
+          "label": "Text1",
+          "condition": { "==": [{ "var": "varType" }, "var2"] }
+        },
+        {
+          "component": "aem-content",
+          "name": "ctaLink1",
+          "label": "CTA Link1",
+          "condition": { "==": [{ "var": "varType" }, "var2"] }
+        },
+        {
+          "component": "text",
+          "name": "ctaLinkText1",
+          "label": "CTA Link Text1",
+          "condition": { "==": [{ "var": "varType" }, "var2"] }
+        },
+        {
+          "component": "select",
+          "name": "linkType1",
+          "label": "CTA Type1",
+          "condition": { "==": [{ "var": "varType" }, "var2"] },
+          "options": [
+            {
+              "name": "default",
+              "value": ""
+            },
+            {
+              "name": "primary",
+              "value": "primary"
+            },
+            {
+              "name": "secondary",
+              "value": "secondary"
+            },
+            {
+              "name": "tertiary",
+              "value": "tertiary"
+            }
+          ]
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image2",
+          "label": "Image2",
+          "condition": { "==": [{ "var": "varType" }, "var2"] }
+        },
+        {
+          "component": "text",
+          "name": "imageAlt2",
+          "label": "Image Alt2",
+          "condition": { "==": [{ "var": "varType" }, "var2"] }
+        },
+        {
+          "component": "text",
+          "name": "title1",
+          "label": "Title1",
+          "condition": { "==": [{ "var": "varType" }, "var2"] }
+        },
+        {
+          "component": "richtext",
+          "name": "text1",
+          "label": "Text1",
           "condition": { "==": [{ "var": "varType" }, "var2"] }
         },
         {
