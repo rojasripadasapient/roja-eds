@@ -464,12 +464,6 @@
 
       },
       {
-        "component": "text",
-        "name": "variant2LinkTitle2",
-        "label": "Variant2 Title2",
-        "condition": { "==": [{ "var": "varType" }, "var2"] }
-      },
-      {
         "component": "select",
         "name": "variant2LinkType2",
         "label": "Variant2 Type2",
