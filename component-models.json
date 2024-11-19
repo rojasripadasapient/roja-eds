@@ -297,8 +297,8 @@
       },
       {
         "component": "richtext",
-        "name": "text",
-        "label": "Text",
+        "name": "description",
+        "label": "Description",
         "condition": { "==": [{ "var": "varType" }, "var1"] }
       },
       {
