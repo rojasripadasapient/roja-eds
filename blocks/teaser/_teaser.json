@@ -160,9 +160,15 @@
           "condition": { "==": [{ "var": "varType" }, "var2"] }
         },
         {
+          "component": "text",
+          "name": "variant2LinkTitle",
+          "label": "Variant2 Title",
+          "condition": { "==": [{ "var": "varType" }, "var2"] }
+        },
+        {
           "component": "select",
           "name": "variant2LinkType",
-          "label": "Variant2 Type1",
+          "label": "Variant2 Type",
           "condition": { "==": [{ "var": "varType" }, "var2"] },
           "options": [
             {
@@ -215,15 +221,16 @@
         },
         {
           "component": "aem-content",
-          "name": "variant2Link2",
-          "label": "Variant2 Link2",
+          "name": "link",
+          "label": "Link2",
           "condition": { "==": [{ "var": "varType" }, "var2"] }
         },
         {
           "component": "text",
-          "name": "variant2LinkText2",
-          "label": "Variant2 Text2",
+          "name": "text",
+          "label": "Text2",
           "condition": { "==": [{ "var": "varType" }, "var2"] }
+
         },
         {
           "component": "select",
