@@ -297,9 +297,9 @@
       },
       {
         "component": "richtext",
-        "name": "variant1Text",
+        "name": "text",
         "value": "",
-        "label": "Variant1 Text",
+        "label": "Text",
         "valueType": "string",
         "condition": { "==": [{ "var": "varType" }, "var1"] }
       },
