@@ -30,7 +30,7 @@ export default async function decorate(block) {
     //   console.log(features);
     const elements = [...block.children].slice(1, 6);
     console.log(elements);
-    const ctaElement = buildCta(elements[4]);
+    const ctaElement = buildCta(elements[3]);
     console.log(ctaElement);
     //buildCta(elements[5]);
     console.log(elements[5]);
