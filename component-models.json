@@ -219,7 +219,7 @@
       {
         "component": "text",
         "name": "variant1Title",
-        "label": "Vatiant1 Title",
+        "label": "Variant1 Title",
         "condition": { "==": [{ "var": "varType" }, "var1"] }
       },
       {
@@ -294,7 +294,7 @@
       {
         "component": "text",
         "name": "variant2Title1",
-        "label": "Vatiant2 Title1",
+        "label": "Variant2 Title1",
         "condition": { "==": [{ "var": "varType" }, "var2"] }
       },
       {
@@ -366,7 +366,7 @@
       {
         "component": "text",
         "name": "variant2Title2",
-        "label": "Vatiant2 Title2",
+        "label": "Variant2 Title2",
         "condition": { "==": [{ "var": "varType" }, "var2"] }
       },
       {
