@@ -110,31 +110,22 @@
         },
 
         {
-          "component": "reference",
-          "valueType": "string",
-          "name": "image1",
-          "label": "Image1",
-          "condition": { "==": [{ "var": "varType" }, "var2"] }
-        },
-        {
           "component": "text",
-          "valueType": "string",
           "name": "imageAlt1",
           "label": "Image Alt1",
-          "value": "",
-          "condition": { "==": [{ "var": "varType" }, "var2"] }
+          "condition": { "==": [{ "var": "varType" }, "var1"] }
         },
         {
           "component": "text",
           "name": "title1",
           "label": "Title1",
-          "condition": { "==": [{ "var": "varType" }, "var2"] }
+          "condition": { "==": [{ "var": "varType" }, "var1"] }
         },
         {
           "component": "richtext",
           "name": "text1",
           "label": "Text1",
-          "condition": { "==": [{ "var": "varType" }, "var2"] }
+          "condition": { "==": [{ "var": "varType" }, "var1"] }
         },
         {
           "component": "aem-content",
