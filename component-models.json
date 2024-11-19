@@ -694,29 +694,6 @@
         ]
       },
       {
-        "component": "select",
-        "name": "linkType1",
-        "label": "Type1",
-        "options": [
-          {
-            "name": "default",
-            "value": ""
-          },
-          {
-            "name": "primary",
-            "value": "primary"
-          },
-          {
-            "name": "secondary",
-            "value": "secondary"
-          },
-          {
-            "name": "tertiary",
-            "value": "tertiary"
-          }
-        ]
-      },
-      {
         "component": "aem-content",
         "name": "link1",
         "label": "Link1"
