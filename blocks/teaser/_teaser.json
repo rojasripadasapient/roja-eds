@@ -53,15 +53,6 @@
           "valueType": "string",
           "name": "variant1Image",
           "label": "Variant1 Image",
-          "multi": false,
-          "condition": { "==": [{ "var": "varType" }, "var1"] }
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "imageAltVariant1",
-          "label": "Variant1 Alt",
-          "value": "",
           "condition": { "==": [{ "var": "varType" }, "var1"] }
         },
         {
