@@ -458,8 +458,8 @@
       },
       {
         "component": "text",
-        "name": "linkText2",
-        "label": "Link Text2",
+        "name": "text2",
+        "label": "Text2",
         "condition": { "==": [{ "var": "varType" }, "var2"] }
 
       },
