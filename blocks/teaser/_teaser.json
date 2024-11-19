@@ -173,50 +173,48 @@
         {
           "component": "reference",
           "valueType": "string",
-          "name": "variant2Image2",
-          "label": "Variant2 Image2",
+          "name": "image2",
+          "label": "Image2",
           "multi": false,
           "condition": { "==": [{ "var": "varType" }, "var2"] }
         },
         {
           "component": "text",
           "valueType": "string",
-          "name": "image2AltVariant2",
-          "label": "Variant2 Alt2",
+          "name": "imageAlt2",
+          "label": "Image Alt2",
           "value": "",
           "condition": { "==": [{ "var": "varType" }, "var2"] }
         },
         {
           "component": "text",
-          "name": "variant2Title2",
-          "label": "Variant2 Title2",
+          "name": "Title2",
+          "label": "Title2",
           "condition": { "==": [{ "var": "varType" }, "var2"] }
         },
         {
           "component": "richtext",
-          "name": "variant2Text2",
-          "value": "",
-          "label": "Variant2 Text2",
-          "valueType": "string",
+          "name": "Text2",
+          "label": "Text2",
           "condition": { "==": [{ "var": "varType" }, "var2"] }
         },
         {
           "component": "aem-content",
-          "name": "link2Variant2",
-          "label": "Link2 Variant2",
+          "name": "ctalink2",
+          "label": "CTA Link2",
           "condition": { "==": [{ "var": "varType" }, "var2"] }
         },
         {
           "component": "text",
-          "name": "text2Variant2",
-          "label": "Text2 Variant2",
+          "name": "ctaText2",
+          "label": "CTA Text2",
           "condition": { "==": [{ "var": "varType" }, "var2"] }
 
         },
         {
           "component": "select",
-          "name": "variant2LinkType2",
-          "label": "Variant2 Type2",
+          "name": "LinkType2",
+          "label": "Type2",
           "condition": { "==": [{ "var": "varType" }, "var2"] },
           "options": [
             {
