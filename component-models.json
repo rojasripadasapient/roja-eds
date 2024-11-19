@@ -334,14 +334,14 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "variant2Image",
-        "label": "Variant2 Image",
+        "name": "variant2Image1",
+        "label": "Variant2 Image1",
         "condition": { "==": [{ "var": "varType" }, "var2"] }
       },
       {
         "component": "text",
-        "name": "variant2Title2",
-        "label": "Variant2 Title2",
+        "name": "variant2Title1",
+        "label": "Variant2 Title1",
         "condition": { "==": [{ "var": "varType" }, "var2"] }
       },
       {
@@ -366,6 +366,62 @@
         "component": "select",
         "name": "variant2LinkType1",
         "label": "Variant2 LinkType1",
+        "condition": { "==": [{ "var": "varType" }, "var2"] },
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          },
+          {
+            "name": "tertiary",
+            "value": "tertiary"
+          }
+        ]
+      },
+
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "variant2Image2",
+        "label": "Variant2 Image2",
+        "condition": { "==": [{ "var": "varType" }, "var2"] }
+      },
+      {
+        "component": "text",
+        "name": "variant2Title2",
+        "label": "Variant2 Title2",
+        "condition": { "==": [{ "var": "varType" }, "var2"] }
+      },
+      {
+        "component": "richtext",
+        "name": "description2",
+        "label": "Description2",
+        "condition": { "==": [{ "var": "varType" }, "var2"] }
+      },
+      {
+        "component": "aem-content",
+        "name": "variant2Link2",
+        "label": "Variant2 Link2",
+        "condition": { "==": [{ "var": "varType" }, "var2"] }
+      },
+      {
+        "component": "text",
+        "name": "variant2LinkText2",
+        "label": "Variant2 Text2",
+        "condition": { "==": [{ "var": "varType" }, "var2"] }
+      },
+      {
+        "component": "select",
+        "name": "variant2LinkType2",
+        "label": "Variant2 LinkType2",
         "condition": { "==": [{ "var": "varType" }, "var2"] },
         "options": [
           {
