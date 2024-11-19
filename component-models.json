@@ -348,7 +348,6 @@
         "component": "select",
         "name": "linkType",
         "label": "CTA Type",
-        "condition": { "==": [{ "var": "varType" }, "var1"] },
         "options": [
           {
             "name": "default",
@@ -366,7 +365,8 @@
             "name": "tertiary",
             "value": "tertiary"
           }
-        ]
+        ],
+        "condition": { "==": [{ "var": "varType" }, "var1"] }
       },
 
       {

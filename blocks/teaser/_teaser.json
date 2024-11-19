@@ -138,7 +138,8 @@
               "name": "tertiary",
               "value": "tertiary"
             }
-          ]
+          ],
+          "condition": { "==": [{ "var": "varType" }, "var1"] }
         },
 
         {
