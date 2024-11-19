@@ -183,7 +183,6 @@
           "component": "select",
           "name": "linkType1",
           "label": "CTA Type1",
-          "condition": { "==": [{ "var": "varType" }, "var2"] },
           "options": [
             {
               "name": "default",
@@ -201,7 +200,8 @@
               "name": "tertiary",
               "value": "tertiary"
             }
-          ]
+          ],
+          "condition": { "==": [{ "var": "varType" }, "var2"] }
         },
         {
           "component": "reference",
@@ -245,7 +245,6 @@
           "component": "select",
           "name": "LinkType2",
           "label": "Type2",
-          "condition": { "==": [{ "var": "varType" }, "var2"] },
           "options": [
             {
               "name": "default",
@@ -263,7 +262,8 @@
               "name": "tertiary",
               "value": "tertiary"
             }
-          ]
+          ],
+          "condition": { "==": [{ "var": "varType" }, "var2"] }
         }
       ]
     }

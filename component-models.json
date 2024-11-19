@@ -405,8 +405,7 @@
       {
         "component": "text",
         "name": "ctaLinkText1",
-        "label": "CTA Text1",
-        "condition": { "==": [{ "var": "varType" }, "var2"] }
+        "label": "CTA Text1"
       },
       {
         "component": "select",
@@ -429,7 +428,8 @@
             "name": "tertiary",
             "value": "tertiary"
           }
-        ]
+        ],
+        "condition": { "==": [{ "var": "varType" }, "var2"] }
       },
       {
         "component": "reference",
@@ -472,7 +472,6 @@
         "component": "select",
         "name": "LinkType2",
         "label": "Type2",
-        "condition": { "==": [{ "var": "varType" }, "var2"] },
         "options": [
           {
             "name": "default",
@@ -490,7 +489,8 @@
             "name": "tertiary",
             "value": "tertiary"
           }
-        ]
+        ],
+        "condition": { "==": [{ "var": "varType" }, "var2"] }
       }
     ]
   },
