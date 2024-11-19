@@ -18,7 +18,8 @@
       "fragment",
       "teaser",
       "accordion",
-      "tab"
+      "tab",
+      "action-stripe"
 
     ]
   },
