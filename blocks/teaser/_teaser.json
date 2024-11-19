@@ -228,13 +228,13 @@
         {
           "component": "aem-content",
           "name": "link2",
-          "label": "Variant2 Link2",
+          "label": "Link2",
           "condition": { "==": [{ "var": "varType" }, "var2"] }
         },
         {
           "component": "text",
           "name": "linkText2",
-          "label": "Variant2 Text2",
+          "label": "Link Text2",
           "condition": { "==": [{ "var": "varType" }, "var2"] }
 
         },

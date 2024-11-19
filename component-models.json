@@ -459,7 +459,7 @@
       {
         "component": "text",
         "name": "linkText2",
-        "label": "Variant2 Text2",
+        "label": "Link Text2",
         "condition": { "==": [{ "var": "varType" }, "var2"] }
 
       },
