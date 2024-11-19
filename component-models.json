@@ -339,8 +339,8 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "variant2Image1",
-        "label": "Variant2 Image1",
+        "name": "image1",
+        "label": "Image1",
         "multi": false,
         "condition": { "==": [{ "var": "varType" }, "var2"] }
       },
@@ -354,35 +354,30 @@
       },
       {
         "component": "text",
-        "name": "variant2Title1",
-        "label": "Variant2 Title1",
+        "name": "title1",
+        "label": "Title1",
         "condition": { "==": [{ "var": "varType" }, "var2"] }
       },
       {
         "component": "richtext",
-        "name": "variant2Text1",
-        "value": "",
-        "label": "Variant2 Text1",
-        "valueType": "string",
+        "name": "description1",
+        "label": "Description1",
         "condition": { "==": [{ "var": "varType" }, "var2"] }
       },
       {
         "component": "aem-content",
-        "name": "variant2Link",
-        "label": "Variant2 Link",
-        "condition": { "==": [{ "var": "varType" }, "var2"] }
+        "name": "link1",
+        "label": "Link1"
       },
       {
         "component": "text",
-        "name": "variant2LinkText",
-        "label": "Variant2 Text",
-        "condition": { "==": [{ "var": "varType" }, "var2"] }
+        "name": "linkText1",
+        "label": "Text1"
       },
       {
         "component": "select",
-        "name": "variant2LinkType",
-        "label": "Variant2 Type",
-        "condition": { "==": [{ "var": "varType" }, "var2"] },
+        "name": "linkType1",
+        "label": "Type1",
         "options": [
           {
             "name": "default",
