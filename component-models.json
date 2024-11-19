@@ -291,8 +291,8 @@
       },
       {
         "component": "text",
-        "name": "heading",
-        "label": "Heading",
+        "name": "title",
+        "label": "Title",
         "condition": { "==": [{ "var": "varType" }, "var1"] }
       },
       {
@@ -303,33 +303,37 @@
       },
       {
         "component": "aem-content",
-        "valueType": "string",
-        "name": "ctaTeaserLink",
-        "label": "CTA Link",
-        "value": "",
-        "condition": { "==": [{ "var": "chooseTabTypeVariation" }, "var1"] }
+        "name": "link",
+        "label": "Link"
       },
       {
         "component": "text",
-        "valueType": "string",
-        "name": "ctaTeaserButtonValue",
-        "label": "CTA Text",
-        "value": "",
-        "condition": { "==": [{ "var": "chooseTabTypeVariation" }, "var1"] }
+        "name": "linkText",
+        "label": "Text"
       },
       {
         "component": "select",
-        "name": "ctaButtonOptions",
-        "label": "CTA Type",
+        "name": "linkType",
+        "label": "Type",
         "options": [
-          { "name": "default", "value": "" },
-          { "name": "primary", "value": "primary" },
-          { "name": "secondary", "value": "secondary" },
-          { "name": "tertiary", "value": "tertiary" }
-        ],
-        "condition": { "==": [{ "var": "chooseTabTypeVariation" }, "var1"] }
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          },
+          {
+            "name": "tertiary",
+            "value": "tertiary"
+          }
+        ]
       },
-
 
 
       {
