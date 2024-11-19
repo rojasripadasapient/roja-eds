@@ -440,14 +440,14 @@
       },
       {
         "component": "aem-content",
-        "name": "link",
-        "label": "Link",
+        "name": "variant2Link1",
+        "label": "Variant2 Link1",
         "condition": { "==": [{ "var": "varType" }, "var2"] }
       },
       {
         "component": "text",
-        "name": "text",
-        "label": "Text2",
+        "name": "variant2Text1",
+        "label": "Variant2 Text2",
         "condition": { "==": [{ "var": "varType" }, "var2"] }
 
       },
