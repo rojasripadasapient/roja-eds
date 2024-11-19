@@ -2,7 +2,7 @@
   "definitions": [
     {
       "title": "Teaser",
-      "id": "teaserContent",
+      "id": "teaser",
       "plugins": {
         "xwalk": {
           "page": {
@@ -17,15 +17,16 @@
       }
     },
     {
-      "title": "Teaser",
-      "id": "teaser",
+      "title": "Teaser Content",
+      "id": "teaserContent",
       "plugins": {
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block/item",
             "template": {
-              "name": "teaser",
-              "model": "teaser"
+              "name": "teaserContent",
+              "model": "teaserContent",
+              "filter": "teaserContent"
             }
           }
         }
