@@ -227,16 +227,15 @@
         },
         {
           "component": "aem-content",
-          "name": "link",
-          "label": "Link2",
+          "name": "variant2Link",
+          "label": "Variant2 Link",
           "condition": { "==": [{ "var": "varType" }, "var2"] }
         },
         {
           "component": "text",
-          "name": "text",
-          "label": "Text2",
+          "name": "variant2LinkText",
+          "label": "Variant2 Text",
           "condition": { "==": [{ "var": "varType" }, "var2"] }
-
         },
         {
           "component": "text",
