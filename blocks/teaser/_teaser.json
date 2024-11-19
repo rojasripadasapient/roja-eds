@@ -73,9 +73,7 @@
         {
           "component": "richtext",
           "name": "text",
-          "value": "",
           "label": "Text",
-          "valueType": "string",
           "condition": { "==": [{ "var": "varType" }, "var1"] }
         },
         {
