@@ -64,7 +64,8 @@
       "columns",
       "fragment",
       "sticky-navigation",
-      "tab"
+      "tab",
+      "teaser"
     ]
   }
 ]
