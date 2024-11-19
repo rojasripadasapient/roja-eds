@@ -64,7 +64,12 @@
         {
           "component": "text",
           "name": "title",
-          "label": "Title",
+          "label": "Title"
+        },
+        {
+          "component": "select",
+          "name": "titleType",
+          "label": "Title Type",
           "options": [
             {
               "name": "h1",
@@ -90,8 +95,7 @@
               "name": "h6",
               "value": "h6"
             }
-          ],
-          "condition": { "==": [{ "var": "varType" }, "var1"] }
+          ]
         },
         {
           "component": "richtext",
