@@ -276,8 +276,8 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "variant1Image",
-        "label": "Variant1 Image",
+        "name": "image",
+        "label": "Image",
         "multi": false,
         "condition": { "==": [{ "var": "varType" }, "var1"] }
       },
@@ -291,8 +291,8 @@
       },
       {
         "component": "text",
-        "name": "variant1Title",
-        "label": "Vatiant1 Title",
+        "name": "heading",
+        "label": "Heading",
         "condition": { "==": [{ "var": "varType" }, "var1"] }
       },
       {
@@ -303,39 +303,31 @@
       },
       {
         "component": "aem-content",
-        "name": "variant1Link",
-        "label": "Variant1 Link",
-        "condition": { "==": [{ "var": "varType" }, "var1"] }
+        "valueType": "string",
+        "name": "ctaTeaserLink",
+        "label": "CTA Link",
+        "value": "",
+        "condition": { "==": [{ "var": "chooseTabTypeVariation" }, "var1"] }
       },
       {
         "component": "text",
-        "name": "variant1LinkText",
-        "label": "Variant1 Text",
-        "condition": { "==": [{ "var": "varType" }, "var1"] }
+        "valueType": "string",
+        "name": "ctaTeaserButtonValue",
+        "label": "CTA Text",
+        "value": "",
+        "condition": { "==": [{ "var": "chooseTabTypeVariation" }, "var1"] }
       },
       {
         "component": "select",
-        "name": "variant1LinkType",
-        "label": "Variant1 LinkType",
-        "condition": { "==": [{ "var": "varType" }, "var1"] },
+        "name": "ctaButtonOptions",
+        "label": "CTA Type",
         "options": [
-          {
-            "name": "default",
-            "value": ""
-          },
-          {
-            "name": "primary",
-            "value": "primary"
-          },
-          {
-            "name": "secondary",
-            "value": "secondary"
-          },
-          {
-            "name": "tertiary",
-            "value": "tertiary"
-          }
-        ]
+          { "name": "default", "value": "" },
+          { "name": "primary", "value": "primary" },
+          { "name": "secondary", "value": "secondary" },
+          { "name": "tertiary", "value": "tertiary" }
+        ],
+        "condition": { "==": [{ "var": "chooseTabTypeVariation" }, "var1"] }
       },
 
 
