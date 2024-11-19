@@ -452,13 +452,13 @@
       },
       {
         "component": "aem-content",
-        "name": "link2",
-        "label": "Link2",
+        "name": "link",
+        "label": "Link",
         "condition": { "==": [{ "var": "varType" }, "var2"] }
       },
       {
         "component": "text",
-        "name": "text2",
+        "name": "text",
         "label": "Text2",
         "condition": { "==": [{ "var": "varType" }, "var2"] }
 
