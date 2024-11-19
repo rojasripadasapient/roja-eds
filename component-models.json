@@ -267,7 +267,7 @@
         "label": "Variation Type",
         "name": "varType",
         "valueType": "string",
-        "description": "Select Variation 1 for displaying Heading & Description, and select Variation 2 for displaying Features",
+        "description": "",
         "options": [
           { "name": "Variation 1", "value": "var1" },
           { "name": "Variation 2", "value": "var2" }
@@ -278,14 +278,13 @@
         "valueType": "string",
         "name": "image",
         "label": "Image",
-        "multi": false,
         "condition": { "==": [{ "var": "varType" }, "var1"] }
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "imageAltVariant1",
-        "label": "Variant1 Alt",
+        "name": "imageAlt",
+        "label": "Image Alt",
         "value": "",
         "condition": { "==": [{ "var": "varType" }, "var1"] }
       },
@@ -297,24 +296,24 @@
       },
       {
         "component": "richtext",
-        "name": "description",
-        "label": "Description",
+        "name": "text",
+        "label": "Text",
         "condition": { "==": [{ "var": "varType" }, "var1"] }
       },
       {
         "component": "aem-content",
-        "name": "link",
-        "label": "Link"
+        "name": "ctaLink",
+        "label": "CTA Link"
       },
       {
         "component": "text",
-        "name": "linkText",
-        "label": "Text"
+        "name": "ctaLinkText",
+        "label": "CTA Link Text"
       },
       {
         "component": "select",
         "name": "linkType",
-        "label": "Type",
+        "label": "CTA Type",
         "options": [
           {
             "name": "default",
