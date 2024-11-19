@@ -380,7 +380,6 @@
         "component": "select",
         "name": "linkType1",
         "label": "Type1",
-        "condition": { "==": [{ "var": "varType" }, "var2"] },
         "options": [
           {
             "name": "default",
