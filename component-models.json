@@ -111,6 +111,103 @@
       }
     ]
   },
+
+  {
+    "id": "tabContent",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "tabName",
+        "label": "Tab Name",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "select",
+        "label": "Variation Type",
+        "name": "varType",
+        "valueType": "string",
+        "description": "Select Variation 1 for displaying Heading & Description, and select Variation 2 for displaying Features",
+        "options": [
+          { "name": "Variation 1", "value": "var1" },
+          { "name": "Variation 2", "value": "var2" }
+        ]
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "heading",
+        "label": "Heading",
+        "value": "",
+        "condition": { "==": [{ "var": "varType" }, "var1"] }
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "label": "Description",
+        "condition": { "==": [{ "var": "varType" }, "var1"] }
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "ctaLink",
+        "label": "CTA Link",
+        "value": "",
+        "condition": { "==": [{ "var": "varType" }, "var1"] }
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "ctaText",
+        "label": "CTA Text",
+        "value": "",
+        "condition": { "==": [{ "var": "varType" }, "var1"] }
+      },
+      {
+        "component": "select",
+        "name": "ctaType",
+        "label": "CTA Type",
+        "options": [
+          { "name": "default", "value": "" },
+          { "name": "primary", "value": "primary" },
+          { "name": "secondary", "value": "secondary" },
+          { "name": "tertiary", "value": "tertiary" }
+        ],
+        "condition": { "==": [{ "var": "varType" }, "var1"] }
+      },
+      {
+        "component": "richtext",
+        "name": "usp",
+        "value": "",
+        "label": "USP",
+        "valueType": "string",
+        "description": "Add USP and USP-Value as key-value pair",
+        "multi": true,
+        "condition": { "==": [{ "var": "varType" }, "var2"] }
+      },
+      {
+        "component": "richtext",
+        "name": "uspvalue",
+        "value": "",
+        "label": "USP Value",
+        "description": "Add USP and USP-Value as key-value pair",
+        "valueType": "string",
+        "multi": true,
+        "condition": { "==": [{ "var": "varType" }, "var2"] }
+      }
+    ]
+  },
+
+
+
+
   {
     "id": "card",
     "fields": [
@@ -159,32 +256,8 @@
       }
     ]
   },
-  {
-    "id": "hero",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Alt",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
+
+
 
   {
     "id": "teaser",
@@ -219,7 +292,7 @@
       {
         "component": "text",
         "name": "variant1Title",
-        "label": "Variant1 Title",
+        "label": "Vatiant1 Title",
         "condition": { "==": [{ "var": "varType" }, "var1"] }
       },
       {
@@ -272,6 +345,9 @@
           }
         ]
       },
+
+
+
       {
         "component": "reference",
         "valueType": "string",
@@ -291,7 +367,7 @@
       {
         "component": "text",
         "name": "variant2Title1",
-        "label": "Variant2 Title1",
+        "label": "Vatiant2 Title1",
         "condition": { "==": [{ "var": "varType" }, "var2"] }
       },
       {
@@ -363,7 +439,7 @@
       {
         "component": "text",
         "name": "variant2Title2",
-        "label": "Variant2 Title2",
+        "label": "Vatiant2 Title2",
         "condition": { "==": [{ "var": "varType" }, "var2"] }
       },
       {
@@ -419,28 +495,10 @@
       }
     ]
   },
+
   {
-    "id": "tab",
+    "id": "hero",
     "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "blockTitle",
-        "label": "Title",
-        "value": ""
-      }
-    ]
-  },
-  {
-    "id": "tabContent",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "tabName",
-        "label": "Tab Name",
-        "multi": false
-      },
       {
         "component": "reference",
         "valueType": "string",
@@ -449,208 +507,21 @@
         "multi": false
       },
       {
-        "component": "select",
-        "label": "Variation Type",
-        "name": "varType",
-        "valueType": "string",
-        "description": "Select Variation 1 for displaying Heading & Description, and select Variation 2 for displaying Features",
-        "options": [
-          {
-            "name": "Variation 1",
-            "value": "var1"
-          },
-          {
-            "name": "Variation 2",
-            "value": "var2"
-          }
-        ]
-      },
-      {
         "component": "text",
         "valueType": "string",
-        "name": "heading",
-        "label": "Heading",
-        "value": "",
-        "condition": {
-          "==": [
-            {
-              "var": "varType"
-            },
-            "var1"
-          ]
-        }
-      },
-      {
-        "component": "richtext",
-        "name": "description",
-        "label": "Description",
-        "condition": {
-          "==": [
-            {
-              "var": "varType"
-            },
-            "var1"
-          ]
-        }
-      },
-      {
-        "component": "aem-content",
-        "valueType": "string",
-        "name": "ctaLink",
-        "label": "CTA Link",
-        "value": "",
-        "condition": {
-          "==": [
-            {
-              "var": "varType"
-            },
-            "var1"
-          ]
-        }
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "ctaText",
-        "label": "CTA Text",
-        "value": "",
-        "condition": {
-          "==": [
-            {
-              "var": "varType"
-            },
-            "var1"
-          ]
-        }
-      },
-      {
-        "component": "select",
-        "name": "ctaType",
-        "label": "CTA Type",
-        "options": [
-          {
-            "name": "default",
-            "value": ""
-          },
-          {
-            "name": "primary",
-            "value": "primary"
-          },
-          {
-            "name": "secondary",
-            "value": "secondary"
-          },
-          {
-            "name": "tertiary",
-            "value": "tertiary"
-          }
-        ],
-        "condition": {
-          "==": [
-            {
-              "var": "varType"
-            },
-            "var1"
-          ]
-        }
-      },
-      {
-        "component": "richtext",
-        "name": "usp",
-        "value": "",
-        "label": "USP",
-        "valueType": "string",
-        "description": "Add USP and USP-Value as key-value pair",
-        "multi": true,
-        "condition": {
-          "==": [
-            {
-              "var": "varType"
-            },
-            "var2"
-          ]
-        }
-      },
-      {
-        "component": "richtext",
-        "name": "uspvalue",
-        "value": "",
-        "label": "USP Value",
-        "description": "Add USP and USP-Value as key-value pair",
-        "valueType": "string",
-        "multi": true,
-        "condition": {
-          "==": [
-            {
-              "var": "varType"
-            },
-            "var2"
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "id": "sticky-navigation",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "stickyNavModelId",
-        "label": "Model Name",
+        "name": "imageAlt",
+        "label": "Alt",
         "value": ""
       },
       {
-        "component": "aem-content",
-        "name": "link",
-        "label": "CTA Link"
-      },
-      {
-        "component": "text",
-        "name": "linkText",
-        "label": "CTA Name"
-      },
-      {
-        "component": "select",
-        "name": "linkType",
-        "label": "CTA Type",
-        "options": [
-          {
-            "name": "default",
-            "value": ""
-          },
-          {
-            "name": "primary",
-            "value": "primary"
-          },
-          {
-            "name": "secondary",
-            "value": "secondary"
-          },
-          {
-            "name": "tertiary",
-            "value": "tertiary"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "navlink",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "stickyNavHeading",
-        "label": "Title",
-        "value": ""
-      },
-      {
-        "component": "aem-content",
-        "valueType": "string",
-        "name": "stickyLink",
-        "label": "Link"
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   }
 ]
+
+

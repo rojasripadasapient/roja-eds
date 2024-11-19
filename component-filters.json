@@ -16,7 +16,10 @@
       "cards",
       "columns",
       "fragment",
-      "teaser"
+      "teaser",
+      "accordion",
+      "tab"
+
     ]
   },
   {
@@ -38,34 +41,6 @@
       "image",
       "button",
       "title"
-    ]
-  },
-  {
-    "id": "tab",
-    "components": [
-      "tabContent"
-    ]
-  },
-  {
-    "id": "sticky-navigation",
-    "components": [
-      "navlink"
-    ]
-  },
-  {
-    "id": "section",
-    "components": [
-      "text",
-      "image",
-      "button",
-      "title",
-      "hero",
-      "cards",
-      "columns",
-      "fragment",
-      "sticky-navigation",
-      "tab",
-      "teaser"
     ]
   }
 ]
