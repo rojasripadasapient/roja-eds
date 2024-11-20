@@ -262,14 +262,12 @@ export default async function decorate(block) {
   const teaserVariant = [...block.children].slice(0, 1);
   const teaserVariantVal = teaserVariant[0].innerText.trim();
 
-  // if (teaserVariantVal === 'var1') {
-  //   teaserVariantOne(block);
-  // } else if (teaserVariantVal === 'var2') {
-  //   teaserVariantTwo(block);
-  // }
-  if (teaserVariantVal === 'var1' || teaserVariantVal === 'var2') {
-    block.style.display = 'none';
-  } else if (teaserVariantVal === 'var1') {
+  const allVariants = [...block.children].slice(1); // All the content except the first item (variant selector)
+  allVariants.forEach(variantBlock => {
+    variantBlock.style.display = 'none'; // Hide all blocks initially
+  });
+
+  if (teaserVariantVal === 'var1') {
     teaserVariantOne(block);
   } else if (teaserVariantVal === 'var2') {
     teaserVariantTwo(block);
