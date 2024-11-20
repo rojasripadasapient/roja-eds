@@ -240,7 +240,7 @@ function teaserVariantTwo(block) {
   if (ctaElement2) ctaContainer2?.appendChild(ctaElement2);
 
   // Clear the original block content and append the new container
-  block.innerHTML = '';
+  //block.innerHTML = '';
   block.classList.add('teaser-comp');
   block.appendChild(container);
 

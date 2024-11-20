@@ -1,7 +1,7 @@
 {
   "definitions": [
     {
-      "title": "Action Stripe",
+      "title": "B004-action-Stripe",
       "id": "action-stripe",
       "plugins": {
         "xwalk": {
