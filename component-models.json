@@ -572,6 +572,7 @@
           ]
         }
       },
+
       {
         "component": "aem-content",
         "name": "variant2Link2",
