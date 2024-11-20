@@ -697,17 +697,17 @@
       },
       {
         "component": "aem-content",
-        "name": "link",
+        "name": "link1",
         "label": "Link1"
       },
       {
         "component": "text",
-        "name": "linkText",
+        "name": "linkText1",
         "label": "Text1"
       },
       {
         "component": "select",
-        "name": "linkType",
+        "name": "linkType1",
         "label": "Type1",
         "options": [
           {
