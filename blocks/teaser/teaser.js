@@ -100,7 +100,7 @@ function buildCta(cta) {
   const url = anchor.getAttribute('href') || '#';
   const title = anchor.getAttribute('title') || 'Default Title';
   const clsList = (anchor.getAttribute('class') || '').split(' ');
-  const variant = clsList[3] || 'tertiary';
+  const variant = clsList[2] || 'secondary';
 
   const button = document.createElement('wds-button');
   const span = document.createElement('span');
