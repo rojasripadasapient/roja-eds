@@ -88,17 +88,17 @@
         },
         {
           "component": "aem-content",
-          "name": "link2",
+          "name": "ctalink2",
           "label": "Link2"
         },
         {
           "component": "text",
-          "name": "linkText2",
+          "name": "ctalinkText2",
           "label": "Text2"
         },
         {
           "component": "select",
-          "name": "linkType2",
+          "name": "ctalinkType2",
           "label": "Type2",
           "options": [
             {
