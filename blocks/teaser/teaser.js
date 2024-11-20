@@ -168,11 +168,15 @@ function teaserVariantOne(block) {
   block.innerHTML = '';
   block.classList.add('teaser-comp');
   block.appendChild(container);
+  bindEvent(block);
 }
 
 function teaserVariantTwo(block) {
   // Select the elements for the two sections (slicing the children of the block)
-  const var2elements = [...block.children].slice(5, 20).map((row) => row.firstElementChild);
+  const var2elements = [...block.children].slice(5, 9).map((row) => row.firstElementChild);
+  const var2elements2 = [...block.children].slice(11, 16).map((row) => row.firstElementChild);
+  console.log(var2elements);
+  console.log(var2elements2);
 
   // Log to check the size and contents of var2elements
   console.log('var2elements:', var2elements);
@@ -180,7 +184,7 @@ function teaserVariantTwo(block) {
 
   // Get the CTA buttons for each section, with fallback in case they don't exist
   const ctaElement1 = var2elements[3] ? buildCta(var2elements[3]) : null;
-  const ctaElement2 = var2elements[9] ? buildCta(var2elements[9]) : null;
+  const ctaElement2 = var2elements2[3] ? buildCta(var2elements[3]) : null;
 
   // Log the CTA elements to see if they are being built
   console.log('ctaElement1:', ctaElement1);
@@ -188,7 +192,10 @@ function teaserVariantTwo(block) {
 
 
   // Extracting image alt, headline, and subheadline for each section
-  const [imageAlt1, headline1, subheadline1, imageAlt2, headline2, subheadline2] = var2elements;
+  const [imageAlt1, headline1, subheadline1] = var2elements;
+  const [imageAlt2, headline2, subheadline2] = var2elements2;
+
+  console.log(imageAlt1, headline1, subheadline1, imageAlt2, headline2, subheadline2);
 
   // Select all the picture containers (assuming there are two images)
   const pictureContainers = block.querySelectorAll('picture');
@@ -216,7 +223,6 @@ function teaserVariantTwo(block) {
       </div>
       <!-- Section 2: Second Image, Headline, Subheadline, and CTA -->
       <div class="teaser__section">
-
         <div class="teaser__image">${pictureContainers[1] ? pictureContainers[1].outerHTML : ''}</div>
         <div class="teaser__text">
           <div class="teaser__title wds2-type-display-m desktop-title">${headline2 ? headline2.innerHTML : 'Default Headline'}</div>
