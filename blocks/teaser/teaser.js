@@ -94,16 +94,15 @@ export default async function decorate(block) {
 */
 import { moveInstrumentation } from '../../scripts/scripts.js';
 
-function buildCta(cta) {
-  console.log(cta);
-  const anchor = cta.querySelector('.button-container a');
+function buildCta(cta, ctaTitle, ctaVariant) {
+  const anchor = cta?.querySelector('.button-container a');
+  if (!anchor) return null;
   const url = anchor.getAttribute('href') || '#';
-  const title = anchor.getAttribute('title') || 'Default Title';
-  const clsList = (anchor.getAttribute('class') || '').split(' ');
-  const variant = clsList[2] || 'secondary';
-
+  const title = ctaTitle ? ctaTitle.textContent : (anchor.getAttribute('title') || '');
+  const variant = ctaVariant ? ctaVariant.textContent : (anchor.classList[1] || 'secondary');
   const button = document.createElement('wds-button');
   const span = document.createElement('span');
+
   button.setAttribute('background', 'light');
   button.setAttribute('variant', variant);
   button.setAttribute('data-src', url);
@@ -173,7 +172,7 @@ function teaserVariantOne(block) {
 
 function teaserVariantTwo(block) {
   // Select the elements for the two sections (slicing the children of the block)
-  const var2elements = [...block.children].slice(5, 10).map((row) => row.firstElementChild);
+  const var2elements = [...block.children].slice(5, 11).map((row) => row.firstElementChild);
   const var2elements2 = [...block.children].slice(11, 18).map((row) => row.firstElementChild);
   console.log(var2elements);
   console.log(var2elements2);
@@ -183,8 +182,16 @@ function teaserVariantTwo(block) {
   console.log('var2elements length:', var2elements.length); // Check how many elements are in the array
 
   // Get the CTA buttons for each section, with fallback in case they don't exist
-  const ctaElement1 = var2elements[3] ? buildCta(var2elements[3]) : null;
-  const ctaElement2 = var2elements2[3] ? buildCta(var2elements2[3]) : null;
+  const ctaElement1 = var2elements[3] ? buildCta(var2elements[3], var2elements[4], var2elements[5] ) : null;
+  const ctaElement2 = var2elements2[3] ? buildCta(var2elements2[3] , var2elements2[4], var2elements2[5]) : null;
+
+  console.log(var2elements[3]);
+  console.log(var2elements[4]);
+  console.log(var2elements[5]);
+
+  console.log(var2elements2[3]);
+  console.log(var2elements2[4]);
+  console.log(var2elements2[5]);
 
   // Log the CTA elements to see if they are being built
   console.log('ctaElement1:', ctaElement1);
@@ -211,12 +218,12 @@ function teaserVariantTwo(block) {
   // Create the container for the teaser
   const container = document.createElement('div');
   container.innerHTML = `
-    <div class="varianttwo__container">
+    <div class="varianttwo__container flex">
       <!-- Section 1: First Image, Headline, Subheadline, and CTA -->
       <div class="teaser__section">
         <div class="teaser__image">${pictureContainers[0] ? pictureContainers[0].outerHTML : ''}</div>
         <div class="teaser__text">
-          <div class="teaser__title wds2-type-display-m desktop-title">${headline1 ? headline1.innerHTML : 'Default Headline'}</div>
+          <div class="teaser__title wds2-type-display-m">${headline1 ? headline1.innerHTML : 'Default Headline'}</div>
           <div class="teaser__description wds2-type-body-light-m">${subheadline1 ? subheadline1.innerHTML : 'Default Subheadline'}</div>
           <div class="teaser__cta"></div>
         </div>
@@ -225,7 +232,7 @@ function teaserVariantTwo(block) {
       <div class="teaser__section">
         <div class="teaser__image">${pictureContainers[1] ? pictureContainers[1].outerHTML : ''}</div>
         <div class="teaser__text">
-          <div class="teaser__title wds2-type-display-m desktop-title">${headline2 ? headline2.innerHTML : 'Default Headline'}</div>
+          <div class="teaser__title wds2-type-display-m">${headline2 ? headline2.innerHTML : 'Default Headline'}</div>
           <div class="teaser__description wds2-type-body-light-m">${subheadline2 ? subheadline2.innerHTML : 'Default Subheadline'}</div>
           <div class="teaser__cta"></div>
         </div>
@@ -237,14 +244,30 @@ function teaserVariantTwo(block) {
   const ctaContainer1 = container.querySelectorAll('.teaser__cta')[0]; // First CTA container
   const ctaContainer2 = container.querySelectorAll('.teaser__cta')[1]; // Second CTA container
   if (ctaElement1) ctaContainer1?.appendChild(ctaElement1);
+  console.log(ctaElement1);
   if (ctaElement2) ctaContainer2?.appendChild(ctaElement2);
+  console.log(ctaElement2);
 
   // Clear the original block content and append the new container
-  //block.innerHTML = '';
+  block.innerHTML = '';
   block.classList.add('teaser-comp');
   block.appendChild(container);
 
   // Bind the event to handle button click (for navigation)
+  bindEvent(block);
+}
+
+
+export default async function decorate(block) {
+  const teaserVariant = [...block.children].slice(0, 1);
+  const teaserVariantVal = teaserVariant[0].innerText.trim();
+
+  if (teaserVariantVal === 'var1') {
+    teaserVariantOne(block);
+  } else if (teaserVariantVal === 'var2') {
+    teaserVariantTwo(block);
+  }
+
   bindEvent(block);
 }
 
