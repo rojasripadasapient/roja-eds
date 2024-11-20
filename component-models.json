@@ -697,17 +697,17 @@
       },
       {
         "component": "aem-content",
-        "name": "ctalink1",
+        "name": "link",
         "label": "Link1"
       },
       {
         "component": "text",
-        "name": "ctalinkText1",
+        "name": "linkText",
         "label": "Text1"
       },
       {
         "component": "select",
-        "name": "ctalinkType1",
+        "name": "linkType",
         "label": "Type1",
         "options": [
           {

@@ -55,17 +55,17 @@
         },
         {
           "component": "aem-content",
-          "name": "link1",
+          "name": "link",
           "label": "Link1"
         },
         {
           "component": "text",
-          "name": "linkText1",
+          "name": "linkText",
           "label": "Text1"
         },
         {
           "component": "select",
-          "name": "linkType1",
+          "name": "linkType",
           "label": "Type1",
           "options": [
             {
