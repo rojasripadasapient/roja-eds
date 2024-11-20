@@ -89,12 +89,22 @@
       align-items: center;
   }
 
+  .varianttwo__container {
+    display: flex;
+    gap: 48px;
+    justify-content: space-between;
+  }
+
+  .varianttwo__container .teaser__image {
+    width: 100%;
+  }
+
   .teaser__image {
       width: 50%;
       line-height: 0;
   }
 
-  .teaser__text {
+  .variantone__container .teaser__text {
       width: 50%;
       text-align: left;
       padding-left: 24px;
