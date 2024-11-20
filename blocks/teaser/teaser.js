@@ -173,8 +173,8 @@ function teaserVariantOne(block) {
 
 function teaserVariantTwo(block) {
   // Select the elements for the two sections (slicing the children of the block)
-  const var2elements = [...block.children].slice(5, 9).map((row) => row.firstElementChild);
-  const var2elements2 = [...block.children].slice(11, 16).map((row) => row.firstElementChild);
+  const var2elements = [...block.children].slice(5, 10).map((row) => row.firstElementChild);
+  const var2elements2 = [...block.children].slice(11, 18).map((row) => row.firstElementChild);
   console.log(var2elements);
   console.log(var2elements2);
 
