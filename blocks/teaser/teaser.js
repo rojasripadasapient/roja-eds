@@ -184,7 +184,7 @@ function teaserVariantTwo(block) {
 
   // Get the CTA buttons for each section, with fallback in case they don't exist
   const ctaElement1 = var2elements[3] ? buildCta(var2elements[3]) : null;
-  const ctaElement2 = var2elements2[3] ? buildCta(var2elements[3]) : null;
+  const ctaElement2 = var2elements2[3] ? buildCta(var2elements2[3]) : null;
 
   // Log the CTA elements to see if they are being built
   console.log('ctaElement1:', ctaElement1);
