@@ -131,6 +131,10 @@ function bindEvent(block) {
 
 function teaserVariantOne(block) {
   console.log("hei I am var1");
+
+  // Clear the existing content
+  block.innerHTML = ''; // Clear any previous content
+
   const elements = [...block.children].slice(1, 6);
   const ctaElement = buildCta(elements[3]);
   const [imageAlt, headline, subheadline] = elements;
@@ -165,14 +169,15 @@ function teaserVariantOne(block) {
   const ctaContainer = container.querySelector('.teaser__cta');
   ctaContainer?.appendChild(ctaElement);
 
-  block.innerHTML = '';
   block.classList.add('teaser-comp');
   block.appendChild(container);
   bindEvent(block);
 }
 
 function teaserVariantTwo(block) {
-  // Select the elements for the two sections (slicing the children of the block)
+  // Clear the existing content
+  block.innerHTML = ''; // Clear any previous content
+
   const var2elements = [...block.children].slice(5, 11).map((row) => row.firstElementChild);
   const var2elements2 = [...block.children].slice(11, 18).map((row) => row.firstElementChild);
   console.log(var2elements);
@@ -180,11 +185,11 @@ function teaserVariantTwo(block) {
 
   // Log to check the size and contents of var2elements
   console.log('var2elements:', var2elements);
-  console.log('var2elements length:', var2elements.length); // Check how many elements are in the array
+  console.log('var2elements length:', var2elements.length);
 
-  // Get the CTA buttons for each section, with fallback in case they don't exist
-  const ctaElement1 = var2elements[3] ? buildCta(var2elements[3], var2elements[4], var2elements[5] ) : null;
-  const ctaElement2 = var2elements2[3] ? buildCta(var2elements2[3] , var2elements2[4], var2elements2[5]) : null;
+  // Get the CTA buttons for each section
+  const ctaElement1 = var2elements[3] ? buildCta(var2elements[3], var2elements[4], var2elements[5]) : null;
+  const ctaElement2 = var2elements2[3] ? buildCta(var2elements2[3], var2elements2[4], var2elements2[5]) : null;
 
   console.log(var2elements[3]);
   console.log(var2elements[4]);
@@ -197,7 +202,6 @@ function teaserVariantTwo(block) {
   // Log the CTA elements to see if they are being built
   console.log('ctaElement1:', ctaElement1);
   console.log('ctaElement2:', ctaElement2);
-
 
   // Extracting image alt, headline, and subheadline for each section
   const [imageAlt1, headline1, subheadline1] = var2elements;
@@ -250,14 +254,12 @@ function teaserVariantTwo(block) {
   console.log(ctaElement2);
 
   // Clear the original block content and append the new container
-  block.innerHTML = '';
   block.classList.add('teaser-comp');
   block.appendChild(container);
 
   // Bind the event to handle button click (for navigation)
   bindEvent(block);
 }
-
 
 export default async function decorate(block) {
   const teaserVariant = [...block.children].slice(0, 1);
@@ -268,6 +270,9 @@ export default async function decorate(block) {
     variantBlock.style.display = 'none'; // Hide all blocks initially
   });
 
+  // Clear the block content before adding new content
+  block.innerHTML = '';
+
   if (teaserVariantVal === 'var1') {
     teaserVariantOne(block);
   } else if (teaserVariantVal === 'var2') {
@@ -276,3 +281,4 @@ export default async function decorate(block) {
 
   bindEvent(block);
 }
+
