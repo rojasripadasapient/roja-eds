@@ -1,13 +1,36 @@
 import { moveInstrumentation } from '../../scripts/scripts.js';
 
+// function buildCta(cta, ctaTitle, ctaVariant) {
+//   const anchor = cta?.querySelector('.button-container a');
+//   if (!anchor) return null;
+//   const url = anchor.getAttribute('href') || '#';
+//   const title = ctaTitle ? ctaTitle.textContent : (anchor.getAttribute('title') || '');
+//   console.log(title);
+//   const variant = ctaVariant ? ctaVariant.textContent : (anchor.classList[3] || 'secondary');
+//   console.log(variant);
+//   const button = document.createElement('wds-button');
+//   const span = document.createElement('span');
+
+//   button.setAttribute('background', 'light');
+//   button.setAttribute('variant', variant);
+//   button.setAttribute('data-src', url);
+//   span.textContent = title;
+//   button.appendChild(span);
+
+//   moveInstrumentation(anchor, span);
+
+//   return button;
+// }
+
 function buildCta(cta, ctaTitle, ctaVariant) {
   const anchor = cta?.querySelector('.button-container a');
-  if (!anchor) return null;
-  const url = anchor.getAttribute('href') || '#';
-  const title = ctaTitle ? ctaTitle.textContent : (anchor.getAttribute('title') || '');
-  console.log(title);
-  const variant = ctaVariant ? ctaVariant.textContent : (anchor.classList[3] || 'secondary');
-  console.log(variant);
+  const isCtaTitleP = ctaTitle && ctaTitle.tagName === 'P'; // Check if ctaTitle is a <p> element
+  if (!anchor && !isCtaTitleP) return null; // Ensure that either anchor or p element is present
+
+  const url = anchor ? anchor.getAttribute('href') : '#'; // Fallback URL if anchor is missing
+  const title = isCtaTitleP ? ctaTitle.textContent : (ctaTitle ? ctaTitle.textContent : (anchor ? anchor.getAttribute('title') : ''));
+  const variant = ctaVariant ? ctaVariant.textContent : (anchor ? anchor.classList[3] : 'secondary');
+
   const button = document.createElement('wds-button');
   const span = document.createElement('span');
 
@@ -17,10 +40,16 @@ function buildCta(cta, ctaTitle, ctaVariant) {
   span.textContent = title;
   button.appendChild(span);
 
-  moveInstrumentation(anchor, span);
+  // Handle moveInstrumentation depending on the type of ctaTitle
+  if (isCtaTitleP) {
+    moveInstrumentation(ctaTitle, span);  // If ctaTitle is <p>, pass <p> and <span>
+  } else if (anchor) {
+    moveInstrumentation(anchor, span);  // Otherwise, pass <a> and <span>
+  }
 
   return button;
 }
+
 
 function bindEvent(block) {
   const wdsButton = block.querySelector('wds-button');
@@ -80,8 +109,6 @@ function teaserVariantOne(block) {
   bindEvent(block);
 }
 
-import { moveInstrumentation } from '../../scripts/scripts.js';
-
 function teaserVariantTwo(block) {
   // Select the elements for the two sections (slicing the children of the block)
   const var2elements = [...block.children].slice(5, 11).map((row) => row.firstElementChild);
@@ -90,6 +117,10 @@ function teaserVariantTwo(block) {
   // Get the CTA buttons for each section, with fallback in case they don't exist
   const ctaElement1 = var2elements[3] ? buildCta(var2elements[3], var2elements[4], var2elements[5]) : null;
   const ctaElement2 = var2elements2[3] ? buildCta(var2elements2[3], var2elements2[4], var2elements2[5]) : null;
+
+  console.log(var2elements[3], var2elements[4], var2elements[5]);
+  console.log(var2elements2[3], var2elements2[4], var2elements2[5]);
+
 
   // Extracting image alt, headline, and subheadline for each section
   const [imageAlt1, headline1, subheadline1] = var2elements;
@@ -165,18 +196,9 @@ function teaserVariantTwo(block) {
   block.classList.add('teaser-comp');
   block.appendChild(container);
 
-  // Reinitialize inline editing for both sections to ensure AEM hooks are applied to dynamically added elements
-  reinitializeInlineEditing(); // Call this to trigger AEM inline editing hooks
+  // Bind the event to handle button click (for navigation)
   bindEvent(ctaContainer1);  // Pass only the container of the first section
   bindEvent(ctaContainer2);  // Pass only the container of the second section
-}
-
-// Helper function to reinitialize inline editing (you may need to adapt this based on your AEM setup)
-function reinitializeInlineEditing() {
-  if (window && window.editable) {
-    // Reinitialize inline editing hooks for your custom components
-    window.editable.enableInlineEditing();
-  }
 }
 
 export default async function decorate(block) {
