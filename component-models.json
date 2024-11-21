@@ -800,9 +800,15 @@
     "id": "offers",
     "fields": [
       {
-        "component": "richtext",
-        "name": "title",
-        "label": "Title"
+        "component": "reference",
+        "valueType": "string",
+        "name": "variant1Image",
+        "label": "Variant1 Image"
+      },
+      {
+        "component": "text",
+        "name": "variant1Title",
+        "label": "Variant1 Title"
       },
       {
         "component": "richtext",
@@ -811,42 +817,18 @@
       },
       {
         "component": "aem-content",
-        "name": "variant2Link2",
-        "label": "Variant2 Link2",
-        "condition": {
-          "==": [
-            {
-              "var": "varType"
-            },
-            "var2"
-          ]
-        }
+        "name": "link",
+        "label": "Link"
       },
       {
         "component": "text",
-        "name": "variant2LinkText2",
-        "label": "Variant2 Text2",
-        "condition": {
-          "==": [
-            {
-              "var": "varType"
-            },
-            "var2"
-          ]
-        }
+        "name": "linkText",
+        "label": "Text"
       },
       {
         "component": "select",
-        "name": "variant2LinkType2",
-        "label": "Variant2 LinkType2",
-        "condition": {
-          "==": [
-            {
-              "var": "varType"
-            },
-            "var2"
-          ]
-        },
+        "name": "linkType",
+        "label": "LinkType",
         "options": [
           {
             "name": "default",
@@ -867,105 +849,51 @@
         ]
       },
       {
-        "id": "offers",
-        "fields": [
+        "component": "reference",
+        "valueType": "string",
+        "name": "Image1",
+        "label": "Image1"
+      },
+      {
+        "component": "text",
+        "name": "Title1",
+        "label": "Title1"
+      },
+      {
+        "component": "richtext",
+        "name": "description1",
+        "label": "Description1"
+      },
+      {
+        "component": "aem-content",
+        "name": "link1",
+        "label": "Link1"
+      },
+      {
+        "component": "text",
+        "name": "linkText1",
+        "label": "Text1"
+      },
+      {
+        "component": "select",
+        "name": "linkType1",
+        "label": "LinkType1",
+        "options": [
           {
-            "component": "reference",
-            "valueType": "string",
-            "name": "variant1Image",
-            "label": "Variant1 Image"
+            "name": "default",
+            "value": ""
           },
           {
-            "component": "text",
-            "name": "variant1Title",
-            "label": "Variant1 Title"
+            "name": "primary",
+            "value": "primary"
           },
           {
-            "component": "richtext",
-            "name": "description",
-            "label": "Description"
+            "name": "secondary",
+            "value": "secondary"
           },
           {
-            "component": "aem-content",
-            "name": "link",
-            "label": "Link"
-          },
-          {
-            "component": "text",
-            "name": "linkText",
-            "label": "Text"
-          },
-          {
-            "component": "select",
-            "name": "linkType",
-            "label": "LinkType",
-            "options": [
-              {
-                "name": "default",
-                "value": ""
-              },
-              {
-                "name": "primary",
-                "value": "primary"
-              },
-              {
-                "name": "secondary",
-                "value": "secondary"
-              },
-              {
-                "name": "tertiary",
-                "value": "tertiary"
-              }
-            ]
-          },
-          {
-            "component": "reference",
-            "valueType": "string",
-            "name": "Image1",
-            "label": "Image1"
-          },
-          {
-            "component": "text",
-            "name": "Title1",
-            "label": "Title1"
-          },
-          {
-            "component": "richtext",
-            "name": "description1",
-            "label": "Description1"
-          },
-          {
-            "component": "aem-content",
-            "name": "link1",
-            "label": "Link1"
-          },
-          {
-            "component": "text",
-            "name": "linkText1",
-            "label": "Text1"
-          },
-          {
-            "component": "select",
-            "name": "linkType1",
-            "label": "LinkType1",
-            "options": [
-              {
-                "name": "default",
-                "value": ""
-              },
-              {
-                "name": "primary",
-                "value": "primary"
-              },
-              {
-                "name": "secondary",
-                "value": "secondary"
-              },
-              {
-                "name": "tertiary",
-                "value": "tertiary"
-              }
-            ]
+            "name": "tertiary",
+            "value": "tertiary"
           }
         ]
       }
