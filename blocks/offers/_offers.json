@@ -193,6 +193,16 @@
           "name": "description2",
           "label": "Description2"
         },
+        {
+          "component": "aem-content",
+          "name": "link2",
+          "label": "CTA Link2"
+        },
+        {
+          "component": "text",
+          "name": "linkText2",
+          "label": "CTA Name2"
+        },
 
 
 
@@ -214,18 +224,18 @@
         },
         {
           "component": "aem-content",
-          "name": "link2",
-          "label": "Link2"
+          "name": "link3",
+          "label": "Link3"
         },
         {
           "component": "text",
-          "name": "linkText2",
-          "label": "Text2"
+          "name": "linkText3",
+          "label": "Text3"
         },
         {
           "component": "select",
-          "name": "linkType2",
-          "label": "LinkType2",
+          "name": "linkType3",
+          "label": "LinkType3",
           "options": [
             {
               "name": "default",
