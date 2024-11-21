@@ -870,6 +870,12 @@
         "id": "offers",
         "fields": [
           {
+            "component": "reference",
+            "name": "images",
+            "label": "Images",
+            "multi": true
+          },
+          {
             "component": "richtext",
             "name": "title",
             "label": "Title"
@@ -943,12 +949,6 @@
             "multi": true
           }
         ]
-      },
-      {
-        "component": "reference",
-        "name": "images",
-        "label": "Images",
-        "multi": true
       }
     ]
   }

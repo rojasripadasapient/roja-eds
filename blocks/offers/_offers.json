@@ -22,6 +22,12 @@
       "id": "offers",
       "fields": [
         {
+          "component": "reference",
+          "name": "images",
+          "label": "Images",
+          "multi": true
+        },
+        {
           "component": "richtext",
           "name": "title",
           "label": "Title"
@@ -87,12 +93,6 @@
               "value": "tertiary"
             }
           ]
-        },
-        {
-          "component": "reference",
-          "name": "images",
-          "label": "Images",
-          "multi": true
         }
       ]
     }
