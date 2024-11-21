@@ -874,8 +874,8 @@
             "fields": [
               {
                 "component": "reference",
-                "name": "imageURL",
-                "label": "ImageURL",
+                "name": "image",
+                "label": "Image",
                 "multi": false
               },
               {
