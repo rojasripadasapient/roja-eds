@@ -80,6 +80,8 @@ function teaserVariantOne(block) {
   bindEvent(block);
 }
 
+import { moveInstrumentation } from '../../scripts/scripts.js';
+
 function teaserVariantTwo(block) {
   // Select the elements for the two sections (slicing the children of the block)
   const var2elements = [...block.children].slice(5, 11).map((row) => row.firstElementChild);
@@ -163,9 +165,18 @@ function teaserVariantTwo(block) {
   block.classList.add('teaser-comp');
   block.appendChild(container);
 
-  // Bind the event to handle button click (for navigation)
+  // Reinitialize inline editing for both sections to ensure AEM hooks are applied to dynamically added elements
+  reinitializeInlineEditing(); // Call this to trigger AEM inline editing hooks
   bindEvent(ctaContainer1);  // Pass only the container of the first section
   bindEvent(ctaContainer2);  // Pass only the container of the second section
+}
+
+// Helper function to reinitialize inline editing (you may need to adapt this based on your AEM setup)
+function reinitializeInlineEditing() {
+  if (window && window.editable) {
+    // Reinitialize inline editing hooks for your custom components
+    window.editable.enableInlineEditing();
+  }
 }
 
 export default async function decorate(block) {

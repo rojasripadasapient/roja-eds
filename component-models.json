@@ -870,34 +870,19 @@
         "id": "offers",
         "fields": [
           {
-            "id": "offers",
-            "fields": [
-              {
-                "component": "reference",
-                "valueType": "string",
-                "name": "image",
-                "label": "Image"
-              },
-              {
-                "component": "text",
-                "name": "imageAlt",
-                "label": "Alt Text"
-              },
-              {
-                "component": "text",
-                "valueType": "string",
-                "name": "title",
-                "label": "Title"
-              },
-              {
-                "component": "richtext",
-                "valueType": "string",
-                "name": "description",
-                "label": "Description"
-              }
-            ]
+            "component": "reference",
+            "valueType": "string",
+            "name": "image",
+            "label": "Image",
+            "multi": false
+          },
+          {
+            "component": "richtext",
+            "name": "description",
+            "value": "",
+            "label": "Description",
+            "valueType": "string"
           }
-
         ]
       }
     ]
