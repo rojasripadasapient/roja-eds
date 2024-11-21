@@ -2,6 +2,8 @@ import { moveInstrumentation } from '../../scripts/scripts.js';
 
 function buildCta(cta, ctaTitle, ctaVariant) {
   const anchor = cta?.querySelector('.button-container a');
+  const elementP = ctaTitle?.querySelector('p');
+  console.log(elementP);
   if (!anchor) return null;
   const url = anchor.getAttribute('href') || '#';
   const title = ctaTitle ? ctaTitle.textContent : (anchor.getAttribute('title') || '');
@@ -17,7 +19,12 @@ function buildCta(cta, ctaTitle, ctaVariant) {
   span.textContent = title;
   button.appendChild(span);
 
-  moveInstrumentation(anchor, span);
+  if(elementP) {
+    moveInstrumentation(elementP, span);console.log('Hi I am inside element P moveInstrumentation');
+  }
+else {
+    moveInstrumentation(anchor, span);console.log('Hi I am inside element anchor moveInstrumentation');
+}
 
   return button;
 }
@@ -89,10 +96,6 @@ function teaserVariantTwo(block) {
   const ctaElement1 = var2elements[3] ? buildCta(var2elements[3], var2elements[4], var2elements[5]) : null;
   const ctaElement2 = var2elements2[3] ? buildCta(var2elements2[3], var2elements2[4], var2elements2[5]) : null;
 
-  console.log(var2elements[3], var2elements[4], var2elements[5]);
-  console.log(var2elements2[3], var2elements2[4], var2elements2[5]);
-
-
   // Extracting image alt, headline, and subheadline for each section
   const [imageAlt1, headline1, subheadline1] = var2elements;
   const [imageAlt2, headline2, subheadline2] = var2elements2;
@@ -138,39 +141,8 @@ function teaserVariantTwo(block) {
   // Insert the CTA buttons into each section
   const ctaContainer1 = container.querySelectorAll('.teaser__cta')[0]; // First CTA container
   const ctaContainer2 = container.querySelectorAll('.teaser__cta')[1]; // Second CTA container
-
-  // Ensure both CTA elements are not null before appending
-  if (ctaElement1) {
-    ctaContainer1?.appendChild(ctaElement1);
-    const anchor1 = ctaElement1.querySelector('a');
-    const span1 = ctaElement1.querySelector('span');
-    if (anchor1 && span1) {
-      moveInstrumentation(anchor1, span1); // Call for the first button only if both elements exist
-    } else {
-      const p1 = ctaElement1.querySelector('p'); // Check for <p> tag in variantTwo
-      if (p1 && span1) {
-        moveInstrumentation(p1, span1); // Move instrumentation for <p> to <span>
-      }
-    }
-  } else {
-    console.error('CTA Element 1 is null!');
-  }
-
-  if (ctaElement2) {
-    ctaContainer2?.appendChild(ctaElement2);
-    const anchor2 = ctaElement2.querySelector('a');
-    const span2 = ctaElement2.querySelector('span');
-    if (anchor2 && span2) {
-      moveInstrumentation(anchor2, span2); // Call for the second button only if both elements exist
-    } else {
-      const p2 = ctaElement2.querySelector('p'); // Check for <p> tag in variantTwo
-      if (p2 && span2) {
-        moveInstrumentation(p2, span2); // Move instrumentation for <p> to <span>
-      }
-    }
-  } else {
-    console.error('CTA Element 2 is null!');
-  }
+  if (ctaElement1) ctaContainer1?.appendChild(ctaElement1);
+  if (ctaElement2) ctaContainer2?.appendChild(ctaElement2);
 
   // Clear the original block content and append the new container
   block.innerHTML = '';
@@ -181,6 +153,7 @@ function teaserVariantTwo(block) {
   bindEvent(ctaContainer1);  // Pass only the container of the first section
   bindEvent(ctaContainer2);  // Pass only the container of the second section
 }
+
 
 export default async function decorate(block) {
   const teaserVariant = [...block.children].slice(0, 1);
@@ -199,4 +172,3 @@ export default async function decorate(block) {
 
   bindEvent(block);
 }
-
