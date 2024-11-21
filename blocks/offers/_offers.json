@@ -123,37 +123,6 @@
           ]
         },
         {
-          "component": "select",
-          "name": "heading",
-          "label": "Heading",
-          "options": [
-            {
-              "name": "h1",
-              "value": "h1"
-            },
-            {
-              "name": "h2",
-              "value": "h2"
-            },
-            {
-              "name": "h3",
-              "value": "h3"
-            },
-            {
-              "name": "h4",
-              "value": "h4"
-            },
-            {
-              "name": "h5",
-              "value": "h5"
-            },
-            {
-              "name": "h6",
-              "value": "h6"
-            }
-          ]
-        },
-        {
           "component": "text",
           "valueType": "string",
           "name": "spec1Image1",
@@ -209,7 +178,6 @@
           "label": "Spec4 Value Image1",
           "value": ""
         },
-
         {
           "component": "aem-content",
           "name": "link",
@@ -220,31 +188,7 @@
           "name": "linkText",
           "label": "CTA Name"
         },
-        {
-          "component": "select",
-          "name": "linkType",
-          "label": "CTA Type",
-          "options": [
-            {
-              "name": "default",
-              "value": ""
-            },
-            {
-              "name": "primary",
-              "value": "primary"
-            },
-            {
-              "name": "secondary",
-              "value": "secondary"
-            },
-            {
-              "name": "tertiary",
-              "value": "tertiary"
-            }
-          ]
-        }
-      ]
-    },
+
 
 
         {
