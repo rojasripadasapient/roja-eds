@@ -23,9 +23,10 @@
       "fields": [
         {
           "component": "reference",
-          "name": "images",
-          "label": "Images",
-          "multi": true
+          "valueType": "string",
+          "name": "image",
+          "label": "Image",
+          "multi": false
         },
         {
           "component": "richtext",
