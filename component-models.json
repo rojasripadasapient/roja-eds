@@ -896,6 +896,62 @@
             "value": "tertiary"
           }
         ]
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec1",
+        "label": "Spec1",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec1Value",
+        "label": "Spec1 Value",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec2",
+        "label": "Spec2",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec2Value",
+        "label": "Spec2 Value",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec3",
+        "label": "Spec3",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec3Value",
+        "label": "Spec3 Value",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec4",
+        "label": "Spec4",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec4Value",
+        "label": "Spec4 Value",
+        "value": ""
       }
     ]
   }
