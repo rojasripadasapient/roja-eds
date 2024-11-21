@@ -935,28 +935,18 @@
       },
       {
         "component": "aem-content",
-        "name": "link2",
-        "label": "Link2"
+        "name": "link",
+        "label": "Link"
       },
       {
         "component": "text",
-        "name": "linkText2",
-        "label": "Text2"
-      },
-      {
-        "component": "aem-content",
-        "name": "link3",
-        "label": "Link3"
-      },
-      {
-        "component": "text",
-        "name": "linkText3",
-        "label": "Text3"
+        "name": "linkText",
+        "label": "Text"
       },
       {
         "component": "select",
-        "name": "linkType3",
-        "label": "LinkType3",
+        "name": "linkType",
+        "label": "LinkType",
         "options": [
           {
             "name": "default",
