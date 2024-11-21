@@ -800,9 +800,14 @@
     "id": "offers",
     "fields": [
       {
-        "component": "select",
+        "component": "text",
         "name": "heading",
-        "label": "Heading",
+        "label": "Heading"
+      },
+      {
+        "component": "select",
+        "name": "headingType",
+        "label": "Heading Type",
         "options": [
           {
             "name": "h1",
