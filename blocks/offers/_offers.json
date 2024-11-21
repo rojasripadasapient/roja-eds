@@ -23,77 +23,26 @@
       "fields": [
         {
           "component": "reference",
-          "valueType": "string",
-          "name": "image",
-          "label": "Image",
+          "name": "imageURL",
+          "label": "ImageURL",
           "multi": false
         },
         {
+          "component": "text",
+          "name": "imageAltPromoContent",
+          "label": "Alt Text"
+        },
+        {
           "component": "richtext",
+          "valueType": "string",
           "name": "title",
           "label": "Title"
         },
         {
           "component": "richtext",
-          "name": "description",
+          "valueType": "string",
+          "name": "col1text",
           "label": "Description"
-        },
-        {
-          "component": "aem-content",
-          "name": "variant2Link2",
-          "label": "Variant2 Link2",
-          "condition": {
-            "==": [
-              {
-                "var": "varType"
-              },
-              "var2"
-            ]
-          }
-        },
-        {
-          "component": "text",
-          "name": "variant2LinkText2",
-          "label": "Variant2 Text2",
-          "condition": {
-            "==": [
-              {
-                "var": "varType"
-              },
-              "var2"
-            ]
-          }
-        },
-        {
-          "component": "select",
-          "name": "variant2LinkType2",
-          "label": "Variant2 LinkType2",
-          "condition": {
-            "==": [
-              {
-                "var": "varType"
-              },
-              "var2"
-            ]
-          },
-          "options": [
-            {
-              "name": "default",
-              "value": ""
-            },
-            {
-              "name": "primary",
-              "value": "primary"
-            },
-            {
-              "name": "secondary",
-              "value": "secondary"
-            },
-            {
-              "name": "tertiary",
-              "value": "tertiary"
-            }
-          ]
         }
       ]
     }

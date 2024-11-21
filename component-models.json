@@ -870,80 +870,34 @@
         "id": "offers",
         "fields": [
           {
-            "component": "reference",
-            "valueType": "string",
-            "name": "image",
-            "label": "Image",
-            "multi": false
-          },
-
-          {
-            "component": "richtext",
-            "name": "title",
-            "label": "Title"
-          },
-          {
-            "component": "richtext",
-            "name": "description",
-            "label": "Description"
-          },
-          {
-            "component": "aem-content",
-            "name": "link",
-            "label": "Link",
-            "condition": {
-              "==": [
-                {
-                  "var": "varType"
-                },
-                "var2"
-              ]
-            }
-          },
-          {
-            "component": "text",
-            "name": "variant2LinkText2",
-            "label": "Variant2 Text2",
-            "condition": {
-              "==": [
-                {
-                  "var": "varType"
-                },
-                "var2"
-              ]
-            }
-          },
-          {
-            "component": "select",
-            "name": "variant2LinkType2",
-            "label": "Variant2 LinkType2",
-            "condition": {
-              "==": [
-                {
-                  "var": "varType"
-                },
-                "var2"
-              ]
-            },
-            "options": [
+            "id": "offers",
+            "fields": [
               {
-                "name": "default",
-                "value": ""
+                "component": "reference",
+                "name": "imageURL",
+                "label": "ImageURL",
+                "multi": false
               },
               {
-                "name": "primary",
-                "value": "primary"
+                "component": "text",
+                "name": "imageAlt",
+                "label": "Alt Text"
               },
               {
-                "name": "secondary",
-                "value": "secondary"
+                "component": "richtext",
+                "valueType": "string",
+                "name": "title",
+                "label": "Title"
               },
               {
-                "name": "tertiary",
-                "value": "tertiary"
+                "component": "richtext",
+                "valueType": "string",
+                "name": "description",
+                "label": "Description"
               }
             ]
           }
+
         ]
       }
     ]
