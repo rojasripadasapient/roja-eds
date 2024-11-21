@@ -188,6 +188,11 @@
           "name": "linkText1",
           "label": "CTA Name1"
         },
+        {
+          "component": "richtext",
+          "name": "description2",
+          "label": "Description2"
+        },
 
 
 
@@ -204,8 +209,8 @@
         },
         {
           "component": "richtext",
-          "name": "description2",
-          "label": "Description2"
+          "name": "description3",
+          "label": "Description3"
         },
         {
           "component": "aem-content",
