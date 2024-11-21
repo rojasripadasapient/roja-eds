@@ -872,16 +872,100 @@
           {
             "component": "reference",
             "valueType": "string",
-            "name": "image",
-            "label": "Image",
-            "multi": false
+            "name": "variant1Image",
+            "label": "Variant1 Image"
+          },
+          {
+            "component": "text",
+            "name": "variant1Title",
+            "label": "Variant1 Title"
           },
           {
             "component": "richtext",
             "name": "description",
-            "value": "",
-            "label": "Description",
-            "valueType": "string"
+            "label": "Description"
+          },
+          {
+            "component": "aem-content",
+            "name": "link",
+            "label": "Link"
+          },
+          {
+            "component": "text",
+            "name": "linkText",
+            "label": "Text"
+          },
+          {
+            "component": "select",
+            "name": "linkType",
+            "label": "LinkType",
+            "options": [
+              {
+                "name": "default",
+                "value": ""
+              },
+              {
+                "name": "primary",
+                "value": "primary"
+              },
+              {
+                "name": "secondary",
+                "value": "secondary"
+              },
+              {
+                "name": "tertiary",
+                "value": "tertiary"
+              }
+            ]
+          },
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "Image1",
+            "label": "Image1"
+          },
+          {
+            "component": "text",
+            "name": "Title1",
+            "label": "Title1"
+          },
+          {
+            "component": "richtext",
+            "name": "description1",
+            "label": "Description1"
+          },
+          {
+            "component": "aem-content",
+            "name": "link1",
+            "label": "Link1"
+          },
+          {
+            "component": "text",
+            "name": "linkText1",
+            "label": "Text1"
+          },
+          {
+            "component": "select",
+            "name": "linkType1",
+            "label": "LinkType1",
+            "options": [
+              {
+                "name": "default",
+                "value": ""
+              },
+              {
+                "name": "primary",
+                "value": "primary"
+              },
+              {
+                "name": "secondary",
+                "value": "secondary"
+              },
+              {
+                "name": "tertiary",
+                "value": "tertiary"
+              }
+            ]
           }
         ]
       }
