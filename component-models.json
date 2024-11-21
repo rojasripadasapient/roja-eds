@@ -941,12 +941,6 @@
                 "value": "tertiary"
               }
             ]
-          },
-          {
-            "component": "reference",
-            "name": "images",
-            "label": "Images",
-            "multi": true
           }
         ]
       }
