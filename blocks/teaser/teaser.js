@@ -1,36 +1,13 @@
 import { moveInstrumentation } from '../../scripts/scripts.js';
 
-// function buildCta(cta, ctaTitle, ctaVariant) {
-//   const anchor = cta?.querySelector('.button-container a');
-//   if (!anchor) return null;
-//   const url = anchor.getAttribute('href') || '#';
-//   const title = ctaTitle ? ctaTitle.textContent : (anchor.getAttribute('title') || '');
-//   console.log(title);
-//   const variant = ctaVariant ? ctaVariant.textContent : (anchor.classList[3] || 'secondary');
-//   console.log(variant);
-//   const button = document.createElement('wds-button');
-//   const span = document.createElement('span');
-
-//   button.setAttribute('background', 'light');
-//   button.setAttribute('variant', variant);
-//   button.setAttribute('data-src', url);
-//   span.textContent = title;
-//   button.appendChild(span);
-
-//   moveInstrumentation(anchor, span);
-
-//   return button;
-// }
-
 function buildCta(cta, ctaTitle, ctaVariant) {
   const anchor = cta?.querySelector('.button-container a');
-  const isCtaTitleP = ctaTitle && ctaTitle.tagName === 'P'; // Check if ctaTitle is a <p> element
-  if (!anchor && !isCtaTitleP) return null; // Ensure that either anchor or p element is present
-
-  const url = anchor ? anchor.getAttribute('href') : '#'; // Fallback URL if anchor is missing
-  const title = isCtaTitleP ? ctaTitle.textContent : (ctaTitle ? ctaTitle.textContent : (anchor ? anchor.getAttribute('title') : ''));
-  const variant = ctaVariant ? ctaVariant.textContent : (anchor ? anchor.classList[3] : 'secondary');
-
+  if (!anchor) return null;
+  const url = anchor.getAttribute('href') || '#';
+  const title = ctaTitle ? ctaTitle.textContent : (anchor.getAttribute('title') || '');
+  console.log(title);
+  const variant = ctaVariant ? ctaVariant.textContent : (anchor.classList[3] || 'secondary');
+  console.log(variant);
   const button = document.createElement('wds-button');
   const span = document.createElement('span');
 
@@ -40,16 +17,10 @@ function buildCta(cta, ctaTitle, ctaVariant) {
   span.textContent = title;
   button.appendChild(span);
 
-  // Handle moveInstrumentation depending on the type of ctaTitle
-  if (isCtaTitleP) {
-    moveInstrumentation(ctaTitle, span);  // If ctaTitle is <p>, pass <p> and <span>
-  } else if (anchor) {
-    moveInstrumentation(anchor, span);  // Otherwise, pass <a> and <span>
-  }
+  moveInstrumentation(anchor, span);
 
   return button;
 }
-
 
 function bindEvent(block) {
   const wdsButton = block.querySelector('wds-button');
@@ -175,6 +146,11 @@ function teaserVariantTwo(block) {
     const span1 = ctaElement1.querySelector('span');
     if (anchor1 && span1) {
       moveInstrumentation(anchor1, span1); // Call for the first button only if both elements exist
+    } else {
+      const p1 = ctaElement1.querySelector('p'); // Check for <p> tag in variantTwo
+      if (p1 && span1) {
+        moveInstrumentation(p1, span1); // Move instrumentation for <p> to <span>
+      }
     }
   } else {
     console.error('CTA Element 1 is null!');
@@ -186,6 +162,11 @@ function teaserVariantTwo(block) {
     const span2 = ctaElement2.querySelector('span');
     if (anchor2 && span2) {
       moveInstrumentation(anchor2, span2); // Call for the second button only if both elements exist
+    } else {
+      const p2 = ctaElement2.querySelector('p'); // Check for <p> tag in variantTwo
+      if (p2 && span2) {
+        moveInstrumentation(p2, span2); // Move instrumentation for <p> to <span>
+      }
     }
   } else {
     console.error('CTA Element 2 is null!');
@@ -218,3 +199,4 @@ export default async function decorate(block) {
 
   bindEvent(block);
 }
+
