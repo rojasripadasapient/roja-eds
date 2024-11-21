@@ -90,39 +90,6 @@
           "label": "Description1"
         },
         {
-          "component": "aem-content",
-          "name": "link",
-          "label": "Link"
-        },
-        {
-          "component": "text",
-          "name": "linkText",
-          "label": "Text"
-        },
-        {
-          "component": "select",
-          "name": "linkType",
-          "label": "LinkType",
-          "options": [
-            {
-              "name": "default",
-              "value": ""
-            },
-            {
-              "name": "primary",
-              "value": "primary"
-            },
-            {
-              "name": "secondary",
-              "value": "secondary"
-            },
-            {
-              "name": "tertiary",
-              "value": "tertiary"
-            }
-          ]
-        },
-        {
           "component": "text",
           "valueType": "string",
           "name": "spec1Image1",
@@ -180,6 +147,21 @@
         },
         {
           "component": "aem-content",
+          "name": "link",
+          "label": "CTA Link"
+        },
+        {
+          "component": "text",
+          "name": "linkText",
+          "label": "CTA Name"
+        },
+        {
+          "component": "richtext",
+          "name": "description2",
+          "label": "Description2"
+        },
+        {
+          "component": "aem-content",
           "name": "link1",
           "label": "CTA Link1"
         },
@@ -189,20 +171,39 @@
           "label": "CTA Name1"
         },
         {
-          "component": "richtext",
-          "name": "description2",
-          "label": "Description2"
-        },
-        {
           "component": "aem-content",
           "name": "link2",
-          "label": "CTA Link2"
+          "label": "Link2"
         },
         {
           "component": "text",
           "name": "linkText2",
-          "label": "CTA Name2"
+          "label": "Text2"
         },
+        {
+          "component": "select",
+          "name": "linkType2",
+          "label": "LinkType2",
+          "options": [
+            {
+              "name": "default",
+              "value": ""
+            },
+            {
+              "name": "primary",
+              "value": "primary"
+            },
+            {
+              "name": "secondary",
+              "value": "secondary"
+            },
+            {
+              "name": "tertiary",
+              "value": "tertiary"
+            }
+          ]
+        },
+
 
 
 
