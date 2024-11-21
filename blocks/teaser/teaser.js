@@ -134,8 +134,29 @@ function teaserVariantTwo(block) {
   // Insert the CTA buttons into each section
   const ctaContainer1 = container.querySelectorAll('.teaser__cta')[0]; // First CTA container
   const ctaContainer2 = container.querySelectorAll('.teaser__cta')[1]; // Second CTA container
-  if (ctaElement1) ctaContainer1?.appendChild(ctaElement1);
-  if (ctaElement2) ctaContainer2?.appendChild(ctaElement2);
+
+  // Ensure both CTA elements are not null before appending
+  if (ctaElement1) {
+    ctaContainer1?.appendChild(ctaElement1);
+    const anchor1 = ctaElement1.querySelector('a');
+    const span1 = ctaElement1.querySelector('span');
+    if (anchor1 && span1) {
+      moveInstrumentation(anchor1, span1); // Call for the first button only if both elements exist
+    }
+  } else {
+    console.error('CTA Element 1 is null!');
+  }
+
+  if (ctaElement2) {
+    ctaContainer2?.appendChild(ctaElement2);
+    const anchor2 = ctaElement2.querySelector('a');
+    const span2 = ctaElement2.querySelector('span');
+    if (anchor2 && span2) {
+      moveInstrumentation(anchor2, span2); // Call for the second button only if both elements exist
+    }
+  } else {
+    console.error('CTA Element 2 is null!');
+  }
 
   // Clear the original block content and append the new container
   block.innerHTML = '';
@@ -146,7 +167,6 @@ function teaserVariantTwo(block) {
   bindEvent(ctaContainer1);  // Pass only the container of the first section
   bindEvent(ctaContainer2);  // Pass only the container of the second section
 }
-
 
 export default async function decorate(block) {
   const teaserVariant = [...block.children].slice(0, 1);
@@ -165,5 +185,3 @@ export default async function decorate(block) {
 
   bindEvent(block);
 }
-
- 
