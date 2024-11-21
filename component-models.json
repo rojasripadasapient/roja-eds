@@ -802,61 +802,12 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "variant1Image",
-        "label": "Variant1 Image"
-      },
-      {
-        "component": "text",
-        "name": "variant1Title",
-        "label": "Variant1 Title"
-      },
-      {
-        "component": "richtext",
-        "name": "description",
-        "label": "Description"
-      },
-      {
-        "component": "aem-content",
-        "name": "link",
-        "label": "Link"
-      },
-      {
-        "component": "text",
-        "name": "linkText",
-        "label": "Text"
-      },
-      {
-        "component": "select",
-        "name": "linkType",
-        "label": "LinkType",
-        "options": [
-          {
-            "name": "default",
-            "value": ""
-          },
-          {
-            "name": "primary",
-            "value": "primary"
-          },
-          {
-            "name": "secondary",
-            "value": "secondary"
-          },
-          {
-            "name": "tertiary",
-            "value": "tertiary"
-          }
-        ]
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "Image1",
+        "name": "image1",
         "label": "Image1"
       },
       {
         "component": "text",
-        "name": "Title1",
+        "name": "title1",
         "label": "Title1"
       },
       {
@@ -896,61 +847,165 @@
             "value": "tertiary"
           }
         ]
-      },
-      {
+      },{
         "component": "text",
         "valueType": "string",
-        "name": "spec1",
-        "label": "Spec1",
+        "name": "spec1Image1",
+        "label": "Spec1 Image1",
         "value": ""
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "spec1Value",
-        "label": "Spec1 Value",
+        "name": "spec1ValueImage1",
+        "label": "Spec1 Value Image1",
         "value": ""
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "spec2",
-        "label": "Spec2",
+        "name": "spec2Image1",
+        "label": "Spec2 Image1",
         "value": ""
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "spec2Value",
-        "label": "Spec2 Value",
+        "name": "spec2ValueImage1",
+        "label": "Spec2 Value Image1",
         "value": ""
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "spec3",
-        "label": "Spec3",
+        "name": "spec3Image1",
+        "label": "Spec3 Image1",
         "value": ""
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "spec3Value",
-        "label": "Spec3 Value",
+        "name": "spec3ValueImage1",
+        "label": "Spec3 Value Image1",
         "value": ""
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "spec4",
-        "label": "Spec4",
+        "name": "spec4Image1",
+        "label": "Spec4 Image1",
         "value": ""
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "spec4Value",
-        "label": "Spec4 Value",
+        "name": "spec4ValueImage1",
+        "label": "Spec4 Value Image1",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "Image2",
+        "label": "Image2"
+      },
+      {
+        "component": "text",
+        "name": "title2",
+        "label": "Title2"
+      },
+      {
+        "component": "richtext",
+        "name": "description2",
+        "label": "Description2"
+      },
+      {
+        "component": "aem-content",
+        "name": "link2",
+        "label": "Link2"
+      },
+      {
+        "component": "text",
+        "name": "linkText2",
+        "label": "Text2"
+      },
+      {
+        "component": "select",
+        "name": "linkType2",
+        "label": "LinkType2",
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          },
+          {
+            "name": "tertiary",
+            "value": "tertiary"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec1Image2",
+        "label": "Spec1Image2",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec2ValueImage2",
+        "label": "Spec2 Value Image2",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec2Image2",
+        "label": "Spec2 Image2",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec2ValueImage2",
+        "label": "Spec2 Value Image2",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec3Image2",
+        "label": "Spec3 Image2",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec3ValueImage2",
+        "label": "Spec3 Value Image2",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec4Image2",
+        "label": "Spec4 Image2",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec4ValueImage2",
+        "label": "Spec4 Value Image2",
         "value": ""
       }
     ]
