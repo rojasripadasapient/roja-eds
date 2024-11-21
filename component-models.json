@@ -795,6 +795,32 @@
         ]
       }
     ]
+  },
+  {
+    "id": "offers",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "label": "Description"
+      },
+      {
+        "component": "aem-content",
+        "name": "ctalink",
+        "label": "CTA Link"
+      },
+      {
+        "component": "reference",
+        "name": "images",
+        "label": "Images",
+        "multi": true
+      }
+    ]
   }
 
 ]
