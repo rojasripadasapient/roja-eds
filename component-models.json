@@ -940,15 +940,16 @@
         "label": "Spec4 Value Image1",
         "value": ""
       },
+
       {
         "component": "aem-content",
-        "name": "link",
-        "label": "CTA Link"
+        "name": "link1",
+        "label": "CTA Link1"
       },
       {
         "component": "text",
-        "name": "linkText",
-        "label": "CTA Name"
+        "name": "linkText1",
+        "label": "CTA Name1"
       },
 
 
