@@ -1,31 +1,15 @@
 {
   "definitions": [
     {
-      "title": "B004-action-Stripe",
-      "id": "action-stripe",
+      "title": "Hero",
+      "id": "hero",
       "plugins": {
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block",
             "template": {
-              "name": "action-stripe",
-              "model": "action-stripe"
-            }
-          }
-        }
-      }
-    },
-    {
-      "title": "Action-Stripe Content",
-      "id": "action-stripeContent",
-      "plugins": {
-        "xwalk": {
-          "page": {
-            "resourceType": "core/franklin/components/block/v1/block/item",
-            "template": {
-              "name": "action-stripeContent",
-              "model": "action-stripeContent",
-              "filter": "action-stripeContent"
+              "name": "Hero",
+              "model": "hero"
             }
           }
         }
@@ -34,149 +18,31 @@
   ],
   "models": [
     {
-      "id": "action-stripe",
+      "id": "hero",
       "fields": [
         {
-          "component": "aem-content",
-          "name": "link",
-          "label": "Link"
+          "component": "reference",
+          "valueType": "string",
+          "name": "image",
+          "label": "Image",
+          "multi": false
         },
         {
           "component": "text",
-          "name": "linkText",
-          "label": "Text"
+          "valueType": "string",
+          "name": "imageAlt",
+          "label": "Alt",
+          "value": ""
         },
         {
-          "component": "select",
-          "name": "linkType",
-          "label": "Type",
-          "options": [
-            {
-              "name": "default",
-              "value": ""
-            },
-            {
-              "name": "primary",
-              "value": "primary"
-            },
-            {
-              "name": "secondary",
-              "value": "secondary"
-            },
-            {
-              "name": "tertiary",
-              "value": "tertiary"
-            }
-          ]
-        },
-        {
-          "component": "aem-content",
-          "name": "link1",
-          "label": "Link1"
-        },
-        {
-          "component": "text",
-          "name": "linkText1",
-          "label": "Text1"
-        },
-        {
-          "component": "select",
-          "name": "linkType1",
-          "label": "Type1",
-          "options": [
-            {
-              "name": "default",
-              "value": ""
-            },
-            {
-              "name": "primary",
-              "value": "primary"
-            },
-            {
-              "name": "secondary",
-              "value": "secondary"
-            },
-            {
-              "name": "tertiary",
-              "value": "tertiary"
-            }
-          ]
-        },
-        {
-          "component": "aem-content",
-          "name": "ctalink2",
-          "label": "Link2"
-        },
-        {
-          "component": "text",
-          "name": "ctalinkText2",
-          "label": "Text2"
-        },
-        {
-          "component": "select",
-          "name": "ctalinkType2",
-          "label": "Type2",
-          "options": [
-            {
-              "name": "default",
-              "value": ""
-            },
-            {
-              "name": "primary",
-              "value": "primary"
-            },
-            {
-              "name": "secondary",
-              "value": "secondary"
-            },
-            {
-              "name": "tertiary",
-              "value": "tertiary"
-            }
-          ]
-        },
-        {
-          "component": "aem-content",
-          "name": "link3",
-          "label": "Link3"
-        },
-        {
-          "component": "text",
-          "name": "linkText3",
-          "label": "Text3"
-        },
-        {
-          "component": "select",
-          "name": "linkType3",
-          "label": "Type3",
-          "options": [
-            {
-              "name": "default",
-              "value": ""
-            },
-            {
-              "name": "primary",
-              "value": "primary"
-            },
-            {
-              "name": "secondary",
-              "value": "secondary"
-            },
-            {
-              "name": "tertiary",
-              "value": "tertiary"
-            }
-          ]
+          "component": "richtext",
+          "name": "text",
+          "value": "",
+          "label": "Text",
+          "valueType": "string"
         }
       ]
     }
   ],
-  "filters": [
-    {
-      "id": "action-stripe",
-      "components": [
-        "action-stripeContent"
-      ]
-    }
-  ]
+  "filters": []
 }
