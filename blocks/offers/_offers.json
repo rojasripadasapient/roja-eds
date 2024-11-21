@@ -33,8 +33,60 @@
         },
         {
           "component": "aem-content",
-          "name": "ctalink",
-          "label": "CTA Link"
+          "name": "variant2Link2",
+          "label": "Variant2 Link2",
+          "condition": {
+            "==": [
+              {
+                "var": "varType"
+              },
+              "var2"
+            ]
+          }
+        },
+        {
+          "component": "text",
+          "name": "variant2LinkText2",
+          "label": "Variant2 Text2",
+          "condition": {
+            "==": [
+              {
+                "var": "varType"
+              },
+              "var2"
+            ]
+          }
+        },
+        {
+          "component": "select",
+          "name": "variant2LinkType2",
+          "label": "Variant2 LinkType2",
+          "condition": {
+            "==": [
+              {
+                "var": "varType"
+              },
+              "var2"
+            ]
+          },
+          "options": [
+            {
+              "name": "default",
+              "value": ""
+            },
+            {
+              "name": "primary",
+              "value": "primary"
+            },
+            {
+              "name": "secondary",
+              "value": "secondary"
+            },
+            {
+              "name": "tertiary",
+              "value": "tertiary"
+            }
+          ]
         },
         {
           "component": "reference",
