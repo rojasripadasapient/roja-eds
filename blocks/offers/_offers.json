@@ -200,8 +200,8 @@
         {
           "component": "text",
           "valueType": "string",
-          "name": "spec2ValueImage2",
-          "label": "Spec2 Value Image2",
+          "name": "spec1ValueImage2",
+          "label": "Spec1 Value Image2",
           "value": ""
         },
         {

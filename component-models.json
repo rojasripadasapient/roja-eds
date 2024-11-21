@@ -956,14 +956,14 @@
         "component": "text",
         "valueType": "string",
         "name": "spec1Image2",
-        "label": "Spec1Image2",
+        "label": "Spec1 Image2",
         "value": ""
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "spec2ValueImage2",
-        "label": "Spec2 Value Image2",
+        "name": "spec1ValueImage2",
+        "label": "Spec1 Value Image2",
         "value": ""
       },
       {
