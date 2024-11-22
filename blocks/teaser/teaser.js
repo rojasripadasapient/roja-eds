@@ -1,4 +1,4 @@
-import { moveInstrumentation } from '../../../../scripts/scripts.js';
+import { moveInstrumentation } from '../../scripts/scripts.js';
 
 function buildCta(cta, ctaTitle, ctaVariant) {
   const anchor = cta?.querySelector('.button-container a');
@@ -8,7 +8,12 @@ function buildCta(cta, ctaTitle, ctaVariant) {
 
   const url = anchor.getAttribute('href') || '#';
   const title = ctaTitle ? ctaTitle.textContent : (anchor.getAttribute('title') || '');
-  const variant = ctaVariant ? ctaVariant.textContent : (anchor.classList[3] || 'secondary');
+  const clsList = (anchor?.getAttribute('class') || '').split(' ');
+
+// Extract the variant from ctaVariant textContent or fallback to clsList[1] or default 'tertiary'
+    const variant = (ctaVariant && ctaVariant.textContent.trim()) || (clsList[1] && clsList[1].trim()) || 'tertiary';
+
+  //   const variant = ctaVariant ? ctaVariant.textContent : (anchor.classList[3] || 'secondary');
   const button = document.createElement('wds-button');
   const span = document.createElement('span');
 
