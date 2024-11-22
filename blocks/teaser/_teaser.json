@@ -182,6 +182,11 @@
             }
           ]
         },
+
+
+
+
+
         {
           "component": "reference",
           "valueType": "string",
@@ -252,14 +257,6 @@
           "component": "select",
           "name": "variant2LinkType1",
           "label": "Variant2 LinkType1",
-          "condition": {
-            "==": [
-              {
-                "var": "varType"
-              },
-              "var2"
-            ]
-          },
           "options": [
             {
               "name": "default",
@@ -279,6 +276,8 @@
             }
           ]
         },
+
+
         {
           "component": "reference",
           "valueType": "string",
@@ -349,14 +348,6 @@
           "component": "select",
           "name": "variant2LinkType2",
           "label": "Variant2 LinkType2",
-          "condition": {
-            "==": [
-              {
-                "var": "varType"
-              },
-              "var2"
-            ]
-          },
           "options": [
             {
               "name": "default",
