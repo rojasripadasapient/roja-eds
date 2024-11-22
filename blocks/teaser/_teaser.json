@@ -83,8 +83,8 @@
         },
         {
           "component": "select",
-          "name": "titleType",
-          "label": "Title Type",
+          "name": "heading",
+          "label": "Heading",
           "options": [
             {
               "name": "h1",
