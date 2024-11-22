@@ -92,7 +92,7 @@
         align-items: center;
     }
 
-    .variantone__container {
+    .varianttwo__container {
       flex-direction: row;
       justify-content: space-between;
       display: flex;
@@ -124,6 +124,7 @@
     .desktop-title {
         display: block;
     }
+
     .varianttwo__container .teaser__section:not(:last-child) {
       padding-bottom: 0;
     }
@@ -152,13 +153,13 @@
       justify-content: space-between;
     }
 
-    .varianttwo__container .teaser__image {
-      width: 100%;
-    }
-
-    .teaser__image {
+    .variantone__container.teaser__image {
         width: 50%;
         line-height: 0;
+    }
+
+    .varianttwo__container .teaser__image {
+      width: 100%;
     }
 
     .variantone__container .teaser__text {
