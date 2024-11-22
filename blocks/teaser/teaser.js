@@ -3,11 +3,15 @@ import { moveInstrumentation } from '../../../../scripts/scripts.js';
 function buildCta(cta, ctaTitle, ctaVariant) {
   const anchor = cta?.querySelector('.button-container a');
   const elementP = ctaTitle?.querySelector('p');
+  console.log(elementP);
   if (!anchor) return null;
-
   const url = anchor.getAttribute('href') || '#';
   const title = ctaTitle ? ctaTitle.textContent : (anchor.getAttribute('title') || '');
-  const variant = ctaVariant ? ctaVariant.textContent : (anchor.classList[3] || 'secondary');
+  const clsList = (anchor.getAttribute('class') || '').split(' ');
+  console.log(clsList);
+  console.log(title);
+  const variant = ctaVariant ? ctaVariant.textContent : clsList[1] || 'secondary';
+  console.log(variant);
   const button = document.createElement('wds-button');
   const span = document.createElement('span');
 
@@ -18,14 +22,15 @@ function buildCta(cta, ctaTitle, ctaVariant) {
   button.appendChild(span);
 
   if(elementP) {
-    moveInstrumentation(elementP, span);
+    moveInstrumentation(elementP, span);console.log('Hi I am inside element P moveInstrumentation');
   }
-  else {
-    moveInstrumentation(anchor, span);
-  }
+else {
+    moveInstrumentation(anchor, span);console.log('Hi I am inside element anchor moveInstrumentation');
+}
 
   return button;
 }
+
 
 function bindEvent(block) {
   const wdsButton = block.querySelector('wds-button');
