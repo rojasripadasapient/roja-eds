@@ -70,8 +70,8 @@
         },
         {
           "component": "text",
-          "name": "variant1Title",
-          "label": "Variant1 Title",
+          "name": "title",
+          "label": "Title",
           "condition": {
             "==": [
               {
@@ -110,15 +110,7 @@
               "name": "h6",
               "value": "h6"
             }
-          ],
-          "condition": {
-            "==": [
-              {
-                "var": "varType"
-              },
-              "var1"
-            ]
-          }
+          ]
         },
         {
           "component": "richtext",
