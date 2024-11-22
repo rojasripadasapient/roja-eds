@@ -355,7 +355,15 @@
       {
         "component": "text",
         "name": "title",
-        "label": "Title"
+        "label": "Title",
+        "condition": {
+          "==": [
+            {
+              "var": "varType"
+            },
+            "var1"
+          ]
+        }
       },
       {
         "component": "select",
@@ -386,7 +394,15 @@
             "name": "h6",
             "value": "h6"
           }
-        ]
+        ],
+        "condition": {
+          "==": [
+            {
+              "var": "varType"
+            },
+            "var1"
+          ]
+        }
       },
       {
         "component": "richtext",
