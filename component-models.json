@@ -355,15 +355,7 @@
       {
         "component": "text",
         "name": "title",
-        "label": "Title",
-        "condition": {
-          "==": [
-            {
-              "var": "varType"
-            },
-            "var1"
-          ]
-        }
+        "label": "Title"
       },
       {
         "component": "select",
