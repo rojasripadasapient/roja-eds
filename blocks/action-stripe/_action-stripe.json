@@ -38,6 +38,12 @@
       "id": "action-stripe",
       "fields": [
         {
+          "component": "boolean",
+          "label": "Background Color",
+          "name": "bgColor",
+          "valueType": "boolean"
+        },
+        {
           "component": "aem-content",
           "name": "link",
           "label": "Link"
