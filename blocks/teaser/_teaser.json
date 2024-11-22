@@ -110,7 +110,15 @@
               "name": "h6",
               "value": "h6"
             }
-          ]
+          ],
+          "condition": {
+            "==": [
+              {
+                "var": "varType"
+              },
+              "var1"
+            ]
+          }
         },
         {
           "component": "richtext",
