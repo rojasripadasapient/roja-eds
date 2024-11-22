@@ -163,14 +163,6 @@
           "component": "select",
           "name": "variant1LinkType",
           "label": "Variant1 LinkType",
-          "condition": {
-            "==": [
-              {
-                "var": "varType"
-              },
-              "var1"
-            ]
-          },
           "options": [
             {
               "name": "default",
