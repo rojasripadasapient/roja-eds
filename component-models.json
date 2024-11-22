@@ -353,6 +353,19 @@
         }
       },
       {
+        "component": "text",
+        "name": "variant1Title",
+        "label": "Variant1 Title",
+        "condition": {
+          "==": [
+            {
+              "var": "varType"
+            },
+            "var1"
+          ]
+        }
+      },
+      {
         "component": "select",
         "name": "titleType",
         "label": "Title Type",
