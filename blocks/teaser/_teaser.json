@@ -85,14 +85,6 @@
           "component": "select",
           "name": "titleType",
           "label": "Title Type",
-          "condition": {
-            "==": [
-              {
-                "var": "varType"
-              },
-              "var1"
-            ]
-          },
           "options": [
             {
               "name": "h1",
