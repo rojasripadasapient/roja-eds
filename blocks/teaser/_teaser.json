@@ -83,8 +83,8 @@
         },
         {
           "component": "select",
-          "name": "heading",
-          "label": "Heading",
+          "name": "variant1Heading",
+          "label": "Variant1 Heading",
           "options": [
             {
               "name": "h1",
