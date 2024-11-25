@@ -1,14 +1,14 @@
 {
   "definitions": [
     {
-      "title": "Teaser",
+      "title": "GB007-Teaser",
       "id": "teaser",
       "plugins": {
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block",
             "template": {
-              "name": "teaser",
+              "name": "GB007-Teaser",
               "model": "teaser",
               "filter": "teaser"
             }
@@ -189,200 +189,200 @@
               "value": "tertiary"
             }
           ]
-        }
-      ]
-    },
-    {
-      "component": "reference",
-      "valueType": "string",
-      "name": "variant2Image1",
-      "label": "Variant2 Image1",
-      "condition": {
-        "==": [
-          {
-            "var": "chooseTeaserTypeVariation"
-          },
-          "var2"
-        ]
-      }
-    },
-    {
-      "component": "text",
-      "name": "variant2Title1",
-      "label": "Variant2 Title1",
-      "condition": {
-        "==": [
-          {
-            "var": "chooseTeaserTypeVariation"
-          },
-          "var2"
-        ]
-      }
-    },
-    {
-      "component": "richtext",
-      "name": "description1",
-      "label": "Description1",
-      "condition": {
-        "==": [
-          {
-            "var": "chooseTeaserTypeVariation"
-          },
-          "var2"
-        ]
-      }
-    },
-    {
-      "component": "aem-content",
-      "name": "variant2Link1",
-      "label": "Variant2 Link1",
-      "condition": {
-        "==": [
-          {
-            "var": "chooseTeaserTypeVariation"
-          },
-          "var2"
-        ]
-      }
-    },
-    {
-      "component": "text",
-      "name": "variant2LinkText1",
-      "label": "Variant2 Text1",
-      "condition": {
-        "==": [
-          {
-            "var": "chooseTeaserTypeVariation"
-          },
-          "var2"
-        ]
-      }
-    },
-    {
-      "component": "select",
-      "name": "variant2LinkType1",
-      "label": "Variant2 LinkType1",
-      "condition": {
-        "==": [
-          {
-            "var": "chooseTeaserTypeVariation"
-          },
-          "var2"
-        ]
-      },
-      "options": [
-        {
-          "name": "default",
-          "value": ""
         },
         {
-          "name": "primary",
-          "value": "primary"
+          "component": "reference",
+          "valueType": "string",
+          "name": "variant2Image1",
+          "label": "Variant2 Image1",
+          "condition": {
+            "==": [
+              {
+                "var": "chooseTeaserTypeVariation"
+              },
+              "var2"
+            ]
+          }
         },
         {
-          "name": "secondary",
-          "value": "secondary"
+          "component": "text",
+          "name": "variant2Title1",
+          "label": "Variant2 Title1",
+          "condition": {
+            "==": [
+              {
+                "var": "chooseTeaserTypeVariation"
+              },
+              "var2"
+            ]
+          }
         },
         {
-          "name": "tertiary",
-          "value": "tertiary"
-        }
-      ]
-    },
-    {
-      "component": "reference",
-      "valueType": "string",
-      "name": "variant2Image2",
-      "label": "Variant2 Image2",
-      "condition": {
-        "==": [
-          {
-            "var": "chooseTeaserTypeVariation"
-          },
-          "var2"
-        ]
-      }
-    },
-    {
-      "component": "text",
-      "name": "variant2Title2",
-      "label": "Variant2 Title2",
-      "condition": {
-        "==": [
-          {
-            "var": "chooseTeaserTypeVariation"
-          },
-          "var2"
-        ]
-      }
-    },
-    {
-      "component": "richtext",
-      "name": "description2",
-      "label": "Description2",
-      "condition": {
-        "==": [
-          {
-            "var": "chooseTeaserTypeVariation"
-          },
-          "var2"
-        ]
-      }
-    },
-    {
-      "component": "aem-content",
-      "name": "variant2Link2",
-      "label": "Variant2 Link2",
-      "condition": {
-        "==": [
-          {
-            "var": "chooseTeaserTypeVariation"
-          },
-          "var2"
-        ]
-      }
-    },
-    {
-      "component": "text",
-      "name": "variant2LinkText2",
-      "label": "Variant2 Text2",
-      "condition": {
-        "==": [
-          {
-            "var": "chooseTeaserTypeVariation"
-          },
-          "var2"
-        ]
-      }
-    },
-    {
-      "component": "select",
-      "name": "variant2LinkType2",
-      "label": "Variant2 LinkType2",
-      "condition": {
-        "==": [
-          {
-            "var": "chooseTeaserTypeVariation"
-          },
-          "var2"
-        ]
-      },
-      "options": [
-        {
-          "name": "default",
-          "value": ""
+          "component": "richtext",
+          "name": "description1",
+          "label": "Description1",
+          "condition": {
+            "==": [
+              {
+                "var": "chooseTeaserTypeVariation"
+              },
+              "var2"
+            ]
+          }
         },
         {
-          "name": "primary",
-          "value": "primary"
+          "component": "aem-content",
+          "name": "variant2Link1",
+          "label": "Variant2 Link1",
+          "condition": {
+            "==": [
+              {
+                "var": "chooseTeaserTypeVariation"
+              },
+              "var2"
+            ]
+          }
         },
         {
-          "name": "secondary",
-          "value": "secondary"
+          "component": "text",
+          "name": "variant2LinkText1",
+          "label": "Variant2 Text1",
+          "condition": {
+            "==": [
+              {
+                "var": "chooseTeaserTypeVariation"
+              },
+              "var2"
+            ]
+          }
         },
         {
-          "name": "tertiary",
-          "value": "tertiary"
+          "component": "select",
+          "name": "variant2LinkType1",
+          "label": "Variant2 LinkType1",
+          "condition": {
+            "==": [
+              {
+                "var": "chooseTeaserTypeVariation"
+              },
+              "var2"
+            ]
+          },
+          "options": [
+            {
+              "name": "default",
+              "value": ""
+            },
+            {
+              "name": "primary",
+              "value": "primary"
+            },
+            {
+              "name": "secondary",
+              "value": "secondary"
+            },
+            {
+              "name": "tertiary",
+              "value": "tertiary"
+            }
+          ]
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "variant2Image2",
+          "label": "Variant2 Image2",
+          "condition": {
+            "==": [
+              {
+                "var": "chooseTeaserTypeVariation"
+              },
+              "var2"
+            ]
+          }
+        },
+        {
+          "component": "text",
+          "name": "variant2Title2",
+          "label": "Variant2 Title2",
+          "condition": {
+            "==": [
+              {
+                "var": "chooseTeaserTypeVariation"
+              },
+              "var2"
+            ]
+          }
+        },
+        {
+          "component": "richtext",
+          "name": "description2",
+          "label": "Description2",
+          "condition": {
+            "==": [
+              {
+                "var": "chooseTeaserTypeVariation"
+              },
+              "var2"
+            ]
+          }
+        },
+        {
+          "component": "aem-content",
+          "name": "variant2Link2",
+          "label": "Variant2 Link2",
+          "condition": {
+            "==": [
+              {
+                "var": "chooseTeaserTypeVariation"
+              },
+              "var2"
+            ]
+          }
+        },
+        {
+          "component": "text",
+          "name": "variant2LinkText2",
+          "label": "Variant2 Text2",
+          "condition": {
+            "==": [
+              {
+                "var": "chooseTeaserTypeVariation"
+              },
+              "var2"
+            ]
+          }
+        },
+        {
+          "component": "select",
+          "name": "variant2LinkType2",
+          "label": "Variant2 LinkType2",
+          "condition": {
+            "==": [
+              {
+                "var": "chooseTeaserTypeVariation"
+              },
+              "var2"
+            ]
+          },
+          "options": [
+            {
+              "name": "default",
+              "value": ""
+            },
+            {
+              "name": "primary",
+              "value": "primary"
+            },
+            {
+              "name": "secondary",
+              "value": "secondary"
+            },
+            {
+              "name": "tertiary",
+              "value": "tertiary"
+            }
+          ]
         }
       ]
     }
