@@ -38,6 +38,12 @@
       "id": "teaser",
       "fields": [
         {
+          "component": "boolean",
+          "label": "Background Color",
+          "name": "bgColor",
+          "valueType": "boolean"
+        },
+        {
           "component": "select",
           "label": "Variation Type",
           "name": "chooseTeaserTypeVariation",
