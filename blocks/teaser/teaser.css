@@ -1,7 +1,11 @@
-.section.teaser-container {
-    background: var(--wds2-colour-background-grey);
-    overflow: auto;
-  }
+main > .section.teaser-container {
+  background-color: var(--wds2-colour-nissanwhite);
+  overflow: auto;
+}
+
+main > .section.teaser-container.no-bg {
+  background-color: var(--wds2-colour-validation-background-info-onlight);
+}
 
   .teaser-wrapper {
     padding: var(--wds2-grid-xl-padding) var(--wds2-grid-s-padding) !important;
@@ -78,10 +82,6 @@
 
   .varianttwo__container .teaser__section:not(:last-child) {
     padding-bottom: var(--wds2-grid-l-padding);
-  }
-
-  .teaser-container:has(.varianttwo__container) {
-    background-color: transparent;
   }
 
   /* Tablet Screen  */
