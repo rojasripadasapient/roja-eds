@@ -291,7 +291,7 @@ function teaserVariantTwo(block) {
     <div class="varianttwo__container flex">
       <!-- Section 1: First Image, Headline, Subheadline, and CTA -->
       <div class="teaser__section">
-        <div class="teaser__image">${pictureContainers[1] ? pictureContainers[1].outerHTML : ''}</div>
+        <div class="teaser__image">${pictureContainers[0] ? pictureContainers[0].outerHTML : ''}</div>
         <div class="teaser__text">
           <div class="teaser__title wds2-type-display-m">${headline1 ? headline1.innerHTML : ''}</div>
           <div class="teaser__description wds2-type-body-light-m">${subheadline1 ? subheadline1.innerHTML : ''}</div>
@@ -300,7 +300,7 @@ function teaserVariantTwo(block) {
       </div>
       <!-- Section 2: Second Image, Headline, Subheadline, and CTA -->
       <div class="teaser__section">
-        <div class="teaser__image">${pictureContainers[2] ? pictureContainers[2].outerHTML : ''}</div>
+        <div class="teaser__image">${pictureContainers[1] ? pictureContainers[1].outerHTML : ''}</div>
         <div class="teaser__text">
           <div class="teaser__title wds2-type-display-m">${headline2 ? headline2.innerHTML : ''}</div>
           <div class="teaser__description wds2-type-body-light-m">${subheadline2 ? subheadline2.innerHTML : ''}</div>
