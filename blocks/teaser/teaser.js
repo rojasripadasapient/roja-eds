@@ -298,7 +298,7 @@ function teaserVariantOne(bgColor, block) {
   const ctaContainer = container.querySelector('.teaser__cta');
   ctaContainer?.appendChild(ctaElement);
 
-  //block.innerHTML = '';
+  block.innerHTML = '';
   block.classList.add('teaser-comp');
   block.appendChild(container);
   bindEvent(block);
@@ -362,7 +362,7 @@ function teaserVariantTwo(bgColor, block) {
   if (ctaElement1) ctaContainer1?.appendChild(ctaElement1);
   if (ctaElement2) ctaContainer2?.appendChild(ctaElement2);
 
-  //block.innerHTML = '';
+  block.innerHTML = '';
   block.classList.add('teaser-comp');
   block.appendChild(container);
 
@@ -394,4 +394,3 @@ export default async function decorate(block) {
 
   bindEvent(block);
 }
-has context menu
