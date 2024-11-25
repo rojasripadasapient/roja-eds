@@ -223,12 +223,52 @@ function bindEvent(block) {
   }
 }
 
-function teaserVariantOne(block) {
-  const elements = [...block.children].slice(1, 6);
+// /**
+//   * Add specific class to the promo element based on the option
+//   * @param {HTMLElement} bgColor - The bgcolor element.
+//   * @param {HTMLElement} block - The block containing the promo content.
+//   */
+// function addBgColor(bgColor, block) {
+//   const bgColorVal = bgColor;
+//   const parentElem = block.closest('.teaser-container');
+//   if (parentElem) {
+//     if (bgColorVal === 'true') {
+//       parentElem.classList.add('no-bg');
+//     } else {
+//       parentElem.classList.remove('no-bg');
+//     }
+//   }
+// }
+
+/**
+* Add specific class to the promo element based on the option
+* @param {HTMLElement} bgColor - The bgcolor element.
+* @param {HTMLElement} block - The block containing the promo content.
+*/
+function addBgColor(bgColor, block) {
+  const bgColorVal = bgColor || '';
+  const parentElem = block.closest('.teaser-container');
+  console.log(bgColor);
+  console.log('Hi I am the bg color of var1');
+  if (parentElem) {
+    if (bgColorVal === 'true' || bgColorVal === '') {
+      parentElem.classList.add('no-bg');
+    } else {
+      parentElem.classList.remove('no-bg');
+      console.log('Hi I am the bg color of var1 else block');
+    }
+  }
+}
+
+function teaserVariantOne(bgColor, block) {
+  const elements = [...block.children].slice(2, 7);
   const ctaElement = buildCta(elements[3]);
   const [imageAlt, headline, subheadline] = elements;
   const pictureContainer = block.querySelector('picture');
   const img = pictureContainer?.querySelector('img');
+  addBgColor(bgColor, block);
+
+  console.log(elements);
 
   if (img && (!img.getAttribute('alt') || img.getAttribute('alt') === '')) {
     img.setAttribute('alt', imageAlt?.textContent.trim());
@@ -258,21 +298,25 @@ function teaserVariantOne(block) {
   const ctaContainer = container.querySelector('.teaser__cta');
   ctaContainer?.appendChild(ctaElement);
 
-  block.innerHTML = '';
+  //block.innerHTML = '';
   block.classList.add('teaser-comp');
   block.appendChild(container);
   bindEvent(block);
 }
 
-function teaserVariantTwo(block) {
-  const var2elements = [...block.children].slice(5, 11).map((row) => row.firstElementChild);
-  const var2elements2 = [...block.children].slice(11, 18).map((row) => row.firstElementChild);
+function teaserVariantTwo(bgColor, block) {
+  const var2elements = [...block.children].slice(6, 12).map((row) => row.firstElementChild);
+  const var2elements2 = [...block.children].slice(12, 18).map((row) => row.firstElementChild);
+  console.log(var2elements);
+  console.log(var2elements2);
   const ctaElement1 = var2elements[3]
     ? buildCta(var2elements[3], var2elements[4], var2elements[5])
     : null;
+  console.log(ctaElement1);
   const ctaElement2 = var2elements2[3]
     ? buildCta(var2elements2[3], var2elements2[4], var2elements2[5])
     : null;
+    console.log(ctaElement2);
   const [imageAlt1, headline1, subheadline1] = var2elements;
   const [imageAlt2, headline2, subheadline2] = var2elements2;
   const pictureContainers = block.querySelectorAll('picture');
@@ -285,6 +329,8 @@ function teaserVariantTwo(block) {
   if (images[1] && (!images[1].getAttribute('alt') || images[1].getAttribute('alt') === '')) {
     images[1].setAttribute('alt', imageAlt2?.textContent.trim());
   }
+
+  addBgColor(bgColor, block);
 
   const container = document.createElement('div');
   container.innerHTML = `
@@ -316,7 +362,7 @@ function teaserVariantTwo(block) {
   if (ctaElement1) ctaContainer1?.appendChild(ctaElement1);
   if (ctaElement2) ctaContainer2?.appendChild(ctaElement2);
 
-  block.innerHTML = '';
+  //block.innerHTML = '';
   block.classList.add('teaser-comp');
   block.appendChild(container);
 
@@ -325,17 +371,27 @@ function teaserVariantTwo(block) {
 }
 
 export default async function decorate(block) {
-  const teaserVariant = [...block.children].slice(0, 1);
+  const teaserVariant = [...block.children].slice(1, 2);
   const teaserVariantVal = teaserVariant[0].innerText.trim();
   const allVariants = [...block.children].slice(1);
+  console.log(teaserVariant);
+  console.log(teaserVariantVal);
+  console.log(allVariants);
+  const bgColorElem = [...block.children].slice(0, 1);
+  console.log(bgColorElem);
+  const bgColor = bgColorElem[0]?.querySelector('p').textContent;
+  console.log(bgColor);
+
+  console.log(bgColor);
 
   allVariants.forEach((variantBlock) => { variantBlock.style.display = 'none'; });
 
   if (teaserVariantVal === 'var1') {
-    teaserVariantOne(block);
+    teaserVariantOne(bgColor, block);
   } else if (teaserVariantVal === 'var2') {
-    teaserVariantTwo(block);
+    teaserVariantTwo(bgColor, block);
   }
 
   bindEvent(block);
 }
+has context menu
