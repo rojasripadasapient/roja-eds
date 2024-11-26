@@ -76,7 +76,7 @@
       },
       {
         "component": "select",
-        "name": "linkType",
+        "name": "Type",
         "label": "Type",
         "options": [
           {
@@ -375,8 +375,8 @@
       },
       {
         "component": "select",
-        "name": "linkType",
-        "label": "LinkType",
+        "name": "textType",
+        "label": "Text Type",
         "options": [
           {
             "name": "default",

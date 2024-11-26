@@ -96,8 +96,8 @@
         },
         {
           "component": "select",
-          "name": "linkType",
-          "label": "LinkType",
+          "name": "textType",
+          "label": "Text Type",
           "options": [
             {
               "name": "default",
