@@ -369,13 +369,8 @@
         "label": "Description1"
       },
       {
-        "component": "aem-content",
-        "name": "link",
-        "label": "Link"
-      },
-      {
         "component": "text",
-        "name": "linkText",
+        "name": "text",
         "label": "Text"
       },
       {
