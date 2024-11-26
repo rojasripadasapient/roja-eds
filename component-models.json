@@ -515,6 +515,43 @@
           }
         ]
       },
+      {
+        "component": "aem-content",
+        "name": "link3",
+        "label": "CTA Link3"
+      },
+      {
+        "component": "text",
+        "name": "linkText3",
+        "label": "CTA Name3"
+      },
+      {
+        "component": "select",
+        "name": "linkType3",
+        "label": "LinkType3",
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          },
+          {
+            "name": "tertiary",
+            "value": "tertiary"
+          }
+        ]
+      },
+
+
+
+
 
 
       {
