@@ -457,12 +457,12 @@
       {
         "component": "aem-content",
         "name": "link",
-        "label": "CTA Link"
+        "label": "Link"
       },
       {
         "component": "text",
         "name": "linkText",
-        "label": "CTA Name"
+        "label": "Link Text"
       },
       {
         "component": "select",
