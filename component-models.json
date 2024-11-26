@@ -430,14 +430,14 @@
         "value": ""
       },
       {
-        "component": "text",
-        "name": "text1",
-        "label": "Text1"
-      },
-      {
         "component": "aem-content",
         "name": "link1",
-        "label": "CTA Link1"
+        "label": "Link1"
+      },
+      {
+        "component": "text",
+        "name": "linkText1",
+        "label": "Link Text1"
       },
       {
         "component": "richtext",
@@ -446,13 +446,13 @@
       },
       {
         "component": "aem-content",
-        "name": "link1",
-        "label": "CTA Link1"
+        "name": "link2",
+        "label": "Link2"
       },
       {
         "component": "text",
-        "name": "linkText1",
-        "label": "CTA Name1"
+        "name": "linkText2",
+        "label": "Link Text2"
       },
       {
         "component": "aem-content",
