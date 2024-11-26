@@ -197,18 +197,18 @@
         },
         {
           "component": "aem-content",
-          "name": "link3",
-          "label": "CTA Link3"
+          "name": "link",
+          "label": "CTA Link"
         },
         {
           "component": "text",
-          "name": "linkText3",
-          "label": "CTA Name3"
+          "name": "linkText",
+          "label": "CTA Name"
         },
         {
           "component": "select",
-          "name": "linkType3",
-          "label": "LinkType3",
+          "name": "linkType",
+          "label": "LinkType",
           "options": [
             {
               "name": "default",

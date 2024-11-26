@@ -476,18 +476,18 @@
       },
       {
         "component": "aem-content",
-        "name": "link3",
-        "label": "Link3"
+        "name": "link",
+        "label": "Link"
       },
       {
         "component": "text",
-        "name": "linkText3",
-        "label": "Text3"
+        "name": "linkText",
+        "label": "Text"
       },
       {
         "component": "select",
-        "name": "linkType3",
-        "label": "LinkType3",
+        "name": "linkType",
+        "label": "LinkType",
         "options": [
           {
             "name": "default",
