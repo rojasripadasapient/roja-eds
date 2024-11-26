@@ -125,13 +125,6 @@
         {
           "component": "text",
           "valueType": "string",
-          "name": "spec1Image1",
-          "label": "Spec1 Image1",
-          "value": ""
-        },
-        {
-          "component": "text",
-          "valueType": "string",
           "name": "spec1ValueImage1",
           "label": "Spec1 Value Image1",
           "value": ""
@@ -139,8 +132,8 @@
         {
           "component": "text",
           "valueType": "string",
-          "name": "spec2Image1",
-          "label": "Spec2 Image1",
+          "name": "spec1Image1",
+          "label": "Spec1 Image1",
           "value": ""
         },
         {
@@ -153,8 +146,8 @@
         {
           "component": "text",
           "valueType": "string",
-          "name": "spec3Image1",
-          "label": "Spec3 Image1",
+          "name": "spec2Image1",
+          "label": "Spec2 Image1",
           "value": ""
         },
         {
@@ -167,8 +160,8 @@
         {
           "component": "text",
           "valueType": "string",
-          "name": "spec4Image1",
-          "label": "Spec4 Image1",
+          "name": "spec3Image1",
+          "label": "Spec3 Image1",
           "value": ""
         },
         {
@@ -176,6 +169,13 @@
           "valueType": "string",
           "name": "spec4ValueImage1",
           "label": "Spec4 Value Image1",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "spec4Image1",
+          "label": "Spec4 Image1",
           "value": ""
         },
         {
