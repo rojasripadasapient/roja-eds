@@ -446,8 +446,8 @@
       },
       {
         "component": "richtext",
-        "name": "description",
-        "label": "Description"
+        "name": "description1",
+        "label": "Description1"
       },
       {
         "component": "aem-content",
