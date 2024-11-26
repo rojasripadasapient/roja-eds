@@ -43,6 +43,11 @@
           "label": "Heading"
         },
         {
+          "component": "text",
+          "name": "heading",
+          "label": "Heading"
+        },
+        {
           "component": "select",
           "name": "headingType",
           "label": "Heading Type",
@@ -157,8 +162,8 @@
         },
         {
           "component": "aem-content",
-          "name": "link",
-          "label": "CTA Link"
+          "name": "link1",
+          "label": "CTA Link1"
         },
         {
           "component": "richtext",

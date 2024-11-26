@@ -436,8 +436,8 @@
       },
       {
         "component": "aem-content",
-        "name": "link",
-        "label": "CTA Link"
+        "name": "link1",
+        "label": "CTA Link1"
       },
       {
         "component": "richtext",
