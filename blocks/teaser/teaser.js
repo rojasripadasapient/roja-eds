@@ -322,12 +322,12 @@ function teaserVariantTwo(bgColor, block) {
   const pictureContainers = block.querySelectorAll('picture');
   const images = Array.from(pictureContainers).map((picture) => picture.querySelector('img'));
 
-  if (images[1] && (!images[1].getAttribute('alt') || images[1].getAttribute('alt') === '')) {
-    images[1].setAttribute('alt', imageAlt1?.textContent.trim());
+  if (images[0] && (!images[0].getAttribute('alt') || images[0].getAttribute('alt') === '')) {
+    images[0].setAttribute('alt', imageAlt1?.textContent.trim());
   }
 
-  if (images[2] && (!images[2].getAttribute('alt') || images[2].getAttribute('alt') === '')) {
-    images[2].setAttribute('alt', imageAlt2?.textContent.trim());
+  if (images[1] && (!images[1].getAttribute('alt') || images[1].getAttribute('alt') === '')) {
+    images[1].setAttribute('alt', imageAlt2?.textContent.trim());
   }
 
   addBgColor(bgColor, block);
@@ -337,7 +337,7 @@ function teaserVariantTwo(bgColor, block) {
     <div class="varianttwo__container flex">
       <!-- Section 1: First Image, Headline, Subheadline, and CTA -->
       <div class="teaser__section">
-        <div class="teaser__image">${pictureContainers[0] ? pictureContainers[0].outerHTML : ''}</div>
+        <div class="teaser__image">${pictureContainers[1] ? pictureContainers[1].outerHTML : ''}</div>
         <div class="teaser__text">
           <div class="teaser__title wds2-type-display-m">${headline1 ? headline1.innerHTML : ''}</div>
           <div class="teaser__description wds2-type-body-light-m">${subheadline1 ? subheadline1.innerHTML : ''}</div>
@@ -346,7 +346,7 @@ function teaserVariantTwo(bgColor, block) {
       </div>
       <!-- Section 2: Second Image, Headline, Subheadline, and CTA -->
       <div class="teaser__section">
-        <div class="teaser__image">${pictureContainers[1] ? pictureContainers[1].outerHTML : ''}</div>
+        <div class="teaser__image">${pictureContainers[2] ? pictureContainers[2].outerHTML : ''}</div>
         <div class="teaser__text">
           <div class="teaser__title wds2-type-display-m">${headline2 ? headline2.innerHTML : ''}</div>
           <div class="teaser__description wds2-type-body-light-m">${subheadline2 ? subheadline2.innerHTML : ''}</div>
