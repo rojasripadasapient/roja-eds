@@ -1,37 +1,28 @@
-.hero-container .hero-wrapper {
-  max-width: unset;
+main > .section.action-stripe-container {
+  background-color: var(--wds2-colour-nissanwhite);
+  overflow: auto;
+}
+
+main > .section.action-stripe-container.no-bg {
+  background-color: var(--wds2-colour-validation-background-info-onlight);
+}
+
+main > .section > div.action-stripe-container {
   padding: 0;
+  max-width: 1500px;
+  /* display: flow-root; */
 }
 
-.hero {
-  position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+.action-strip-title {
+  font-size: 16px;
 }
 
-.hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
+.action-stripe-wrapper {
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: none !important;
 }
 
-.hero picture {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
-}
-
-.hero img {
-  object-fit: cover;
+.action-stripe-wrapper .container {
   width: 100%;
-  height: 100%;
-}
-
-@media (width >= 900px) {
-  .hero {
-    padding: 40px 32px;
-  }
 }
