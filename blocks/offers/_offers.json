@@ -177,8 +177,8 @@
         },
         {
           "component": "aem-content",
-          "name": "link2",
-          "label": "CTA Link2"
+          "name": "link",
+          "label": "CTA Link"
         },
         {
           "component": "text",
