@@ -95,29 +95,6 @@
           "label": "Text"
         },
         {
-          "component": "select",
-          "name": "linkType",
-          "label": "LinkType",
-          "options": [
-            {
-              "name": "default",
-              "value": ""
-            },
-            {
-              "name": "primary",
-              "value": "primary"
-            },
-            {
-              "name": "secondary",
-              "value": "secondary"
-            },
-            {
-              "name": "tertiary",
-              "value": "tertiary"
-            }
-          ]
-        },
-        {
           "component": "text",
           "valueType": "string",
           "name": "spec1ValueImage1",
