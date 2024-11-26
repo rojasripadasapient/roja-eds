@@ -102,15 +102,15 @@
         {
           "component": "text",
           "valueType": "string",
-          "name": "spec1",
-          "label": "Spec1",
+          "name": "spec1Value",
+          "label": "Spec1 Value",
           "value": ""
         },
         {
           "component": "text",
           "valueType": "string",
-          "name": "spec1Value",
-          "label": "Spec1 Value",
+          "name": "spec1",
+          "label": "Spec1",
           "value": ""
         },
         {
