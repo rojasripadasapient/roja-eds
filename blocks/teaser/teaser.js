@@ -322,12 +322,12 @@ function teaserVariantTwo(bgColor, block) {
   const pictureContainers = block.querySelectorAll('picture');
   const images = Array.from(pictureContainers).map((picture) => picture.querySelector('img'));
 
-  if (images[0] && (!images[0].getAttribute('alt') || images[0].getAttribute('alt') === '')) {
-    images[0].setAttribute('alt', imageAlt1?.textContent.trim());
+  if (images[1] && (!images[1].getAttribute('alt') || images[1].getAttribute('alt') === '')) {
+    images[1].setAttribute('alt', imageAlt1?.textContent.trim());
   }
 
-  if (images[1] && (!images[1].getAttribute('alt') || images[1].getAttribute('alt') === '')) {
-    images[1].setAttribute('alt', imageAlt2?.textContent.trim());
+  if (images[2] && (!images[2].getAttribute('alt') || images[2].getAttribute('alt') === '')) {
+    images[2].setAttribute('alt', imageAlt2?.textContent.trim());
   }
 
   addBgColor(bgColor, block);
