@@ -389,6 +389,11 @@
       },
       {
         "component": "text",
+        "name": "textSpec1",
+        "label": "Text Spec1"
+      },
+      {
+        "component": "text",
         "valueType": "string",
         "name": "spec2",
         "label": "Spec2",
@@ -400,6 +405,11 @@
         "name": "spec2Value",
         "label": "Spec2 Value",
         "value": ""
+      },
+      {
+        "component": "text",
+        "name": "textSpec2",
+        "label": "Text Spec2"
       },
       {
         "component": "text",
@@ -417,6 +427,11 @@
       },
       {
         "component": "text",
+        "name": "textSpec3",
+        "label": "Text Spec3"
+      },
+      {
+        "component": "text",
         "valueType": "string",
         "name": "spec4",
         "label": "Spec4",
@@ -428,6 +443,11 @@
         "name": "spec4Value",
         "label": "Spec4 Value",
         "value": ""
+      },
+      {
+        "component": "text",
+        "name": "textSpec4",
+        "label": "Text Spec4"
       },
       {
         "component": "aem-content",
