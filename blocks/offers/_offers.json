@@ -161,11 +161,6 @@
           "label": "CTA Link"
         },
         {
-          "component": "text",
-          "name": "linkText",
-          "label": "CTA Name"
-        },
-        {
           "component": "richtext",
           "name": "description1",
           "label": "Description1"
