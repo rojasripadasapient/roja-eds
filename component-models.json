@@ -376,15 +376,15 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "spec1Value",
-        "label": "Spec1 Value",
+        "name": "spec1",
+        "label": "Spec1",
         "value": ""
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "spec1",
-        "label": "Spec1",
+        "name": "spec1Value",
+        "label": "Spec1 Value",
         "value": ""
       },
       {
@@ -438,6 +438,11 @@
         "component": "text",
         "name": "linkText1",
         "label": "Link Text1"
+      },
+      {
+        "component": "aem-content",
+        "name": "link1",
+        "label": "CTA Link1"
       },
       {
         "component": "richtext",
