@@ -511,6 +511,22 @@
             "value": "tertiary"
           }
         ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image2",
+        "label": "Image2"
+      },
+      {
+        "component": "text",
+        "name": "title2",
+        "label": "Title2"
+      },
+      {
+        "component": "richtext",
+        "name": "description2",
+        "label": "Description2"
       }
     ]
   },

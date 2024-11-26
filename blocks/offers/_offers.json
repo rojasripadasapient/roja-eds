@@ -233,11 +233,6 @@
             }
           ]
         },
-
-
-
-
-
         {
           "component": "reference",
           "valueType": "string",
