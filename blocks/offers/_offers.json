@@ -97,13 +97,6 @@
         {
           "component": "text",
           "valueType": "string",
-          "name": "spec1",
-          "label": "Spec1",
-          "value": ""
-        },
-        {
-          "component": "text",
-          "valueType": "string",
           "name": "spec1Value",
           "label": "Spec1 Value",
           "value": ""
@@ -111,8 +104,8 @@
         {
           "component": "text",
           "valueType": "string",
-          "name": "spec2",
-          "label": "Spec2",
+          "name": "spec1",
+          "label": "Spec1",
           "value": ""
         },
         {
@@ -125,8 +118,8 @@
         {
           "component": "text",
           "valueType": "string",
-          "name": "spec3",
-          "label": "Spec3",
+          "name": "spec2",
+          "label": "Spec2",
           "value": ""
         },
         {
@@ -139,8 +132,8 @@
         {
           "component": "text",
           "valueType": "string",
-          "name": "spec4",
-          "label": "Spec4",
+          "name": "spec3",
+          "label": "Spec3",
           "value": ""
         },
         {
@@ -148,6 +141,13 @@
           "valueType": "string",
           "name": "spec4Value",
           "label": "Spec4 Value",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "spec4",
+          "label": "Spec4",
           "value": ""
         },
         {
