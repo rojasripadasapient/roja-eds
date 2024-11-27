@@ -52,6 +52,7 @@ function addBgColor(bgColor, block) {
   const bgColorVal = bgColor || '';
   const parentElem = block.closest('.action-strip-container');
   if (parentElem) {
+    // Apply background logic independently of other styles
     if (bgColorVal === 'false' || bgColorVal === '') {
       parentElem.classList.add('no-bg');
     } else {
@@ -170,19 +171,19 @@ function createActionStrip() {
 
   actionStrip.classList.add('actionstrip');
   actionStrip.innerHTML = `
-    <div class="flex-container flex">
-      <div class="action-strip-icon-container">
-        <div class="actionstrip__cta"></div>
-      </div>
-      <div class="action-strip-icon-container">
-          <div class="actionstrip__cta"></div>
-      </div>
-      <div class="action-strip-icon-container">
-        <div class="actionstrip__cta"></div>
-      </div>
-      <div class="action-strip-icon-container">
-        <div class="actionstrip__cta"></div>
-      </div>
+<div class="flex-container flex">
+<div class="action-strip-icon-container">
+<div class="actionstrip__cta"></div>
+</div>
+<div class="action-strip-icon-container">
+<div class="actionstrip__cta"></div>
+</div>
+<div class="action-strip-icon-container">
+<div class="actionstrip__cta"></div>
+</div>
+<div class="action-strip-icon-container">
+<div class="actionstrip__cta"></div>
+</div>
     `;
 
   return actionStrip;
@@ -208,6 +209,7 @@ export default function decorate(block) {
   const bgColorElem = [...block.children].slice(0, 1);
   const bgColor = bgColorElem[0]?.querySelector('p').textContent;
 
+  // Apply background color logic
   addBgColor(bgColor, block);
 
   block.innerHTML = '';
