@@ -27,59 +27,59 @@
           "label": "Cards",
           "description": "Add multiple cards for the offer block",
           "item": {
-            "type": "object",
-            "fields": [
-              {
-                "component": "text",
-                "name": "title",
-                "label": "Card Title"
-              },
-              {
-                "component": "richtext",
-                "name": "description",
-                "label": "Card Description"
-              },
-              {
-                "component": "reference",
-                "valueType": "string",
-                "name": "image",
-                "label": "Card Image"
-              },
-              {
-                "component": "aem-content",
-                "name": "link",
-                "label": "Card Link"
-              },
-              {
-                "component": "text",
-                "name": "linkText",
-                "label": "Card Link Text"
-              },
-              {
-                "component": "select",
-                "name": "linkType",
-                "label": "Card Link Type",
-                "options": [
-                  {
-                    "name": "default",
-                    "value": ""
-                  },
-                  {
-                    "name": "primary",
-                    "value": "primary"
-                  },
-                  {
-                    "name": "secondary",
-                    "value": "secondary"
-                  },
-                  {
-                    "name": "tertiary",
-                    "value": "tertiary"
-                  }
-                ]
-              }
-            ]
-          }
+            "type": "object"
+          },
+          "fields": [
+            {
+              "component": "text",
+              "name": "title",
+              "label": "Card Title"
+            },
+            {
+              "component": "richtext",
+              "name": "description",
+              "label": "Card Description"
+            },
+            {
+              "component": "reference",
+              "valueType": "string",
+              "name": "image",
+              "label": "Card Image"
+            },
+            {
+              "component": "aem-content",
+              "name": "link",
+              "label": "Card Link"
+            },
+            {
+              "component": "text",
+              "name": "linkText",
+              "label": "Card Link Text"
+            },
+            {
+              "component": "select",
+              "name": "linkType",
+              "label": "Card Link Type",
+              "options": [
+                {
+                  "name": "default",
+                  "value": ""
+                },
+                {
+                  "name": "primary",
+                  "value": "primary"
+                },
+                {
+                  "name": "secondary",
+                  "value": "secondary"
+                },
+                {
+                  "name": "tertiary",
+                  "value": "tertiary"
+                }
+              ]
+            }
+          ]
         }
       ]
     }
