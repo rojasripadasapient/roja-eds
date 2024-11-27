@@ -1,14 +1,14 @@
-main > .section.action-stripe-container {
+main > .section.action-strip-container {
   background-color: var(--wds2-colour-nissanwhite);
   overflow: auto;
   padding: var(--wds2-grid-xl-padding) var(--wds2-grid-s-padding);
 }
 
-main > .section.action-stripe-container.no-bg {
+main > .section.action-strip-container.no-bg {
   background-color: var(--wds2-colour-validation-background-info-onlight);
 }
 
-main > .section > div.action-stripe-container {
+main > .section > div.action-strip-container {
   padding: 0;
   max-width: 1500px;
 }
@@ -25,13 +25,13 @@ main > .section > div.action-stripe-container {
   font-size: var(--wds2-type-subtitle-m-fontSize);
 }
 
-.action-stripe-wrapper {
+.action-strip-wrapper {
   margin: 0 !important;
   padding: 0 !important;
   max-width: none !important;
 }
 
-.action-stripe-wrapper .container {
+.action-strip-wrapper .container {
   width: 100%;
 }
 
@@ -46,7 +46,7 @@ wds-icon {
 }
 
 @media (min-width: 768px) {
-  main > .section.action-stripe-container {
+  main > .section.action-strip-container {
     padding: 60px var(--wds2-grid-xl-padding);
   }
   .flex-container {
@@ -65,7 +65,7 @@ wds-icon {
 }
 
 @media (min-width: 1024px) {
-  main > .section.action-stripe-container {
+  main > .section.action-strip-container {
     padding: 60px var(--wds2-grid-l-margin);
   }
 }

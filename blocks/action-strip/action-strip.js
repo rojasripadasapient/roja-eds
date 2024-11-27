@@ -1,6 +1,6 @@
 import { moveInstrumentation } from '../../scripts/scripts.js';
 
-function buildCtaButton(cta, ctaTitle, ctaVariant, index) {
+function buildCtaButton(cta, ctaTitle, ctaVariant) {
     const anchor = cta?.querySelector('.button-container a');
     const title = ctaTitle ? ctaTitle.textContent : '';
 
@@ -12,27 +12,29 @@ function buildCtaButton(cta, ctaTitle, ctaVariant, index) {
     const span = document.createElement('span');
     const iconWrapper = document.createElement('span');
 
-    const iconNames = [
-        'icon-exterior_view',
-        'icon-trade-in-quote',
-        'icon-transportation',
-        'icon-download-brochure'
-    ];
+    // Determine icon name and alt text based on the variant or other criteria
+    const iconNames = {
+        primary: 'icon-exterior_view',
+        secondary: 'icon-trade-in-quote',
+        tertiary: 'icon-transportation',
+        quarter: 'icon-download-brochure',
+    };
 
-    const iconAltTexts = [
-        'Exterior View',
-        'Trade-in Quote',
-        'Transportation',
-        'Download Brochure'
-    ];
+    const iconAltTexts = {
+        primary: 'Exterior View',
+        secondary: 'Trade-in Quote',
+        tertiary: 'Transportation',
+        quarter: 'Download Brochure',
+    };
 
-    const iconName = iconNames[index] || '';
-    const iconAltText = iconAltTexts[index] || '';
+    // Default to 'primary' if no variant is provided
+    const iconName = iconNames[ctaVariant] || iconNames.primary;
+    const iconAltText = iconAltTexts[ctaVariant] || iconAltTexts.primary;
 
     const icon = document.createElement('wds-icon');
     icon.setAttribute('iconName', iconName);
     icon.className = 'action-strip__icon';
-    icon.setAttribute('aria-label', iconAltText);
+    icon.setAttribute('aria-label', iconAltText); // Set aria-label for accessibility
 
     iconWrapper.appendChild(icon);
 
@@ -46,6 +48,7 @@ function buildCtaButton(cta, ctaTitle, ctaVariant, index) {
     anchorTag.setAttribute('href', url);
     anchorTag.appendChild(button);
 
+    // Ensure inline editing instrumentation is preserved
     moveInstrumentation(cta || anchor, span);
 
     return anchorTag;
@@ -53,7 +56,7 @@ function buildCtaButton(cta, ctaTitle, ctaVariant, index) {
 
 function addBgColor(bgColor, block) {
     const bgColorVal = bgColor || '';
-    const parentElem = block.closest('.action-stripe-container');
+    const parentElem = block.closest('.action-strip-container');
     if (parentElem) {
         if (bgColorVal === 'false' || bgColorVal === '') {
             parentElem.classList.add('no-bg');
@@ -244,10 +247,10 @@ export default function decorate(block) {
 
     const actionStrip = createActionStrip();
     const buttons = {
-        primary: actionStripElements[0] ? buildCtaButton(actionStripElements[0], actionStripElements[0], null, 0) : null,
-        secondary: actionStripElements[1] && actionStripElements[2] ? buildCtaButton(actionStripElements[1], actionStripElements[2], null, 1) : null,
-        tertiary: actionStripElements[3] && actionStripElements[4] ? buildCtaButton(actionStripElements[3], actionStripElements[4], null, 2) : null,
-        quarter: actionStripElements[5] && actionStripElements[6] ? buildCtaButton(actionStripElements[5], actionStripElements[6], null, 3) : null,
+        primary: actionStripElements[0] ? buildCtaButton(actionStripElements[0], actionStripElements[0], 'primary') : null,
+        secondary: actionStripElements[1] && actionStripElements[2] ? buildCtaButton(actionStripElements[1], actionStripElements[2], 'secondary') : null,
+        tertiary: actionStripElements[3] && actionStripElements[4] ? buildCtaButton(actionStripElements[3], actionStripElements[4], 'tertiary') : null,
+        quarter: actionStripElements[5] && actionStripElements[6] ? buildCtaButton(actionStripElements[5], actionStripElements[6], 'quarter') : null,
     };
 
     populateActionStrip(actionStrip, buttons);
