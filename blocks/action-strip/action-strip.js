@@ -44,14 +44,10 @@ function buildCtaButton(cta, ctaTitle, ctaVariant) {
     span.classList.add('action-strip-title', 'wds2-type-action-button-m');
     button.appendChild(span);
 
-    const anchorTag = document.createElement('a');
-    anchorTag.setAttribute('href', url);
-    anchorTag.appendChild(button);
-
     // Ensure inline editing instrumentation is preserved
     moveInstrumentation(cta || anchor, span);
 
-    return anchorTag;
+    return button;
 }
 
 function addBgColor(bgColor, block) {
@@ -117,6 +113,19 @@ function observeShadowDomChanges() {
     });
 }
 
+// External redirection handler
+function bindEvent(wdsButton) {
+    if (wdsButton && !wdsButton.isEventBound) {
+        wdsButton.addEventListener('click', () => {
+            const url = wdsButton.getAttribute('data-src');
+            if (url && url !== '#') {
+                window.location.href = url;
+            }
+        });
+        wdsButton.isEventBound = true;
+    }
+}
+
 function bindButtonEvents(actionStrip) {
     function shadowRootElementsFromDom() {
         const wdsButtons = document.querySelectorAll('wds-button');
@@ -169,29 +178,6 @@ function bindButtonEvents(actionStrip) {
     observeShadowDomChanges();
 
     setTimeout(shadowRootElementsFromDom, 0);
-
-    actionStrip.addEventListener('click', (event) => {
-        let actionStripCta, url, anchor;
-
-        if (event.target.closest('.actionstrip__cta')) {
-            actionStripCta = event.target.closest('.actionstrip__cta');
-        } else if (event.target.closest('.action-strip-icon-container')) {
-            const iconContainer = event.target.closest('.action-strip-icon-container');
-            actionStripCta = iconContainer.querySelector('.actionstrip__cta');
-        }
-
-        if (actionStripCta) {
-            anchor = actionStripCta.querySelector('a');
-            url = anchor ? anchor.getAttribute('href') : null;
-
-            if (url && url !== '#') {
-                event.preventDefault();
-                window.location.href = url;
-            } else {
-                console.log('No valid URL found for the button.');
-            }
-        }
-    });
 }
 
 function createActionStrip() {
@@ -257,4 +243,11 @@ export default function decorate(block) {
 
     block.appendChild(actionStrip);
     bindButtonEvents(actionStrip);
+
+    // Bind events to buttons for redirection after DOM update
+    setTimeout(() => {
+        actionStrip.querySelectorAll('wds-button').forEach(button => {
+            bindEvent(button);
+        });
+    }, 500);  // A small delay to ensure buttons are available
 }
