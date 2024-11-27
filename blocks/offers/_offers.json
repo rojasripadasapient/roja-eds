@@ -282,6 +282,178 @@
           "component": "richtext",
           "name": "description2",
           "label": "Description2"
+        },
+        {
+          "component": "text",
+          "name": "textImage1",
+          "label": "Text Image1"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "spec1ValueImage1",
+          "label": "Spec1 Value Image1",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "spec1Image1",
+          "label": "Spec1 Image1",
+          "value": ""
+        },
+        {
+          "component": "richtext",
+          "name": "textSpec1Image1",
+          "label": "Tool Tip 1 Image1"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "spec2ValueImage1",
+          "label": "Spec2 Value Image1",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "spec2Image1",
+          "label": "Spec2 Image1",
+          "value": ""
+        },
+        {
+          "component": "richtext",
+          "name": "textSpec2Image1",
+          "label": "Tool Tip 2 Image1"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "spec3ValueImage1",
+          "label": "Spec3 Value Image1",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "spec3Image1",
+          "label": "Spec3 Image1",
+          "value": ""
+        },
+        {
+          "component": "richtext",
+          "name": "textSpec3Image1",
+          "label": "Tool Tip 3 Image1"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "spec4ValueImage1",
+          "label": "Spec4 Value Image1",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "spec4Image1",
+          "label": "Spec4 Image1",
+          "value": ""
+        },
+        {
+          "component": "richtext",
+          "name": "textSpec4",
+          "label": "Tool Tip 4 Image1"
+        },
+        {
+          "component": "aem-content",
+          "name": "link1Image1",
+          "label": "Link1 Image1"
+        },
+        {
+          "component": "text",
+          "name": "linkText1Image1",
+          "label": "Link Text1 Image1"
+        },
+        {
+          "component": "richtext",
+          "name": "description1Image1",
+          "label": "Description1 Image1"
+        },
+        {
+          "component": "aem-content",
+          "name": "link2Image1",
+          "label": "Link2 Image1"
+        },
+        {
+          "component": "text",
+          "name": "linkText2Image1",
+          "label": "Link Text2 Image1"
+        },
+        {
+          "component": "aem-content",
+          "name": "link3Image1",
+          "label": "Link3 Image1"
+        },
+        {
+          "component": "text",
+          "name": "linkText3Image1",
+          "label": "Link Text3 Image1"
+        },
+        {
+          "component": "select",
+          "name": "linkType3Image1",
+          "label": "LinkType3 Image1",
+          "options": [
+            {
+              "name": "default",
+              "value": ""
+            },
+            {
+              "name": "primary",
+              "value": "primary"
+            },
+            {
+              "name": "secondary",
+              "value": "secondary"
+            },
+            {
+              "name": "tertiary",
+              "value": "tertiary"
+            }
+          ]
+        },
+        {
+          "component": "aem-content",
+          "name": "linkImage1",
+          "label": "Link Image1"
+        },
+        {
+          "component": "text",
+          "name": "linkTextImage1",
+          "label": "Link Text Image1"
+        },
+        {
+          "component": "select",
+          "name": "linkTypeImage1",
+          "label": "LinkType Image1",
+          "options": [
+            {
+              "name": "default",
+              "value": ""
+            },
+            {
+              "name": "primary",
+              "value": "primary"
+            },
+            {
+              "name": "secondary",
+              "value": "secondary"
+            },
+            {
+              "name": "tertiary",
+              "value": "tertiary"
+            }
+          ]
         }
       ]
     }
