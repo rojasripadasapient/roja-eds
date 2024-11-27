@@ -321,12 +321,61 @@
         "component": "multifield",
         "name": "cards",
         "label": "Cards",
-        "description": "Add multiple cards for the offer block"},
-
-      {
-        "component": "text",
-        "name": "heading",
-        "label": "Heading"
+        "description": "Add multiple cards for the offer block",
+        "item": {
+          "type": "object",
+          "fields": [
+            {
+              "component": "text",
+              "name": "title",
+              "label": "Card Title"
+            },
+            {
+              "component": "richtext",
+              "name": "description",
+              "label": "Card Description"
+            },
+            {
+              "component": "reference",
+              "valueType": "string",
+              "name": "image",
+              "label": "Card Image"
+            },
+            {
+              "component": "aem-content",
+              "name": "link",
+              "label": "Card Link"
+            },
+            {
+              "component": "text",
+              "name": "linkText",
+              "label": "Card Link Text"
+            },
+            {
+              "component": "select",
+              "name": "linkType",
+              "label": "Card Link Type",
+              "options": [
+                {
+                  "name": "default",
+                  "value": ""
+                },
+                {
+                  "name": "primary",
+                  "value": "primary"
+                },
+                {
+                  "name": "secondary",
+                  "value": "secondary"
+                },
+                {
+                  "name": "tertiary",
+                  "value": "tertiary"
+                }
+              ]
+            }
+          ]
+        }
       },
       {
         "component": "text",
@@ -361,194 +410,6 @@
           {
             "name": "h6",
             "value": "h6"
-          }
-        ]
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image"
-      },
-      {
-        "component": "text",
-        "name": "title",
-        "label": "Title"
-      },
-      {
-        "component": "richtext",
-        "name": "description",
-        "label": "Description"
-      },
-      {
-        "component": "text",
-        "name": "text",
-        "label": "Text"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "spec1Value",
-        "label": "Spec1 Value",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "spec1",
-        "label": "Spec1",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "textSpec1",
-        "label": "Tool Tip 1"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "spec2Value",
-        "label": "Spec2 Value",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "spec2",
-        "label": "Spec2",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "textSpec2",
-        "label": "Tool Tip 2"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "spec3Value",
-        "label": "Spec3 Value",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "spec3",
-        "label": "Spec3",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "textSpec3",
-        "label": "Tool Tip 3"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "spec4Value",
-        "label": "Spec4 Value",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "spec4",
-        "label": "Spec4",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "textSpec4",
-        "label": "Tool Tip 4"
-      },
-      {
-        "component": "aem-content",
-        "name": "link1",
-        "label": "Link1"
-      },
-      {
-        "component": "text",
-        "name": "linkText1",
-        "label": "Link Text1"
-      },
-      {
-        "component": "richtext",
-        "name": "description1",
-        "label": "Description1"
-      },
-      {
-        "component": "aem-content",
-        "name": "link2",
-        "label": "Link2"
-      },
-      {
-        "component": "text",
-        "name": "linkText2",
-        "label": "Link Text2"
-      },
-      {
-        "component": "aem-content",
-        "name": "link3",
-        "label": "Link3"
-      },
-      {
-        "component": "text",
-        "name": "linkText3",
-        "label": "Link Text3"
-      },
-      {
-        "component": "select",
-        "name": "linkType3",
-        "label": "LinkType3",
-        "options": [
-          {
-            "name": "default",
-            "value": ""
-          },
-          {
-            "name": "primary",
-            "value": "primary"
-          },
-          {
-            "name": "secondary",
-            "value": "secondary"
-          },
-          {
-            "name": "tertiary",
-            "value": "tertiary"
-          }
-        ]
-      },
-      {
-        "component": "aem-content",
-        "name": "link",
-        "label": "Link"
-      },
-      {
-        "component": "text",
-        "name": "linkText",
-        "label": "Link Text"
-      },
-      {
-        "component": "select",
-        "name": "linkType",
-        "label": "LinkType",
-        "options": [
-          {
-            "name": "default",
-            "value": ""
-          },
-          {
-            "name": "primary",
-            "value": "primary"
-          },
-          {
-            "name": "secondary",
-            "value": "secondary"
-          },
-          {
-            "name": "tertiary",
-            "value": "tertiary"
           }
         ]
       }
