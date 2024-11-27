@@ -1,4 +1,4 @@
-import { moveInstrumentation } from '../../../../scripts/scripts.js';
+import { moveInstrumentation } from '../../scripts/scripts.js';
 
 function buildCtaButton(cta, ctaTitle, ctaVariant) {
   const anchor = cta?.querySelector('.button-container a');
