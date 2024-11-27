@@ -244,10 +244,9 @@ export default function decorate(block) {
     block.appendChild(actionStrip);
     bindButtonEvents(actionStrip);
 
-    // Bind events to buttons for redirection after DOM update
     setTimeout(() => {
         actionStrip.querySelectorAll('wds-button').forEach(button => {
             bindEvent(button);
         });
-    }, 500);  // A small delay to ensure buttons are available
+    }, 0);
 }
