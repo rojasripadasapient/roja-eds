@@ -189,7 +189,7 @@
     ]
   },
   {
-    "id": "action-stripe",
+    "id": "action-strip",
     "fields": [
       {
         "component": "boolean",
