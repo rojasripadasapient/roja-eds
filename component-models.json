@@ -388,7 +388,7 @@
         "value": ""
       },
       {
-        "component": "text",
+        "component": "richtext",
         "name": "textSpec1",
         "label": "Text Spec1"
       },
@@ -407,7 +407,7 @@
         "value": ""
       },
       {
-        "component": "text",
+        "component": "richtext",
         "name": "textSpec2",
         "label": "Text Spec2"
       },
@@ -426,7 +426,7 @@
         "value": ""
       },
       {
-        "component": "text",
+        "component": "richtext",
         "name": "textSpec3",
         "label": "Text Spec3"
       },
@@ -445,7 +445,7 @@
         "value": ""
       },
       {
-        "component": "text",
+        "component": "richtext",
         "name": "textSpec4",
         "label": "Text Spec4"
       },
