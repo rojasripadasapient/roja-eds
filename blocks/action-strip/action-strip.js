@@ -1,4 +1,4 @@
-import { moveInstrumentation } from '../../scripts/scripts.js';
+import { moveInstrumentation } from '../../../../scripts/scripts.js';
 
 function buildCtaButton(cta, ctaTitle, ctaVariant) {
   const anchor = cta?.querySelector('.button-container a');
@@ -45,16 +45,23 @@ function buildCtaButton(cta, ctaTitle, ctaVariant) {
   // Ensure inline editing instrumentation is preserved
   moveInstrumentation(cta || anchor, span);
 
+  // Apply button styles here
+  button.style.cssText = `
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  `;
+
   return button;
 }
 
 function addBgColor(bgColor, block) {
-  const bgColorVal = bgColor || '';
   const parentElem = block.closest('.action-strip-container');
   if (parentElem) {
-    // Apply background logic independently of other styles
-    if (bgColorVal === 'false' || bgColorVal === '') {
-      parentElem.classList.add('no-bg');
+    if (bgColor === 'false' || bgColor === '') {
+      parentElem.classList.add('no-bg');  // Background color handling
     } else {
       parentElem.classList.remove('no-bg');
     }
@@ -62,18 +69,13 @@ function addBgColor(bgColor, block) {
 }
 
 function observeShadowDomChanges() {
-  // Observe changes to wds-button shadow DOM
   const wdsButtons = document.querySelectorAll('wds-button');
 
   wdsButtons.forEach((wdsButton) => {
     const wdsButtonShadowRoot = wdsButton.shadowRoot;
 
     if (wdsButtonShadowRoot) {
-      const observer = new MutationObserver((mutationsList) => {
-        mutationsList.forEach(() => {
-        });
-      });
-
+      const observer = new MutationObserver(() => {});
       observer.observe(wdsButtonShadowRoot, {
         childList: true,
         attributes: true,
@@ -82,18 +84,13 @@ function observeShadowDomChanges() {
     }
   });
 
-  // Observe changes to wds-icon shadow DOM
   const wdsIcons = document.querySelectorAll('wds-icon');
 
   wdsIcons.forEach((wdsIcon) => {
     const wdsIconShadowRoot = wdsIcon.shadowRoot;
 
     if (wdsIconShadowRoot) {
-      const iconObserver = new MutationObserver((mutationsList) => {
-        mutationsList.forEach(() => {
-        });
-      });
-
+      const iconObserver = new MutationObserver(() => {});
       iconObserver.observe(wdsIconShadowRoot, {
         childList: true,
         attributes: true,
@@ -107,7 +104,6 @@ function bindEvent(wdsButton) {
   if (wdsButton && !wdsButton.isEventBound) {
     wdsButton.addEventListener('click', () => {
       const url = wdsButton.getAttribute('data-src');
-
       if (url && url !== '#') {
         window.location.href = url;
       }
@@ -122,7 +118,6 @@ function bindButtonEvents() {
 
     wdsButtons.forEach((wdsButton) => {
       const wdsButtonShadowRoot = wdsButton.shadowRoot;
-
       if (wdsButtonShadowRoot) {
         const wdsButtonShadowbutton = wdsButtonShadowRoot.querySelector('button');
         if (wdsButtonShadowbutton) {
@@ -138,37 +133,23 @@ function bindButtonEvents() {
       }
 
       const wdsIcon = wdsButton.querySelector('wds-icon');
-      const wdsIconShadowRoot = wdsIcon.shadowRoot;
-      const wdsIconContent = wdsIconShadowRoot.querySelector('.icon-container');
-      wdsIconContent.style.cssText = `
-        width: 24px;
-      `;
-
       if (wdsIcon) {
+        const wdsIconShadowRoot = wdsIcon.shadowRoot;
+        const wdsIconContent = wdsIconShadowRoot.querySelector('.icon-container');
+        wdsIconContent.style.cssText = `width: 24px;`;
+
         wdsIcon.style.fontSize = '24px';
         wdsIcon.style.verticalAlign = 'middle';
-
-        const iconClassName = wdsIcon.className || '';
-        const styleTag = document.createElement('style');
-
-        document.head.appendChild(styleTag);
-
-        const styleSheet = styleTag.sheet;
-
-        styleSheet.insertRule(`.${iconClassName}::before {
-          font-size: 24px !important;
-        }`, styleSheet.cssRules.length);
       }
     });
   }
-  // Observe changes to shadow DOM elements
+
   observeShadowDomChanges();
   setTimeout(shadowRootElementsFromDom, 0);
 }
 
 function createActionStrip() {
   const actionStrip = document.createElement('div');
-
   actionStrip.classList.add('actionstrip');
   actionStrip.innerHTML = `
 <div class="flex-container flex">
@@ -185,7 +166,6 @@ function createActionStrip() {
 <div class="actionstrip__cta"></div>
 </div>
     `;
-
   return actionStrip;
 }
 
@@ -209,7 +189,7 @@ export default function decorate(block) {
   const bgColorElem = [...block.children].slice(0, 1);
   const bgColor = bgColorElem[0]?.querySelector('p').textContent;
 
-  // Apply background color logic
+  // Apply background color logic only
   addBgColor(bgColor, block);
 
   block.innerHTML = '';
