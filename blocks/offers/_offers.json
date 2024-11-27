@@ -202,8 +202,36 @@
         },
         {
           "component": "aem-content",
-          "name": "link",
-          "label": "Link"
+          "name": "link3",
+          "label": "Link3"
+        },
+        {
+          "component": "text",
+          "name": "linkText3",
+          "label": "Link Text3"
+        },
+        {
+          "component": "select",
+          "name": "linkType3",
+          "label": "LinkType3",
+          "options": [
+            {
+              "name": "default",
+              "value": ""
+            },
+            {
+              "name": "primary",
+              "value": "primary"
+            },
+            {
+              "name": "secondary",
+              "value": "secondary"
+            },
+            {
+              "name": "tertiary",
+              "value": "tertiary"
+            }
+          ]
         },
         {
           "component": "text",
@@ -233,6 +261,7 @@
             }
           ]
         },
+
         {
           "component": "reference",
           "valueType": "string",
