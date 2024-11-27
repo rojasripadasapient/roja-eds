@@ -270,13 +270,13 @@
         {
           "component": "reference",
           "valueType": "string",
-          "name": "image2",
-          "label": "Image2"
+          "name": "image1",
+          "label": "Image1"
         },
         {
           "component": "text",
-          "name": "title2",
-          "label": "Title2"
+          "name": "title1",
+          "label": "Title1"
         },
         {
           "component": "richtext",
