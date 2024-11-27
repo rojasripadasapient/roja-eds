@@ -390,8 +390,7 @@
         "valueType": "string",
         "name": "spec1",
         "label": "Spec1",
-        "value": "",
-        "tooltip": ""
+        "value": ""
       },
       {
         "component": "richtext",
