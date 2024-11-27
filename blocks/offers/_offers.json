@@ -116,7 +116,7 @@
         {
           "component": "richtext",
           "name": "textSpec1",
-          "label": "Text Spec1"
+          "label": "Tool Tip 1"
         },
         {
           "component": "text",
@@ -135,7 +135,7 @@
         {
           "component": "richtext",
           "name": "textSpec2",
-          "label": "Text Spec2"
+          "label": "Tool Tip 2"
         },
         {
           "component": "text",
@@ -154,7 +154,7 @@
         {
           "component": "richtext",
           "name": "textSpec3",
-          "label": "Text Spec3"
+          "label": "Tool Tip 3"
         },
         {
           "component": "text",
@@ -173,7 +173,7 @@
         {
           "component": "richtext",
           "name": "textSpec4",
-          "label": "Text Spec4"
+          "label": "Tool Tip 4"
         },
         {
           "component": "aem-content",
