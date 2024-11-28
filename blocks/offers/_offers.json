@@ -54,7 +54,7 @@
           "valueType": "string",
           "name": "tabName",
           "label": "Tab Name",
-          "multi": true
+          "multi": false
         },
         {
           "component": "reference",
@@ -69,14 +69,14 @@
           "name": "heading",
           "label": "Heading",
           "value": "",
-          "multi": true
+          "multi": false
 
         },
         {
           "component": "richtext",
           "name": "description",
           "label": "Description",
-          "multi": true
+          "multi": false
         },
         {
           "component": "aem-content",
@@ -84,7 +84,7 @@
           "name": "ctaTabLink",
           "label": "CTA Link",
           "value": "",
-          "multi": true
+          "multi": false
         },
         {
           "component": "text",
@@ -98,7 +98,7 @@
           "component": "select",
           "name": "ctaTabType",
           "label": "CTA Type",
-          "multi": true,
+          "multi": false,
           "options": [
             {
               "name": "default",
