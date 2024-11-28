@@ -321,14 +321,14 @@
         "valueType": "string",
         "name": "tabName",
         "label": "Tab Name",
-        "multi": false
+        "multi": true
       },
       {
         "component": "reference",
         "valueType": "string",
         "name": "image",
         "label": "Image",
-        "multi": false
+        "multi": true
       },
       {
         "component": "text",
@@ -336,14 +336,14 @@
         "name": "heading",
         "label": "Heading",
         "value": "",
-        "multi": false
+        "multi": true
 
       },
       {
         "component": "richtext",
         "name": "description",
         "label": "Description",
-        "multi": false
+        "multi": true
       },
       {
         "component": "aem-content",
@@ -351,7 +351,7 @@
         "name": "ctaTabLink",
         "label": "CTA Link",
         "value": "",
-        "multi": false
+        "multi": true
       },
       {
         "component": "text",
@@ -359,12 +359,13 @@
         "name": "ctaTabText",
         "label": "CTA Text",
         "value": "",
-        "multi": false
+        "multi": true
       },
       {
         "component": "select",
         "name": "ctaTabType",
         "label": "CTA Type",
+        "multi": true,
         "options": [
           {
             "name": "default",
@@ -404,18 +405,7 @@
       }
     ]
   },
-  {
-    "id": "tab",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "blockTitle",
-        "label": "Titleee",
-        "value": ""
-      }
-    ]
-  },
+
   {
     "id": "tabContent",
     "fields": [
