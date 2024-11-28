@@ -314,18 +314,6 @@
     ]
   },
   {
-    "id": "offers",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "mainTabTitle",
-        "label": "Title",
-        "value": ""
-      }
-    ]
-  },
-  {
     "id": "offersContent",
     "fields": [
       {
