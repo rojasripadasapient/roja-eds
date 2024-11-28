@@ -371,22 +371,26 @@
             "component": "reference",
             "valueType": "string",
             "name": "image",
-            "label": "Image"
+            "label": "Image",
+            "multi": false
           },
           {
             "component": "text",
             "name": "title",
-            "label": "Title"
+            "label": "Title",
+            "multi": false
           },
           {
             "component": "richtext",
             "name": "description",
-            "label": "Description"
+            "label": "Description",
+            "multi": false
           },
           {
             "component": "text",
             "name": "text",
-            "label": "Text"
+            "label": "Text",
+            "multi": false
           },
           {
             "component": "text",
