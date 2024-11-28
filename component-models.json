@@ -358,7 +358,7 @@
         ]
       },
       {
-        "id": "tabContent",
+        "id": "offersContent",
         "fields": [
           {
             "component": "text",
