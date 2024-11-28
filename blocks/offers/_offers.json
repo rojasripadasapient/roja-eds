@@ -17,7 +17,7 @@
       }
     },
     {
-      "title": "offers Content",
+      "title": "Offers Content",
       "id": "offersContent",
       "plugins": {
         "xwalk": {
@@ -40,7 +40,7 @@
         {
           "component": "text",
           "valueType": "string",
-          "name": "mainTabTitle",
+          "name": "mainTabHeading",
           "label": "Title",
           "value": ""
         }
@@ -66,7 +66,7 @@
         {
           "component": "select",
           "label": "Variation Type",
-          "name": "selectTabType",
+          "name": "chooseTabTypeVariation",
           "valueType": "string",
           "description": "Select Variation 1 for displaying Heading & Description, and select Variation 2 for displaying Features",
           "options": [
@@ -80,13 +80,13 @@
           "name": "heading",
           "label": "Heading",
           "value": "",
-          "condition": { "==": [{ "var": "selectTabType" }, "var1"] }
+          "condition": { "==": [{ "var": "chooseTabTypeVariation" }, "var1"] }
         },
         {
           "component": "richtext",
           "name": "description",
           "label": "Description",
-          "condition": { "==": [{ "var": "selectTabType" }, "var1"] }
+          "condition": { "==": [{ "var": "chooseTabTypeVariation" }, "var1"] }
         },
         {
           "component": "aem-content",
@@ -94,19 +94,19 @@
           "name": "ctaTabLink",
           "label": "CTA Link",
           "value": "",
-          "condition": { "==": [{ "var": "selectTabType" }, "var1"] }
+          "condition": { "==": [{ "var": "chooseTabTypeVariation" }, "var1"] }
         },
         {
           "component": "text",
           "valueType": "string",
-          "name": "ctaTabText",
+          "name": "ctaTabButtonValue",
           "label": "CTA Text",
           "value": "",
-          "condition": { "==": [{ "var": "selectTabType" }, "var1"] }
+          "condition": { "==": [{ "var": "chooseTabTypeVariation" }, "var1"] }
         },
         {
           "component": "select",
-          "name": "ctaTabType",
+          "name": "ctaButtonOptions",
           "label": "CTA Type",
           "options": [
             { "name": "default", "value": "" },
@@ -114,7 +114,7 @@
             { "name": "secondary", "value": "secondary" },
             { "name": "tertiary", "value": "tertiary" }
           ],
-          "condition": { "==": [{ "var": "selectTabType" }, "var1"] }
+          "condition": { "==": [{ "var": "chooseTabTypeVariation" }, "var1"] }
         },
         {
           "component": "text",
@@ -124,7 +124,7 @@
           "valueType": "string",
           "description": "Add USP and USP-Value as key-value pair",
           "multi": true,
-          "condition": { "==": [{ "var": "selectTabType" }, "var2"] }
+          "condition": { "==": [{ "var": "chooseTabTypeVariation" }, "var2"] }
         },
         {
           "component": "text",
@@ -134,7 +134,7 @@
           "description": "Add USP and USP-Value as key-value pair",
           "valueType": "string",
           "multi": true,
-          "condition": { "==": [{ "var": "selectTabType" }, "var2"] }
+          "condition": { "==": [{ "var": "chooseTabTypeVariation" }, "var2"] }
         }
       ]
     }
