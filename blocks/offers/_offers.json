@@ -61,7 +61,18 @@
           "valueType": "string",
           "name": "image",
           "label": "Image",
-          "multi": true
+          "multi": false
+        },
+        {
+          "component": "select",
+          "label": "Variation Type",
+          "name": "selectTabType",
+          "valueType": "string",
+          "description": "Select Variation 1 for displaying Heading & Description, and select Variation 2 for displaying Features",
+          "options": [
+            { "name": "Variation 1", "value": "var1" },
+            { "name": "Variation 2", "value": "var2" }
+          ]
         },
         {
           "component": "text",
@@ -69,14 +80,13 @@
           "name": "heading",
           "label": "Heading",
           "value": "",
-          "multi": false
-
+          "condition": { "==": [{ "var": "selectTabType" }, "var1"] }
         },
         {
           "component": "richtext",
           "name": "description",
           "label": "Description",
-          "multi": false
+          "condition": { "==": [{ "var": "selectTabType" }, "var1"] }
         },
         {
           "component": "aem-content",
@@ -84,7 +94,7 @@
           "name": "ctaTabLink",
           "label": "CTA Link",
           "value": "",
-          "multi": false
+          "condition": { "==": [{ "var": "selectTabType" }, "var1"] }
         },
         {
           "component": "text",
@@ -92,31 +102,19 @@
           "name": "ctaTabText",
           "label": "CTA Text",
           "value": "",
-          "multi": true
+          "condition": { "==": [{ "var": "selectTabType" }, "var1"] }
         },
         {
           "component": "select",
           "name": "ctaTabType",
           "label": "CTA Type",
-          "multi": false,
           "options": [
-            {
-              "name": "default",
-              "value": ""
-            },
-            {
-              "name": "primary",
-              "value": "primary"
-            },
-            {
-              "name": "secondary",
-              "value": "secondary"
-            },
-            {
-              "name": "tertiary",
-              "value": "tertiary"
-            }
-          ]
+            { "name": "default", "value": "" },
+            { "name": "primary", "value": "primary" },
+            { "name": "secondary", "value": "secondary" },
+            { "name": "tertiary", "value": "tertiary" }
+          ],
+          "condition": { "==": [{ "var": "selectTabType" }, "var1"] }
         },
         {
           "component": "text",
@@ -125,7 +123,8 @@
           "label": "USP",
           "valueType": "string",
           "description": "Add USP and USP-Value as key-value pair",
-          "multi": false
+          "multi": true,
+          "condition": { "==": [{ "var": "selectTabType" }, "var2"] }
         },
         {
           "component": "text",
@@ -134,7 +133,8 @@
           "label": "USP Value",
           "description": "Add USP and USP-Value as key-value pair",
           "valueType": "string",
-          "multi": false
+          "multi": true,
+          "condition": { "==": [{ "var": "selectTabType" }, "var2"] }
         }
       ]
     }
