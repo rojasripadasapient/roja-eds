@@ -1,187 +1,44 @@
 import { moveInstrumentation } from '../../scripts/scripts.js';
 
+// Function to apply the correct headline class based on the tag
+function applyHeadlineClass(headline) {
+  if (!headline) return;
 
-// function buildCta(cta, ctaTitle, ctaVariant) {
-//   const anchor = cta?.querySelector('.button-container a');
-//   const elementP = ctaTitle?.querySelector('p');
-//   if (!anchor) return null;
-//   const url = anchor.getAttribute('href') || '#';
-//   const title = ctaTitle ? ctaTitle.textContent : (anchor.getAttribute('title') || '');
-//   console.log(title);
-//   // Get the list of classes (split by spaces, not by characters)
-// const clsList = (anchor?.getAttribute('class') || '').split(' ');
+  const heading = headline.querySelector('h1, h2, h3, h4, h5, h6');
+  if (!heading) return;
 
-// // Extract the variant from ctaVariant textContent or fallback to clsList[1] or default 'tertiary'
-// const variant = (ctaVariant && ctaVariant.textContent.trim()) || (clsList.includes('button--tertiary') ? 'tertiary' : 'tertiary');
+  const classes = {
+    H1: 'wds2-type-display-l wds2-type-display-xl',
+    H2: 'wds2-type-display-m wds2-type-display-l',
+    H3: 'wds2-type-display-s wds2-type-display-m',
+    H4: 'wds2-type-display-xs wds2-type-display-s',
+    H5: 'wds2-type-display-xs wds2-type-display-xs',
+    H6: 'wds2-type-display-xs wds2-type-display-xs',
+  };
 
-// console.log(variant);
-//   console.log(variant);
-//   const button = document.createElement('wds-button');
-//   const span = document.createElement('span');
+  const headClass = classes[heading.tagName] || 'wds2-type-display-s wds2-type-display-m';
 
-//   button.setAttribute('background', 'light');
-//   button.setAttribute('variant', variant);
-//   button.setAttribute('data-src', url);
-//   span.textContent = title;
-//   button.appendChild(span);
+  console.log(headClass);
+  const largeScreen = window.matchMedia('(min-width: 1024px)');
+  const selectedClass = largeScreen.matches ? headClass.split(' ')[1] : headClass.split(' ')[0];
 
-//   if(elementP) {
-//     moveInstrumentation(elementP, span);console.log('Hi I am inside element P moveInstrumentation');
-//   }
-// else {
-//     moveInstrumentation(anchor, span);console.log('Hi I am inside element anchor moveInstrumentation');
-// }
+  console.log(selectedClass);
 
-//   return button;
-// }
+  heading.classList.add(selectedClass);
+  heading.classList.add('teaser-title-header');
+}
 
-// function bindEvent(block) {
-//   const wdsButton = block.querySelector('wds-button');
-//   if (wdsButton && !wdsButton._isEventBound) {  // Check if the event is already bound
-//     wdsButton.addEventListener('click', () => {
-//       const url = wdsButton.getAttribute('data-src');
-//       console.log(url);
-//       if (url && url !== '#') {
-//         window.location.href = url;
-//       } else {
-//         console.log('No valid URL found');
-//       }
-//     });
-//     wdsButton._isEventBound = true;  // Mark the event as bound
-//   }
-// }
+// Function to apply subheadline and add both classes (light-m and teaser-variant1__desc)
+function applySubheadlineClass(subheadline) {
+  if (!subheadline) return;
 
-// function teaserVariantOne(block) {
-//   console.log("hei I am var1");
-//   const elements = [...block.children].slice(1, 6);
-//   console.log(elements);
-//   const ctaElement = buildCta(elements[3]);
-//   console.log(ctaElement);
-//   const [imageAlt, headline, subheadline] = elements;
-//   const pictureContainer = block.querySelector('picture');
-//   const img = pictureContainer?.querySelector('img');
+  const pTag = subheadline.querySelector('p');
+  if (pTag) {
+    pTag.classList.add('wds2-type-body-light-m', 'teaser-variant1__desc');
+  }
+}
 
-//   if (img && (!img.getAttribute('alt') || img.getAttribute('alt') === '')) {
-//     img.setAttribute('alt', imageAlt?.textContent.trim());
-//   }
-
-//   if (headline) {
-//     headline.innerHTML = headline?.innerHTML || '';
-//   }
-
-//   if (subheadline) {
-//     subheadline.innerHTML = subheadline?.innerHTML || '';
-//   }
-
-//   const container = document.createElement('div');
-//   container.innerHTML = `
-//     <div class="variantone__container flex">
-//       <div class="teaser__title wds2-type-display-m mobile-title">${headline ? headline.innerHTML : ''}</div>
-//       <div class="teaser__image">${pictureContainer ? pictureContainer.outerHTML : ''}</div>
-//       <div class="teaser__text">
-//         <div class="teaser__title wds2-type-display-m desktop-title">${headline ? headline.innerHTML : ''}</div>
-//         <div class="teaser__description wds2-type-body-light-m">${subheadline ? subheadline.innerHTML : ''}</div>
-//         <div class="teaser__cta"></div>
-//       </div>
-//     </div>
-//   `;
-
-//   const ctaContainer = container.querySelector('.teaser__cta');
-//   ctaContainer?.appendChild(ctaElement);
-
-//   block.innerHTML = '';
-//   block.classList.add('teaser-comp');
-//   block.appendChild(container);
-//   bindEvent(block);
-// }
-
-// function teaserVariantTwo(block) {
-//   // Select the elements for the two sections (slicing the children of the block)
-//   const var2elements = [...block.children].slice(5, 11).map((row) => row.firstElementChild);
-//   const var2elements2 = [...block.children].slice(11, 18).map((row) => row.firstElementChild);
-
-//   // Get the CTA buttons for each section, with fallback in case they don't exist
-//   const ctaElement1 = var2elements[3] ? buildCta(var2elements[3], var2elements[4], var2elements[5]) : null;
-//   const ctaElement2 = var2elements2[3] ? buildCta(var2elements2[3], var2elements2[4], var2elements2[5]) : null;
-
-//   // Extracting image alt, headline, and subheadline for each section
-//   const [imageAlt1, headline1, subheadline1] = var2elements;
-//   const [imageAlt2, headline2, subheadline2] = var2elements2;
-
-//   // Select all the picture containers (assuming there are two images for var2)
-//   const pictureContainers = block.querySelectorAll('picture');
-//   const images = Array.from(pictureContainers).map(picture => picture.querySelector('img'));
-
-//   // Ensure that the correct images are being assigned the correct alt text
-//   if (images[0] && (!images[0].getAttribute('alt') || images[0].getAttribute('alt') === '')) {
-//     images[0].setAttribute('alt', imageAlt1?.textContent.trim());
-//   }
-
-//   if (images[1] && (!images[1].getAttribute('alt') || images[1].getAttribute('alt') === '')) {
-//     images[1].setAttribute('alt', imageAlt2?.textContent.trim());
-//   }
-
-//   // Create the container for the teaser
-//   const container = document.createElement('div');
-//   container.innerHTML = `
-//     <div class="varianttwo__container flex">
-//       <!-- Section 1: First Image, Headline, Subheadline, and CTA -->
-//       <div class="teaser__section">
-//         <div class="teaser__image">${pictureContainers[1] ? pictureContainers[1].outerHTML : ''}</div>
-//         <div class="teaser__text">
-//           <div class="teaser__title wds2-type-display-m">${headline1 ? headline1.innerHTML : ''}</div>
-//           <div class="teaser__description wds2-type-body-light-m">${subheadline1 ? subheadline1.innerHTML : ''}</div>
-//           <div class="teaser__cta"></div>
-//         </div>
-//       </div>
-//       <!-- Section 2: Second Image, Headline, Subheadline, and CTA -->
-//       <div class="teaser__section">
-//         <div class="teaser__image">${pictureContainers[2] ? pictureContainers[2].outerHTML : ''}</div>
-//         <div class="teaser__text">
-//           <div class="teaser__title wds2-type-display-m">${headline2 ? headline2.innerHTML : ''}</div>
-//           <div class="teaser__description wds2-type-body-light-m">${subheadline2 ? subheadline2.innerHTML : ''}</div>
-//           <div class="teaser__cta"></div>
-//         </div>
-//       </div>
-//     </div>
-//   `;
-
-//   // Insert the CTA buttons into each section
-//   const ctaContainer1 = container.querySelectorAll('.teaser__cta')[0]; // First CTA container
-//   const ctaContainer2 = container.querySelectorAll('.teaser__cta')[1]; // Second CTA container
-//   if (ctaElement1) ctaContainer1?.appendChild(ctaElement1);
-//   if (ctaElement2) ctaContainer2?.appendChild(ctaElement2);
-
-//   // Clear the original block content and append the new container
-//   block.innerHTML = '';
-//   block.classList.add('teaser-comp');
-//   block.appendChild(container);
-
-//   // Bind the event to handle button click (for navigation)
-//   bindEvent(ctaContainer1);  // Pass only the container of the first section
-//   bindEvent(ctaContainer2);  // Pass only the container of the second section
-// }
-
-
-// export default async function decorate(block) {
-//   const teaserVariant = [...block.children].slice(0, 1);
-//   const teaserVariantVal = teaserVariant[0].innerText.trim();
-//   const allVariants = [...block.children].slice(1); // All the content except the first item (variant selector)
-
-//   allVariants.forEach(variantBlock => {
-//     variantBlock.style.display = 'none'; // Hide all blocks initially
-//   });
-
-//   if (teaserVariantVal === 'var1') {
-//     teaserVariantOne(block);
-//   } else if (teaserVariantVal === 'var2') {
-//     teaserVariantTwo(block);
-//   }
-
-//   bindEvent(block);
-// }
-
-
+// Function to build CTA (Call-to-Action) button
 function buildCta(cta, ctaTitle, ctaVariant) {
   const anchor = cta?.querySelector('.button-container a');
   const elementP = ctaTitle?.querySelector('p');
@@ -190,7 +47,7 @@ function buildCta(cta, ctaTitle, ctaVariant) {
 
   const url = anchor.getAttribute('href') || '#';
   const title = ctaTitle ? ctaTitle.textContent : (anchor.getAttribute('title') || '');
-  const clsList =  anchor.getAttribute('class')?.split(' ')[1] || 'tertiary';
+  const clsList = anchor.getAttribute('class')?.split(' ')[1] || 'tertiary';
   const variant = ctaVariant ? ctaVariant.textContent : clsList;
   const button = document.createElement('wds-button');
   const span = document.createElement('span');
@@ -199,6 +56,7 @@ function buildCta(cta, ctaTitle, ctaVariant) {
   button.setAttribute('variant', variant);
   button.setAttribute('data-src', url);
   span.textContent = title;
+  span.classList.add('teasercta-text', 'wds2-type-action-button-m');
   button.appendChild(span);
 
   if (elementP) {
@@ -210,6 +68,7 @@ function buildCta(cta, ctaTitle, ctaVariant) {
   return button;
 }
 
+// Function to bind the event to the CTA button
 function bindEvent(block) {
   const wdsButton = block.querySelector('wds-button');
   if (wdsButton && !wdsButton.isEventBound) {
@@ -223,58 +82,35 @@ function bindEvent(block) {
   }
 }
 
-// /**
-//   * Add specific class to the promo element based on the option
-//   * @param {HTMLElement} bgColor - The bgcolor element.
-//   * @param {HTMLElement} block - The block containing the promo content.
-//   */
-// function addBgColor(bgColor, block) {
-//   const bgColorVal = bgColor;
-//   const parentElem = block.closest('.teaser-container');
-//   if (parentElem) {
-//     if (bgColorVal === 'true') {
-//       parentElem.classList.add('no-bg');
-//     } else {
-//       parentElem.classList.remove('no-bg');
-//     }
-//   }
-// }
-
-/**
-* Add specific class to the promo element based on the option
-* @param {HTMLElement} bgColor - The bgcolor element.
-* @param {HTMLElement} block - The block containing the promo content.
-*/
+// Function to handle background color based on the provided value
 function addBgColor(bgColor, block) {
   const bgColorVal = bgColor || '';
   const parentElem = block.closest('.teaser-container');
-  console.log(bgColor);
-  console.log('Hi I am the bg color of var1');
   if (parentElem) {
     if (bgColorVal === 'true' || bgColorVal === '') {
       parentElem.classList.add('no-bg');
     } else {
       parentElem.classList.remove('no-bg');
-      console.log('Hi I am the bg color of var1 else block');
     }
   }
 }
 
+// Function to handle teaser variant 1
 function teaserVariantOne(bgColor, block) {
   const elements = [...block.children].slice(2, 7);
   const ctaElement = buildCta(elements[3]);
   const [imageAlt, headline, subheadline] = elements;
   const pictureContainer = block.querySelector('picture');
   const img = pictureContainer?.querySelector('img');
-  addBgColor(bgColor, block);
 
-  console.log(elements);
+  addBgColor(bgColor, block);
 
   if (img && (!img.getAttribute('alt') || img.getAttribute('alt') === '')) {
     img.setAttribute('alt', imageAlt?.textContent.trim());
   }
 
   if (headline) {
+    applyHeadlineClass(headline);
     headline.innerHTML = headline?.innerHTML || '';
   }
 
@@ -282,15 +118,22 @@ function teaserVariantOne(bgColor, block) {
     subheadline.innerHTML = subheadline?.innerHTML || '';
   }
 
+  applySubheadlineClass(subheadline);
+
   const container = document.createElement('div');
+  container.classList.add('container');
+  //<div class="teaser__mobile-title">${headline ? headline.innerHTML : ''}</div>
   container.innerHTML = `
-    <div class="variantone__container flex">
-      <div class="teaser__title wds2-type-display-m mobile-title">${headline ? headline.innerHTML : ''}</div>
-      <div class="teaser__image">${pictureContainer ? pictureContainer.outerHTML : ''}</div>
-      <div class="teaser__text">
-        <div class="teaser__title wds2-type-display-m desktop-title">${headline ? headline.innerHTML : ''}</div>
-        <div class="teaser__description wds2-type-body-light-m">${subheadline ? subheadline.innerHTML : ''}</div>
-        <div class="teaser__cta"></div>
+    <div class="row">
+      <div class="col-sm-2 col-md-12 col-l-12 col-xl-12">
+        <div class="variantone__container">
+          <div class="teaser__image">${pictureContainer ? pictureContainer.outerHTML : ''}</div>
+          <div class="teaser__text">
+            <div class="teaser__title desktop-title">${headline ? headline.innerHTML : ''}</div>
+            <div class="teaser__description">${subheadline ? subheadline.innerHTML : ''}</div>
+            <div class="teaser__cta"></div>
+          </div>
+        </div>
       </div>
     </div>
   `;
@@ -301,29 +144,29 @@ function teaserVariantOne(bgColor, block) {
   block.innerHTML = '';
   block.classList.add('teaser-comp');
   block.appendChild(container);
+
   bindEvent(block);
 }
 
+// Function to handle teaser variant 2
 function teaserVariantTwo(bgColor, block) {
   const var2elements = [...block.children].slice(6, 12).map((row) => row.firstElementChild);
   const var2elements2 = [...block.children].slice(12, 18).map((row) => row.firstElementChild);
-  console.log(var2elements);
-  console.log(var2elements2);
   const ctaElement1 = var2elements[3]
     ? buildCta(var2elements[3], var2elements[4], var2elements[5])
     : null;
-  console.log(ctaElement1);
   const ctaElement2 = var2elements2[3]
     ? buildCta(var2elements2[3], var2elements2[4], var2elements2[5])
     : null;
-    console.log(ctaElement2);
   const [imageAlt1, headline1, subheadline1] = var2elements;
   const [imageAlt2, headline2, subheadline2] = var2elements2;
   const pictureContainers = block.querySelectorAll('picture');
+
   const images = Array.from(pictureContainers).map((picture) => picture.querySelector('img'));
 
   if (images[0] && (!images[0].getAttribute('alt') || images[0].getAttribute('alt') === '')) {
     images[0].setAttribute('alt', imageAlt1?.textContent.trim());
+
   }
 
   if (images[1] && (!images[1].getAttribute('alt') || images[1].getAttribute('alt') === '')) {
@@ -332,32 +175,55 @@ function teaserVariantTwo(bgColor, block) {
 
   addBgColor(bgColor, block);
 
+  // // Ensure images are added to DOM correctly
+  // const teaserDescription1 = block.querySelectorAll('.teaser__description')[0];
+  // const teaserDescription2 = block.querySelectorAll('.teaser__description')[1];
+  // applySubheadlineClass(teaserDescription1);
+  // applySubheadlineClass(teaserDescription2);
+
   const container = document.createElement('div');
+  container.classList.add('container');
   container.innerHTML = `
-    <div class="varianttwo__container flex">
-      <!-- Section 1: First Image, Headline, Subheadline, and CTA -->
-      <div class="teaser__section">
-        <div class="teaser__image">${pictureContainers[1] ? pictureContainers[1].outerHTML : ''}</div>
-        <div class="teaser__text">
-          <div class="teaser__title wds2-type-display-m">${headline1 ? headline1.innerHTML : ''}</div>
-          <div class="teaser__description wds2-type-body-light-m">${subheadline1 ? subheadline1.innerHTML : ''}</div>
-          <div class="teaser__cta"></div>
-        </div>
-      </div>
-      <!-- Section 2: Second Image, Headline, Subheadline, and CTA -->
-      <div class="teaser__section">
-        <div class="teaser__image">${pictureContainers[2] ? pictureContainers[2].outerHTML : ''}</div>
-        <div class="teaser__text">
-          <div class="teaser__title wds2-type-display-m">${headline2 ? headline2.innerHTML : ''}</div>
-          <div class="teaser__description wds2-type-body-light-m">${subheadline2 ? subheadline2.innerHTML : ''}</div>
-          <div class="teaser__cta"></div>
+    <div class="row">
+      <div class="col-sm-2 col-md-12 col-l-12 col-xl-12">
+        <div class="varianttwo__container flex">
+          <div class="teaser__section">
+            <div class="teaser__image">${pictureContainers[0] ? pictureContainers[0].outerHTML : ''}</div>
+            <div class="teaser__text">
+              <div class="teaser__title">${headline1 ? headline1.innerHTML : ''}</div>
+              <div class="teaser__description">${subheadline1 ? subheadline1.innerHTML : ''}</div>
+              <div class="teaser__cta"></div>
+            </div>
+          </div>
+          <div class="teaser__section">
+            <div class="teaser__image">${pictureContainers[1] ? pictureContainers[1].outerHTML : ''}</div>
+            <div class="teaser__text">
+              <div class="teaser__title">${headline2 ? headline2.innerHTML : ''}</div>
+              <div class="teaser__description">${subheadline2 ? subheadline2.innerHTML : ''}</div>
+              <div class="teaser__cta"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   `;
 
+  const teaserTitles = container.querySelectorAll('.teaser__title p');
+  teaserTitles.forEach((pTag) => {
+    pTag.classList.add('wds2-type-display-xs');
+  });
+
+  const teaserDescriptions = container.querySelectorAll('.teaser__description p');
+  teaserDescriptions.forEach((pTag) => {
+    pTag.classList.add('wds2-type-body-light-m');
+  });
+
   const ctaContainer1 = container.querySelectorAll('.teaser__cta')[0];
   const ctaContainer2 = container.querySelectorAll('.teaser__cta')[1];
+
+  if (ctaElement1) ctaContainer1?.appendChild(ctaElement1);
+  if (ctaElement2) ctaContainer2?.appendChild(ctaElement2);
+
 
   if (ctaElement1) ctaContainer1?.appendChild(ctaElement1);
   if (ctaElement2) ctaContainer2?.appendChild(ctaElement2);
@@ -370,19 +236,13 @@ function teaserVariantTwo(bgColor, block) {
   bindEvent(ctaContainer2);
 }
 
+// Main export function that decorates the block based on variant
 export default async function decorate(block) {
   const teaserVariant = [...block.children].slice(1, 2);
   const teaserVariantVal = teaserVariant[0].innerText.trim();
   const allVariants = [...block.children].slice(1);
-  console.log(teaserVariant);
-  console.log(teaserVariantVal);
-  console.log(allVariants);
   const bgColorElem = [...block.children].slice(0, 1);
-  console.log(bgColorElem);
   const bgColor = bgColorElem[0]?.querySelector('p').textContent;
-  console.log(bgColor);
-
-  console.log(bgColor);
 
   allVariants.forEach((variantBlock) => { variantBlock.style.display = 'none'; });
 
