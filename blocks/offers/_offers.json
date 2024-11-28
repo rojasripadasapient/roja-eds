@@ -86,14 +86,14 @@
               "valueType": "string",
               "name": "tabName",
               "label": "Tab Name",
-              "multi": false
+              "multi": true
             },
             {
               "component": "reference",
               "valueType": "string",
               "name": "image",
               "label": "Image",
-              "multi": false
+              "multi": true
             },
             {
               "component": "text",
