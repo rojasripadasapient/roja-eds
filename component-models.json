@@ -314,7 +314,7 @@
     ]
   },
   {
-    "id": "offers",
+    "id": "offersContent",
     "fields": [
       {
         "component": "text",
@@ -402,7 +402,6 @@
         "valueType": "string",
         "multi": true
       }
-
     ]
   },
   {
