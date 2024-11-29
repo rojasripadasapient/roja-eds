@@ -219,7 +219,7 @@
         },
         {
           "title": "Offers",
-          "id": "offers",
+          "id": "offers-content",
           "plugins": {
             "xwalk": {
               "page": {
