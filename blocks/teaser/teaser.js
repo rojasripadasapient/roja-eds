@@ -1,4 +1,5 @@
-import { moveInstrumentation } from '../../scripts/scripts.js';
+import { moveInstrumentation } from '../../../../scripts/scripts.js';
+import { TEASER_BLOCK_VARIATION } from '../../../../scripts/constant.js';
 
 // Function to apply the correct headline class based on the tag
 function applyHeadlineClass(headline) {
@@ -17,12 +18,8 @@ function applyHeadlineClass(headline) {
   };
 
   const headClass = classes[heading.tagName] || 'wds2-type-display-s wds2-type-display-m';
-
-  console.log(headClass);
   const largeScreen = window.matchMedia('(min-width: 1024px)');
   const selectedClass = largeScreen.matches ? headClass.split(' ')[1] : headClass.split(' ')[0];
-
-  console.log(selectedClass);
 
   heading.classList.add(selectedClass);
   heading.classList.add('teaser-title-header');
@@ -87,7 +84,7 @@ function addBgColor(bgColor, block) {
   const bgColorVal = bgColor || '';
   const parentElem = block.closest('.teaser-container');
   if (parentElem) {
-    if (bgColorVal === 'true' || bgColorVal === '') {
+    if (bgColorVal === 'false' || bgColorVal === '') {
       parentElem.classList.add('no-bg');
     } else {
       parentElem.classList.remove('no-bg');
@@ -122,7 +119,6 @@ function teaserVariantOne(bgColor, block) {
 
   const container = document.createElement('div');
   container.classList.add('container');
-  //<div class="teaser__mobile-title">${headline ? headline.innerHTML : ''}</div>
   container.innerHTML = `
     <div class="row">
       <div class="col-sm-2 col-md-12 col-l-12 col-xl-12">
@@ -166,7 +162,6 @@ function teaserVariantTwo(bgColor, block) {
 
   if (images[0] && (!images[0].getAttribute('alt') || images[0].getAttribute('alt') === '')) {
     images[0].setAttribute('alt', imageAlt1?.textContent.trim());
-
   }
 
   if (images[1] && (!images[1].getAttribute('alt') || images[1].getAttribute('alt') === '')) {
@@ -174,12 +169,6 @@ function teaserVariantTwo(bgColor, block) {
   }
 
   addBgColor(bgColor, block);
-
-  // // Ensure images are added to DOM correctly
-  // const teaserDescription1 = block.querySelectorAll('.teaser__description')[0];
-  // const teaserDescription2 = block.querySelectorAll('.teaser__description')[1];
-  // applySubheadlineClass(teaserDescription1);
-  // applySubheadlineClass(teaserDescription2);
 
   const container = document.createElement('div');
   container.classList.add('container');
@@ -224,10 +213,6 @@ function teaserVariantTwo(bgColor, block) {
   if (ctaElement1) ctaContainer1?.appendChild(ctaElement1);
   if (ctaElement2) ctaContainer2?.appendChild(ctaElement2);
 
-
-  if (ctaElement1) ctaContainer1?.appendChild(ctaElement1);
-  if (ctaElement2) ctaContainer2?.appendChild(ctaElement2);
-
   block.innerHTML = '';
   block.classList.add('teaser-comp');
   block.appendChild(container);
@@ -242,13 +227,13 @@ export default async function decorate(block) {
   const teaserVariantVal = teaserVariant[0].innerText.trim();
   const allVariants = [...block.children].slice(1);
   const bgColorElem = [...block.children].slice(0, 1);
-  const bgColor = bgColorElem[0]?.querySelector('p').textContent;
+  const bgColor = bgColorElem[0]?.querySelector('p')?.textContent;
 
   allVariants.forEach((variantBlock) => { variantBlock.style.display = 'none'; });
 
-  if (teaserVariantVal === 'var1') {
+  if (teaserVariantVal === TEASER_BLOCK_VARIATION.VARIANT_1) {
     teaserVariantOne(bgColor, block);
-  } else if (teaserVariantVal === 'var2') {
+  } else if (teaserVariantVal === TEASER_BLOCK_VARIATION.VARIANT_2) {
     teaserVariantTwo(bgColor, block);
   }
 

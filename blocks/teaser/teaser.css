@@ -1,200 +1,200 @@
 main > .section.teaser-container {
-  background-color: var(--wds2-colour-nissanwhite);
-  overflow: auto;
+    background-color: var(--wds2-colour-validation-background-info-onlight);
+    overflow: auto;
 }
 
 main > .section > div.teaser-wrapper {
-  padding: 0;
-  max-width: 1500px;
+    padding: 0;
+    max-width: 1500px;
 }
 
 main > .section {
-  margin: 0;
+    margin: 0;
 }
 
 main > .section.teaser-container.no-bg {
-  background-color: var(--wds2-colour-validation-background-info-onlight);
+    background-color: var(--wds2-colour-nissanwhite);
 }
+
 .section.teaser-container .container {
-  margin: 40px var(--wds2-grid-s-margin);
+    margin: var(--wds2-grid-m-margin) var(--wds2-grid-s-margin);
 }
 
 .variantone__container {
-  position: relative;
-  padding-top: 24px;
-  row-gap: 24px;
+    position: relative;
+    padding-top: var(--wds2-radio-element-margin);
+    row-gap: var(--wds2-radio-element-margin);
 }
 
 .variantone__container,
 .varianttwo__container {
-  display: inline-grid;
-  grid-auto-flow: row;
-  grid-auto-columns: minmax(0, 1fr);
-  width: 100%;
+    display: inline-grid;
+    grid-auto-flow: row;
+    grid-auto-columns: minmax(0, 1fr);
+    width: 100%;
 }
 
 .varianttwo__container {
-  row-gap: 40px;
+    row-gap: var(--wds2-grid-m-margin);
 }
 
 .variantone__container .teaser__title {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
-}
-
-.variantone__container .teaser__image {
-  margin-top: 24px;
-  height: 251px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .variantone__container .teaser__text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  text-align: left;
-  width: 100%;
-  gap: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    width: 100%;
+    gap: var(--wds2-radio-element-margin);
 }
 
 .varianttwo__container .teaser__title p,
 .varianttwo__container .teaser__description p {
-  margin: 0;
-  color: #000;
+    margin: 0;
+    color: var(--wds2-colour-nissanblack);
 }
 
 .varianttwo__container .teaser__title p {
-  padding-top: 20px;
+    padding-top: var(--wds2-grid-s-padding);
 }
 
 .varianttwo__container .teaser__description p {
-  padding-top: 12px;
-  padding-bottom: 20px;
+    padding-top: 12px;
+    padding-bottom: var(--wds2-grid-s-padding);
 }
 
 .teaser-title-header,
 .teaser-variant1__desc {
-  margin: 0;
-  color: #000;
+    margin: 0;
+    color: var(--wds2-colour-nissanblack);
 }
 
 .varianttwo__container .teaser__image {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-top: 56.25%; /* 16:9 aspect ratio (9/16 = 0.5625) */
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%; /* 16:9 aspect ratio (9/16 = 0.5625) */
+    overflow: hidden;
 }
 
 .varianttwo__container .teaser__image img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* This will make sure the image covers the area */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .variantone__container .teaser__image {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: var(--wds2-radio-element-margin);
+    height: 251px;
 }
 
 .variantone__container .teaser__image img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 @media screen and (min-width: 767px) {
-  .variantone__container .teaser__image {
-    margin-top: 0;
-  }
+    .variantone__container .teaser__image {
+        margin-top: 0;
+    }
 
-  .variantone__container .teaser__title {
-    position: unset;
-  }
-  .variantone__container {
-    position: unset;
-    padding-top: 0;
-}
+    .variantone__container .teaser__title {
+        position: unset;
+    }
+
+    .variantone__container {
+        position: unset;
+        padding-top: 0;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .teaser-wrapper .container {
-    margin: 60px var(--wds2-grid-m-margin) !important;
-  }
+    .teaser-wrapper .container {
+        margin: 60px var(--wds2-grid-m-margin) !important;
+    }
 
-  .variantone__container .teaser__image {
-    height: 247px;
-  }
+    .variantone__container .teaser__image {
+        height: 247px;
+    }
 
-  .variantone__container,
-  .varianttwo__container {
-    display: inline-grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-flow: row;
-    grid-auto-columns: minmax(0, 1fr);
-    gap: 60px 30px;
-    width: 100%;
-  }
+    .variantone__container,
+    .varianttwo__container {
+        display: inline-grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-flow: row;
+        grid-auto-columns: minmax(0, 1fr);
+        gap: var(--wds2-grid-m-padding);
+        width: 100%;
+    }
 
-  .variantone__container .teaser__mobile-title {
-    display: none;
-  }
+    .variantone__container .teaser__mobile-title {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1024px) {
-  .variantone__container .teaser__image {
-    height: 309px !important;
-  }
+    .variantone__container .teaser__image {
+        height: 309px !important;
+    }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
-  .variantone__container .teaser__image {
-    height: 342px;
-  }
+    .variantone__container .teaser__image {
+        height: 342px;
+    }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1499px) {
-  .teaser-wrapper .container {
-    margin: var(--wds2-grid-l-margin) !important;
-  }
+    .teaser-wrapper .container {
+        margin: var(--wds2-grid-l-margin) !important;
+    }
 
-  .variantone__container .teaser__image {
-    height: 465px;
-  }
+    .variantone__container .teaser__image {
+        height: 465px;
+    }
 
-  .variantone__container,
-  .varianttwo__container {
-    display: inline-grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-columns: minmax(0, 1fr);
-    gap: 40px;
-    width: 100%;
-  }
+    .variantone__container,
+    .varianttwo__container {
+        display: inline-grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-columns: minmax(0, 1fr);
+        gap: var(--wds2-grid-m-margin);
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 1500px) {
-  .teaser-wrapper .container {
-    margin: var(--wds2-grid-l-margin) !important;
-  }
-  .variantone__container .teaser__image {
-    height: 488px;
-  }
-  .variantone__container,
-  .varianttwo__container {
-    display: inline-grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-columns: minmax(0, 1fr);
-    gap: 40px;
-    width: 100%;
-  }
+    .teaser-wrapper .container {
+        margin: var(--wds2-grid-l-margin) !important;
+    }
+
+    .variantone__container .teaser__image {
+        height: 488px;
+    }
+
+    .variantone__container,
+    .varianttwo__container {
+        display: inline-grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-columns: minmax(0, 1fr);
+        gap: var(--wds2-grid-m-margin);
+        width: 100%;
+    }
 }
