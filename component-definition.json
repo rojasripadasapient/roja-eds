@@ -84,7 +84,7 @@
       "components": [
         {
           "title": "GB005-Offers",
-          "id": "offers",
+          "id": "offers-content",
           "plugins": {
             "xwalk": {
               "page": {
