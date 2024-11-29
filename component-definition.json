@@ -218,8 +218,8 @@
           }
         },
         {
-          "title": "offers",
-          "id": "offers-content",
+          "title": "Offers",
+          "id": "offers",
           "plugins": {
             "xwalk": {
               "page": {
