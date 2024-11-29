@@ -132,22 +132,6 @@
           }
         },
         {
-          "title": "Action Strip Content",
-          "id": "action-stripContent",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "action-stripContent",
-                  "model": "action-stripContent",
-                  "filter": "action-stripContent"
-                }
-              }
-            }
-          }
-        },
-        {
           "title": "Cards",
           "id": "cards",
           "plugins": {
