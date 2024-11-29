@@ -224,15 +224,15 @@
         },
         {
           "title": "offers Content",
-          "id": "",
+          "id": "offers-Content",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "coffersContentore/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "offersContent",
-                  "model": "offersContent",
-                  "filter": "offersContent"
+                  "name": "offers-Content",
+                  "model": "offers-Content",
+                  "filter": "offers-Content"
                 }
               }
             }
