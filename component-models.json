@@ -314,7 +314,7 @@
     ]
   },
   {
-    "id": "offers",
+    "id": "offers-content",
     "fields": [
       {
         "component": "reference",
