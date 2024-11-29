@@ -314,27 +314,8 @@
     ]
   },
   {
-    "id": "offers",
+    "id": "offers-content",
     "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "mainTabHeading",
-        "label": "Title",
-        "value": ""
-      }
-    ]
-  },
-  {
-    "id": "offersContent",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "tabName",
-        "label": "Tab Name",
-        "multi": false
-      },
       {
         "component": "reference",
         "valueType": "string",
@@ -343,77 +324,427 @@
         "multi": false
       },
       {
-        "component": "select",
-        "label": "Variation Type",
-        "name": "chooseTabTypeVariation",
-        "valueType": "string",
-        "description": "Select Variation 1 for displaying Heading & Description, and select Variation 2 for displaying Features",
-        "options": [
-          { "name": "Variation 1", "value": "var1" },
-          { "name": "Variation 2", "value": "var2" }
-        ]
-      },
-      {
         "component": "text",
-        "valueType": "string",
-        "name": "heading",
-        "label": "Heading",
-        "value": "",
-        "condition": { "==": [{ "var": "chooseTabTypeVariation" }, "var1"] }
+        "name": "title",
+        "label": "Title",
+        "multi": false
       },
       {
         "component": "richtext",
         "name": "description",
         "label": "Description",
-        "condition": { "==": [{ "var": "chooseTabTypeVariation" }, "var1"] }
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "text",
+        "label": "Text",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec1Value",
+        "label": "Spec1 Value",
+        "value": "",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec1",
+        "label": "Spec1",
+        "value": "",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "textSpec1",
+        "label": "Tool Tip 1",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec2Value",
+        "label": "Spec2 Value",
+        "value": "",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec2",
+        "label": "Spec2",
+        "value": "",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "textSpec2",
+        "label": "Tool Tip 2",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec3Value",
+        "label": "Spec3 Value",
+        "value": "",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec3",
+        "label": "Spec3",
+        "value": "",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "textSpec3",
+        "label": "Tool Tip 3",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec4Value",
+        "label": "Spec4 Value",
+        "value": "",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec4",
+        "label": "Spec4",
+        "value": "",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "textSpec4",
+        "label": "Tool Tip 4",
+        "multi": false
       },
       {
         "component": "aem-content",
-        "valueType": "string",
-        "name": "ctaTabLink",
-        "label": "CTA Link",
-        "value": "",
-        "condition": { "==": [{ "var": "chooseTabTypeVariation" }, "var1"] }
+        "name": "link1",
+        "label": "Link1",
+        "multi": false
       },
       {
         "component": "text",
-        "valueType": "string",
-        "name": "ctaTabButtonValue",
-        "label": "CTA Text",
-        "value": "",
-        "condition": { "==": [{ "var": "chooseTabTypeVariation" }, "var1"] }
+        "name": "linkText1",
+        "label": "Link Text1",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "description1",
+        "label": "Description1",
+        "multi": false
+      },
+      {
+        "component": "aem-content",
+        "name": "link2",
+        "label": "Link2",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "linkText2",
+        "label": "Link Text2",
+        "multi": false
+      },
+      {
+        "component": "aem-content",
+        "name": "link3",
+        "label": "Link3",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "linkText3",
+        "label": "Link Text3",
+        "multi": false
       },
       {
         "component": "select",
-        "name": "ctaButtonOptions",
-        "label": "CTA Type",
+        "name": "linkType3",
+        "label": "LinkType3",
+        "multi": false,
         "options": [
-          { "name": "default", "value": "" },
-          { "name": "primary", "value": "primary" },
-          { "name": "secondary", "value": "secondary" },
-          { "name": "tertiary", "value": "tertiary" }
-        ],
-        "condition": { "==": [{ "var": "chooseTabTypeVariation" }, "var1"] }
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          },
+          {
+            "name": "tertiary",
+            "value": "tertiary"
+          }
+        ]
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Link",
+        "multi": false
       },
       {
         "component": "text",
-        "name": "usp",
-        "value": "",
-        "label": "USP",
+        "name": "linkText",
+        "label": "Link Text",
+        "multi": false
+      },
+      {
+        "component": "select",
+        "name": "linkType",
+        "label": "LinkType",
+        "multi": false,
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          },
+          {
+            "name": "tertiary",
+            "value": "tertiary"
+          }
+        ]
+      },
+      {
+        "component": "reference",
         "valueType": "string",
-        "description": "Add USP and USP-Value as key-value pair",
-        "multi": true,
-        "condition": { "==": [{ "var": "chooseTabTypeVariation" }, "var2"] }
+        "name": "image1",
+        "label": "Image1",
+        "multi": false
       },
       {
         "component": "text",
-        "name": "uspValue",
-        "value": "",
-        "label": "USP Value",
-        "description": "Add USP and USP-Value as key-value pair",
+        "name": "title1",
+        "label": "Title1",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "description2",
+        "label": "Description2",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "textImage1",
+        "label": "Text Image1",
+        "multi": false
+      },
+      {
+        "component": "text",
         "valueType": "string",
-        "multi": true,
-        "condition": { "==": [{ "var": "chooseTabTypeVariation" }, "var2"] }
+        "name": "spec1ValueImage1",
+        "label": "Spec1 Value Image1",
+        "value": "",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec1Image1",
+        "label": "Spec1 Image1",
+        "value": "",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "textSpec1Image1",
+        "label": "Tool Tip 1 Image1",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec2ValueImage1",
+        "label": "Spec2 Value Image1",
+        "value": "",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec2Image1",
+        "label": "Spec2 Image1",
+        "value": "",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "textSpec2Image1",
+        "label": "Tool Tip 2 Image1",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec3ValueImage1",
+        "label": "Spec3 Value Image1",
+        "value": "",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec3Image1",
+        "label": "Spec3 Image1",
+        "value": "",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "textSpec3Image1",
+        "label": "Tool Tip 3 Image1",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec4ValueImage1",
+        "label": "Spec4 Value Image1",
+        "value": "",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec4Image1",
+        "label": "Spec4 Image1",
+        "value": "",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "textSpec4Image1",
+        "label": "Tool Tip 4 Image1",
+        "multi": false
+      },
+      {
+        "component": "aem-content",
+        "name": "link1Image1",
+        "label": "Link1 Image1",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "linkText1Image1",
+        "label": "Link Text1 Image1",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "description1Image1",
+        "label": "Description1 Image1",
+        "multi": false
+      },
+      {
+        "component": "aem-content",
+        "name": "link2Image1",
+        "label": "Link2 Image1",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "linkText2Image1",
+        "label": "Link Text2 Image1",
+        "multi": false
+      },
+      {
+        "component": "aem-content",
+        "name": "link3Image1",
+        "label": "Link3 Image1",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "linkText3Image1",
+        "label": "Link Text3 Image1",
+        "multi": false
+      },
+      {
+        "component": "select",
+        "name": "linkType3Image1",
+        "label": "LinkType3 Image1",
+        "multi": false,
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          },
+          {
+            "name": "tertiary",
+            "value": "tertiary"
+          }
+        ]
+      },
+      {
+        "component": "aem-content",
+        "name": "linkImage1",
+        "label": "Link Image1",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "linkTextImage1",
+        "label": "Link Text Image1",
+        "multi": false
+      },
+      {
+        "component": "select",
+        "name": "linkTypeImage1",
+        "label": "LinkType Image1",
+        "multi": false,
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          },
+          {
+            "name": "tertiary",
+            "value": "tertiary"
+          }
+        ]
       }
     ]
   },
