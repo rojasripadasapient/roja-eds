@@ -59,7 +59,7 @@
   {
     "id": "offers",
     "components": [
-      "offersContent"
+      "offers-content"
     ]
   },
   {
