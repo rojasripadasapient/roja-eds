@@ -1,5 +1,5 @@
-import { moveInstrumentation } from '../../../../scripts/scripts.js';
-import { TEASER_BLOCK_VARIATION } from '../../../../scripts/constant.js';
+import { moveInstrumentation } from '../../scripts/scripts.js';
+import { TEASER_BLOCK_VARIATION } from '../../scripts/constant.js';
 
 // Function to apply the correct headline class based on the tag
 function applyHeadlineClass(headline) {
