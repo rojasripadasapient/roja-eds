@@ -35,6 +35,11 @@
   ],
   "models": [
     {
+      "component": "text",
+      "name": "title",
+      "label": "Title"
+    },
+    {
       "id": "offers-content",
       "fields": [
         {
