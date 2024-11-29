@@ -35,18 +35,6 @@
   ],
   "models": [
     {
-      "id": "offers",
-      "fields": [
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "mainTabHeading",
-          "label": "Title",
-          "value": ""
-        }
-      ]
-    },
-    {
       "id": "offers-content",
       "fields": [
         {
