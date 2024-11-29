@@ -71,6 +71,57 @@
     ]
   },
   {
+    "id": "action-strip",
+    "fields": [
+      {
+        "component": "boolean",
+        "label": "Background Color",
+        "name": "bgColor",
+        "valueType": "boolean"
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "Text"
+      },
+      {
+        "component": "aem-content",
+        "name": "link1",
+        "label": "Link1"
+      },
+      {
+        "component": "text",
+        "name": "linkText1",
+        "label": "Text1"
+      },
+      {
+        "component": "aem-content",
+        "name": "link2",
+        "label": "Link2"
+      },
+      {
+        "component": "text",
+        "name": "linkText2",
+        "label": "Text2"
+      },
+      {
+        "component": "aem-content",
+        "name": "link3",
+        "label": "Link3"
+      },
+      {
+        "component": "text",
+        "name": "linkText3",
+        "label": "Text3"
+      }
+    ]
+  },
+  {
     "id": "offers",
     "fields": [
       {

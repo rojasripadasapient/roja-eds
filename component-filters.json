@@ -11,7 +11,9 @@
       "text",
       "image",
       "button",
-      "offers-content"
+      "offers-content",
+      "action-strip"
+
     ]
   }
 ]
