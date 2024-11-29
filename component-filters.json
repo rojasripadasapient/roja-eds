@@ -13,7 +13,18 @@
       "button",
       "offers-content",
       "action-strip"
-
+    ]
+  },
+  {
+    "id": "action-strip",
+    "components": [
+      "action-stripContent"
+    ]
+  },
+  {
+    "id": "offers",
+    "components": [
+      "offersContent"
     ]
   }
 ]
