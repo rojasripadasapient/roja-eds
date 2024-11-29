@@ -11,8 +11,18 @@
       "text",
       "image",
       "button",
-      "offers-content",
-      "action-strip"
+      "title",
+      "hero",
+      "cards",
+      "columns",
+      "fragment",
+      "media-gallery"
+    ]
+  },
+  {
+    "id": "accordion",
+    "components": [
+      "accordion-item"
     ]
   },
   {
@@ -22,9 +32,42 @@
     ]
   },
   {
+    "id": "cards",
+    "components": [
+      "card"
+    ]
+  },
+  {
+    "id": "columns",
+    "components": [
+      "column"
+    ]
+  },
+  {
+    "id": "column",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title"
+    ]
+  },
+  {
     "id": "offers",
     "components": [
       "offersContent"
+    ]
+  },
+  {
+    "id": "tab",
+    "components": [
+      "tabContent"
+    ]
+  },
+  {
+    "id": "teaser",
+    "components": [
+      "teaserContent"
     ]
   }
 ]
