@@ -61,13 +61,44 @@
               }
             }
           }
+        },
+        {
+          "title": "Section",
+          "id": "section",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/section/v1/section",
+                "template": {
+                  "model": "section"
+                }
+              }
+            }
+          }
         }
       ]
     },
     {
       "title": "Blocks",
       "id": "blocks",
-      "components": []
+      "components": [
+        {
+          "title": "GB005-Offers",
+          "id": "offers",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "offers",
+                  "model": "offers",
+                  "filter": "offers"
+                }
+              }
+            }
+          }
+        }
+      ]
     }
   ]
 }
