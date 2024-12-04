@@ -319,6 +319,13 @@
       {
         "component": "text",
         "valueType": "string",
+        "name": "offersTitle",
+        "label": "Offers Title",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
         "name": "pageLabel",
         "label": "Pagination label",
         "value": ""
