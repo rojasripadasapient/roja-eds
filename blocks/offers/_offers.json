@@ -80,67 +80,67 @@
         {
           "component": "text",
           "valueType": "string",
-          "name": "spec2Value",
-          "label": "Spec2 Value",
+          "name": "aprValue",
+          "label": "APR Value",
           "value": "",
           "multi": false
         },
         {
           "component": "text",
           "valueType": "string",
-          "name": "spec2",
-          "label": "Spec2",
+          "name": "aprLabel",
+          "label": "APR Label",
           "value": "",
           "multi": false
         },
         {
           "component": "richtext",
-          "name": "textSpec2",
-          "label": "Tool Tip 2",
+          "name": "aprLabelTip",
+          "label": "APR Label Tip",
           "multi": false
         },
         {
           "component": "text",
           "valueType": "string",
-          "name": "spec3Value",
-          "label": "Spec3 Value",
+          "name": "depositValue",
+          "label": "Deposit Value",
           "value": "",
           "multi": false
         },
         {
           "component": "text",
           "valueType": "string",
-          "name": "spec3",
-          "label": "Spec3",
-          "value": "",
-          "multi": false
-        },
-        {
-          "component": "richtext",
-          "name": "textSpec3",
-          "label": "Tool Tip 3",
-          "multi": false
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "spec4Value",
-          "label": "Spec4 Value",
-          "value": "",
-          "multi": false
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "spec4",
-          "label": "Spec4",
+          "name": "depositLabel",
+          "label": "deposit Label",
           "value": "",
           "multi": false
         },
         {
           "component": "richtext",
-          "name": "textSpec4",
-          "label": "Tool Tip 4",
+          "name": "depositLabelTip",
+          "label": "Deposit Label Tip",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "monthlyValue",
+          "label": "Monthly Value",
+          "value": "",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "monthlyLabel",
+          "label": "monthly Label",
+          "value": "",
+          "multi": false
+        },
+        {
+          "component": "richtext",
+          "name": "monthlyLabelTip",
+          "label": "Monthly Tool Tip",
           "multi": false
         },
         {
