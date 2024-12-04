@@ -15,6 +15,22 @@
           }
         }
       }
+    },
+    {
+      "title": "Offers Content",
+      "id": "offers-Content",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "offers-Content",
+              "model": "offers-Content",
+              "filter": "offers-Content"
+            }
+          }
+        }
+      }
     }
   ],
   "models": [
@@ -36,203 +52,213 @@
           "value": ""
         },
         {
-          "component": "text",
-          "name": "text",
-          "label": "Text",
-          "multi": false
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "msrpValue",
-          "label": "MSRP Value",
-          "value": "",
-          "multi": false
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "msrpLabel",
-          "label": "MSRP Label",
-          "value": "",
-          "multi": false
-        },
-        {
-          "component": "richtext",
-          "name": "msrpLabelTip",
-          "label": "MSRP Label Tip",
-          "multi": false
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "aprValue",
-          "label": "APR Value",
-          "value": "",
-          "multi": false
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "aprLabel",
-          "label": "APR Label",
-          "value": "",
-          "multi": false
-        },
-        {
-          "component": "richtext",
-          "name": "aprLabelTip",
-          "label": "APR Label Tip",
-          "multi": false
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "depositValue",
-          "label": "Deposit Value",
-          "value": "",
-          "multi": false
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "depositLabel",
-          "label": "deposit Label",
-          "value": "",
-          "multi": false
-        },
-        {
-          "component": "richtext",
-          "name": "depositLabelTip",
-          "label": "Deposit Label Tip",
-          "multi": false
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "monthlyValue",
-          "label": "Monthly Value",
-          "value": "",
-          "multi": false
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "monthlyLabel",
-          "label": "monthly Label",
-          "value": "",
-          "multi": false
-        },
-        {
-          "component": "richtext",
-          "name": "monthlyLabelTip",
-          "label": "Monthly Tool Tip",
-          "multi": false
-        },
-        {
-          "component": "aem-content",
-          "name": "link1",
-          "label": "Link1",
-          "multi": false
-        },
-        {
-          "component": "text",
-          "name": "linkText1",
-          "label": "Link Text1",
-          "multi": false
-        },
-        {
-          "component": "richtext",
-          "name": "description1",
-          "label": "Description1",
-          "multi": false
-        },
-        {
-          "component": "aem-content",
-          "name": "link2",
-          "label": "Link2",
-          "multi": false
-        },
-        {
-          "component": "text",
-          "name": "linkText2",
-          "label": "Link Text2",
-          "multi": false
-        },
-        {
-          "component": "aem-content",
-          "name": "link3",
-          "label": "Link3",
-          "multi": false
-        },
-        {
-          "component": "text",
-          "name": "linkText3",
-          "label": "Link Text3",
-          "multi": false
-        },
-        {
-          "component": "select",
-          "name": "linkType3",
-          "label": "LinkType3",
-          "multi": false,
-          "options": [
+          "id": "offers-content",
+          "fields": [
             {
-              "name": "default",
-              "value": ""
+              "component": "text",
+              "name": "text",
+              "label": "Text",
+              "multi": false
             },
             {
-              "name": "primary",
-              "value": "primary"
+              "component": "text",
+              "valueType": "string",
+              "name": "msrpValue",
+              "label": "MSRP Value",
+              "value": "",
+              "multi": false
             },
             {
-              "name": "secondary",
-              "value": "secondary"
+              "component": "text",
+              "valueType": "string",
+              "name": "msrpLabel",
+              "label": "MSRP Label",
+              "value": "",
+              "multi": false
             },
             {
-              "name": "tertiary",
-              "value": "tertiary"
-            }
-          ]
-        },
-        {
-          "component": "aem-content",
-          "name": "link",
-          "label": "Link",
-          "multi": false
-        },
-        {
-          "component": "text",
-          "name": "linkText",
-          "label": "Link Text",
-          "multi": false
-        },
-        {
-          "component": "select",
-          "name": "linkType",
-          "label": "LinkType",
-          "multi": false,
-          "options": [
-            {
-              "name": "default",
-              "value": ""
+              "component": "richtext",
+              "name": "msrpLabelTip",
+              "label": "MSRP Label Tip",
+              "multi": false
             },
             {
-              "name": "primary",
-              "value": "primary"
+              "component": "text",
+              "valueType": "string",
+              "name": "aprValue",
+              "label": "APR Value",
+              "value": "",
+              "multi": false
             },
             {
-              "name": "secondary",
-              "value": "secondary"
+              "component": "text",
+              "valueType": "string",
+              "name": "aprLabel",
+              "label": "APR Label",
+              "value": "",
+              "multi": false
             },
             {
-              "name": "tertiary",
-              "value": "tertiary"
+              "component": "richtext",
+              "name": "aprLabelTip",
+              "label": "APR Label Tip",
+              "multi": false
+            },
+            {
+              "component": "text",
+              "valueType": "string",
+              "name": "depositValue",
+              "label": "Deposit Value",
+              "value": "",
+              "multi": false
+            },
+            {
+              "component": "text",
+              "valueType": "string",
+              "name": "depositLabel",
+              "label": "deposit Label",
+              "value": "",
+              "multi": false
+            },
+            {
+              "component": "richtext",
+              "name": "depositLabelTip",
+              "label": "Deposit Label Tip",
+              "multi": false
+            },
+            {
+              "component": "text",
+              "valueType": "string",
+              "name": "monthlyValue",
+              "label": "Monthly Value",
+              "value": "",
+              "multi": false
+            },
+            {
+              "component": "text",
+              "valueType": "string",
+              "name": "monthlyLabel",
+              "label": "monthly Label",
+              "value": "",
+              "multi": false
+            },
+            {
+              "component": "richtext",
+              "name": "monthlyLabelTip",
+              "label": "Monthly Tool Tip",
+              "multi": false
+            },
+            {
+              "component": "aem-content",
+              "name": "link1",
+              "label": "Link1",
+              "multi": false
+            },
+            {
+              "component": "text",
+              "name": "linkText1",
+              "label": "Link Text1",
+              "multi": false
+            },
+            {
+              "component": "richtext",
+              "name": "description1",
+              "label": "Description1",
+              "multi": false
+            },
+            {
+              "component": "aem-content",
+              "name": "link2",
+              "label": "Link2",
+              "multi": false
+            },
+            {
+              "component": "text",
+              "name": "linkText2",
+              "label": "Link Text2",
+              "multi": false
+            },
+            {
+              "component": "aem-content",
+              "name": "link3",
+              "label": "Link3",
+              "multi": false
+            },
+            {
+              "component": "text",
+              "name": "linkText3",
+              "label": "Link Text3",
+              "multi": false
+            },
+            {
+              "component": "select",
+              "name": "linkType3",
+              "label": "LinkType3",
+              "multi": false,
+              "options": [
+                {
+                  "name": "default",
+                  "value": ""
+                },
+                {
+                  "name": "primary",
+                  "value": "primary"
+                },
+                {
+                  "name": "secondary",
+                  "value": "secondary"
+                },
+                {
+                  "name": "tertiary",
+                  "value": "tertiary"
+                }
+              ]
+            },
+            {
+              "component": "aem-content",
+              "name": "link",
+              "label": "Link",
+              "multi": false
+            },
+            {
+              "component": "text",
+              "name": "linkText",
+              "label": "Link Text",
+              "multi": false
+            },
+            {
+              "component": "select",
+              "name": "linkType",
+              "label": "LinkType",
+              "multi": false,
+              "options": [
+                {
+                  "name": "default",
+                  "value": ""
+                },
+                {
+                  "name": "primary",
+                  "value": "primary"
+                },
+                {
+                  "name": "secondary",
+                  "value": "secondary"
+                },
+                {
+                  "name": "tertiary",
+                  "value": "tertiary"
+                }
+              ]
             }
           ]
         }
       ]
     }
   ],
-  "filters": []
+  "filters": [
+    {
+      "id": "offers",
+      "components": ["offers-content"]
+    }
+  ]
 }
