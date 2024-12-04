@@ -58,23 +58,23 @@
         {
           "component": "text",
           "valueType": "string",
-          "name": "spec1Value",
-          "label": "Spec1 Value",
+          "name": "msrpValue",
+          "label": "MSRP Value",
           "value": "",
           "multi": false
         },
         {
           "component": "text",
           "valueType": "string",
-          "name": "spec1",
-          "label": "Spec1",
+          "name": "msrpLabel",
+          "label": "MSRP Label",
           "value": "",
           "multi": false
         },
         {
           "component": "richtext",
-          "name": "textSpec1",
-          "label": "Tool Tip 1",
+          "name": "msrpLabelTip",
+          "label": "MSRP Label Tip",
           "multi": false
         },
         {
