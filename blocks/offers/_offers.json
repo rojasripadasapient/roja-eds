@@ -50,25 +50,6 @@
       "id": "offers-content",
       "fields": [
         {
-          "component": "reference",
-          "valueType": "string",
-          "name": "image",
-          "label": "Image",
-          "multi": false
-        },
-        {
-          "component": "text",
-          "name": "title",
-          "label": "Title",
-          "multi": false
-        },
-        {
-          "component": "richtext",
-          "name": "description",
-          "label": "Description",
-          "multi": false
-        },
-        {
           "component": "text",
           "name": "text",
           "label": "Text",
