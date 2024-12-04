@@ -326,8 +326,22 @@
     ]
   },
   {
-    "id": "offers-content",
+    "id": "offers",
     "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "offersTitle",
+        "label": "offers Title",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "pageLabel",
+        "label": "Pagination label",
+        "value": ""
+      },
       {
         "component": "text",
         "name": "text",
