@@ -1,4 +1,4 @@
-import { loadCSS } from '../../../scripts/aem.js';
+import { loadCSS } from '../../scripts/aem.js';
 
 /**
 * loads and decorates the header, mainly the nav
