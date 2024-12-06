@@ -84,7 +84,7 @@
         {
           "component": "text",
           "valueType": "string",
-          "name": "secondaryNavHeading",
+          "name": "secondaryNavTitle",
           "label": "Title",
           "value": ""
         },
