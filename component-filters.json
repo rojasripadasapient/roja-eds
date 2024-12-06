@@ -75,7 +75,7 @@
     ]
   },
   {
-    "id": "teaser",
+    "id": "secondary-nav",
     "components": [
       "secondary-nav"
     ]

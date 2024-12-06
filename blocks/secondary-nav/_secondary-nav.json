@@ -83,7 +83,7 @@
       "fields": [
         {
           "component": "text",
-          "valueType": "string",
+          "valueType": "[string",
           "name": "NavHeading",
           "label": "Title",
           "value": ""
