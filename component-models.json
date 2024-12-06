@@ -1028,7 +1028,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "secondaryNavModelId",
+        "name": "modelId",
         "label": "Model Name",
         "value": ""
       },
