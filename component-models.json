@@ -966,8 +966,8 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "stickyNavModelId",
-        "label": "Model Name",
+        "name": "title",
+        "label": "Title",
         "value": ""
       },
       {
