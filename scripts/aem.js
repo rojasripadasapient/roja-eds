@@ -10,7 +10,6 @@
  * governing permissions and limitations under the License.
  */
 
-import { BLOCK_FOLDER_PATH } from './constant.js';
 /* eslint-env browser */
 function sampleRUM(checkpoint, data) {
   // eslint-disable-next-line max-len
@@ -321,29 +320,10 @@ function createOptimizedPicture(
   return picture;
 }
 
-function fetchConfigurationsFromSpreadsheet(key) {
-  return new Promise((resolve) => {
-    fetch('/admin-config.json')
-      .then((resp) => {
-        if (resp.ok) {
-          return resp.json();
-        }
-        return {};
-      })
-      .then((json) => {
-        const identifierValue = getMetadata('identifier');
-        const configuration = json.data.find((item) => item.identifier === identifierValue);
-        resolve(configuration[key]);
-      })
-      .catch(() => ({}));
-  });
-  // return(configuration[key]);
-}
-
 /**
  * Set template (page structure) and theme (page styles).
  */
-async function decorateTemplateAndTheme() {
+function decorateTemplateAndTheme() {
   const addClasses = (element, classes) => {
     classes.split(',').forEach((c) => {
       element.classList.add(toClassName(c.trim()));
@@ -353,15 +333,6 @@ async function decorateTemplateAndTheme() {
   if (template) addClasses(document.body, template);
   const theme = getMetadata('theme');
   if (theme) addClasses(document.body, theme);
-
-  const loadThemeFromSpreadsheet = await fetchConfigurationsFromSpreadsheet('themePath');
-  if (loadThemeFromSpreadsheet && !loadThemeFromSpreadsheet.includes('http')) {
-    addClasses(document.body, loadThemeFromSpreadsheet);
-    loadCSS(`${window.hlx.codeBasePath}/styles/${loadThemeFromSpreadsheet.toLowerCase()}/styles.css`);
-  }
-  if (loadThemeFromSpreadsheet && loadThemeFromSpreadsheet.includes('http')) {
-    loadCSS(loadThemeFromSpreadsheet);
-  }
 }
 
 /**
@@ -460,44 +431,13 @@ function decorateButtons(element) {
  * @param {string} [prefix] prefix to be added to icon src
  * @param {string} [alt] alt text to be added to icon
  */
-async function renderDecorateIcon(span, prefix = '', alt = '') {
+function decorateIcon(span, prefix = '', alt = '') {
   const iconName = Array.from(span.classList)
     .find((c) => c.startsWith('icon-'))
     .substring(5);
   const img = document.createElement('img');
   img.dataset.iconName = iconName;
-  const themePath = await fetchConfigurationsFromSpreadsheet('themePath');
-  if (themePath && !themePath.includes('http')) {
-    img.src = `${window.hlx.codeBasePath}${prefix}/icons/${themePath.toLowerCase()}/${iconName}.svg`;
-  } else {
-    img.src = `${window.hlx.codeBasePath}${prefix}/icons/${iconName}.svg`;
-  }
-  img.alt = alt;
-  img.loading = 'lazy';
-  span.append(img);
-  return span.outerHTML;
-}
-
-/**
- * Add <img> for icon, prefixed with codeBasePath and optional prefix.
- * @param {Element} [span] span element with icon classes
- * @param {string} [prefix] prefix to be added to icon src
- * @param {string} [alt] alt text to be added to icon
- */
-async function decorateIcon(span, prefix = '', alt = '') {
-  const iconName = Array.from(span.classList)
-    .find((c) => c.startsWith('icon-'))
-    .substring(5);
-  const img = document.createElement('img');
-  img.dataset.iconName = iconName;
-  const themePath = await fetchConfigurationsFromSpreadsheet('themePath');
-  // eslint-disable-next-line no-console
-  console.log('themePath= {}', themePath);
-  if (themePath && !themePath.includes('http')) {
-    img.src = `${window.hlx.codeBasePath}${prefix}/icons/${themePath.toLowerCase()}/${iconName}.svg`;
-  } else {
-    img.src = `${window.hlx.codeBasePath}${prefix}/icons/${iconName}.svg`;
-  }
+  img.src = `${window.hlx.codeBasePath}${prefix}/icons/${iconName}.svg`;
   img.alt = alt;
   img.loading = 'lazy';
   span.append(img);
@@ -625,35 +565,6 @@ function buildBlock(blockName, content) {
   return blockEl;
 }
 
-function findPathNestedLevel(blockName) {
-  const paths = Object.keys(BLOCK_FOLDER_PATH);
-  const blocksArray = Object.values(BLOCK_FOLDER_PATH);
-
-  // eslint-disable-next-line no-plusplus
-  for (let i = 0; i < paths.length; i++) {
-    const blocks = blocksArray[i];
-
-    if (blocks.includes(blockName)) {
-      return paths[i];
-    }
-  }
-
-  return null;
-}
-
-function loadThemeCssForBlock(block) {
-  const theme = getMetadata('theme');
-  const { blockName } = block.dataset;
-  let folderPath = findPathNestedLevel(blockName);
-  if (folderPath === null) {
-    folderPath = 'blocks';
-  }
-  if (theme) {
-    loadCSS(`${window.hlx.codeBasePath}/${folderPath}/${blockName}/${theme.toLowerCase()}/${blockName}.css`);
-  }
-  return {};
-}
-
 /**
  * Loads JS and CSS for a block.
  * @param {Element} block The block element
@@ -663,17 +574,13 @@ async function loadBlock(block) {
   if (status !== 'loading' && status !== 'loaded') {
     block.dataset.blockStatus = 'loading';
     const { blockName } = block.dataset;
-    let folderPath = findPathNestedLevel(blockName);
-    if (folderPath === null) {
-      folderPath = 'blocks';
-    }
     try {
-      const cssLoaded = loadCSS(`${window.hlx.codeBasePath}/${folderPath}/${blockName}/${blockName}.css`);
+      const cssLoaded = loadCSS(`${window.hlx.codeBasePath}/blocks/${blockName}/${blockName}.css`);
       const decorationComplete = new Promise((resolve) => {
         (async () => {
           try {
             const mod = await import(
-              `${window.hlx.codeBasePath}/${folderPath}/${blockName}/${blockName}.js`
+              `${window.hlx.codeBasePath}/blocks/${blockName}/${blockName}.js`
             );
             if (mod.default) {
               await mod.default(block);
@@ -729,12 +636,7 @@ function decorateBlocks(main) {
  * @returns {Promise}
  */
 async function loadHeader(header) {
-  let blockName = 'header';
-  const themePath = await fetchConfigurationsFromSpreadsheet('themePath');
-  if (themePath && !themePath.includes('http') && themePath.endsWith('-nna')) {
-    blockName = 'header-nna';
-  }
-  const headerBlock = buildBlock(blockName, '');
+  const headerBlock = buildBlock('header', '');
   header.append(headerBlock);
   decorateBlock(headerBlock);
   return loadBlock(headerBlock);
@@ -746,12 +648,7 @@ async function loadHeader(header) {
  * @returns {Promise}
  */
 async function loadFooter(footer) {
-  let blockName = 'footer';
-  const themePath = await fetchConfigurationsFromSpreadsheet('themePath');
-  if (themePath && !themePath.includes('http') && themePath.endsWith('-nna')) {
-    blockName = 'footer-nna';
-  }
-  const footerBlock = buildBlock(blockName, '');
+  const footerBlock = buildBlock('footer', '');
   footer.append(footerBlock);
   decorateBlock(footerBlock);
   return loadBlock(footerBlock);
@@ -834,7 +731,4 @@ export {
   toClassName,
   waitForFirstImage,
   wrapTextNodes,
-  renderDecorateIcon,
-  loadThemeCssForBlock,
-  fetchConfigurationsFromSpreadsheet,
 };
