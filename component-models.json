@@ -1021,131 +1021,67 @@
         "label": "Link"
       }
     ]
-  },{
-  "id": "secondary-nav",
-  "fields": [
-    {
-      "component": "text",
-      "valueType": "string",
-      "name": "stickyNavModelId",
-      "label": "Model Name",
-      "value": ""
-    },
-    {
-      "component": "aem-content",
-      "name": "link",
-      "label": "CTA Link"
-    },
-    {
-      "component": "text",
-      "name": "linkText",
-      "label": "CTA Name"
-    },
-    {
-      "component": "select",
-      "name": "linkType",
-      "label": "CTA Type",
-      "options": [
-        {
-          "name": "default",
-          "value": ""
-        },
-        {
-          "name": "primary",
-          "value": "primary"
-        },
-        {
-          "name": "secondary",
-          "value": "secondary"
-        },
-        {
-          "name": "tertiary",
-          "value": "tertiary"
-        }
-      ]
-    }
-  ]
-},
+  },
   {
-    "id": "navlink",
+    "id": "secondary-nav",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "secondaryNavModelId",
+        "label": "Model Name",
+        "value": ""
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "CTA Link"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "CTA Name"
+      },
+      {
+        "component": "select",
+        "name": "linkType",
+        "label": "CTA Type",
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          },
+          {
+            "name": "tertiary",
+            "value": "tertiary"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "secondarynavlink",
     "fields": [
       {
         "component": "text",
         "valueType": "string",
         "name": "secondaryNavOverview",
-        "label": "Overview",
+        "label": "Title",
         "value": ""
       },
       {
         "component": "aem-content",
         "valueType": "string",
-        "name": "overviewLink",
-        "label": "Overview Link"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "secondaryNavFeatures",
-        "label": "Features",
-        "value": ""
-      },
-      {
-        "component": "aem-content",
-        "valueType": "string",
-        "name": "featuresLink",
-        "label": "Features Link"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "secondaryNavDesign",
-        "label": "Design",
-        "value": ""
-      },
-      {
-        "component": "aem-content",
-        "valueType": "string",
-        "name": "designLink",
-        "label": "Design Link"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "secondaryNavCompare",
-        "label": "Compare",
-        "value": ""
-      },
-      {
-        "component": "aem-content",
-        "valueType": "string",
-        "name": "compareLink",
-        "label": "Compare Link"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "secondaryNavRequest",
-        "label": "Request a quote",
-        "value": ""
-      },
-      {
-        "component": "aem-content",
-        "valueType": "string",
-        "name": "requestLink",
-        "label": "Request a quote Link"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "secondaryNavBook",
-        "label": "Book a test drive",
-        "value": ""
-      },
-      {
-        "component": "aem-content",
-        "valueType": "string",
-        "name": "bookLink",
-        "label": "Book a test drive Link"
+        "name": "Link",
+        "label": "Link"
       }
     ]
   }
