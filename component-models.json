@@ -982,29 +982,6 @@
         "label": "Link OverView"
       },
       {
-        "component": "select",
-        "name": "linkType1",
-        "label": "CTA Type1",
-        "options": [
-          {
-            "name": "default",
-            "value": ""
-          },
-          {
-            "name": "primary",
-            "value": "primary"
-          },
-          {
-            "name": "secondary",
-            "value": "secondary"
-          },
-          {
-            "name": "tertiary",
-            "value": "tertiary"
-          }
-        ]
-      },
-      {
         "component": "text",
         "name": "linkTextFeatures",
         "label": "Text Features"
@@ -1013,29 +990,6 @@
         "component": "aem-content",
         "name": "linkFeatures",
         "label": "Link Features"
-      },
-      {
-        "component": "select",
-        "name": "linkType2",
-        "label": "CTA Type2",
-        "options": [
-          {
-            "name": "default",
-            "value": ""
-          },
-          {
-            "name": "primary",
-            "value": "primary"
-          },
-          {
-            "name": "secondary",
-            "value": "secondary"
-          },
-          {
-            "name": "tertiary",
-            "value": "tertiary"
-          }
-        ]
       },
       {
         "component": "text",
@@ -1048,29 +1002,6 @@
         "label": "Link Design"
       },
       {
-        "component": "select",
-        "name": "linkType3",
-        "label": "CTA Type3",
-        "options": [
-          {
-            "name": "default",
-            "value": ""
-          },
-          {
-            "name": "primary",
-            "value": "primary"
-          },
-          {
-            "name": "secondary",
-            "value": "secondary"
-          },
-          {
-            "name": "tertiary",
-            "value": "tertiary"
-          }
-        ]
-      },
-      {
         "component": "text",
         "name": "linkTextCompare",
         "label": "Text Compare"
@@ -1079,29 +1010,6 @@
         "component": "aem-content",
         "name": "linkCompare",
         "label": "Link Compare"
-      },
-      {
-        "component": "select",
-        "name": "linkType4",
-        "label": "CTA Type4",
-        "options": [
-          {
-            "name": "default",
-            "value": ""
-          },
-          {
-            "name": "primary",
-            "value": "primary"
-          },
-          {
-            "name": "secondary",
-            "value": "secondary"
-          },
-          {
-            "name": "tertiary",
-            "value": "tertiary"
-          }
-        ]
       },
       {
         "component": "text",
