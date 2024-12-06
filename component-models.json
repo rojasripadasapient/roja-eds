@@ -959,106 +959,14 @@
       }
     ]
   },
-
   {
     "id": "secondary-nav",
     "fields": [
       {
         "component": "text",
         "valueType": "string",
-        "name": "title",
-        "label": "Title",
-        "value": ""
-      },
-
-      {
-        "component": "text",
-        "name": "linkTextOverview",
-        "label": "Text Overview"
-      },
-      {
-        "component": "aem-content",
-        "name": "linkOverView",
-        "label": "Link OverView"
-      },
-      {
-        "component": "text",
-        "name": "linkTextFeatures",
-        "label": "Text Features"
-      },
-      {
-        "component": "aem-content",
-        "name": "linkFeatures",
-        "label": "Link Features"
-      },
-      {
-        "component": "text",
-        "name": "linkTextDesign",
-        "label": "Text Design"
-      },
-      {
-        "component": "aem-content",
-        "name": "linkDesign",
-        "label": "Link Design"
-      },
-      {
-        "component": "text",
-        "name": "linkTextCompare",
-        "label": "Text Compare"
-      },
-      {
-        "component": "aem-content",
-        "name": "linkCompare",
-        "label": "Link Compare"
-      },
-      {
-        "component": "text",
-        "name": "linkTextRequestaquote",
-        "label": "Text Request A Quote"
-      },
-      {
-        "component": "aem-content",
-        "name": "linkRequestaquote",
-        "label": "Link Request A Quote"
-      },
-      {
-        "component": "select",
-        "name": "linkType5",
-        "label": "CTA Type5",
-        "options": [
-          {
-            "name": "default",
-            "value": ""
-          },
-          {
-            "name": "primary",
-            "value": "primary"
-          },
-          {
-            "name": "secondary",
-            "value": "secondary"
-          },
-          {
-            "name": "tertiary",
-            "value": "tertiary"
-          }
-        ]
-      },
-      {
-        "component": "text",
-        "name": "linkTextRequestaquote",
-        "label": "Text Request A Quote"
-      },
-      {
-        "component": "aem-content",
-        "name": "linkBookATestDrive",
-        "label": "Link Book A Test Drive"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "buildYourQashqai",
-        "label": "Build your QASHQAI",
+        "name": "secondaryNavModelId",
+        "label": "Model Name",
         "value": ""
       },
       {
@@ -1102,15 +1010,15 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "stickyNavHeading",
+        "name": "secondaryNavOverview",
         "label": "Title",
         "value": ""
       },
       {
         "component": "aem-content",
         "valueType": "string",
-        "name": "stickyLink",
-        "label": "Link"
+        "name": "secondaryLinkOverview",
+        "label": "Link Overview"
       }
     ]
   }
