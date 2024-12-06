@@ -45,7 +45,7 @@
         },
         {
           "component": "text",
-          "name": "linkText OverView",
+          "name": "linkTextOverView",
           "label": "Text OverView"
         },
         {
@@ -78,7 +78,7 @@
         },
         {
           "component": "text",
-          "name": "linkText Features",
+          "name": "linkTextFeatures",
           "label": "Text Features"
         },
         {
@@ -111,7 +111,7 @@
         },
         {
           "component": "text",
-          "name": "linkText Design",
+          "name": "linkTextDesign",
           "label": "Text Design"
         },
         {
@@ -144,7 +144,7 @@
         },
         {
           "component": "text",
-          "name": "linkText Compare",
+          "name": "linkTextCompare",
           "label": "Text Compare"
         },
         {
