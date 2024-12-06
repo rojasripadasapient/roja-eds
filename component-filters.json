@@ -19,8 +19,7 @@
       "action-strip",
       "offers",
       "teaser",
-      "secondary-nav",
-      "secondarynavlink"
+      "secondary-nav"
 
 
     ]
@@ -79,7 +78,7 @@
   {
     "id": "secondary-nav",
     "components": [
-      "navlinksecondary"
+      "navlink"
     ]
   }
 

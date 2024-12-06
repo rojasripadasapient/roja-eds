@@ -319,15 +319,15 @@
           }
         },
         {
-          "title": "Secondary Link",
-          "id": "navlinksecondary",
+          "title": "Navlink",
+          "id": "navlink",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Secondary Link",
-                  "model": "navlinksecondary"
+                  "name": "navlink",
+                  "model": "navlink"
                 }
               }
             }

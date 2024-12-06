@@ -1005,22 +1005,21 @@
     ]
   },
   {
-    "id": "navlinksecondary",
+    "id": "navlink",
     "fields": [
       {
         "component": "text",
         "valueType": "string",
-        "name": "secondaryNavTitle",
+        "name": "stickyNavHeading",
         "label": "Title",
         "value": ""
       },
       {
         "component": "aem-content",
         "valueType": "string",
-        "name": "secondaryLink",
-        "label": "Secondary Link"
+        "name": "stickyLink",
+        "label": "Link"
       }
     ]
   }
-
 ]
