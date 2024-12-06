@@ -18,7 +18,8 @@
       "fragment",
       "action-strip",
       "offers",
-      "teaser"
+      "teaser",
+      "secondary-nav"
 
     ]
   },
@@ -71,6 +72,12 @@
     "id": "teaser",
     "components": [
       "teaserContent"
+    ]
+  },
+  {
+    "id": "teaser",
+    "components": [
+      "secondary-nav"
     ]
   }
 ]

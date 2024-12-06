@@ -131,5 +131,12 @@
       ]
     }
   ],
-  "filters": []
+  "filters": [
+    {
+      "id": "secondary-nav",
+      "components": [
+        "secondary-nav"
+      ]
+    }
+  ]
 }
