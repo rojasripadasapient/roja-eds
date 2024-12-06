@@ -99,7 +99,7 @@
   ],
   "filters": [
     {
-      "id": "sticky-navigation",
+      "id": "secondary-nav",
       "components": [
         "navlink"
       ]
