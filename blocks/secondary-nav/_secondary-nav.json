@@ -42,7 +42,12 @@
           "name": "title",
           "label": "Title",
           "value": ""
-        },
+        }
+      ]
+    },
+    {
+      "id": "navlink",
+      "fields": [
         {
           "component": "text",
           "name": "linkTextOverView",
@@ -263,9 +268,9 @@
   ],
   "filters": [
     {
-      "id": "secondary-nav",
+      "id": "sticky-navigation",
       "components": [
-        "secondary-nav"
+        "navlink"
       ]
     }
   ]
