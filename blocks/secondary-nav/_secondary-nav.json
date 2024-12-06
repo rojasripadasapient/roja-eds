@@ -1,31 +1,16 @@
 {
   "definitions": [
     {
-      "title": "B007-StickyNavigation",
-      "id": "sticky-navigation",
+      "title": "Secondary-nav",
+      "id": "secondary-nav",
       "plugins": {
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block",
             "template": {
-              "name": "sticky-navigation",
-              "model": "sticky-navigation",
-              "filter" : "sticky-navigation"
-            }
-          }
-        }
-      }
-    },
-    {
-      "title": "Link",
-      "id": "navlink",
-      "plugins": {
-        "xwalk": {
-          "page": {
-            "resourceType": "core/franklin/components/block/v1/block/item",
-            "template": {
-              "name": "Link",
-              "model": "navlink"
+              "name": "secondary-nav",
+              "model": "secondary-nav",
+              "filter" : "secondary-nav"
             }
           }
         }
@@ -34,13 +19,80 @@
   ],
   "models": [
     {
-      "id": "sticky-navigation",
+      "id": "secondary-nav",
       "fields": [
         {
           "component": "text",
           "valueType": "string",
-          "name": "stickyNavModelId",
-          "label": "Model Name",
+          "name": "secondary-nav",
+          "label": "Title",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "name": "linkText OverView",
+          "label": "Text OverView"
+        },
+        {
+          "component": "aem-content",
+          "name": "linkOverView",
+          "label": "Link OverView"
+        },
+        {
+          "component": "text",
+          "name": "linkText Features",
+          "label": "Text Features"
+        },
+        {
+          "component": "aem-content",
+          "name": "linkFeatures",
+          "label": "Link Features"
+        },
+        {
+          "component": "text",
+          "name": "linkText Design",
+          "label": "Text Design"
+        },
+        {
+          "component": "aem-content",
+          "name": "linkDesign",
+          "label": "Link Design"
+        },
+        {
+          "component": "text",
+          "name": "linkText Compare",
+          "label": "Text Compare"
+        },
+        {
+          "component": "aem-content",
+          "name": "linkCompare",
+          "label": "Link Compare"
+        },
+        {
+          "component": "text",
+          "name": "linkTextRequestaquote",
+          "label": "Text Request A Quote"
+        },
+        {
+          "component": "aem-content",
+          "name": "linkRequestaquote",
+          "label": "Link Request A Quote"
+        },
+        {
+          "component": "text",
+          "name": "linkTextRequestaquote",
+          "label": "Text Request A Quote"
+        },
+        {
+          "component": "aem-content",
+          "name": "linkBookATestDrive",
+          "label": "Link Book A Test Drive"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "buildYourQashqai",
+          "label": "Build your QASHQAI",
           "value": ""
         },
         {
@@ -77,32 +129,7 @@
           ]
         }
       ]
-    },
-    {
-      "id": "navlink",
-      "fields": [
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "stickyNavHeading",
-          "label": "Title",
-          "value": ""
-        },
-        {
-          "component": "aem-content",
-          "valueType": "string",
-          "name": "stickyLink",
-          "label": "Link"
-        }
-      ]
     }
   ],
-  "filters": [
-    {
-      "id": "sticky-navigation",
-      "components": [
-        "navlink"
-      ]
-    }
-  ]
+  "filters": []
 }
