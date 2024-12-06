@@ -19,7 +19,9 @@
       "action-strip",
       "offers",
       "teaser",
-      "navlink"
+      "navlink",
+      "secondary-nav"
+
 
     ]
   },
