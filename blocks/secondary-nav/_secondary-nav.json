@@ -39,7 +39,7 @@
         {
           "component": "text",
           "valueType": "string",
-          "name": "secondaryNavModelId",
+          "name": "stickyNavModelId",
           "label": "Model Name",
           "value": ""
         },
@@ -83,8 +83,8 @@
       "fields": [
         {
           "component": "text",
-          "valueType": "[string",
-          "name": "NavHeading",
+          "valueType": "string",
+          "name": "stickyNavHeading",
           "label": "Title",
           "value": ""
         },

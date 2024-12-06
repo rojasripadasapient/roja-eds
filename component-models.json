@@ -965,7 +965,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "secondaryNavModelId",
+        "name": "stickyNavModelId",
         "label": "Model Name",
         "value": ""
       },
@@ -1010,7 +1010,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "NavHeading",
+        "name": "stickyNavHeading",
         "label": "Title",
         "value": ""
       },
@@ -1018,7 +1018,7 @@
         "component": "aem-content",
         "valueType": "string",
         "name": "stickyLink",
-        "label": "Link Overview"
+        "label": "Link"
       }
     ]
   }

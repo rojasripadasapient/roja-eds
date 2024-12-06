@@ -303,7 +303,7 @@
           }
         },
         {
-          "title": "Secondary-Nav",
+          "title": "Secondary-nav",
           "id": "secondary-nav",
           "plugins": {
             "xwalk": {
@@ -312,12 +312,28 @@
                 "template": {
                   "name": "secondary-nav",
                   "model": "secondary-nav",
-                  "filter": "secondary-nav"
+                  "filter" : "secondary-nav"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Link",
+          "id": "navlink",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Link",
+                  "model": "navlink"
                 }
               }
             }
           }
         }
+
       ]
     }
   ]
