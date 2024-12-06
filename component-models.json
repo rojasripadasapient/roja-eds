@@ -965,6 +965,11 @@
     "fields": [
       {
         "component": "text",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "text",
         "name": "linkTextOverView",
         "label": "Text OverView"
       },

@@ -38,16 +38,9 @@
       "fields": [
         {
           "component": "text",
-          "valueType": "string",
           "name": "title",
-          "label": "Title",
-          "value": ""
-        }
-      ]
-    },
-    {
-      "id": "navlink",
-      "fields": [
+          "label": "Title"
+        },
         {
           "component": "text",
           "name": "linkTextOverView",
