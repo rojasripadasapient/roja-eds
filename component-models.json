@@ -1068,20 +1068,20 @@
     ]
   },
   {
-    "id": "secondarynavlink",
+    "id": "navlinksecondary",
     "fields": [
       {
         "component": "text",
         "valueType": "string",
-        "name": "secondaryNavOverview",
+        "name": "secondaryNavHeading",
         "label": "Title",
         "value": ""
       },
       {
         "component": "aem-content",
         "valueType": "string",
-        "name": "Link",
-        "label": "Link"
+        "name": "secondaryLink",
+        "label": "Secondary Link"
       }
     ]
   }

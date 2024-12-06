@@ -18,14 +18,14 @@
     },
     {
       "title": "Secondary Link",
-      "id": "secondarynavlink",
+      "id": "navlinksecondary",
       "plugins": {
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block/item",
             "template": {
-              "name": "Link",
-              "model": "secondarynavlink"
+              "name": "Secondary Link",
+              "model": "navlinksecondary"
             }
           }
         }
@@ -79,20 +79,20 @@
       ]
     },
     {
-      "id": "secondarynavlink",
+      "id": "navlinksecondary",
       "fields": [
         {
           "component": "text",
           "valueType": "string",
-          "name": "secondaryNavOverview",
+          "name": "secondaryNavHeading",
           "label": "Title",
           "value": ""
         },
         {
           "component": "aem-content",
           "valueType": "string",
-          "name": "Link",
-          "label": "Link"
+          "name": "secondaryLink",
+          "label": "Secondary Link"
         }
       ]
     }
@@ -101,7 +101,7 @@
     {
       "id": "secondary-nav",
       "components": [
-        "secondarynavlink"
+        "navlinksecondary"
       ]
     }
   ]
