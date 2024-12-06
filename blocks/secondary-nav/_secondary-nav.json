@@ -45,8 +45,8 @@
         },
         {
           "component": "text",
-          "name": "linkTextOverView",
-          "label": "Text OverView"
+          "name": "linkTextOverview",
+          "label": "Text Overview"
         },
         {
           "component": "aem-content",
