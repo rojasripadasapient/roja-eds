@@ -966,7 +966,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "secondary-nav",
+        "name": "title",
         "label": "Title",
         "value": ""
       },
