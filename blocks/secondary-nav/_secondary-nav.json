@@ -84,22 +84,22 @@
         {
           "component": "text",
           "valueType": "string",
-          "name": "secondaryNavOverview",
+          "name": "NavHeading",
           "label": "Title",
           "value": ""
         },
         {
           "component": "aem-content",
           "valueType": "string",
-          "name": "secondaryLinkOverview",
-          "label": "Link Overview"
+          "name": "stickyLink",
+          "label": "Link"
         }
       ]
     }
   ],
   "filters": [
     {
-      "id": "secondary-nav",
+      "id": "sticky-navigation",
       "components": [
         "navlink"
       ]

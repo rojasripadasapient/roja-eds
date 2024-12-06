@@ -1010,14 +1010,14 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "secondaryNavOverview",
+        "name": "NavHeading",
         "label": "Title",
         "value": ""
       },
       {
         "component": "aem-content",
         "valueType": "string",
-        "name": "secondaryLinkOverview",
+        "name": "stickyLink",
         "label": "Link Overview"
       }
     ]
