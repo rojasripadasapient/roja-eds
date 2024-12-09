@@ -1,0 +1,233 @@
+main > .section.secondary-nav-container {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+  :focus-visible {
+    outline: 3px solid var(--wds2-colour-action-focus-onlight);
+    border-radius: 3px;
+  }
+
+  main > .section.secondary-nav-container {
+    margin: -15px 20px 0 132px;
+    position: relative;
+    top: 0;
+    z-index: 999;
+    display: block;
+    border-top: 1px solid var(--wds2-colour-keyline-onlight);
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  main > .section > div.secondary-nav-wrapper {
+    max-width: none;
+    padding: 0;
+  }
+
+  .secondary-nav-comp .secondary-nav__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .secondary-nav-comp .secondary-nav__car-name {
+    color: var(--wds2-colour-nissanblack);
+    text-align: center;
+  }
+
+  .secondary-nav-comp .secondary-nav__link {
+    text-decoration: none;
+    color: var(--wds2-colour-nissanblack);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .secondary-nav-comp .secondary-nav__link:hover {
+    color: var(--wds2-colour-action-hover-onlight);
+  }
+
+  .secondary-nav-comp .secondary-nav__link.active {
+    border-bottom: 1px solid var(--wds2-colour-nissanblack);
+  }
+
+  .secondary-nav-comp .secondary-nav__icon-wrapper {
+   display: none;
+  }
+
+  .secondary-nav-comp .secondary-nav__icon-wrapper.active {
+    border: 2px solid var(--wds2-colour-keyline-onlight);
+    background: var(--wds2-colour-nissanwhite);
+    justify-content: center;
+  }
+
+  .secondary-nav-comp .secondary-nav__dropdown-icon {
+    font-size: 8px;
+    display: flex;
+    transition: transform 300ms linear;
+  }
+
+  .secondary-nav-comp .secondary-nav__dropdown-icon.active {
+    transform: rotate(-180deg);
+  }
+
+  @keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-60px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+  }
+
+  @keyframes fade-out {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+  }
+
+  .secondary-nav-comp .secondary-nav__link:active {
+    padding: 0 0 4px;
+    border-bottom: 1px solid black;
+  }
+
+  .secondary-nav-comp .secondary-nav__links-button-section {
+    display: flex;
+    gap: 32px;
+  }
+
+    .secondary-nav-comp .secondary-nav__linksbutton-section {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+    }
+
+    .secondary-nav-comp .secondary-nav__car-name-wrapper {
+      display: flex;
+      align-items: center;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .secondary-nav-comp .secondary-nav__list {
+        flex-direction: row;
+        gap: 32px;
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .secondary-nav-comp .secondary-nav__overflow-li {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .secondary-nav-comp .secondary-nav__overflow-option {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        border-radius: 4px;
+        background: transparent;
+        position: relative;
+        -webkit-tap-highlight-color: transparent;
+        height: 27px;
+    }
+
+    .secondary-nav-comp .secondary-nav__overflow-option::before {
+        content: "";
+        position: absolute;
+        inset: 0 -8px -3px;
+        border-radius: 4px;
+        background: transparent;
+        z-index: 0;
+        display: block;
+    }
+
+    .secondary-nav-comp .secondary-nav__overflow-option:focus-visible::before {
+        outline: 3px solid var(--wds2-colour-action-focus-onlight);
+        border-radius: 3px;
+        z-index: 1;
+    }
+
+    .secondary-nav-comp .secondary-nav__overflow-option:focus-visible {
+        outline: none;
+    }
+
+    .secondary-nav-comp .secondary-nav__overflow-title {
+        color: var(--wds2-colour-nissanblack);
+        z-index: 1;
+    }
+
+    .secondary-nav-comp .secondary-nav__overflow-dropdown-icon {
+        font-size: 12px;
+        margin-left: 8px;
+        display: inline-block;
+        transition: transform 300ms linear;
+        z-index: 1;
+        margin-top: 5px;
+    }
+
+    .secondary-nav-comp .secondary-nav__overflow-dropdown-icon.active {
+        transform: rotate(-180deg);
+        margin-top: 0;
+    }
+
+    .secondary-nav-comp .secondary-nav__overflow-option:hover::before,
+    .secondary-nav__overflow-option.active::before {
+        background: var(--wds2-colour-background-grey);
+    }
+
+    .secondary-nav-comp
+        .secondary-nav__overflow-option:hover
+        .secondary-nav__overflow-title,
+    .secondary-nav__overflow-option:hover
+        .secondary-nav__overflow-dropdown-icon {
+        color: var(--wds2-colour-action-hover-onlight);
+    }
+
+    .secondary-nav-comp .secondary-nav__overflow-dropdown {
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 53px;
+        border-radius: 4px;
+        border: 0 solid var(--wds2-colour-keyline-onlight);
+        background: var(--wds2-colour-nissanwhite);
+        opacity: 0;
+        pointer-events: none;
+        animation: fade-out 300ms cubic-bezier(0.77, 0, 0.18, 1);
+        box-shadow: 0 4px 16px 0 rgba(0 0 0 / 16%);
+        min-width: 140px;
+        display: none;
+    }
+
+    .secondary-nav-comp .secondary-nav__overflow-dropdown.active {
+        opacity: 1;
+        animation: fade-in 300ms cubic-bezier(0.77, 0, 0.18, 1);
+        pointer-events: auto;
+        display: flex;
+    }
+
+    .secondary-nav-comp .secondary-nav__overflow-option-list {
+        display: flex;
+        list-style: none;
+        gap: 4px;
+        flex-direction: column;
+        margin: 0;
+        padding: 16px 24px 16px 20px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .secondary-nav-comp .secondary-nav__linksbutton-section {
+        gap: 32px;
+    }
+}
+
