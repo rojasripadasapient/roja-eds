@@ -34,8 +34,19 @@ main > .section > div.action-strip-container {
   max-width: none !important;
 }
 
-wds-icon {
+.actionstrip__cta wds-icon {
   margin-right: 12px;
+}
+
+.actionstrip__cta wds-button:focus-visible {
+    outline: 3px solid var(--wds2-colour-action-focus-onlight);
+    border-radius: 3px;
+}
+
+.action-strip-wrapper:focus-visible,
+.action-strip-icon-container:focus-visible {
+    outline: 3px solid var(--wds2-colour-action-focus-onlight);
+    border-radius: 3px;
 }
 
 .action-strip-icon-container {

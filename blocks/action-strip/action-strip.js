@@ -2,12 +2,12 @@ import { moveInstrumentation } from '../../scripts/scripts.js';
 
 function buildCtaButton(cta, ctaTitle, ctaVariant) {
   const anchor = cta?.querySelector('.button-container a');
-  const title = ctaTitle ? ctaTitle.textContent : '';
+  const elementP = ctaTitle?.querySelector('p');
 
   if (!anchor) return null;
 
   const url = anchor.getAttribute('href') || '#';
-
+  const title = ctaTitle ? ctaTitle.textContent : (anchor.getAttribute('title') || '');
   const button = document.createElement('wds-button');
   const span = document.createElement('span');
   const iconWrapper = document.createElement('span');
@@ -37,13 +37,18 @@ function buildCtaButton(cta, ctaTitle, ctaVariant) {
 
   iconWrapper.appendChild(icon);
   button.setAttribute('data-src', url);
+  button.setAttribute('tab-index', 0)
   button.appendChild(iconWrapper);
   span.textContent = title;
   span.classList.add('action-strip-title', 'wds2-type-action-button-m');
   button.appendChild(span);
 
   // Ensure inline editing instrumentation is preserved
-  moveInstrumentation(cta || anchor, span);
+  if (elementP) {
+    moveInstrumentation(elementP, span);
+  } else {
+    moveInstrumentation(anchor, span);
+  }
 
   return button;
 }
@@ -62,11 +67,8 @@ function addBgColor(bgColor, block) {
 
 function observeShadowDomChanges(block) {
   // Observe changes to wds-button shadow DOM
-    console.log(block);
   const parentElement = block.closest('.action-strip-container');
   const wdsButtons = parentElement.querySelectorAll('wds-button');
-
-  console.log(wdsButtons);
 
   wdsButtons.forEach((wdsButton) => {
     const wdsButtonShadowRoot = wdsButton.shadowRoot;
@@ -87,8 +89,6 @@ function observeShadowDomChanges(block) {
 
   // Observe changes to wds-icon shadow DOM
   const wdsIcons = parentElement.querySelectorAll('wds-icon');
-
-  console.log(wdsIcons);
 
   wdsIcons.forEach((wdsIcon) => {
     const wdsIconShadowRoot = wdsIcon.shadowRoot;
@@ -125,7 +125,6 @@ function bindButtonEvents(block) {
   function shadowRootElementsFromDom() {
     const actionstipElem = block.closest('.action-strip-container');
     const wdsButtons = actionstipElem.querySelectorAll('wds-button');
-    console.log(wdsButtons);
 
     wdsButtons.forEach((wdsButton) => {
       const wdsButtonShadowRoot = wdsButton.shadowRoot;
@@ -139,6 +138,8 @@ function bindButtonEvents(block) {
             display: flex;
             align-items: center;
             justify-content: center;
+            padding-left: 0;
+            padding-right: 0;
           `;
           wdsButtonShadowbutton.classList.remove('button--primary', 'light', 'small');
         }
@@ -154,17 +155,6 @@ function bindButtonEvents(block) {
       if (wdsIcon) {
         wdsIcon.style.fontSize = '24px';
         wdsIcon.style.verticalAlign = 'middle';
-
-        const iconClassName = wdsIcon.className || '';
-        const styleTag = document.createElement('style');
-
-        document.head.appendChild(styleTag);
-
-        const styleSheet = styleTag.sheet;
-
-        styleSheet.insertRule(`.${iconClassName}::before {
-          font-size: 24px !important;
-        }`, styleSheet.cssRules.length);
       }
     });
   }
