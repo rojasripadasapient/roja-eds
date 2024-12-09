@@ -216,7 +216,7 @@ export default function decorate(block) {
 
   const actionStrip = createActionStrip();
   const buttons = {
-    primary: actionStripElements[0] ? buildCtaButton(actionStripElements[0], actionStripElements[0], 'primary') : null,
+    primary: actionStripElements[0] ? buildCtaButton(actionStripElements[0]) : null,
     secondary: actionStripElements[1] && actionStripElements[2] ? buildCtaButton(actionStripElements[1], actionStripElements[2], 'secondary') : null,
     tertiary: actionStripElements[3] && actionStripElements[4] ? buildCtaButton(actionStripElements[3], actionStripElements[4], 'tertiary') : null,
     quarter: actionStripElements[5] && actionStripElements[6] ? buildCtaButton(actionStripElements[5], actionStripElements[6], 'quarter') : null,
