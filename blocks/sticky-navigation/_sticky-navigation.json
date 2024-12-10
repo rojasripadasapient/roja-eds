@@ -1,0 +1,108 @@
+{
+  "definitions": [
+    {
+      "title": "B007-StickyNavigation",
+      "id": "sticky-navigation",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "sticky-navigation",
+              "model": "sticky-navigation",
+              "filter" : "sticky-navigation"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Link",
+      "id": "navlink",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Link",
+              "model": "navlink"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "sticky-navigation",
+      "fields": [
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "stickyNavModelId",
+          "label": "Model Name",
+          "value": ""
+        },
+        {
+          "component": "aem-content",
+          "name": "link",
+          "label": "CTA Link"
+        },
+        {
+          "component": "text",
+          "name": "linkText",
+          "label": "CTA Name"
+        },
+        {
+          "component": "select",
+          "name": "linkType",
+          "label": "CTA Type",
+          "options": [
+            {
+              "name": "default",
+              "value": ""
+            },
+            {
+              "name": "primary",
+              "value": "primary"
+            },
+            {
+              "name": "secondary",
+              "value": "secondary"
+            },
+            {
+              "name": "tertiary",
+              "value": "tertiary"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "navlink",
+      "fields": [
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "stickyNavHeading",
+          "label": "Title",
+          "value": ""
+        },
+        {
+          "component": "aem-content",
+          "valueType": "string",
+          "name": "stickyLink",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "sticky-navigation",
+      "components": [
+        "navlink"
+      ]
+    }
+  ]
+}

@@ -332,6 +332,37 @@
               }
             }
           }
+        },
+        {
+          "title": "B007-StickyNavigation",
+          "id": "sticky-navigation",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "sticky-navigation",
+                  "model": "sticky-navigation",
+                  "filter" : "sticky-navigation"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Link",
+          "id": "navlink",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Link",
+                  "model": "navlink"
+                }
+              }
+            }
+          }
         }
 
       ]
