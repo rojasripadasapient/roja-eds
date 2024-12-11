@@ -88,6 +88,13 @@
           "value": ""
         },
         {
+          "component": "text",
+          "valueType": "string",
+          "name": "termsAndConditionText",
+          "label": "Terms and Condition Text",
+          "value": ""
+        },
+        {
           "component": "aem-content",
           "name": "ctaLink",
           "label": "CTA Link"
@@ -132,22 +139,44 @@
         {
           "component": "aem-content",
           "name": "overlayCTA1",
-          "label": "Overlay CTA1 Label"
+          "label": "Overlay CTA1 Link"
         },
         {
           "component": "text",
           "name": "OverlayCTA1",
-          "label": "Overlay CTA1  Type"
+          "label": "Overlay CTA1  Label"
+        },
+        {
+          "component": "select",
+          "name": "ctaType1",
+          "label": "CTA Type1",
+          "options": [
+            { "name": "default", "value": "" },
+            { "name": "primary", "value": "primary" },
+            { "name": "secondary", "value": "secondary" },
+            { "name": "tertiary", "value": "tertiary" }
+          ]
         },
         {
           "component": "aem-content",
           "name": "overlayCTA2",
-          "label": "Overlay CTA2 Label"
+          "label": "Overlay CTA2 Link"
         },
         {
           "component": "text",
           "name": "OverlayCTA2",
-          "label": "Overlay CTA2  Type"
+          "label": "Overlay CTA2  Label"
+        },
+        {
+          "component": "select",
+          "name": "ctaType2",
+          "label": "CTA Type2",
+          "options": [
+            { "name": "default", "value": "" },
+            { "name": "primary", "value": "primary" },
+            { "name": "secondary", "value": "secondary" },
+            { "name": "tertiary", "value": "tertiary" }
+          ]
         }
       ]
     }
