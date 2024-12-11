@@ -440,6 +440,16 @@
         "component": "text",
         "name": "OverlayCTA1",
         "label": "Overlay CTA1  Type"
+      },
+      {
+        "component": "aem-content",
+        "name": "overlayCTA2",
+        "label": "Overlay CTA2 Label"
+      },
+      {
+        "component": "text",
+        "name": "OverlayCTA2",
+        "label": "Overlay CTA2  Type"
       }
     ]
   },
