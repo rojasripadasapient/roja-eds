@@ -325,157 +325,60 @@
       },
       {
         "component": "text",
+        "name": "offersTitleHeading",
+        "label": "Offers Title Heading Level"
+      },
+      {
+        "component": "select",
+        "name": "titleType",
+        "label": "Title Type",
+        "options": [
+          {
+            "name": "h1",
+            "value": "h1"
+          },
+          {
+            "name": "h2",
+            "value": "h2"
+          },
+          {
+            "name": "h3",
+            "value": "h3"
+          },
+          {
+            "name": "h4",
+            "value": "h4"
+          },
+          {
+            "name": "h5",
+            "value": "h5"
+          },
+          {
+            "name": "h6",
+            "value": "h6"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "offerId",
+        "label": "Offer ID",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "offerModelName",
+        "label": "Offer Model Name",
+        "value": ""
+      },
+      {
+        "component": "text",
         "valueType": "string",
         "name": "pageLabel",
         "label": "Pagination label",
         "value": ""
-      },
-      {
-        "component": "text",
-        "name": "text",
-        "label": "Text"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "msrpLabel",
-        "label": "MSRP Label",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "msrpLabelTip",
-        "label": "MSRP Label Tip"
-
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "aprLabel",
-        "label": "APR Label",
-        "value": ""
-
-      },
-      {
-        "component": "richtext",
-        "name": "aprLabelTip",
-        "label": "APR Label Tip",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "depositLabel",
-        "label": "deposit Label",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "depositLabelTip",
-        "label": "Deposit Label Tip",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "monthlyLabel",
-        "label": "monthly Label",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "monthlyLabelTip",
-        "label": "Monthly Tool Tip",
-        "value": ""
-      },
-      {
-        "component": "aem-content",
-        "name": "link1",
-        "label": "Link1"
-      },
-      {
-        "component": "text",
-        "name": "linkText1",
-        "label": "Link Text1"
-      },
-      {
-        "component": "richtext",
-        "name": "description1",
-        "label": "Description1"
-      },
-      {
-        "component": "aem-content",
-        "name": "link2",
-        "label": "Link2"
-      },
-      {
-        "component": "text",
-        "name": "linkText2",
-        "label": "Link Text2"
-      },
-      {
-        "component": "aem-content",
-        "name": "link3",
-        "label": "Link3"
-      },
-      {
-        "component": "text",
-        "name": "linkText3",
-        "label": "Link Text3"
-      },
-      {
-        "component": "select",
-        "name": "linkType3",
-        "label": "LinkType3",
-        "options": [{
-          "name": "default",
-          "value": ""
-        },
-          {
-            "name": "primary",
-            "value": "primary"
-          },
-          {
-            "name": "secondary",
-            "value": "secondary"
-          },
-          {
-            "name": "tertiary",
-            "value": "tertiary"
-          }
-        ]
-      },
-      {
-        "component": "aem-content",
-        "name": "link",
-        "label": "Link"
-      },
-      {
-        "component": "text",
-        "name": "linkText",
-        "label": "Link Text"
-      },
-      {
-        "component": "select",
-        "name": "linkType",
-        "label": "LinkType",
-        "options": [{
-          "name": "default",
-          "value": ""
-        },
-          {
-            "name": "primary",
-            "value": "primary"
-          },
-          {
-            "name": "secondary",
-            "value": "secondary"
-          },
-          {
-            "name": "tertiary",
-            "value": "tertiary"
-          }
-        ]
       }
     ]
   },
