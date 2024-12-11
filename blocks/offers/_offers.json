@@ -88,13 +88,6 @@
           "value": ""
         },
         {
-          "component": "richtext",
-          "valueType": "string",
-          "name": "termsAndCondition",
-          "label": "Terms and Condition",
-          "value": ""
-        },
-        {
           "component": "aem-content",
           "name": "ctaLink",
           "label": "CTA Link"
@@ -103,6 +96,13 @@
           "component": "text",
           "name": "ctaText",
           "label": "CTA Text"
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "termsAndCondition",
+          "label": "Terms and Condition",
+          "value": ""
         }
       ]
     }
