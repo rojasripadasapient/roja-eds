@@ -464,8 +464,8 @@
       },
       {
         "component": "select",
-        "name": "ctaType1",
-        "label": "CTA Type1",
+        "name": "ctaType2",
+        "label": "CTA Type2",
         "options": [
           { "name": "default", "value": "" },
           { "name": "primary", "value": "primary" },
