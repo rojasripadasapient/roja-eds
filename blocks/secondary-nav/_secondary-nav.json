@@ -85,14 +85,14 @@
           "component": "text",
           "valueType": "string",
           "name": "secNavHeading",
-          "label": "Title",
+          "label": "Sec Title",
           "value": ""
         },
         {
           "component": "aem-content",
           "valueType": "string",
           "name": "secLink",
-          "label": "Link"
+          "label": "Sec Link"
         }
       ]
     }
