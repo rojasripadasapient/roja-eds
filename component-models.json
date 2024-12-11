@@ -409,6 +409,27 @@
           { "name": "secondary", "value": "secondary" },
           { "name": "tertiary", "value": "tertiary" }
         ]
+      },
+      {
+        "component": "aem-content",
+        "name": "ctaLink1",
+        "label": "CTA Link1"
+      },
+      {
+        "component": "text",
+        "name": "ctaText1",
+        "label": "CCTA Text1"
+      },
+      {
+        "component": "select",
+        "name": "ctaType1",
+        "label": "CTA Type1",
+        "options": [
+          { "name": "default", "value": "" },
+          { "name": "primary", "value": "primary" },
+          { "name": "secondary", "value": "secondary" },
+          { "name": "tertiary", "value": "tertiary" }
+        ]
       }
     ]
   },
