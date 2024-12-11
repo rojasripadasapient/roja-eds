@@ -102,7 +102,7 @@
         {
           "component": "text",
           "name": "ctaText",
-          "label": "CCTA Text"
+          "label": "CTA Text"
         },
         {
           "component": "select",
