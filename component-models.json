@@ -374,6 +374,20 @@
         "name": "modelYear",
         "label": "Model Year",
         "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "offerDetailButtonLabel",
+        "label": "Offer Detail  Button Label",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "termsAndCondition",
+        "label": "Terms and Condition",
+        "value": ""
       }
     ]
   },

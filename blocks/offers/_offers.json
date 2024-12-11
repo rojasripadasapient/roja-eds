@@ -83,8 +83,15 @@
         {
           "component": "text",
           "valueType": "string",
-          "name": "msrpLabel",
-          "label": "MSRP Label",
+          "name": "offerDetailButtonLabel",
+          "label": "Offer Detail  Button Label",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "termsAndCondition",
+          "label": "Terms and Condition",
           "value": ""
         }
       ]
