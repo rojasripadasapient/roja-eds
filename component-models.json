@@ -392,17 +392,17 @@
       {
         "component": "aem-content",
         "name": "ctaLink",
-        "label": "Card CTA Link"
+        "label": "CTA Link"
       },
       {
         "component": "text",
         "name": "ctaText",
-        "label": "Card CTA Text"
+        "label": "CTA Text"
       },
       {
         "component": "select",
         "name": "ctaType",
-        "label": "Card CTA Type",
+        "label": "CTA Type",
         "options": [
           { "name": "default", "value": "" },
           { "name": "primary", "value": "primary" },
