@@ -79,7 +79,7 @@
   {
     "id": "secondary-nav",
     "components": [
-      "navlink"
+      "secondary-item"
     ]
   },
   {

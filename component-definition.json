@@ -320,14 +320,14 @@
         },
         {
           "title": "Link",
-          "id": "navlink",
+          "id": "secondary-item",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
                   "name": "Link",
-                  "model": "navlink"
+                  "model": "secondary-item"
                 }
               }
             }
