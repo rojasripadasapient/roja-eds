@@ -430,6 +430,16 @@
           { "name": "secondary", "value": "secondary" },
           { "name": "tertiary", "value": "tertiary" }
         ]
+      },
+      {
+        "component": "aem-content",
+        "name": "overlayCTA1",
+        "label": "Overlay CTA1 Label"
+      },
+      {
+        "component": "text",
+        "name": "OverlayCTA1",
+        "label": "Overlay CTA1  Type"
       }
     ]
   },
