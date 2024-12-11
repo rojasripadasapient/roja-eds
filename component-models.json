@@ -997,24 +997,6 @@
     ]
   },
   {
-    "id": "navlink",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "stickyNavHeading",
-        "label": "Title",
-        "value": ""
-      },
-      {
-        "component": "aem-content",
-        "valueType": "string",
-        "name": "stickyLink",
-        "label": "Link"
-      }
-    ]
-  },
-  {
     "id": "sticky-navigation",
     "fields": [
       {
