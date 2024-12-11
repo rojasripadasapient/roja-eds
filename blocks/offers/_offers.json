@@ -93,6 +93,16 @@
           "name": "termsAndCondition",
           "label": "Terms and Condition",
           "value": ""
+        },
+        {
+          "component": "aem-content",
+          "name": "ctaLink",
+          "label": "Card CTA Link"
+        },
+        {
+          "component": "text",
+          "name": "ctaText",
+          "label": "Card CTA Text"
         }
       ]
     }
