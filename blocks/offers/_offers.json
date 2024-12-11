@@ -30,7 +30,7 @@
         },
         {
           "component": "text",
-          "name": "titleHeading",
+          "name": "title",
           "label": "Offers Title Heading Level"
         },
         {
