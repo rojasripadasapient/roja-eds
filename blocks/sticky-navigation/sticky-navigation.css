@@ -175,9 +175,14 @@ main > .section > div.sticky-navigation-wrapper {
     gap: 24px;
   }
 
+  .sticky-nav-comp .sticky-nav__list li {
+    padding-bottom: 2px;
+  }
+
   .sticky-nav-comp .sticky-nav__overflow-li {
     display: flex;
     align-items: flex-end;
+    padding-bottom: 0;
   }
 
   .sticky-nav-comp .sticky-nav__overflow-option {

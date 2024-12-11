@@ -1,5 +1,5 @@
-import { moveInstrumentation } from '../../../../scripts/scripts.js';
-import { isDesktop } from '../../../../scripts/utils.js';
+import { moveInstrumentation } from '../../scripts/scripts.js';
+import { isDesktop } from '../../scripts/utils.js';
 
 // Function to set the active link
 function setSecondaryNavActiveLink(link) {
