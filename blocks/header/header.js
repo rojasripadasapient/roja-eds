@@ -1,5 +1,5 @@
-import { loadCSS } from '../../../scripts/aem.js';
-import { isDesktop } from '../../../scripts/utils.js';
+import { loadCSS } from '../../scripts/aem.js';
+import { isDesktop } from '../../scripts/utils.js';
 
 function handleStickyNavVisibility() {
   const mainNav = document.querySelector('#nissan_global_header'); // Main navigation element
