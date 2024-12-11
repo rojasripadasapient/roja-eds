@@ -418,7 +418,7 @@
       {
         "component": "text",
         "name": "ctaText1",
-        "label": "CCTA Text1"
+        "label": "CTA Text1"
       },
       {
         "component": "select",
