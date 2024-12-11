@@ -25,7 +25,7 @@
           "component": "text",
           "valueType": "string",
           "name": "title",
-          "label": "Offers Title",
+          "label": "Title",
           "value": ""
         },
         {
