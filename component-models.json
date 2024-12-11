@@ -324,11 +324,6 @@
         "value": ""
       },
       {
-        "component": "text",
-        "name": "title",
-        "label": "Offers Title Heading Level"
-      },
-      {
         "component": "select",
         "name": "titleType",
         "label": "Title Type",
@@ -376,8 +371,8 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "pageLabel",
-        "label": "Pagination label",
+        "name": "modelYear",
+        "label": "Model Year",
         "value": ""
       }
     ]
