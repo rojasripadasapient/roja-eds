@@ -991,8 +991,8 @@
       {
         "component": "aem-content",
         "valueType": "string",
-        "name": "Sec secLink",
-        "label": "Link"
+        "name": "secLink",
+        "label": "Sec Link"
       }
     ]
   },
