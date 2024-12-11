@@ -1,20 +1,14 @@
 import { moveInstrumentation } from '../../scripts/scripts.js';
 import { TEASER_BLOCK_VARIATION } from '../../scripts/constant.js';
-import {
-  isDesktop,
-  isTablet,
-  isMobile,
-  isLargeDesktop,
-} from '../../scripts/utils.js';
+import { isDesktop, isTablet, isMobile, isLargeDesktop } from '../../scripts/utils.js';
 
+// Function to apply the correct headline class based on the tag
 function generateTeaserHeader(headline) {
   if (!headline) return;
 
   const titleElement = headline.querySelector('p');
 
-  if (!titleElement) {
-    return '';
-  }
+  if (!titleElement) return ;
 
   const span = document.createElement('span');
   let updatedClass = 'wds2-type-display-m';
@@ -28,7 +22,7 @@ function generateTeaserHeader(headline) {
   span.className = `${updatedClass}`;
   span.textContent = titleElement.textContent;
 
-  moveInstrumentation(titleElement, span);
+  moveInstrumentation(titleElement, span)
 
   return span.outerHTML;
 }

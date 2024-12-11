@@ -8,6 +8,7 @@ function buildCtaButton(cta, ctaTitle, ctaVariant) {
 
   const url = anchor.getAttribute('href') || '#';
   const title = ctaTitle ? ctaTitle.textContent : (anchor.getAttribute('title') || '');
+
   const button = document.createElement('wds-button');
   const span = document.createElement('span');
   const iconWrapper = document.createElement('span');
