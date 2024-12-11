@@ -383,7 +383,7 @@
         "value": ""
       },
       {
-        "component": "text",
+        "component": "richtext",
         "valueType": "string",
         "name": "termsAndCondition",
         "label": "Terms and Condition",
