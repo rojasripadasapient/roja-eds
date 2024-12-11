@@ -1,35 +1,32 @@
-import { moveInstrumentation } from '../../scripts/scripts.js';
-import { isDesktop } from '../../scripts/utils.js';
+import { moveInstrumentation } from '../../../../scripts/scripts.js';
+import { isDesktop } from '../../../../scripts/utils.js';
 
 // Function to set the active link
-function setActiveLink(link) {
+function setSecondaryNavActiveLink(link) {
   const navLinks = document.querySelectorAll('.secondary-nav__link');
   navLinks.forEach((navLink) => navLink.classList.remove('active'));
-  link.classList.add('active')
+  link.classList.add('active');
 
   // Store both the link name and URL in localStorage
   const activeLinkData = {
-    id: link.getAttribute('data-id'),
+    id: link.getAttribute('data-link-id'),
     pathname: new URL(link.href).pathname,
   };
-  sessionStorage.setItem('activeNavLink', JSON.stringify(activeLinkData));
+  sessionStorage.setItem('activeSecondaryNavLink', JSON.stringify(activeLinkData));
 }
 
 // Function to initialize the active link from localStorage
-function initializeActiveLink() {
-  const activeLinkData = JSON.parse(sessionStorage.getItem('activeNavLink'));
-  const overviewLink = document.querySelector('.secondary-nav__link[data-id="overview"]');
+function initializeSecondaryNavActiveLink() {
+  const activeLinkData = JSON.parse(sessionStorage.getItem('activeSecondaryNavLink'));
+
   if (activeLinkData) {
     const currentPathname = window.location.pathname;
-    const activeLink = document.querySelector(`.secondary-nav__link[data-id="${activeLinkData.id}"]`);
+    const activeLink = document.querySelector(`.secondary-nav__link[data-link-id="${activeLinkData.id}"]`);
 
     // Check if the stored URL matches the current URL
     if (activeLink && activeLinkData.pathname === currentPathname) {
       activeLink.classList.add('active');
     }
-  } else if (overviewLink) {
-    // Set Overview link as active by default if no active link in sessionStorage
-    overviewLink.classList.add('active');
   }
 }
 
@@ -52,12 +49,10 @@ function toggleDropdown(isVisible, dropdownElement, displayType = 'block', delay
 }
 
 function bindEvent(block) {
-  const stickyNavWrapper = block.querySelector('#secondary-nav-wrapper');
+  const secondaryNavWrapper = block.querySelector('#secondary-nav-wrapper');
   const carNameWrapper = block.querySelector('#secondary-nav-car-name-wrapper');
   const modelName = block.querySelector('#secondary-nav-model-name');
   const dropdownMenu = block.querySelector('#secondary-nav-dropdown-menu');
-  const dropdownIcon = block.querySelector('#secondary-nav-dropdown-icon');
-  const iconWrapper = block.querySelector('#secondary-nav-icon-wrapper');
   const wdsButton = block.querySelector('wds-button');
   const navLinks = block.querySelectorAll('.secondary-nav__link');
 
@@ -74,16 +69,11 @@ function bindEvent(block) {
     wdsButton.style.lineHeight = 'normal';
   }
 
-  function adjustCarNameVisibilityForSmallerDevices() {
-    if (!stickyNavWrapper || !wdsButton || !carNameWrapper || !modelName) return;
-    modelName.style.display = 'block';
-  }
-
   function observeForElementAndStyle() {
     // Create an observer to watch for changes in the body (for both wdsButton and other elements)
     const observer = new MutationObserver(() => {
       // Check if the necessary elements exist in the DOM
-      if (wdsButton && stickyNavWrapper && carNameWrapper && modelName) {
+      if (wdsButton && secondaryNavWrapper && carNameWrapper && modelName) {
         // Styling the button inside the shadow DOM
         if (wdsButton?.shadowRoot) {
           const shadowButton = wdsButton.shadowRoot.querySelector('button');
@@ -101,9 +91,6 @@ function bindEvent(block) {
             shadowObserver.observe(wdsButton.shadowRoot, { childList: true, subtree: true });
           }
         }
-
-        // Adjust car name visibility for smaller devices
-        adjustCarNameVisibilityForSmallerDevices();
 
         // Disconnect the main observer once the elements are processed
         observer.disconnect();
@@ -129,7 +116,7 @@ function bindEvent(block) {
   navLinks.forEach((link) => {
     link.addEventListener('click', (event) => {
       event.preventDefault(); // Prevent default link behavior
-      setActiveLink(link);
+      setSecondaryNavActiveLink(link);
       window.location.href = link.href; // Navigate to the clicked link
     });
   });
@@ -310,114 +297,132 @@ export default function decorate(block) {
   block.appendChild(container);
   block.classList.add('secondary-nav-comp');
 
-  function renderNavItems() {
-    const observer = new MutationObserver(() => {
-      const stickyNavWrapper = container.querySelector('#secondary-nav-wrapper');
-      const modelNameWrapper = container.querySelector('#secondary-nav-car-name-wrapper');
-      const dropdownList = container.querySelector('#secondary-nav-dropdown-menu .secondary-nav__list');
-      console.log(dropdownList);
+  function renderSecondaryNavItems() {
+    // Function to start the MutationObserver once the element is available
+    function startObserver() {
+      const globalheaderElement = document.querySelector('#nissan_global_header');
 
-      // Ensure the necessary elements exist
-      if (!stickyNavWrapper || !modelNameWrapper || !dropdownList) return;
+      if (globalheaderElement) {
+        const observer = new MutationObserver(() => {
+          const secondaryNavWrapper = container.querySelector('#secondary-nav-wrapper');
+          const modelNameWrapper = container.querySelector('#secondary-nav-car-name-wrapper');
+          const dropdownList = container.querySelector('#secondary-nav-dropdown-menu .secondary-nav__list');
 
-      // Start rendering logic
-      dropdownList.innerHTML = '';
+          // Ensure the necessary elements exist
+          if (!secondaryNavWrapper || !modelNameWrapper || !dropdownList) return;
 
-      // Calculate available space considering the minimum padding of 32px between sections (64px)
-      const availableSpace = stickyNavWrapper.offsetWidth - (modelNameWrapper.offsetWidth + (document.querySelector('wds-button')?.offsetWidth || 0) + 64);
-      const visibleItems = [];
-      const overflowItems = [];
-      let dropdownItemGap = 0;
+          // Start rendering logic
+          dropdownList.innerHTML = '';
 
-      anchors?.forEach((anchor) => {
-        const navItemHtml = buildNavItem(anchor);
-        const tempItem = document.createElement('li');
-        tempItem.innerHTML = navItemHtml;
+          // Calculate availablespace considering the minimum padding of 32px between sections(64px)
+          const availableSpace = secondaryNavWrapper.offsetWidth - (modelNameWrapper.offsetWidth + (document.querySelector('wds-button')?.offsetWidth || 0) + 64);
+          const visibleItems = [];
+          const overflowItems = [];
+          let dropdownItemGap = 0;
 
-        dropdownList.appendChild(tempItem);
-        dropdownItemGap += 24;
+          anchors?.forEach((anchor) => {
+            const navItemHtml = buildNavItem(anchor);
+            const tempItem = document.createElement('li');
+            tempItem.innerHTML = navItemHtml;
 
-        // Check if adding this item exceeds the available space
-        if ((dropdownList.offsetWidth + dropdownItemGap) > availableSpace) {
-          overflowItems.push(navItemHtml);
-          dropdownList.removeChild(tempItem);
-        } else {
-          visibleItems.push(navItemHtml);
-        }
-      });
+            dropdownList.appendChild(tempItem);
+            dropdownItemGap += 24;
 
-      if (visibleItems.length > 0) {
-        // Render visible items
-        dropdownList.innerHTML = visibleItems.map((item) => item).join('');
-      }
+            // Check if adding this item exceeds the available space
+            if ((dropdownList.offsetWidth + dropdownItemGap) > availableSpace) {
+              overflowItems.push(navItemHtml);
+              dropdownList.removeChild(tempItem);
+            } else {
+              visibleItems.push(navItemHtml);
+            }
+          });
 
-      // If there are overflow items, create a "More" dropdown
-      if (overflowItems.length > 0) {
-        // Create the main list item for overflow
-        const overflowHtml = document.createElement('li');
-        overflowHtml.className = 'secondary-nav__overflow-li';
+          if (visibleItems.length > 0) {
+            // Render visible items
+            dropdownList.innerHTML = visibleItems.map((item) => item).join('');
+          }
 
-        // Create the overflow option div
-        const overflowOptionDiv = document.createElement('div');
-        overflowOptionDiv.className = 'secondary-nav__overflow-option';
-        overflowOptionDiv.tabIndex = 0;
-        overflowOptionDiv.id = 'secondary-nav-overflow-option';
+          // If there are overflow items, create a "More" dropdown
+          if (overflowItems.length > 0) {
+            // Create the main list item for overflow
+            const overflowHtml = document.createElement('li');
+            overflowHtml.className = 'secondary-nav__overflow-li';
 
-        // Create the title span
-        const overflowTitle = document.createElement('span');
-        overflowTitle.className = 'secondary-nav__overflow-title wds2-type-body-regular-s';
-        overflowTitle.textContent = 'More';
+            // Create the overflow option div
+            const overflowOptionDiv = document.createElement('div');
+            overflowOptionDiv.className = 'secondary-nav__overflow-option';
+            overflowOptionDiv.tabIndex = 0;
+            overflowOptionDiv.id = 'secondary-nav-overflow-option';
 
-        // Create the icon
-        const overflowIcon = document.createElement('wds-icon');
-        overflowIcon.setAttribute('iconName', 'icon-down-arrow');
-        overflowIcon.className = 'secondary-nav__overflow-dropdown-icon';
-        overflowIcon.id = 'secondary-nav-overflow-dropdown-icon';
+            // Create the title span
+            const overflowTitle = document.createElement('span');
+            overflowTitle.className = 'secondary-nav__overflow-title wds2-type-body-regular-s';
+            overflowTitle.textContent = 'More';
 
-        // Append title and icon to the overflow option div
-        overflowOptionDiv.appendChild(overflowTitle);
-        overflowOptionDiv.appendChild(overflowIcon);
+            // Create the icon
+            const overflowIcon = document.createElement('wds-icon');
+            overflowIcon.setAttribute('iconName', 'icon-down-arrow');
+            overflowIcon.className = 'secondary-nav__overflow-dropdown-icon';
+            overflowIcon.id = 'secondary-nav-overflow-dropdown-icon';
+            // Append title and icon to the overflow option div
+            overflowOptionDiv.appendChild(overflowTitle);
+            overflowOptionDiv.appendChild(overflowIcon);
 
-        // Create the overflow dropdown div
-        const overflowDropdownDiv = document.createElement('div');
-        overflowDropdownDiv.className = 'secondary-nav__overflow-dropdown';
-        overflowDropdownDiv.id = 'secondary-nav-overflow-dropdown';
+            // Create the overflow dropdown div
+            const overflowDropdownDiv = document.createElement('div');
+            overflowDropdownDiv.className = 'secondary-nav__overflow-dropdown';
+            overflowDropdownDiv.id = 'secondary-nav-overflow-dropdown';
 
-        // Create the list for overflow items
-        const overflowList = document.createElement('ul');
-        overflowList.className = 'secondary-nav__overflow-option-list';
+            // Create the list for overflow items
+            const overflowList = document.createElement('ul');
+            overflowList.className = 'secondary-nav__overflow-option-list';
 
-        // Populate list with overflow items
-        overflowItems.forEach((item) => {
-          const listItem = item;
-          const tempDiv = document.createElement('div');
-          tempDiv.innerHTML = listItem;
+            // Populate list with overflow items
+            overflowItems.forEach((item) => {
+              const listItem = item;
+              const tempDiv = document.createElement('div');
+              tempDiv.innerHTML = listItem;
 
-          // Now, append the first child (the actual element) of the tempDiv
-          overflowList.appendChild(tempDiv.firstChild);
+              // Now, append the first child (the actual element) of the tempDiv
+              overflowList.appendChild(tempDiv.firstChild);
+            });
+
+            // Append list to dropdown div
+            overflowDropdownDiv.appendChild(overflowList);
+
+            // Append overflow option div and dropdown div to the main list item
+            overflowHtml.appendChild(overflowOptionDiv);
+            overflowHtml.appendChild(overflowDropdownDiv);
+            // Append the main list item to the dropdown menu
+            dropdownList.appendChild(overflowHtml);
+
+            bindOverflowDropdown(overflowHtml);
+          }
+
+          initializeSecondaryNavActiveLink();
+
+          observer.disconnect(); // Disconnect observer once done
         });
 
-        // Append list to dropdown div
-        overflowDropdownDiv.appendChild(overflowList);
-
-        // Append overflow option div and dropdown div to the main list item
-        overflowHtml.appendChild(overflowOptionDiv);
-        overflowHtml.appendChild(overflowDropdownDiv);
-        // Append the main list item to the dropdown menu
-        dropdownList.appendChild(overflowHtml);
-
-        bindOverflowDropdown(overflowHtml);
+        observer.observe(globalheaderElement, { childList: true, subtree: true });
       }
+    }
 
-      initializeActiveLink();
+    // Repeatedly check for the element until it becomes available
+    function checkForHeader() {
+      const globalheaderElement = document.querySelector('#nissan_global_header');
 
-      observer.disconnect(); // Disconnect observer once done
-    });
+      if (globalheaderElement) {
+        startObserver(); // Once the element is available, start the observer
+      } else {
+        requestAnimationFrame(checkForHeader); // Keep checking until the element is found
+      }
+    }
 
-    // Start observing the body for changes in childList and subtree
-    observer.observe(document.body, { childList: true, subtree: true });
+    // Start checking for the element
+    requestAnimationFrame(checkForHeader);
   }
 
-  renderNavItems();
+  renderSecondaryNavItems();
   bindEvent(block);
 }
