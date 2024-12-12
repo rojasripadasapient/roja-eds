@@ -60,9 +60,7 @@
   },
   {
     "id": "offers",
-    "components": [
-      "offers-content"
-    ]
+    "components": []
   },
   {
     "id": "tab",
