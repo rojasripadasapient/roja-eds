@@ -4,9 +4,31 @@
 }
 
 .helios.nissan-eds-main-footer .c_025 {
-  padding-bottom: 45px;
-  padding-top: 15px;
+  padding-bottom: var(--wds2-grid-l-padding);
+  padding-top: 0;
   padding-left: var(--wds2-grid-s-padding);
+}
+
+.helios.nissan-eds-main-footer .c_025 a {
+  font-family: var(--wds2-type-body-light-s-fontFamily);
+  font-size: var(--wds2-type-body-light-s-fontSize);
+  font-weight: var(--wds2-type-body-light-s-fontWeight);
+  letter-spacing: var(--wds2-type-body-light-s-letterSpacing);
+  line-height: var(--wds2-type-body-light-s-lineHeight);
+}
+
+.helios.nissan-eds-main-footer .c_054-3 .grid-row .col-12 .footer-container ul li span,
+.helios.nissan-eds-main-footer .c_054-3 .grid-row .col-12 .footer-container ul li a span,
+.helios.nissan-eds-main-footer .c_025 .footer-legal .footer-copyright,
+.helios.nissan-eds-main-footer .c_025 .footer-legal a,
+.helios.nissan-eds-main-footer .c_025 .footer-options a {
+  font-family: var(--wds2-type-body-light-s-fontFamily);
+  font-size: var(--wds2-type-body-light-s-fontSize);
+  font-weight: var(--wds2-type-body-regular-s-fontWeight);
+  letter-spacing: var(--wds2-type-body-light-s-letterSpacing);
+  line-height: var(--wds2-type-body-light-s-lineHeight);
+  color: var(--wds2-colour-nissanwhite);
+  padding-bottom: 12px;
 }
 
 .helios.nissan-eds-main-footer .c_054-3 .grid-row .col-12 .footer-container .footer-heading span {
@@ -28,17 +50,14 @@
   border-bottom: none;
 }
 
-.helios.nissan-eds-main-footer .c_025 a {
-  font-family: var(--wds2-type-body-light-s-fontFamily);
-  font-size: var(--wds2-type-body-light-s-fontSize);
-  font-weight: var(--wds2-type-body-light-s-fontWeight);
-  letter-spacing: var(--wds2-type-body-light-s-letterSpacing);
-  line-height: var(--wds2-type-body-light-s-lineHeight);
-}
-
 .helios.nissan-eds-main-footer .c_025 .footer-options li:first-child a {
   border-top: 1px solid var(--wds2-colour-keyline-onlight);
   padding-top: var(--wds2-grid-m-padding);
+}
+
+.helios.nissan-eds-main-footer .c_054-3 .is-open li,
+.helios.nissan-eds-main-footer .c_054-3 li.is-visible {
+  padding-left: 0;
 }
 
 .helios.nissan-eds-main-footer .c_025:not(.ecommerce-footer) .footer-options > li {
@@ -54,24 +73,97 @@
 }
 
 .helios.nissan-eds-main-footer .c_025 .footer-legal {
-  padding-left: 0;
+  padding: 0;
+}
+
+.helios.nissan-eds-main-footer .c_025 .footer-legal ul {
+  padding-top: 18px;
+}
+
+.helios.nissan-eds-main-footer .c_054-3 .grid-row .col-12 .last ul {
+  padding: 0;
 }
 
 .helios.nissan-eds-main-footer .c_054-3 .social-icon.icon-facebook::before,
 .helios.nissan-eds-main-footer .c_054-3 .social-icon.icon-twitter::before,
 .helios.nissan-eds-main-footer.nissan-eds-main-footer .c_054-3 .social-icon.icon-youtube::before,
-.helios .c_054-3 .social-icon.icon-instagram::before,
-.helios .c_054-3 .footer-heading .accordionToggle::after {
+.helios.nissan-eds-main-footer .c_054-3 .social-icon.icon-instagram::before,
+.helios.nissan-eds-main-footer .c_054-3 .footer-heading .accordionToggle::after,
+.helios.nissan-eds-main-footer .c_054-3 .footer-heading > .accordionToggle::after {
   font-family: var(--wds2-icon-fontFamily);
   color: var(--wds2-colour-nissanwhite);
 }
 
-@media (width >= 768px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .helios.nissan-eds-main-footer .c_025 {
+    margin: 0 var(--wds2-grid-l-padding);
+    max-width: none;
+    border-top: 1px solid var(--wds2-colour-keyline-onlight);
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 60px;
+  }
+
+  .helios.nissan-eds-main-footer .c_025 .footer-legal ul {
+    padding-top: 0;
+  }
+
+  .helios.nissan-eds-main-footer .c_054-3 .grid-row .col-12 .footer-container.last {
+    padding-right: 0;
+  }
+
+  .helios.nissan-eds-main-footer .c_054-3 {
+    padding: 60px var(--wds2-grid-l-padding) var(--wds2-grid-l-padding) var(--wds2-grid-l-padding);
+  }
+
+  .helios.nissan-eds-main-footer .c_054-3 .grid-row .col-12 .footer-container .footer-heading span {
+    padding: 0 0 var(--wds2-radio-element-margin) 0;
+  }
+
+  .helios.nissan-eds-main-footer .c_054-3 .grid-row .col-12 .footer-container ul li {
+    padding: 0 0 var(--wds2-type-disclaimer-regular-fontSize) 0;
+  }
+
+  .helios.nissan-eds-main-footer .c_025 .footer-options,
+  .helios.nissan-eds-main-footer .c_025 .footer-legal {
+    width: 100%;
+    padding: 0;
+  }
+
+  .helios.nissan-eds-main-footer .c_025 .footer-legal a,
+  .helios.nissan-eds-main-footer .c_025 .footer-options a {
+    padding: 0;
+  }
+
+  .helios.nissan-eds-main-footer .c_025 .footer-options a {
+    padding-bottom: 16px;
+  }
+
+  .helios.nissan-eds-main-footer .c_025 .footer-options li:first-child a {
+    border-top: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .helios.nissan-eds-main-footer .grid-row {
+    max-width: 1500px;
+  }
+
   .helios.nissan-eds-main-footer .c_025 {
     margin: 0 var(--wds2-grid-l-margin);
     max-width: none;
     border-top: 1px solid var(--wds2-colour-keyline-onlight);
     padding-left: 0;
+    padding-bottom: var(--wds2-grid-l-margin);
+    padding-top: var(--wds2-grid-l-padding);
+  }
+
+  .helios.nissan-eds-main-footer .c_025 .footer-legal a,
+  .helios.nissan-eds-main-footer .c_025 .footer-legal,
+  .helios.nissan-eds-main-footer .c_025 .footer-options,
+  .helios.nissan-eds-main-footer .c_025 .footer-options a,
+  .helios.nissan-eds-main-footer .c_025 .footer-options li:first-child a {
+    padding: 0;
   }
 
   .helios.nissan-eds-main-footer .c_054-3 {
@@ -93,5 +185,15 @@
 
   .helios.nissan-eds-main-footer .c_025 .footer-options li:first-child a {
     border-top: none;
+  }
+
+  .helios.nissan-eds-main-footer .c_025 .footer-legal ul {
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 1500px) {
+  .helios.nissan-eds-main-footer .grid-row {
+    max-width: 1500px;
   }
 }
