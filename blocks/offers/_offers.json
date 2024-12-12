@@ -23,10 +23,8 @@
       "fields": [
         {
           "component": "text",
-          "valueType": "string",
           "name": "title",
-          "label": "Title",
-          "value": ""
+          "label": "Title"
         },
         {
           "component": "select",
@@ -63,8 +61,8 @@
           "component": "text",
           "valueType": "string",
           "name": "offerId",
-          "label": "Offer ID",
-          "value": ""
+          "value": "",
+          "label": "Offer ID"
         },
         {
           "component": "text",
@@ -84,81 +82,155 @@
           "component": "text",
           "valueType": "string",
           "name": "offerDetailButtonLabel",
-          "label": "Offer Detail  Button Label",
+          "label": "Offer Detail Button Label",
           "value": ""
         },
         {
-          "component": "richtext",
+          "component": "text",
           "valueType": "string",
-          "name": "termsAndConditionText",
-          "label": "Terms and Condition Text",
+          "name": "termsLabel",
+          "label": "Terms Label",
           "value": ""
         },
         {
           "component": "aem-content",
-          "name": "ctaLink",
+          "name": "link",
           "label": "CTA Link"
         },
         {
           "component": "text",
-          "name": "ctaText",
+          "name": "linkText",
           "label": "CTA Text"
         },
         {
           "component": "select",
-          "name": "ctaType",
+          "name": "linkType",
           "label": "CTA Type",
           "options": [
-            { "name": "default", "value": "" },
-            { "name": "primary", "value": "primary" },
-            { "name": "secondary", "value": "secondary" },
-            { "name": "tertiary", "value": "tertiary" }
+            {
+              "name": "default",
+              "value": ""
+            },
+            {
+              "name": "primary",
+              "value": "primary"
+            },
+            {
+              "name": "secondary",
+              "value": "secondary"
+            },
+            {
+              "name": "tertiary",
+              "value": "tertiary"
+            }
           ]
         },
         {
           "component": "aem-content",
-          "name": "overlayCTA1",
-          "label": "Overlay CTA1 Link"
+          "name": "offerLink",
+          "label": "CTA Link 1"
         },
         {
           "component": "text",
-          "name": "OverlayCTA1",
-          "label": "Overlay CTA1  Label"
+          "name": "offerLinkText",
+          "label": "CTA Text 1"
         },
         {
           "component": "select",
-          "name": "ctaType1",
-          "label": "CTA Type1",
+          "name": "offerLinkType",
+          "label": "CTA Type 1",
           "options": [
-            { "name": "default", "value": "" },
-            { "name": "primary", "value": "primary" },
-            { "name": "secondary", "value": "secondary" },
-            { "name": "tertiary", "value": "tertiary" }
+            {
+              "name": "default",
+              "value": ""
+            },
+            {
+              "name": "primary",
+              "value": "primary"
+            },
+            {
+              "name": "secondary",
+              "value": "secondary"
+            },
+            {
+              "name": "tertiary",
+              "value": "tertiary"
+            }
           ]
         },
         {
           "component": "aem-content",
-          "name": "overlayCTA2",
-          "label": "Overlay CTA2 Link"
+          "name": "overlayFirstLink",
+          "label": "Overlay CTA Link 1"
         },
         {
           "component": "text",
-          "name": "OverlayCTA2",
-          "label": "Overlay CTA2  Label"
+          "name": "overlayFirstLinkText",
+          "label": "Overlay CTA Text 1"
         },
         {
           "component": "select",
-          "name": "ctaType2",
-          "label": "CTA Type2",
+          "name": "overlayFirstLinkType",
+          "label": "Overlay CTA Type 1",
           "options": [
-            { "name": "default", "value": "" },
-            { "name": "primary", "value": "primary" },
-            { "name": "secondary", "value": "secondary" },
-            { "name": "tertiary", "value": "tertiary" }
+            {
+              "name": "default",
+              "value": ""
+            },
+            {
+              "name": "primary",
+              "value": "primary"
+            },
+            {
+              "name": "secondary",
+              "value": "secondary"
+            },
+            {
+              "name": "tertiary",
+              "value": "tertiary"
+            }
+          ]
+        },
+        {
+          "component": "aem-content",
+          "name": "overlaySecondLink",
+          "label": "Overlay CTA Link 2"
+        },
+        {
+          "component": "text",
+          "name": "overlaySecondLinkText",
+          "label": "Overlay CTA Text 2"
+        },
+        {
+          "component": "select",
+          "name": "overlaySecondLinkType",
+          "label": "Overlay CTA Type 2",
+          "options": [
+            {
+              "name": "default",
+              "value": ""
+            },
+            {
+              "name": "primary",
+              "value": "primary"
+            },
+            {
+              "name": "secondary",
+              "value": "secondary"
+            },
+            {
+              "name": "tertiary",
+              "value": "tertiary"
+            }
           ]
         }
       ]
     }
   ],
-  "filters": []
+  "filters": [
+    {
+      "id": "offers",
+      "components": []
+    }
+  ]
 }
