@@ -8,7 +8,6 @@ function buildCtaButton(cta, ctaTitle, ctaVariant) {
 
   const url = anchor.getAttribute('href') || '#';
   const title = ctaTitle ? ctaTitle.textContent : (anchor.getAttribute('title') || '');
-
   const button = document.createElement('wds-button');
   const span = document.createElement('span');
   const iconWrapper = document.createElement('span');
@@ -38,7 +37,7 @@ function buildCtaButton(cta, ctaTitle, ctaVariant) {
 
   iconWrapper.appendChild(icon);
   button.setAttribute('data-src', url);
-  button.setAttribute('tab-index', 0)
+  button.setAttribute('tab-index', 0);
   button.appendChild(iconWrapper);
   span.textContent = title;
   span.classList.add('action-strip-title', 'wds2-type-action-button-m');
