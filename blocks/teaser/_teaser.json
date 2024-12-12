@@ -1,7 +1,7 @@
 {
   "definitions": [
     {
-      "title": "teaser",
+      "title": "GB007-Teaser",
       "id": "teaser",
       "plugins": {
         "xwalk": {

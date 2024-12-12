@@ -1,30 +1,28 @@
 import { moveInstrumentation } from '../../scripts/scripts.js';
 import { TEASER_BLOCK_VARIATION } from '../../scripts/constant.js';
-import { isDesktop, isTablet, isMobile, isLargeDesktop } from '../../scripts/utils.js';
 
 // Function to apply the correct headline class based on the tag
-function generateTeaserHeader(headline) {
+function applyHeadlineClass(headline) {
   if (!headline) return;
 
-  const titleElement = headline.querySelector('p');
+  const heading = headline.querySelector('h1, h2, h3, h4, h5, h6');
+  if (!heading) return;
 
-  if (!titleElement) return ;
+  const classes = {
+    H1: 'wds2-type-display-l wds2-type-display-xl',
+    H2: 'wds2-type-display-m wds2-type-display-l',
+    H3: 'wds2-type-display-s wds2-type-display-m',
+    H4: 'wds2-type-display-xs wds2-type-display-s',
+    H5: 'wds2-type-display-xs wds2-type-display-xs',
+    H6: 'wds2-type-display-xs wds2-type-display-xs',
+  };
 
-  const span = document.createElement('span');
-  let updatedClass = 'wds2-type-display-m';
+  const headClass = classes[heading.tagName] || 'wds2-type-display-s wds2-type-display-m';
+  const largeScreen = window.matchMedia('(min-width: 1024px)');
+  const selectedClass = largeScreen.matches ? headClass.split(' ')[1] : headClass.split(' ')[0];
 
-  if (isMobile() || isTablet()) {
-    updatedClass = 'wds2-type-display-s';
-  } else if (isDesktop() || isLargeDesktop()) {
-    updatedClass = 'wds2-type-display-m';
-  }
-
-  span.className = `${updatedClass}`;
-  span.textContent = titleElement.textContent;
-
-  moveInstrumentation(titleElement, span)
-
-  return span.outerHTML;
+  heading.classList.add(selectedClass);
+  heading.classList.add('teaser-title-header');
 }
 
 // Function to apply subheadline and add both classes (light-m and teaser-variant1__desc)
@@ -108,6 +106,11 @@ function teaserVariantOne(bgColor, block) {
     img.setAttribute('alt', imageAlt?.textContent.trim());
   }
 
+  if (headline) {
+    applyHeadlineClass(headline);
+    headline.innerHTML = headline?.innerHTML || '';
+  }
+
   if (subheadline) {
     subheadline.innerHTML = subheadline?.innerHTML || '';
   }
@@ -122,7 +125,7 @@ function teaserVariantOne(bgColor, block) {
         <div class="variantone__container">
           <div class="teaser__image">${pictureContainer ? pictureContainer.outerHTML : ''}</div>
           <div class="teaser__text">
-            <div class="teaser__title desktop-title">${headline ? generateTeaserHeader(headline) : ''}</div>
+            <div class="teaser__title desktop-title">${headline ? headline.innerHTML : ''}</div>
             <div class="teaser__description">${subheadline ? subheadline.innerHTML : ''}</div>
             <div class="teaser__cta"></div>
           </div>
