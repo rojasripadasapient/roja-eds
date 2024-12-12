@@ -1,5 +1,5 @@
 import { moveInstrumentation } from '../../scripts/scripts.js';
-import { getApigeeAccessToken, getApigeeUrl, removeLocalStorageItem } from '../../../../scripts/spreadsheet-utils.js';
+import { getApigeeAccessToken, getApigeeUrl, removeLocalStorageItem } from '../../scripts/spreadsheet-utils.js';
 
 function bindEvent(block) {
   const wdsButton = block.querySelector('wds-button');
